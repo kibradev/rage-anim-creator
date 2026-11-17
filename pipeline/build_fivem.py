@@ -201,6 +201,7 @@ local function play(name, opts)
     local ped = PlayerPedId()
     local flag = LOOP[name] and 1 or 0
     if opts.upper then flag = flag + 48 else flag = flag + 8 end  -- 8 = AF_NOT_INTERRUPTABLE
+    flag = flag | (opts.extra or 0)  -- test: 1024 override physics, 2048 ignore gravity, 512 no collision, 262144 kinematic, 524288 mover extraction
     local speed = opts.speed or 1.0
     -- ayak IK'si kalcayi zemine geri ceker (ziplama/comelme/yana kayma yutulur): oynarken kapat, stop()'ta geri ac
     hipEnd(ped)
@@ -305,8 +306,11 @@ RegisterCommand('vbhip', function(_, args)
             RequestAnimDict(REF_DICT)
             local tw = GetGameTimer()
             while not HasAnimDictLoaded(REF_DICT) and GetGameTimer() - tw < 5000 do Wait(0) end
-            TaskPlayAnim(ped, REF_DICT, REF_CLIP, 8.0, -8.0, -1, 0, 0.0, false, false, false)
-        elseif not play(name, {{ keepIk = args[2] == 'ik' }}) then return end
+            TaskPlayAnim(ped, REF_DICT, REF_CLIP, 8.0, -8.0, -1, tonumber(args[2]) or 0, 0.0, false, false, false)
+        elseif not play(name, {{ keepIk = args[2] == 'ik', extra = tonumber(args[2]) }}) then return end
+        if tonumber(args[2]) then
+            TriggerEvent('chat:addMessage', {{ args = {{ 'vbhip', 'ek bayrak: ' .. args[2] }} }})
+        end
         -- yon tanilamasi: entity heading ile iskeletin (sag-sol uyluk) bakis yonu; fark ~0 olmali, ~180 = iskelet ters
         local function skelYawDiff()
             local r = GetPedBoneCoords(ped, 51826, 0.0, 0.0, 0.0)   -- SKEL_R_Thigh
@@ -354,6 +358,31 @@ RegisterCommand('vbhip', function(_, args)
         local yl = string.format('YON: iskelet-entity farki baslangic %.0f, orta %.0f, son %.0f derece; entity heading en fazla %.0f derece degisti', yaw0, yawMid, yawEnd, hMax)
         print('vbhip: ' .. yl)
         TriggerEvent('chat:addMessage', {{ args = {{ 'vbhip', yl }} }})
+    end)
+end, false)
+
+-- /vbspace: 4 sn icinde Space ile normal zipla; ped'in GERCEK ziplama yuksekligini olcer (bizim ziplamalar icin hedef)
+RegisterCommand('vbspace', function()
+    CreateThread(function()
+        local ped = PlayerPedId()
+        local hip0 = GetPedBoneCoords(ped, 11816, 0.0, 0.0, 0.0).z
+        local e0 = GetEntityCoords(ped).z
+        local f0 = math.min(GetPedBoneCoords(ped, 52301, 0.0, 0.0, 0.0).z, GetPedBoneCoords(ped, 14201, 0.0, 0.0, 0.0).z)
+        local hHi, hLo, eHi, fHi, tAir, tUp = -9, 9, -9, -9, 0, nil
+        TriggerEvent('chat:addMessage', {{ args = {{ 'vbspace', '4 sn icinde Space ile zipla' }} }})
+        local t0 = GetGameTimer()
+        while GetGameTimer() - t0 < 4000 do
+            local h = GetPedBoneCoords(ped, 11816, 0.0, 0.0, 0.0).z - hip0
+            local f = math.min(GetPedBoneCoords(ped, 52301, 0.0, 0.0, 0.0).z, GetPedBoneCoords(ped, 14201, 0.0, 0.0, 0.0).z) - f0
+            hHi, hLo = math.max(hHi, h), math.min(hLo, h)
+            eHi = math.max(eHi, GetEntityCoords(ped).z - e0)
+            fHi = math.max(fHi, f)
+            if f > 0.05 then tUp = tUp or GetGameTimer() elseif tUp then tAir = math.max(tAir, GetGameTimer() - tUp); tUp = nil end
+            Wait(0)
+        end
+        local line = string.format('Space: kalca yukari %+.2f asagi %+.2f m, PED(entity) %+.2f m, alt ayak yerden %+.2f m, havada %d ms', hHi, hLo, eHi, fHi, tAir)
+        print('vbspace: ' .. line)
+        TriggerEvent('chat:addMessage', {{ args = {{ 'vbspace', line }} }})
     end)
 end, false)
 
