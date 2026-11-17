@@ -1,0 +1,10 @@
+assets/
+cache/
+tools/
+node_modules/
+__pycache__/
+.env
+*.ydd
+*.ycd
+*.ytd
+*.yft
