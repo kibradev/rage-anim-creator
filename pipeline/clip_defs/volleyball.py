@@ -89,11 +89,13 @@ def serve_over():
     return 64, False, [(0, READY), (12, stance), (26, toss), (33, hit), (40, follow), (64, READY)]
 
 
-def _air(h, back=0.0, pitch=45):
-    """Airborne feet: ankles h above their standing spot and `back` metres behind it. Measured in game (/vbspace): GTA's own
-    jump lifts the hip only ~0.25 m but tucks the feet ~0.7 m off the ground -- the knee bend is what reads as a jump.
-    Keep h well above the root lift (straight legs hanging under a raised hip look like floating)."""
-    return {"foot_L": (-0.12, -back, h), "foot_R": (0.12, -back, h), "pitch_L": pitch, "pitch_R": pitch}
+def _air(h, fwd=0.0, pitch=40):
+    """Airborne feet: ankles h above their standing spot and `fwd` metres in FRONT of it. Measured in game (/vbspace): GTA's
+    own jump lifts the hip only ~0.25 m but the feet ~0.7 m -- the leg tuck is what reads as a jump. The tuck must be a
+    HIP flexion (thigh swings forward/up, knee in front, foot under or ahead of the hip), as in Rockstar's jumps
+    (legprobe: thigh 50-120 deg forward, foot +0.1..+0.5 m ahead of the hip). Feet folded BEHIND a vertical thigh
+    (heels to the backside) is not a pose GTA peds make."""
+    return {"foot_L": (-0.12, fwd, h), "foot_R": (0.12, fwd, h), "pitch_L": pitch, "pitch_R": pitch}
 
 
 _GROUND = {"foot_L": (-0.12, 0, 0), "foot_R": (0.12, 0, 0), "pitch_L": 0, "pitch_R": 0}
@@ -101,18 +103,18 @@ _GROUND = {"foot_L": (-0.12, 0, 0), "foot_R": (0.12, 0, 0), "pitch_L": 0, "pitch
 
 def spike():
     """Spike (smaç): fast deep crouch with arms back, explosive takeoff, knees tuck up behind while the body bows, hit at
-    the apex, legs reach down, land soft. Air time ~0.57 s (hip +0.38 m, free fall), feet up to ~0.7 m."""
+    the apex, legs reach down, land soft. Air time ~0.57 s (hip +0.38 m, free fall), knees come up in front, feet ~0.6 m."""
     crouch = {"root": (0, -0.02, -0.38), "spine": (36, 0, 0), "head": (-28, 0, 0),
               "hand_L": (-0.30, -0.26, 0.92), "hand_R": (0.30, -0.26, 0.92), "elbow_L": (-0.6, -0.4, 1), "elbow_R": (0.6, -0.4, 1)}
     takeoff = {"root": (0, 0.04, 0.06), "spine": (6, 0, 0), "pitch_L": 42, "pitch_R": 42, "foot_L": (-0.12, 0, 0.10), "foot_R": (0.12, 0, 0.10),
                "hand_L": (-0.30, 0.46, 1.50), "hand_R": (0.30, 0.46, 1.48), "elbow_L": (-0.5, -0.7, -0.6), "elbow_R": (0.5, -0.7, -0.6), "ease": "in"}
-    bow = {"root": (0, 0.10, 0.30), **_air(0.56, 0.22, 55), "spine": (-14, 0, 0), "chest": (-10, 0, -30), "head": (-22, 0, 0),
+    bow = {"root": (0, 0.10, 0.30), **_air(0.50, 0.20, 40), "spine": (-14, 0, 0), "chest": (-10, 0, -30), "head": (-22, 0, 0),
            "hand_L": (-0.14, 0.34, 2.16), "elbow_L": (-1, 0, -0.5),
            "hand_R": (0.38, -0.20, 2.06), "elbow_R": (1, -0.6, 0.2), "wrist_R": (-25, 0, 0), "ease": "out"}
-    hit = {"root": (0, 0.14, 0.38), **_air(0.70, 0.16, 50), "spine": (12, 0, 0), "chest": (8, 0, 22), "head": (-14, 0, 0), "ease": "out",
+    hit = {"root": (0, 0.14, 0.38), **_air(0.60, 0.26, 35), "spine": (12, 0, 0), "chest": (8, 0, 22), "head": (-14, 0, 0), "ease": "out",
            "hand_R": (0.14, 0.36, 2.30), "elbow_R": (1, -0.3, -0.2), "wrist_R": (20, 0, 0),
            "hand_L": (-0.22, 0.30, 1.58), "elbow_L": (-0.3, -0.8, -0.7)}
-    follow = {"root": (0, 0.16, 0.24), **_air(0.36, 0.0, 35), "spine": (22, 0, 0), "chest": (10, 0, 30), "ease": "in",
+    follow = {"root": (0, 0.16, 0.24), **_air(0.30, 0.20, 30), "spine": (22, 0, 0), "chest": (10, 0, 30), "ease": "in",
               "hand_R": (-0.06, 0.56, 1.30), "wrist_R": (0, 0, 0), "hand_L": (-0.30, 0.16, 1.20)}
     touch = {"root": (0, 0.16, -0.02), **_GROUND, "spine": (20, 0, 0), "ease": "in"}
     land = {"root": (0, 0.16, -0.32), **_GROUND, "spine": (28, 0, 0), "chest": (6, 0, 0), "head": (-20, 0, 0),
@@ -121,15 +123,15 @@ def spike():
 
 
 def block():
-    """Block: quick crouch, jump with both arms pressing over the net, knees bend up under the body in the air, soft
+    """Block: quick crouch, jump with both arms pressing over the net, knees come up in front in the air, soft
     landing. Air time ~0.5 s (hip +0.32 m), feet up to ~0.6 m."""
     hands_up = {"hand_L": (-0.20, 0.24, 1.45), "hand_R": (0.20, 0.24, 1.45), "elbow_L": (-1, -0.2, -0.6), "elbow_R": (1, -0.2, -0.6)}
     crouch = {"root": (0, 0, -0.30), "spine": (14, 0, 0), **hands_up}
     takeoff = {"root": (0, 0, 0.05), "spine": (2, 0, 0), "pitch_L": 42, "pitch_R": 42, "foot_L": (-0.12, 0, 0.10), "foot_R": (0.12, 0, 0.10),
                "hand_L": (-0.18, 0.22, 1.86), "hand_R": (0.18, 0.22, 1.86), "ease": "in"}
-    apex = {"root": (0, 0.02, 0.32), **_air(0.60, 0.14, 50), "spine": (4, 0, 0), "chest": (4, 0, 0), "head": (-6, 0, 0),
+    apex = {"root": (0, 0.02, 0.32), **_air(0.54, 0.16, 35), "spine": (4, 0, 0), "chest": (4, 0, 0), "head": (-6, 0, 0),
             "hand_L": (-0.16, 0.28, 2.18), "hand_R": (0.16, 0.28, 2.18), "wrist_L": (25, 0, 0), "wrist_R": (25, 0, 0), "ease": "out"}
-    down = {"root": (0, 0.02, 0.20), **_air(0.30, 0.0, 35), "hand_L": (-0.17, 0.27, 2.02), "hand_R": (0.17, 0.27, 2.02), "ease": "in"}
+    down = {"root": (0, 0.02, 0.20), **_air(0.28, 0.08, 30), "hand_L": (-0.17, 0.27, 2.02), "hand_R": (0.17, 0.27, 2.02), "ease": "in"}
     touch = {"root": (0, 0, -0.02), **_GROUND, "hand_L": (-0.18, 0.26, 1.72), "hand_R": (0.18, 0.26, 1.72), "wrist_L": (10, 0, 0), "wrist_R": (10, 0, 0), "ease": "in"}
     land = {"root": (0, 0, -0.26), **_GROUND, "spine": (16, 0, 0),
             **hands_up, "wrist_L": (0, 0, 0), "wrist_R": (0, 0, 0), "ease": "out"}
@@ -181,9 +183,9 @@ def celebrate():
     crouch = {"root": (0, 0, -0.26), "spine": (20, 0, 0), "hand_L": (-0.24, 0.20, 0.95), "hand_R": (0.24, 0.20, 0.95)}
     takeoff = {"root": (0, 0, 0.04), "pitch_L": 40, "pitch_R": 40, "foot_L": (-0.12, 0, 0.09), "foot_R": (0.12, 0, 0.09), "spine": (6, 0, 0),
                "hand_L": (-0.28, 0.16, 1.60), "hand_R": (0.28, 0.16, 1.60), "ease": "in"}
-    up = {"root": (0, 0, 0.24), **_air(0.52, 0.24, 50), "spine": (-6, 0, 0), "chest": (-8, 0, 0), "head": (-20, 0, 0),
+    up = {"root": (0, 0, 0.24), **_air(0.46, 0.14, 35), "spine": (-6, 0, 0), "chest": (-8, 0, 0), "head": (-20, 0, 0),
           "hand_L": (-0.32, 0.10, 1.96), "hand_R": (0.32, 0.10, 1.96), "elbow_L": (-1, -0.3, -0.3), "elbow_R": (1, -0.3, -0.3), "ease": "out"}
-    down = {"root": (0, 0, 0.12), **_air(0.24, 0.0, 30), "ease": "in"}
+    down = {"root": (0, 0, 0.12), **_air(0.22, 0.06, 30), "ease": "in"}
     land = {"root": (0, 0, -0.20), **_GROUND, "spine": (14, 0, 0), "chest": (0, 0, 0),
             "hand_L": (-0.26, 0.16, 1.05), "hand_R": (0.24, 0.26, 1.55), "elbow_R": (0.35, -0.8, -0.7), "elbow_L": (-0.35, -0.8, -0.7), "ease": "out"}
     pump = {"root": (0, 0, -0.22), "spine": (20, 0, 0), "chest": (4, 0, 12), "hand_R": (0.20, 0.30, 1.18), "ease": "in"}

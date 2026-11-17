@@ -87,7 +87,10 @@ def animate(clip, keys):
         for side, (chain, tpos, trot) in feet.items():
             rot = Matrix.Rotation(math.radians(-p[f"pitch_{side}"]), 3, "X") @ trot
             clip.eval(f)
-            knee = clip.forward() + Vector((0.25 if side == "R" else -0.25, 0, 0.2))
+            # knee direction: a little outward on the ground (squat), straight ahead once the foot is off the floor (a
+            # tucked leg with the knee splayed wider than the foot is not a GTA ped pose)
+            out = 0.25 - 0.17 * min(1.0, max(0.0, p[f"foot_{side}"][2]) / 0.3)
+            knee = clip.forward() + Vector((out if side == "R" else -out, 0, 0.2))
             worst = max(worst, clip.ik(f, *chain, tpos + Vector(p[f"foot_{side}"]), knee, end_rot=rot))
         for side in "LR":
             h = p[f"hand_{side}"]
