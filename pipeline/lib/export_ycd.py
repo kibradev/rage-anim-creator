@@ -18,8 +18,14 @@ def _m(name):
     return importlib.import_module(f"{PKG}.{name}")
 
 
+def is_game_body_bone(name: str) -> bool:
+    """Bones GTA body clips carry rotation tracks for (measured on mnt_dnc_buttwag: 61 = SKEL_* + IK_Head/Root/Hands
+    + PH_*_Hand). Facial, MH_ (corrective) and RB_ (roll) bones are never keyed by body clips."""
+    return name.startswith("SKEL_") or name in {"IK_Head", "IK_Root", "IK_L_Hand", "IK_R_Hand", "PH_L_Hand", "PH_R_Hand"}
+
+
 def complete_action(arm, clip):
-    """Copy of the clip's action where every pose bone has rotation keys (rest = identity), like game clips."""
+    """Copy of the clip's action where every game body bone has rotation keys (rest = identity), like game clips."""
     src = clip.action
     new = bpy.data.actions.new(clip.name + "_export")
     keyed = set()
@@ -32,19 +38,21 @@ def complete_action(arm, clip):
             nf.keyframe_points[i].handle_left = kp.handle_left
             nf.keyframe_points[i].handle_right = kp.handle_right
         nf.update()
-        if fc.data_path.endswith("rotation_quaternion"):
+        if fc.data_path.startswith("pose.bones[") and fc.data_path.endswith("rotation_quaternion"):
             keyed.add(fc.data_path.split('"')[1])
     ident = (1, 0, 0, 0)
+    # never shorten the range below the keys: Sollumz would squeeze all samples into it (time drift)
+    end = max(clip.frames, math.ceil(max((kp.co[0] for fc in src.fcurves for kp in fc.keyframe_points), default=0)))
     for pb in arm.pose.bones:
-        if pb.name in keyed:
+        if pb.name in keyed or not is_game_body_bone(pb.name):
             continue
         for i in range(4):
             nf = new.fcurves.new(f'pose.bones["{pb.name}"].rotation_quaternion', index=i, action_group=pb.name)
             nf.keyframe_points.add(2)
             nf.keyframe_points[0].co = (0, ident[i])
-            nf.keyframe_points[1].co = (clip.frames, ident[i])
+            nf.keyframe_points[1].co = (end, ident[i])
             nf.update()
-    new.frame_range = (0, clip.frames)
+    new.frame_range = (0, end)
     return new
 
 

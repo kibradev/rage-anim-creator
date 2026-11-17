@@ -170,3 +170,21 @@ Tek ekran, üç bölge, koyu tema, shadcn/ui:
 
 ## Bilinen tuzaklar
 (Aşama 4 testinden sonra doldurulacak.)
+
+## Freemode pedleri (17 Kasım)
+- `extract_ped.py -- mp_m_freemode_01` ve `-- mp_f_freemode_01` -> `cache/peds/<ad>/ped.glb` (8 parça, 128 kemik). Arayüzdeki ped seçicide otomatik görünür.
+- Parçalar `streamedpeds_mp.rpf/<ped>/` içinde; base varyant: head/uppr/lowr `_r` + `_whi`, diğerleri `_u` + `_uni` (mevcut `pick_parts` olduğu gibi çalıştı).
+- Animasyon uyumu: tüm SKEL_* kemikleri eşleşiyor; yalnızca `MH_*` düzeltme (corrective) kemikleri freemode'da yok -> animasyonda yok sayılır.
+- Bilinen: export (`server/main.py`) hâlâ `player_zero` iskeletiyle .ycd üretiyor; freemode için ayrı export denenmedi.
+
+## Export gidiş-dönüş testi: GTA dans clip'i (17 Kasım)
+Test: `blender -b --python pipeline/rt_dance.py -- player_zero "special_ped@mountain_dancer@monologue_3@monologue_3a" mnt_dnc_buttwag`
+(orijinal clip -> Blender -> bizim export yolu -> ikili .ycd -> geri oku -> orijinalle kare kare karşılaştır; çıktı `cache/rt/`).
+- Sonuç: 76 eğrinin tamamı geri geldi; en büyük dönüş sapması 0,079°, konum sapması 0,3 mm. Mover (track 5/6), SKEL_ROOT konumu
+  ve bilinmeyen track'ler (33, 134, 137–140) korunuyor.
+- Düzeltilen 1: `complete_action` 354 kemiğin hepsine kimlik rotasyonu yazıyordu. GTA gövde clip'leri yalnızca 61 kemik anahtarlar
+  (SKEL_* + IK_Head/Root/Hands + PH_*_Hand); yüz/MH_/RB_ kemikleri asla. Artık yalnızca bu küme doldurulur (`is_game_body_bone`).
+- Düzeltilen 2: action'ın `frame_range`'i anahtarlardan kısa olursa Sollumz tüm örnekleri o aralığa sıkıştırıyor (zaman kayması,
+  dansta 4,8° hata). Aralık artık anahtarların sonundan kısa olamaz.
+- Orijinalde olup bizim ürettiğimiz clip'lerde OLMAYANLAR (dans için gerekli): `SKEL_ROOT` konum track'i (kalça yükselip alçalması),
+  mover track'leri (`delta_location/rotation`), IK_*/PH_* konumları, clip özellikleri (Properties). `Clip` kütüphanesi şu an yalnızca dönüş anahtarlıyor.
