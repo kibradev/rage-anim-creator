@@ -212,18 +212,127 @@ def celebrate():
     return 70, False, [(0, READY), (8, crouch), (12, takeoff), (17, up), (21, down), (26, land), (34, pump), (42, hold), (48, pump), (56, hold), (70, READY)]
 
 
+# ---------------------------------------------------------------------------------------------------- TOPU ELDE TUTMA
+# İki elle tutuş: bilekler topun iki yanında; top merkezi = bileklerin ortası + GRIP (karakter uzayı). Tüm hold klipleri AYNI tutuşu korur
+# (oyunda top tek bir kemiğe, aynı ofsetle bağlanır; tutuş değişirse top elden kayar).
+BALL_R = 0.105
+GRIP = (0.0, 0.06, -0.03)
+# Referans el yönleri (armatür uzayı 3x3), `vb_hold` doğal tutuş pozunda ölçüldü (pipeline/hold_attach.py). Tutuş ağırlığı > 0 olan karelerde
+# el bu yöne kilitlenir.
+GRIP_ROT = {
+    "L": [[0.45829, -0.046429, 0.887583], [0.864321, 0.255423, -0.433058], [-0.206547, 0.965818, 0.157192]],
+    "R": [[-0.458335, 0.046432, 0.887571], [0.86442, 0.255405, 0.433042], [-0.206577, 0.965725, -0.1572]],
+}
+REST = {"root": (0, 0, 0), "pelvis": (0, 0, 0), "spine": (0, 0, 0), "chest": (0, 0, 0), "head": (0, 0, 0),
+        "hand_L": (-0.25, 0.04, 0.90), "hand_R": (0.25, 0.04, 0.90), "elbow_L": (-0.5, -1.0, -0.6), "elbow_R": (0.5, -1.0, -0.6),
+        "wrist_L": (0, 0, 0), "wrist_R": (0, 0, 0), "foot_L": (-0.10, 0, 0), "foot_R": (0.10, 0, 0), "pitch_L": 0, "pitch_R": 0,
+        "grip": 0.0}
+WRIST_L, WRIST_R = (0, 0, 0), (0, 0, 0)           # avuç içlerini topa çevirmek için (önizlemede ayarlanır)
+HOLD_POSE = {**REST, "root": (0, 0, -0.02), "spine": (6, 0, 0), "chest": (2, 0, 0), "head": (-6, 0, 0),
+             "hand_L": (-0.12, 0.30, 1.08), "hand_R": (0.12, 0.30, 1.08),
+             "elbow_L": (-0.6, -0.5, -1), "elbow_R": (0.6, -0.5, -1), "wrist_L": WRIST_L, "wrist_R": WRIST_R, "grip": 1.0}
+
+
+def hold():
+    """Topu iki elle göğüs önünde tutma: nefes alma kadar hafif hareketli DÖNGÜ (yürürken üst vücut katmanı olarak oynatılır)."""
+    breathe = {**HOLD_POSE, "root": (0, 0, -0.035), "chest": (3, 0, 0), "hand_L": (-0.12, 0.30, 1.095), "hand_R": (0.12, 0.30, 1.095)}
+    return 60, True, [(0, HOLD_POSE), (30, breathe), (60, HOLD_POSE)]
+
+
+def pickup():
+    """Yerdeki topu al: eğil, iki elle yanlardan kavra (kare 14 = KAVRAMA, top eve bağlanır), doğrul, tutuş pozuna gel."""
+    reach = {**REST, "root": (0, 0.12, -0.54), "pelvis": (12, 0, 0), "spine": (60, 0, 0), "chest": (6, 0, 0), "head": (-32, 0, 0),
+             "hand_L": (-0.115, 0.40, 0.17), "hand_R": (0.115, 0.40, 0.17),
+             "elbow_L": (-0.5, -0.3, -1), "elbow_R": (0.5, -0.3, -1), "wrist_L": WRIST_L, "wrist_R": WRIST_R,
+             "foot_L": (-0.10, 0, 0), "foot_R": (0.10, 0, 0), "grip": 1.0}
+    rise = {**reach, "root": (0, 0.06, -0.22), "spine": (22, 0, 0), "pelvis": (4, 0, 0), "head": (-14, 0, 0),
+            "hand_L": (-0.12, 0.38, 0.72), "hand_R": (0.12, 0.38, 0.72), "ease": "out"}
+    down = {**reach, "root": (0, 0.08, -0.28), "spine": (28, 0, 0), "pelvis": (5, 0, 0), "head": (-16, 0, 0),
+            "hand_L": (-0.12, 0.34, 0.55), "hand_R": (0.12, 0.34, 0.55), "grip": 0.35}
+    return 48, False, [(0, REST), (5, down), (10, {**reach, "ease": "out"}), (14, reach), (28, rise), (42, {**HOLD_POSE, "ease": "out"}), (48, HOLD_POSE)]
+
+
+def hold_pass():
+    """Tutarken pas (alttan itiş): hafif çömel, kollar ileri-yukarı uzanırken BIRAKMA (kare 11), kollar gevşeyerek dinlenir."""
+    wind = {**HOLD_POSE, "root": (0, 0, -0.16), "spine": (14, 0, 0), "hand_L": (-0.12, 0.26, 0.80), "hand_R": (0.12, 0.26, 0.80)}
+    rel = {**HOLD_POSE, "root": (0, 0.10, -0.04), "spine": (9, 0, 0), "chest": (0, 0, 0),
+           "hand_L": (-0.12, 0.50, 1.06), "hand_R": (0.12, 0.50, 1.06), "ease": "in"}
+    follow = {**rel, "root": (0, 0.12, -0.04), "hand_L": (-0.14, 0.55, 1.10), "hand_R": (0.14, 0.55, 1.10), "head": (-2, 0, 0), "grip": 0.4, "ease": "out"}
+    return 32, False, [(0, HOLD_POSE), (6, wind), (11, rel), (16, follow), (32, REST)]
+
+
+# klip -> (top klibi bırakılan/alınan kare, top eve ne zaman bağlı): önizleme topu için
+HOLD_PROP = {"vb_hold": ("all", None), "vb_pickup": ("from", 14), "vb_hold_pass": ("until", 11)}
+
+
+def _prop_ball(arm, clip, variant, keys):
+    """Önizleme için top küresi: ellerin tuttuğu yerde. Yalnızca bu klipler için görünür; yoksa gizlenir. (GLB ve .ycd'ye girmez.)"""
+    import bpy
+    ob = bpy.data.objects.get("vb_prop_ball")
+    if ob is None:
+        me = bpy.data.meshes.new("vb_prop_ball")
+        import bmesh
+        bm = bmesh.new()
+        bmesh.ops.create_uvsphere(bm, u_segments=24, v_segments=16, radius=BALL_R)
+        bm.to_mesh(me)
+        bm.free()
+        ob = bpy.data.objects.new("vb_prop_ball", me)
+        bpy.context.scene.collection.objects.link(ob)
+        mat = bpy.data.materials.new("vb_prop_ball")
+        mat.diffuse_color = (0.95, 0.78, 0.12, 1.0)
+        me.materials.append(mat)
+        ob.color = (0.95, 0.78, 0.12, 1.0)
+    if ob.animation_data:
+        ob.animation_data_clear()
+    spec = HOLD_PROP.get(variant)
+    ob.hide_render = ob.hide_viewport = spec is None
+    if spec is None:
+        return
+    mode, at = spec
+    filled = pk._filled(keys)
+    floor = clip.floor
+
+    def center(f):
+        pz = pk.pose_at(filled, f)
+        hl, hr = pz["hand_L"], pz["hand_R"]
+        return tuple((hl[i] + hr[i]) / 2.0 + GRIP[i] for i in range(3))
+
+    for f in range(0, clip.frames + 1):
+        if mode == "from" and f < at:
+            c = center(at)
+            c = (c[0], c[1], BALL_R)                       # grab kareden önce top yerde
+        elif mode == "until" and f > at:
+            c0, k = center(at), f - at                      # bıraktıktan sonra: ileri/yukarı süzülür (yalnızca görsel)
+            c = (c0[0], c0[1] + 0.045 * k, c0[2] + 0.05 * k - 0.0035 * k * k)
+        else:
+            c = center(f)
+        ob.location = (c[0], c[1], floor + c[2])
+        ob.keyframe_insert("location", frame=f)
+        if mode == "until" and f > at:
+            pass
+
+
 CLIPS = {
     "vb_ready_idle": ready_idle, "vb_bump": bump, "vb_set": set_pass, "vb_serve_under": serve_under,
     "vb_serve_over": serve_over, "vb_spike": spike, "vb_block": block, "vb_dig_low": dig_low,
     "vb_dig_side_R": dig_side_R, "vb_dig_side_L": dig_side_L, "vb_shuffle_R": shuffle_R, "vb_shuffle_L": shuffle_L,
-    "vb_celebrate": celebrate,
+    "vb_celebrate": celebrate, "vb_hold": hold, "vb_pickup": pickup, "vb_hold_pass": hold_pass,
 }
 
 
 def build(arm, cl, variant):
     frames, loop, keys = CLIPS[variant]()
     c = cl.Clip(arm, variant, frames, fps=30, loop=loop)
+    try:
+        from mathutils import Matrix
+        c.grip_rot = {k: Matrix(v) for k, v in GRIP_ROT.items()}
+    except (ImportError, TypeError):
+        pass
     worst = pk.animate(c, keys)
     c.key_frames = [k[0] for k in keys]
     c.ik_unreachable = worst
+    try:
+        _prop_ball(arm, c, variant, keys)      # yalnız Blender içinde (bpy); gen_animtable.py bunu çağırmaz
+    except ImportError:
+        pass
     return c

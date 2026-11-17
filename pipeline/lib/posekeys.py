@@ -28,6 +28,7 @@ STAND = {
     "elbow_L": (-0.5, -1.0, -0.6), "elbow_R": (0.5, -1.0, -0.6),
     "wrist_L": (0, 0, 0), "wrist_R": (0, 0, 0),
     "foot_L": (0, 0, 0), "foot_R": (0, 0, 0), "pitch_L": 0.0, "pitch_R": 0.0, "glide": 0,
+    "grip": 0.0,
 }
 EASE = {
     "smooth": lambda t: t * t * (3 - 2 * t), "lin": lambda t: t,
@@ -95,11 +96,30 @@ def animate(clip, keys):
         for side in "LR":
             h = p[f"hand_{side}"]
             clip.eval(f)
-            miss = clip.ik(f, *clip.ARMS[side], Vector((h[0], h[1], floor + h[2])), Vector(p[f"elbow_{side}"]))
+            tgt, elb = Vector((h[0], h[1], floor + h[2])), Vector(p[f"elbow_{side}"])
+            hand = clip.ARMS[side][2]
+            gw = p.get("grip", 0.0)
+            gr = getattr(clip, "grip_rot", None)
+            gripping = bool(gr) and gw > 0.001
+            if gripping:
+                # TUTUŞ: el yönü, doğal yönden referans tutuş yönüne `grip` ağırlığıyla harmanlanır; böylece top-el ofseti klipler
+                # arasında sabit kalır (oyunda top tek kemiğe tek ofsetle bağlanır).
+                import bpy
+                clip.ik(f, *clip.ARMS[side], tgt, elb)                      # doğal el yönünü ölç
+                P = clip.arm.pose.bones
+                P[hand].rotation_quaternion = (1, 0, 0, 0)
+                bpy.context.view_layer.update()
+                nat = P[hand].matrix.to_3x3().to_quaternion()
+                q = nat.slerp(gr[side].to_quaternion(), min(1.0, gw))
+                miss = clip.ik(f, *clip.ARMS[side], tgt, elb, end_rot=q.to_matrix())
+            else:
+                miss = clip.ik(f, *clip.ARMS[side], tgt, elb)
             if miss > worst_at[0]:
                 worst_at = (miss, f"hand_{side}", f)
             worst = max(worst, miss)
-            w = p[f"wrist_{side}"]
-            clip.set(f, {clip.ARMS[side][2]: [("x", w[0]), ("y", w[1]), ("z", w[2])]}, interp="LINEAR")
+            if not gripping:
+                w = p[f"wrist_{side}"]
+                clip.set(f, {hand: [("x", w[0]), ("y", w[1]), ("z", w[2])]}, interp="LINEAR")
     clip.ik_worst_at = worst_at
+    clip.floor = floor
     return worst
