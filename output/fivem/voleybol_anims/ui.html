@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: transparent; font-family: 'Segoe UI', Arial, sans-serif; color: #eef3f0; user-select: none; }
+  #panel { display: none; position: absolute; right: 24px; top: 50%; transform: translateY(-50%); width: 300px; max-height: 86vh;
+    background: rgba(14, 20, 17, .94); border: 1px solid #2c3a32; border-radius: 6px; flex-direction: column; overflow: hidden; }
+  #panel.on { display: flex; }
+  header { padding: 12px 14px; border-bottom: 3px solid #2fbf8a; display: flex; align-items: baseline; justify-content: space-between; }
+  header b { font-size: 17px; letter-spacing: .06em; text-transform: uppercase; }
+  header span { font-size: 11px; color: #8da096; }
+  #list { overflow-y: auto; padding: 6px 10px 10px; }
+  h3 { margin: 12px 2px 4px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #8da096; }
+  button.clip { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 3px 0; padding: 9px 11px;
+    background: #1b2620; color: inherit; border: 1px solid #2c3a32; border-radius: 4px; font: inherit; font-size: 14px; cursor: pointer; text-align: left; }
+  button.clip:hover { border-color: #2fbf8a; background: #22312a; }
+  button.clip.on { background: #2fbf8a; border-color: #2fbf8a; color: #08140e; font-weight: 600; }
+  button.clip small { font-size: 11px; opacity: .7; white-space: nowrap; }
+  footer { padding: 10px 12px; border-top: 1px solid #2c3a32; display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
+  .row { display: flex; align-items: center; gap: 8px; }
+  input[type=range] { flex: 1; accent-color: #2fbf8a; }
+  .btns { display: flex; gap: 8px; }
+  .btns button { flex: 1; padding: 9px; border-radius: 4px; border: 1px solid #2c3a32; background: #1b2620; color: inherit; font: inherit; cursor: pointer; }
+  .btns button.stop { background: #8f2f2f; border-color: #8f2f2f; }
+  .btns button:hover { filter: brightness(1.2); }
+</style></head>
+<body>
+<div id="panel">
+  <header><b>Voleybol</b><span>Esc: kapat</span></header>
+  <div id="list"></div>
+  <footer>
+    <label class="row"><input type="checkbox" id="upper"> Hareket edebileyim (üst vücut)</label>
+    <label class="row">Hız <input type="range" id="speed" min="0.5" max="1.5" step="0.05" value="1"><span id="sv">1.0x</span></label>
+    <div class="btns"><button class="stop" id="stop">Durdur</button><button id="close">Kapat</button></div>
+  </footer>
+</div>
+<script>
+const $ = (id) => document.getElementById(id);
+const post = (name, data) => fetch(`https://${GetParentResourceName()}/${name}`, { method: 'POST', body: JSON.stringify(data || {}) });
+let playing = null;
+function mark() { document.querySelectorAll('button.clip').forEach(b => b.classList.toggle('on', b.dataset.name === playing)); }
+function build(clips) {
+  const list = $('list'); list.innerHTML = '';
+  let group = null;
+  for (const c of clips) {
+    if (c.group !== group) { group = c.group; const h = document.createElement('h3'); h.textContent = group; list.appendChild(h); }
+    const b = document.createElement('button');
+    b.className = 'clip'; b.dataset.name = c.name;
+    b.innerHTML = `<span>${c.title}</span><small>${c.loop ? 'döngü' : c.sec + ' sn'}</small>`;
+    b.onclick = () => { playing = c.name; mark(); post('play', { name: c.name, speed: parseFloat($('speed').value), upper: $('upper').checked }); };
+    list.appendChild(b);
+  }
+}
+$('speed').oninput = () => { $('sv').textContent = parseFloat($('speed').value).toFixed(1) + 'x'; };
+$('stop').onclick = () => { playing = null; mark(); post('stop'); };
+$('close').onclick = () => post('close');
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') post('close'); });
+window.addEventListener('message', (e) => {
+  const m = e.data;
+  if (m.type === 'open') { build(m.clips); playing = m.current; mark(); $('panel').classList.add('on'); }
+  else if (m.type === 'close') $('panel').classList.remove('on');
+  else if (m.type === 'playing') { playing = m.name; mark(); }
+});
+</script>
+</body></html>

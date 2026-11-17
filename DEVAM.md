@@ -59,7 +59,7 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
   parmaklar hareketsiz (el açık); top yok; plonjon (yere atlama) yok; koşu/yaklaşma adımları yok (smaç yerinden sıçrıyor).
 - Dosya düzeyi export testi: `export_ycd.py -- mp_m_freemode_01 vb_spike 1 test` -> `cache/rt/export_test/` (onay kapısına dokunmaz). Geçti (0,04°).
 - `server/main.py` export artık sürümün `ped` alanını kullanıyor (SUNUCU YENİDEN BAŞLATILMALI).
-- FiveM test resource: `python pipeline/build_fivem.py` -> `output/fivem/animcreator_anims/` (`/animtest <clip>`, `/animstop`).
+- FiveM test resource: `python pipeline/build_fivem.py` -> `output/fivem/voleybol_anims/` (`/animtest <clip>`, `/animstop`).
   Yalnızca onaylanıp export edilmiş clip'leri toplar.
 - İnternetten hazır animasyon kullanılmadı (lisans belirsiz + mocap'in GTA iskeletine aktarımı ayrı iş).
 
@@ -68,7 +68,7 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
 2. Oyun testine göre: kök konumu oyunda çalışıyor mu (zıplama/çömelme), yön doğru mu, geçişler.
 3. Eksik hareketler: plonjon, yaklaşma adımlı smaç, sıçrayarak servis, parmak pozları (yumruk/açık el), kadın ped üzerinde kontrol.
 4. Arayüz: uyarıları İncele panelinde göster; toplu onay; freemode kamera çerçevesi.
-- 17 Kas (sonra): Kullanıcı isteğiyle 13 vb_ clip'i onaylandı + export edildi (`output/export/vb_*/v1/*.ycd`), `output/fivem/animcreator_anims/` kuruldu (14 clip).
+- 17 Kas (sonra): Kullanıcı isteğiyle 13 vb_ clip'i onaylandı + export edildi (`output/export/vb_*/v1/*.ycd`), `output/fivem/voleybol_anims/` kuruldu (14 clip).
   uvicorn yeniden başlatıldı (gizli pencere, log `cache/api.log`). Video önizleme: `pipeline/render_video.py -- <ped> vb_` -> `cache/preview/video/*.mp4`.
   iPad önizleme sayfası: https://claude.ai/artifact/N1RyJNthuuGHfrNFJQWy8X (videolar gömülü; güncellemek için sayfayı yeniden üretip aynı dosyadan yayınla).
   FiveM paketi henüz bir sunucuya KOPYALANMADI (sunucu yolu bilinmiyor) ve oyunda denenmedi.
@@ -77,3 +77,6 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
   (3) Michael'ın ceketi parçalanıyordu: `CLOTH` vertex grubu (oyunda kumaş simülasyonu) iskelette yok -> `fix_orphan_groups`
   bu köşeleri en yakın gövde kemiğine bağlıyor, `player_zero` GLB yeniden üretildi; (4) ped değiştirince animasyon durup
   ped T-pozda arkadan görünüyordu -> `Player.attach` seçili clip'i yeniden başlatıyor.
+- 17 Kas: FiveM paketi tek resource oldu: `python pipeline/build_fivem.py` -> `output/fivem/voleybol_anims/` (client.lua + ui.html + stream/*.ycd).
+  Oyunda `ensure voleybol_anims`, F6 veya /vb menüsü (tıkla-oynat, hız, üst vücut modu, Durdur); /animtest <clip>, /animstop de çalışır.
+  Lua sözdizimi `luac -p` ile doğrulandı; oyunda ve NUI HENÜZ DENENMEDİ. Yeni clip export edince build_fivem.py'yi yeniden çalıştır.

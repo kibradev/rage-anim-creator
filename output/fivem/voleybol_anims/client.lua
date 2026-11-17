@@ -1,0 +1,81 @@
+-- Voleybol animasyonlari: tek resource, F6 veya /vb ile menu.
+local LOOP = {
+    ['vb_block'] = false,
+    ['vb_bump'] = false,
+    ['vb_celebrate'] = false,
+    ['vb_dig_low'] = false,
+    ['vb_dig_side_L'] = false,
+    ['vb_dig_side_R'] = false,
+    ['vb_ready_idle'] = true,
+    ['vb_serve_over'] = false,
+    ['vb_serve_under'] = false,
+    ['vb_set'] = false,
+    ['vb_shuffle_L'] = true,
+    ['vb_shuffle_R'] = true,
+    ['vb_spike'] = false,
+    ['wave_hand'] = false
+}
+local CLIPS = [{"name": "vb_ready_idle", "title": "Hazır bekleme", "group": "Duruş", "loop": true, "sec": 2.0}, {"name": "vb_shuffle_R", "title": "Sağa yan adım", "group": "Duruş", "loop": true, "sec": 0.7}, {"name": "vb_shuffle_L", "title": "Sola yan adım", "group": "Duruş", "loop": true, "sec": 0.7}, {"name": "vb_bump", "title": "Manşet pas", "group": "Top kontrolü", "loop": false, "sec": 1.3}, {"name": "vb_set", "title": "Parmak pas", "group": "Top kontrolü", "loop": false, "sec": 1.3}, {"name": "vb_serve_under", "title": "Alttan servis", "group": "Servis", "loop": false, "sec": 1.8}, {"name": "vb_serve_over", "title": "Üstten servis", "group": "Servis", "loop": false, "sec": 2.1}, {"name": "vb_block", "title": "Blok", "group": "Hücum / blok", "loop": false, "sec": 1.9}, {"name": "vb_spike", "title": "Smaç", "group": "Hücum / blok", "loop": false, "sec": 2.4}, {"name": "vb_dig_low", "title": "Alçak defans", "group": "Defans", "loop": false, "sec": 1.5}, {"name": "vb_dig_side_R", "title": "Sağa defans", "group": "Defans", "loop": false, "sec": 1.7}, {"name": "vb_dig_side_L", "title": "Sola defans", "group": "Defans", "loop": false, "sec": 1.7}, {"name": "wave_hand", "title": "El sallama", "group": "Diğer", "loop": false, "sec": 3.0}, {"name": "vb_celebrate", "title": "Sayı sevinci", "group": "Diğer", "loop": false, "sec": 2.3}]
+local open = false
+local current = nil
+
+local function loadDict(name)
+    if HasAnimDictLoaded(name) then return true end
+    RequestAnimDict(name)
+    local t = GetGameTimer()
+    while not HasAnimDictLoaded(name) do
+        Wait(0)
+        if GetGameTimer() - t > 5000 then return false end
+    end
+    return true
+end
+
+-- opts: speed (1.0 = normal), upper (hareket edebilir, ust vucut)
+local function play(name, opts)
+    if LOOP[name] == nil then return false end
+    opts = opts or {}
+    if not loadDict(name) then
+        TriggerEvent('chat:addMessage', { args = { 'voleybol', 'Animasyon yuklenemedi: ' .. name .. ' (stream klasoru dogru mu?)' } })
+        return false
+    end
+    local ped = PlayerPedId()
+    local flag = LOOP[name] and 1 or 0
+    if opts.upper then flag = flag + 48 end
+    local speed = opts.speed or 1.0
+    TaskPlayAnim(ped, name, name, 8.0 * speed, -8.0 * speed, -1, flag, 0.0, false, false, false)
+    SetEntityAnimSpeed(ped, name, name, speed)
+    current = name
+    return true
+end
+
+local function stop()
+    ClearPedTasks(PlayerPedId())
+    current = nil
+end
+
+local function setOpen(v)
+    open = v
+    SetNuiFocus(v, v)
+    SendNUIMessage({ type = v and 'open' or 'close', clips = CLIPS, current = current })
+end
+
+RegisterCommand('vb', function() setOpen(not open) end, false)
+RegisterKeyMapping('vb', 'Voleybol animasyon menusu', 'keyboard', 'F6')
+
+RegisterCommand('animtest', function(_, args)
+    if args[1] and play(args[1]) then return end
+    local names = {}
+    for k in pairs(LOOP) do names[#names + 1] = k end
+    table.sort(names)
+    TriggerEvent('chat:addMessage', { args = { 'animtest', table.concat(names, ', ') } })
+end, false)
+RegisterCommand('animstop', stop, false)
+
+RegisterNUICallback('play', function(data, cb)
+    if play(data.name, { speed = tonumber(data.speed) or 1.0, upper = data.upper == true }) then
+        SendNUIMessage({ type = 'playing', name = data.name })
+    end
+    cb('ok')
+end)
+RegisterNUICallback('stop', function(_, cb) stop(); SendNUIMessage({ type = 'playing', name = nil }); cb('ok') end)
+RegisterNUICallback('close', function(_, cb) setOpen(false); cb('ok') end)
