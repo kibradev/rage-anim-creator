@@ -25,8 +25,11 @@ TITLES = {
 TITLES.update({
     "vbs_spike": ("TEST Smaç (script)", "Test (script)"), "vbs_block": ("TEST Blok (script)", "Test (script)"),
     "vbs_dig_side_R": ("TEST Sağa defans (script)", "Test (script)"),
+    "vbm_spike": ("TEST Smaç (mover)", "Test (mover)"), "vbm_block": ("TEST Blok (mover)", "Test (mover)"),
+    "vbm_celebrate": ("TEST Sayı sevinci (mover)", "Test (mover)"), "vbm_bump": ("TEST Manşet (mover)", "Test (mover)"),
+    "vbm_dig_side_R": ("TEST Sağa defans (mover)", "Test (mover)"),
 })
-ORDER = ["Duruş", "Top kontrolü", "Servis", "Hücum / blok", "Defans", "Diğer", "Test (script)"]
+ORDER = ["Duruş", "Top kontrolü", "Servis", "Hücum / blok", "Defans", "Diğer", "Test (mover)", "Test (script)"]
 
 HIP = {}
 clips = {}
@@ -37,6 +40,8 @@ for d in sorted(EXPORT.iterdir()) if EXPORT.exists() else []:
         if mp.exists():
             meta = json.loads(mp.read_text("utf-8"))
             info = next((v for v in meta["versions"] if v["v"] == vers[-1][0]), {})
+        elif (ROOT / "output" / d.name / "mover.json").exists():  # Rockstar-split variants (pipeline/export_mover.py)
+            info = json.loads((ROOT / "output" / d.name / "mover.json").read_text("utf-8"))
         else:  # script-root variants (pipeline/export_script.py) carry hip.json instead
             info = json.loads((ROOT / "output" / d.name / "hip.json").read_text("utf-8"))
             HIP[d.name] = {k: info[k] for k in ("n", "duration", "x", "y", "z")}
@@ -372,11 +377,11 @@ RegisterCommand('vbjump', function(_, args)
     end)
 end, false)
 
--- /vbref [clip]: OYUNUN KENDI ziplama dansini oynatir (nightclub jumper; varsayilan high_center, dongulu). Kiyas icin: bu senin
--- sunucunda ziplar gibi gorunuyorsa kalca hareketi uygulaniyor demektir. /animstop ile durur.
+-- /vbref [clip] [dict]: OYUNUN KENDI ziplama kutlamasini oynatir (arena celeb jump_b_player_a: comelme kalcada, havaya
+-- kalkis mover'da; vbm_ test varyantlari ayni duzende). /vbref jump_a_player_a, jump_c_player_a, flip_a_player_a da var.
 RegisterCommand('vbref', function(_, args)
-    local dict = 'anim@amb@nightclub@mini@dance@dance_solo@jumper@'
-    local clip = args[1] or 'high_center'
+    local clip = args[1] or 'jump_b_player_a'
+    local dict = args[2] or 'anim@arena@celeb@flat@solo@no_props@'
     RequestAnimDict(dict)
     local t = GetGameTimer()
     while not HasAnimDictLoaded(dict) and GetGameTimer() - t < 5000 do Wait(0) end
@@ -384,7 +389,7 @@ RegisterCommand('vbref', function(_, args)
         TriggerEvent('chat:addMessage', {{ args = {{ 'vbref', 'dict yuklenemedi: ' .. dict }} }})
         return
     end
-    TaskPlayAnim(PlayerPedId(), dict, clip, 8.0, -8.0, -1, 1, 0.0, false, false, false)
+    TaskPlayAnim(PlayerPedId(), dict, clip, 8.0, -8.0, -1, 0, 0.0, false, false, false)
     TriggerEvent('chat:addMessage', {{ args = {{ 'vbref', 'oynuyor: ' .. clip .. ' (durdurmak icin /animstop)' }} }})
 end, false)
 

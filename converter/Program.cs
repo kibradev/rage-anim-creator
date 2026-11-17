@@ -24,13 +24,14 @@ if (args.Length == 3 && args[0] == "ycd2xmlfile")
 if (args.Length < 3) { Console.Error.WriteLine("usage: ycd2xml <gtaDir> <outDir> <name|prefix*>..."); return 1; }
 string gta = args[0], outDir = args[1];
 var patterns = args.Skip(2).Select(a => a.ToLowerInvariant()).ToList();
-Directory.CreateDirectory(outDir);
+if (outDir != "-") Directory.CreateDirectory(outDir);
 
 GTA5Keys.LoadFromPath(gta, false, null);
 var man = new RpfManager();
 man.Init(gta, false, s => { }, e => Console.Error.WriteLine("ERR " + e), false, false);
 
-bool Match(string n) => patterns.Any(p => p.EndsWith("*") ? n.StartsWith(p[..^1]) : n == p);
+bool Match(string n) => patterns.Any(p => p.EndsWith("*") ? n.StartsWith(p[..^1]) : p.StartsWith("~") ? n.Contains(p[1..]) : n == p);
+bool listOnly = outDir == "-"; // ycd2xml <gta> - ~jump ~tennis   -> only print matching names
 
 var chosen = new Dictionary<string, RpfFileEntry>();
 foreach (var rpf in man.AllRpfs)
@@ -44,6 +45,7 @@ foreach (var rpf in man.AllRpfs)
     }
 }
 Console.WriteLine($"matched {chosen.Count} ycd");
+if (listOnly) { foreach (var n in chosen.Keys.OrderBy(x => x)) Console.WriteLine(n); return 0; }
 int ok = 0;
 foreach (var (n, fe) in chosen)
 {
