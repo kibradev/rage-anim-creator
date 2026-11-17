@@ -1,0 +1,38 @@
+{
+ "name": "wave_hand",
+ "versions": [
+  {
+   "v": 1,
+   "label": "ilk surum",
+   "frames": 90,
+   "fps": 30,
+   "duration": 3.0,
+   "loop": false,
+   "file": "v1.glb",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_UpperArm"
+   ]
+  },
+  {
+   "v": 2,
+   "label": "game_facing",
+   "frames": 90,
+   "fps": 30,
+   "duration": 3.0,
+   "loop": false,
+   "file": "v2.glb",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_ROOT",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_UpperArm"
+   ]
+  }
+ ]
+}

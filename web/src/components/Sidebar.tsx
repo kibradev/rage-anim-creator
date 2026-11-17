@@ -1,5 +1,6 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Switch } from '@/components/ui/switch'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { ClipList } from '@/components/ClipList'
 import type { Clip, Ped } from '@/lib/types'
 
@@ -10,13 +11,16 @@ type Props = {
   skeleton: boolean
   onSkeleton: (v: boolean) => void
   clips: Clip[]
+  mine: Clip[]
+  tab: 'orig' | 'mine'
+  onTab: (t: 'orig' | 'mine') => void
   clip: Clip | null
   onClip: (c: Clip) => void
   inPlace: boolean
   onInPlace: (v: boolean) => void
 }
 
-export function Sidebar({ peds, ped, onPed, skeleton, onSkeleton, clips, clip, onClip, inPlace, onInPlace }: Props) {
+export function Sidebar({ peds, ped, onPed, skeleton, onSkeleton, clips, mine, tab, onTab, clip, onClip, inPlace, onInPlace }: Props) {
   return (
     <aside className="flex w-72 shrink-0 flex-col gap-4 border-r border-border p-4">
       <div className="text-sm font-medium tracking-tight">animCreator</div>
@@ -39,7 +43,13 @@ export function Sidebar({ peds, ped, onPed, skeleton, onSkeleton, clips, clip, o
         </SelectContent>
       </Select>
 
-      <ClipList clips={clips} selected={clip} onSelect={onClip} />
+      <Tabs value={tab} onValueChange={(v) => onTab(v as 'orig' | 'mine')}>
+        <TabsList className="w-full">
+          <TabsTrigger value="orig">Orijinal</TabsTrigger>
+          <TabsTrigger value="mine">Benim{mine.length ? ` (${mine.length})` : ''}</TabsTrigger>
+        </TabsList>
+      </Tabs>
+      <ClipList key={tab} clips={tab === 'orig' ? clips : mine} selected={clip} onSelect={onClip} />
 
       <label className="flex items-center justify-between text-sm">
         Yerinde (root motion kapalı)

@@ -11,6 +11,8 @@ export default function App() {
   const [peds, setPeds] = useState<Ped[]>([])
   const [ped, setPed] = useState<string | null>(null)
   const [clips, setClips] = useState<Clip[]>([])
+  const [mine, setMine] = useState<Clip[]>([])
+  const [tab, setTab] = useState<'orig' | 'mine'>('orig')
   const [clip, setClip] = useState<Clip | null>(null)
   const [skeleton, setSkeleton] = useState(false)
   const [inPlace, setInPlace] = useState(true)
@@ -33,6 +35,25 @@ export default function App() {
       .catch(() => setClips([]))
   }, [])
 
+  // authored clips: poll so a newly generated version shows up without reloading
+  useEffect(() => {
+    let alive = true
+    const load = () =>
+      fetch('/api/mine')
+        .then((r) => r.json())
+        .then((list: Clip[]) => {
+          if (!alive) return
+          setMine((prev) => (JSON.stringify(prev) === JSON.stringify(list) ? prev : list))
+        })
+        .catch(() => {})
+    load()
+    const id = setInterval(load, 3000)
+    return () => {
+      alive = false
+      clearInterval(id)
+    }
+  }, [])
+
   const current = peds.find((p) => p.name === ped) ?? null
 
   return (
@@ -45,6 +66,9 @@ export default function App() {
           skeleton={skeleton}
           onSkeleton={setSkeleton}
           clips={clips}
+          mine={mine}
+          tab={tab}
+          onTab={setTab}
           clip={clip}
           onClip={setClip}
           inPlace={inPlace}

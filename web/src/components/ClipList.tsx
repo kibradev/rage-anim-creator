@@ -20,12 +20,18 @@ export function ClipList({ clips, selected, onSelect }: Props) {
           <CommandGroup key={dict} heading={dict}>
             {list.map((c) => (
               <CommandItem
-                key={c.dict + c.name}
-                value={`${c.dict} ${c.name}`}
-                data-checked={selected?.dict === c.dict && selected.name === c.name}
+                key={c.url + c.name}
+                value={`${c.dict} ${c.name} ${c.version ?? ''}`}
+                data-checked={selected?.url === c.url && selected.name === c.name}
                 onSelect={() => onSelect(c)}
               >
                 <span className="truncate">{c.name.replace(/\.clip$/, '')}</span>
+                {c.version && (
+                  <span className="ml-auto text-xs text-muted-foreground">
+                    v{c.version}
+                    {c.label ? ` · ${c.label}` : ''}
+                  </span>
+                )}
               </CommandItem>
             ))}
           </CommandGroup>
