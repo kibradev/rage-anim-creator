@@ -13,11 +13,6 @@ local LOOP = {
     ['vb_shuffle_L'] = true,
     ['vb_shuffle_R'] = true,
     ['vb_spike'] = false,
-    ['vbm_block'] = false,
-    ['vbm_bump'] = false,
-    ['vbm_celebrate'] = false,
-    ['vbm_dig_side_R'] = false,
-    ['vbm_spike'] = false,
     ['wave_hand'] = false
 }
 local CLIPS = {
@@ -34,12 +29,7 @@ local CLIPS = {
     { name = "vb_dig_side_R", title = "Sağa defans", group = "Defans", loop = false, sec = 1.7 },
     { name = "vb_dig_side_L", title = "Sola defans", group = "Defans", loop = false, sec = 1.7 },
     { name = "wave_hand", title = "El sallama", group = "Diğer", loop = false, sec = 3.0 },
-    { name = "vb_celebrate", title = "Sayı sevinci", group = "Diğer", loop = false, sec = 2.3 },
-    { name = "vbm_block", title = "TEST Blok (mover)", group = "Test (mover)", loop = false, sec = 1.9 },
-    { name = "vbm_bump", title = "TEST Manşet (mover)", group = "Test (mover)", loop = false, sec = 1.3 },
-    { name = "vbm_celebrate", title = "TEST Sayı sevinci (mover)", group = "Test (mover)", loop = false, sec = 2.3 },
-    { name = "vbm_dig_side_R", title = "TEST Sağa defans (mover)", group = "Test (mover)", loop = false, sec = 1.7 },
-    { name = "vbm_spike", title = "TEST Smaç (mover)", group = "Test (mover)", loop = false, sec = 2.4 }
+    { name = "vb_celebrate", title = "Sayı sevinci", group = "Diğer", loop = false, sec = 2.3 }
 }
 local open = false
 local current = nil

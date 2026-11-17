@@ -246,7 +246,7 @@
    "loop": false,
    "file": "v4.glb",
    "module": "volleyball:vb_spike",
-   "status": "pending",
+   "status": "approved",
    "report": {
     "loop_gap_deg": 0.0,
     "max_step_deg": 143.52,
