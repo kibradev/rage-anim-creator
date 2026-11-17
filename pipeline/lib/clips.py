@@ -85,7 +85,59 @@ def sine_ops(bone_axis_amp_phase, t: float, cycles: float = 1.0):
     return [(ax, amp * math.sin(2 * math.pi * (cycles * t + ph))) for ax, amp, ph in bone_axis_amp_phase]
 
 
-def export_version(arm, clip: Clip, out_root: Path, label: str = "") -> dict:
+def dump_action(action) -> list:
+    """Serialisable copy of every fcurve (keys, interpolation, handles) so a version can be re-exported later."""
+    out = []
+    for fc in action.fcurves:
+        out.append({
+            "path": fc.data_path, "index": fc.array_index, "group": fc.group.name if fc.group else "",
+            "keys": [{"co": list(k.co), "interp": k.interpolation, "hl": list(k.handle_left), "hr": list(k.handle_right),
+                      "hlt": k.handle_left_type, "hrt": k.handle_right_type} for k in fc.keyframe_points],
+        })
+    return out
+
+
+class LoadedClip:
+    """Clip rebuilt from a dumped action; enough surface for lib.export_ycd."""
+
+    def __init__(self, arm, name, frames, fps, curves):
+        self.arm, self.name, self.frames, self.fps = arm, name, frames, fps
+        self.action = bpy.data.actions.new(name)
+        for c in curves:
+            fc = self.action.fcurves.new(c["path"], index=c["index"], action_group=c["group"])
+            fc.keyframe_points.add(len(c["keys"]))
+            for kp, k in zip(fc.keyframe_points, c["keys"]):
+                kp.co = k["co"]
+                kp.interpolation = k["interp"]
+                kp.handle_left_type, kp.handle_right_type = k["hlt"], k["hrt"]
+                kp.handle_left, kp.handle_right = k["hl"], k["hr"]
+            fc.update()
+        self.action.frame_range = (0, frames)
+
+
+def quality_report(arm, clip) -> dict:
+    """Numbers shown before export: loop seam gap and the fastest per-frame rotation change (degrees)."""
+    bones = sorted({fc.data_path.split('"')[1] for fc in clip.action.fcurves if fc.data_path.startswith("pose.bones")})
+
+    def quat(b, f):
+        path = f'pose.bones["{b}"].rotation_quaternion'
+        cs = [clip.action.fcurves.find(path, index=i) for i in range(4)]
+        return Quaternion([c.evaluate(f) if c else (1.0 if i == 0 else 0.0) for i, c in enumerate(cs)]).normalized()
+
+    def ang(a, b):
+        return math.degrees(2 * math.acos(min(1.0, abs(a.dot(b)))))
+
+    gap, fastest, fastest_at = 0.0, 0.0, ""
+    for b in bones:
+        gap = max(gap, ang(quat(b, 0), quat(b, clip.frames)))
+        for f in range(clip.frames):
+            d = ang(quat(b, f), quat(b, f + 1))
+            if d > fastest:
+                fastest, fastest_at = d, f"{b}@{f}"
+    return {"loop_gap_deg": round(gap, 2), "max_step_deg": round(fastest, 2), "max_step_at": fastest_at}
+
+
+def export_version(arm, clip: Clip, out_root: Path, label: str = "", module: str = "") -> dict:
     """Bake the clip into a single NLA track, export output/<name>/vN.glb and update meta.json."""
     from . import anims as animlib
 
@@ -105,9 +157,12 @@ def export_version(arm, clip: Clip, out_root: Path, label: str = "") -> dict:
     n = len(meta["versions"]) + 1
     glb = d / f"v{n}.glb"
     animlib.export_armature_glb(arm, str(glb))
+    (d / f"v{n}.action.json").write_text(json.dumps({"frames": clip.frames, "fps": clip.fps, "curves": dump_action(clip.action)}), "utf-8")
+    report = quality_report(arm, clip)
     meta["versions"].append({
         "v": n, "label": label, "frames": clip.frames, "fps": clip.fps,
-        "duration": clip.frames / clip.fps, "loop": clip.loop, "file": glb.name,
+        "duration": clip.frames / clip.fps, "loop": clip.loop, "file": glb.name, "module": module,
+        "status": "pending", "report": report,
         "bones": sorted({fc.data_path.split('"')[1] for fc in clip.action.fcurves if fc.data_path.startswith("pose.bones")}),
     })
     meta_path.write_text(json.dumps(meta, indent=1), "utf-8")

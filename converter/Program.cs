@@ -2,6 +2,25 @@
 // Reads .ycd directly from the game RPFs via CodeWalker.Core and writes <name>.ycd.xml (read-only on the game).
 using CodeWalker.GameFiles;
 
+// xml2ycd <in.ycd.xml> <out.ycd>   |   ycd2xmlfile <in.ycd> <out.ycd.xml>  (standalone files, no game keys needed)
+if (args.Length == 3 && args[0] == "xml2ycd")
+{
+    var doc = new System.Xml.XmlDocument(); doc.LoadXml(File.ReadAllText(args[1]));
+    var data = XmlMeta.GetYcdData(doc);
+    if (data == null) { Console.Error.WriteLine("xml has no ClipDictionary"); return 2; }
+    File.WriteAllBytes(args[2], data);
+    Console.WriteLine($"wrote {args[2]} ({data.Length} bytes)");
+    return 0;
+}
+if (args.Length == 3 && args[0] == "ycd2xmlfile")
+{
+    var ycd = new YcdFile();
+    RpfFile.LoadResourceFile(ycd, File.ReadAllBytes(args[1]), 46);
+    File.WriteAllText(args[2], MetaXml.GetXml(ycd, out _));
+    Console.WriteLine($"wrote {args[2]}");
+    return 0;
+}
+
 if (args.Length < 3) { Console.Error.WriteLine("usage: ycd2xml <gtaDir> <outDir> <name|prefix*>..."); return 1; }
 string gta = args[0], outDir = args[1];
 var patterns = args.Skip(2).Select(a => a.ToLowerInvariant()).ToList();

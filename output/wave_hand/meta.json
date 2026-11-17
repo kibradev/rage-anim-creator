@@ -33,6 +33,54 @@
     "SKEL_R_Hand",
     "SKEL_R_UpperArm"
    ]
+  },
+  {
+   "v": 3,
+   "label": "rapor",
+   "frames": 90,
+   "fps": 30,
+   "duration": 3.0,
+   "loop": false,
+   "file": "v3.glb",
+   "module": "wave_hand",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 59.4,
+    "max_step_at": "SKEL_R_Forearm@80"
+   },
+   "bones": [
+    "SKEL_Head",
+    "SKEL_ROOT",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_UpperArm"
+   ]
+  },
+  {
+   "v": 4,
+   "label": "rapor-normalize",
+   "frames": 90,
+   "fps": 30,
+   "duration": 3.0,
+   "loop": false,
+   "file": "v4.glb",
+   "module": "wave_hand",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 7.52,
+    "max_step_at": "SKEL_R_Hand@18"
+   },
+   "bones": [
+    "SKEL_Head",
+    "SKEL_ROOT",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_UpperArm"
+   ]
   }
  ]
 }

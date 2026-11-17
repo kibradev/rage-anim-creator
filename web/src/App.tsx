@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Toaster } from '@/components/ui/sonner'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import { ReviewSheet } from '@/components/ReviewSheet'
+import { Button } from '@/components/ui/button'
 import { Sidebar } from '@/components/Sidebar'
 import { Timeline } from '@/components/Timeline'
 import { Viewport } from '@/components/Viewport'
@@ -14,6 +16,7 @@ export default function App() {
   const [mine, setMine] = useState<Clip[]>([])
   const [tab, setTab] = useState<'orig' | 'mine'>('orig')
   const [clip, setClip] = useState<Clip | null>(null)
+  const [review, setReview] = useState(false)
   const [skeleton, setSkeleton] = useState(false)
   const [inPlace, setInPlace] = useState(true)
   const player = useRef(new Player()).current
@@ -36,23 +39,22 @@ export default function App() {
   }, [])
 
   // authored clips: poll so a newly generated version shows up without reloading
-  useEffect(() => {
-    let alive = true
-    const load = () =>
+  const loadMine = useCallback(
+    () =>
       fetch('/api/mine')
         .then((r) => r.json())
-        .then((list: Clip[]) => {
-          if (!alive) return
-          setMine((prev) => (JSON.stringify(prev) === JSON.stringify(list) ? prev : list))
-        })
-        .catch(() => {})
-    load()
-    const id = setInterval(load, 3000)
-    return () => {
-      alive = false
-      clearInterval(id)
-    }
-  }, [])
+        .then((list: Clip[]) => setMine((prev) => (JSON.stringify(prev) === JSON.stringify(list) ? prev : list)))
+        .catch(() => {}),
+    [],
+  )
+  useEffect(() => {
+    loadMine()
+    const id = setInterval(loadMine, 3000)
+    return () => clearInterval(id)
+  }, [loadMine])
+
+  // keep the selected authored clip in sync with status/export changes
+  const liveClip = clip?.version ? (mine.find((m) => m.url === clip.url) ?? clip) : clip
 
   const current = peds.find((p) => p.name === ped) ?? null
 
@@ -80,10 +82,18 @@ export default function App() {
         <div className="flex min-w-0 flex-1 flex-col">
           <main className="relative min-h-0 flex-1">
             <Viewport url={current?.url ?? null} skeleton={skeleton} player={player} clip={clip} />
+            {liveClip?.version && (
+              <Button className="absolute top-4 right-4" variant="secondary" size="sm" onClick={() => setReview(true)}>
+                İncele
+              </Button>
+            )}
           </main>
           <Timeline player={player} label={clip ? clip.name.replace(/\.clip$/, '') : ''} />
         </div>
       </div>
+      {liveClip?.version && (
+        <ReviewSheet clip={liveClip} open={review} onOpenChange={setReview} onChanged={loadMine} />
+      )}
       <Toaster />
     </TooltipProvider>
   )

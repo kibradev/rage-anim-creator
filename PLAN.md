@@ -139,6 +139,20 @@ Tek ekran, üç bölge, koyu tema, shadcn/ui:
   (5) Animasyonlar dinlenme duruşunun tersine bakıyor -> web'de ped 180° döndürülüyor.
 - Web: Player (AnimationMixer sarmalayıcı), arama + gruplu liste, zaman çubuğu, hız, döngü, boşluk tuşu.
 
+## Aşama 3-4 sonuçları
+- `pipeline/lib/clips.py`: `Clip` (eksenler iskelet-uzayı, rest'e göre; `set`, `key_rest`, `close_loop`), `export_version`,
+  `quality_report`. Clip tanımları `pipeline/clip_defs/<ad>.py` (`build(arm, cl)`), çalıştırma:
+  `blender -b --python pipeline/make_clip.py -- player_zero <modul> "<etiket>"` -> `output/<ad>/vN.glb|.action.json|meta.json`.
+- Onay kapısı: sürüm `pending` doğar; yalnızca arayüzdeki "Onayla" (veya `POST /api/mine/{ad}/{v}/status`) `approved` yapar;
+  `POST /api/export` onaysız sürümü reddeder (409). Export yalnızca kaydedilmiş action'dan (`vN.action.json`) yapılır = önizlenenin aynısı.
+- `.ycd` hattı: Sollumz `export_ycd` (XML) -> `converter xml2ycd` (ikili). Doğrulama: ikili -> XML -> içe aktar -> kemik dönüşü karşılaştırması
+  (wave_hand v4: en büyük sapma 0,097°; orijinal GTA clip'lerinin kendi gidiş-dönüş sapması ~1°).
+- Tuzaklar: (1) Blender'ın bileşen-bazlı quaternion interpolasyonu birim olmayan quaternion üretir; açı ölçerken `.normalized()`
+  kullan, yoksa sahte büyük hız/hata görünür. (2) Yetkili clip'lerde `SKEL_ROOT` 180° Z yaw anahtarı gerekir (`game_facing`),
+  yoksa ped arkasını döner. (3) `target_id` atamadan önce action atanırsa Sollumz ikinci kez retarget eder; önce hedef, sonra action.
+  (4) Oyun için eksik kemik track'leri `complete_action` ile kimlik rotasyonuyla doldurulur. (5) Mover/root pozisyon track'i
+  yazılmıyor; oyunda yükseklik/kayma sorunu çıkarsa buraya bakılacak. **Oyun içi test henüz yapılmadı.**
+
 ## Kurallar
 - `assets/` salt okunur; tüm çıktı `output/` ve `cache/` içine.
 - Blender işleri `pipeline/lib/` içindeki parametreli fonksiyonlarla; serbest script yok.
