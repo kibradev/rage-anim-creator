@@ -72,7 +72,7 @@ def build_dict_objects(arm, clip, action):
     clip_obj.name = clip.name + "_clip"
     clip_obj.parent = clips_obj
     cp = clip_obj.clip_properties
-    cp.hash = clip.name + "_clip"
+    cp.hash = clip.name  # GTA convention: TaskPlayAnim(dict, name) hashes name; a "_clip" suffix made every clip unfindable in game
     cp.name = f"{clip.name}.clip"
     cp.duration = clip.frames / clip.fps
     ca = cp.animations.add()

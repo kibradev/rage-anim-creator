@@ -95,6 +95,20 @@ local function play(name, opts)
     if opts.upper then flag = flag + 48 end
     local speed = opts.speed or 1.0
     TaskPlayAnim(ped, name, name, 8.0 * speed, -8.0 * speed, -1, flag, 0.0, false, false, false)
+    Wait(250)
+    if not IsEntityPlayingAnim(ped, name, name, 3) then
+        -- tanilama: dict yuklendi ama clip oynamadi; "_clip" son ekli ad da dene (eski export hash'i)
+        TaskPlayAnim(ped, name, name .. '_clip', 8.0 * speed, -8.0 * speed, -1, flag, 0.0, false, false, false)
+        Wait(250)
+        if not IsEntityPlayingAnim(ped, name, name .. '_clip', 3) then
+            TriggerEvent('chat:addMessage', {{ args = {{ 'voleybol', 'Oynamadi: ' .. name .. ' (dict yuklendi ama clip bulunamadi/oynatilamadi)' }} }})
+            print('voleybol: oynamadi ' .. name)
+            return false
+        end
+        SetEntityAnimSpeed(ped, name, name .. '_clip', speed)
+        current = name
+        return true
+    end
     SetEntityAnimSpeed(ped, name, name, speed)
     current = name
     return true

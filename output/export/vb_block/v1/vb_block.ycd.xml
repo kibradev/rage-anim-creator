@@ -2,7 +2,7 @@
 <ClipDictionary>
   <Clips>
     <Item>
-      <Hash>vb_block_clip</Hash>
+      <Hash>vb_block</Hash>
       <Name>pack:/vb_block.clip</Name>
       <Type value="Animation" />
       <Unknown30 value="0" />

@@ -2,7 +2,7 @@
 <ClipDictionary>
   <Clips>
     <Item>
-      <Hash>vb_ready_idle_clip</Hash>
+      <Hash>vb_ready_idle</Hash>
       <Name>pack:/vb_ready_idle.clip</Name>
       <Type value="Animation" />
       <Unknown30 value="0" />
