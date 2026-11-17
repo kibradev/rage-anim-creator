@@ -89,7 +89,7 @@
    "loop": false,
    "file": "v2.glb",
    "module": "volleyball:vb_dig_side_L",
-   "status": "pending",
+   "status": "approved",
    "report": {
     "loop_gap_deg": 0.0,
     "max_step_deg": 41.76,
