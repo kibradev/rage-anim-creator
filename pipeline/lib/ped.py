@@ -6,7 +6,7 @@ import re
 import bpy
 from szio import VPath
 
-DEFAULT_COMPONENTS = ("head", "uppr", "lowr", "hand", "feet", "teef", "hair")
+DEFAULT_COMPONENTS = ("head", "uppr", "lowr", "hand", "feet", "teef", "hair", "jbib")
 
 
 def find_ped_dir(game_dir: str, ped: str) -> VPath:
@@ -20,6 +20,17 @@ def find_ped_dir(game_dir: str, ped: str) -> VPath:
         if d.is_dir():
             return d
     raise FileNotFoundError(f"ped folder not found: {ped}")
+
+
+def extract_skeleton_yft(ped_dir: VPath, ped: str):
+    """The full ped skeleton lives in <ped>.yft next to the <ped>/ folder; copy it to cache so Sollumz can use it
+    as external skeleton (component .ydd files only carry partial skeletons)."""
+    from pathlib import Path
+    out = Path(__file__).resolve().parents[2] / "cache" / "skeletons" / f"{ped}.yft"
+    if not out.exists():
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes((ped_dir.parent / f"{ped}.yft").read_bytes())
+    return out
 
 
 def pick_parts(ped_dir: VPath, components=DEFAULT_COMPONENTS, drawable_index="000", tex_variant="a"):
@@ -38,7 +49,11 @@ def import_ped_parts(game_dir: str, ped: str, components=DEFAULT_COMPONENTS, dra
     ped_dir = find_ped_dir(game_dir, ped)
     ytds, ydds = pick_parts(ped_dir, components, drawable_index, tex_variant)
     files = [{"name": n} for n in ytds + ydds]
-    res = bpy.ops.sollumz.import_assets(directory=str(ped_dir), files=files)
+    skel = extract_skeleton_yft(ped_dir, ped)
+    res = bpy.ops.sollumz.import_assets(
+        directory=str(ped_dir), files=files, use_custom_settings=True,
+        dwd_import_external_skeleton="SAVED", dwd_import_external_skeleton_saved_path=str(skel),
+    )
     return ytds, ydds, res
 
 
@@ -68,6 +83,10 @@ def merge_armatures():
             o.matrix_world = mw
     for a in arms[1:]:
         bpy.data.objects.remove(a, do_unlink=True)
+    # mesh objects are named after the root bone (SKEL_ROOT...), which collides with bone nodes in glTF/three.js
+    for i, o in enumerate([o for o in bpy.data.objects if o.type == "MESH"]):
+        o.name = f"mesh_{i}"
+    master.name = "ped_armature"
     return master
 
 

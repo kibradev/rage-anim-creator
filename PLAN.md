@@ -128,6 +128,17 @@ Tek ekran, üç bölge, koyu tema, shadcn/ui:
 - Web: Vite + React + Tailwind + shadcn (base-ui) + react-three-fiber; FastAPI `/api/peds`, `/files/...`.
 - Tuzak: `.ycd` ikili dosyayı Sollumz doğrudan içe aktarmıyor (yalnızca `.ycd.xml`) -> Aşama 2'de CodeWalker.Core ile XML'e çevirme gerekiyor.
 
+## Aşama 2 sonuçları (tamamlandı)
+- `converter/` (.NET, CodeWalker.Core'a bağlı): `.ycd` -> `.ycd.xml`, RPF'ten doğrudan. Build: `dotnet build converter -c Release -o cache/converter`.
+  Kullanım: `dotnet cache/converter/ycd2xml.dll <gta> cache/ycdxml "move_m@*" ...`
+- `pipeline/extract_anims.py -- <ped> <dict>...`: Sollumz `import_ycd` -> `retarget_animation` -> NLA -> GLB (`cache/anims/<dict>.glb`, `index.json`).
+- Tuzaklar: (1) ped parçalarındaki iskelet eksik; tam iskelet `<ped>.yft` içinde (354 kemik) ve `extract_skeleton_yft` ile
+  "harici iskelet" olarak verilmeli, yoksa animasyon gövdeyi bozuyor. (2) Mesh nesne adları kemik adlarıyla çakışıyor
+  (`SKEL_ROOT`) -> `mesh_N` olarak yeniden adlandırılıyor. (3) Çok animasyonlu (paralel katman) clip'ler tek action'a birleştiriliyor.
+  (4) Root motion glTF'de armature düğümünün `position` track'i olarak çıkıyor; web'de "Yerinde" anahtarı bunu atıyor.
+  (5) Animasyonlar dinlenme duruşunun tersine bakıyor -> web'de ped 180° döndürülüyor.
+- Web: Player (AnimationMixer sarmalayıcı), arama + gruplu liste, zaman çubuğu, hız, döngü, boşluk tuşu.
+
 ## Kurallar
 - `assets/` salt okunur; tüm çıktı `output/` ve `cache/` içine.
 - Blender işleri `pipeline/lib/` içindeki parametreli fonksiyonlarla; serbest script yok.

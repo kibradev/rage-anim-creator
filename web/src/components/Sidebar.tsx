@@ -1,7 +1,7 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Switch } from '@/components/ui/switch'
-import { Separator } from '@/components/ui/separator'
-import type { Ped } from '@/lib/types'
+import { ClipList } from '@/components/ClipList'
+import type { Clip, Ped } from '@/lib/types'
 
 type Props = {
   peds: Ped[]
@@ -9,31 +9,42 @@ type Props = {
   onPed: (name: string) => void
   skeleton: boolean
   onSkeleton: (v: boolean) => void
+  clips: Clip[]
+  clip: Clip | null
+  onClip: (c: Clip) => void
+  inPlace: boolean
+  onInPlace: (v: boolean) => void
 }
 
-export function Sidebar({ peds, ped, onPed, skeleton, onSkeleton }: Props) {
+export function Sidebar({ peds, ped, onPed, skeleton, onSkeleton, clips, clip, onClip, inPlace, onInPlace }: Props) {
   return (
     <aside className="flex w-72 shrink-0 flex-col gap-4 border-r border-border p-4">
       <div className="text-sm font-medium tracking-tight">animCreator</div>
 
-      <div className="flex flex-col gap-2">
-        <span className="text-xs text-muted-foreground">Ped</span>
-        <Select items={peds.map((p) => ({ value: p.name, label: p.name }))} value={ped ?? undefined} onValueChange={(v) => v && onPed(v)} disabled={peds.length === 0}>
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder={peds.length ? 'Seç' : 'Ped bulunamadı'} />
-          </SelectTrigger>
-          <SelectContent>
-            {peds.map((p) => (
-              <SelectItem key={p.name} value={p.name}>
-                {p.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
+      <Select
+        items={peds.map((p) => ({ value: p.name, label: p.name }))}
+        value={ped ?? undefined}
+        onValueChange={(v) => v && onPed(v)}
+        disabled={peds.length === 0}
+      >
+        <SelectTrigger className="w-full">
+          <SelectValue placeholder={peds.length ? 'Ped seç' : 'Ped bulunamadı'} />
+        </SelectTrigger>
+        <SelectContent>
+          {peds.map((p) => (
+            <SelectItem key={p.name} value={p.name}>
+              {p.name}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
 
-      <Separator />
+      <ClipList clips={clips} selected={clip} onSelect={onClip} />
 
+      <label className="flex items-center justify-between text-sm">
+        Yerinde (root motion kapalı)
+        <Switch checked={inPlace} onCheckedChange={onInPlace} />
+      </label>
       <label className="flex items-center justify-between text-sm">
         İskelet
         <Switch checked={skeleton} onCheckedChange={onSkeleton} />

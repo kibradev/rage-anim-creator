@@ -8,3 +8,5 @@ __pycache__/
 *.ycd
 *.ytd
 *.yft
+converter/bin/
+converter/obj/
