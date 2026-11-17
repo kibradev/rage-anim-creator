@@ -66,6 +66,7 @@ local function hipStart(name, ped)
     hipRun = hipRun + 1
     local my = hipRun
     CreateThread(function()
+      local ok, err = pcall(function()
         local base = GetEntityCoords(ped)
         hipBase = base
         local head = math.rad(GetEntityHeading(ped))
@@ -99,6 +100,12 @@ local function hipStart(name, ped)
             while hipRun == my and GetGameTimer() - t1 < 150 do put(1.0 - (GetGameTimer() - t1) / 150.0); Wait(0) end
             hipEnd(ped)
         end
+      end)
+      if not ok then
+        hipEnd(ped)
+        print('voleybol HATA (kalca): ' .. tostring(err))
+        TriggerEvent('chat:addMessage', { args = { 'voleybol', 'HATA (kalca): ' .. tostring(err) } })
+      end
     end)
 end
 
@@ -279,6 +286,61 @@ RegisterCommand('vbhip', function(_, args)
         print('vbhip: ' .. yl)
         TriggerEvent('chat:addMessage', { args = { 'vbhip', yl } })
     end)
+end, false)
+
+-- /vbjump [a|b]: ANIMASYONSUZ ziplama testi. a = her kare SetEntityCoordsNoOffset (script'imizin yaptigi), b = SetEntityVelocity (fizik).
+-- Hangisi ped'i gercekten kaldiriyor? Sohbete "oyunun bildigi" en yuksek yukseklik yazilir.
+RegisterCommand('vbjump', function(_, args)
+    local mode = args[1] or 'a'
+    CreateThread(function()
+        local ped = PlayerPedId()
+        ClearPedTasks(ped)
+        Wait(300)
+        local base = GetEntityCoords(ped)
+        local peak = -9.0
+        local t0 = GetGameTimer()
+        if mode == 'b' then
+            SetEntityVelocity(ped, 0.0, 0.0, 4.5)
+            while GetGameTimer() - t0 < 1000 do
+                local z = GetEntityCoords(ped).z - base.z
+                if z > peak then peak = z end
+                Wait(0)
+            end
+        else
+            SetEntityCollision(ped, false, false)
+            SetPedGravity(ped, false)
+            while GetGameTimer() - t0 < 700 do
+                local k = (GetGameTimer() - t0) / 700.0
+                SetEntityCoordsNoOffset(ped, base.x, base.y, base.z + 0.5 * math.sin(math.pi * k), false, false, false)
+                SetEntityVelocity(ped, 0.0, 0.0, 0.0)
+                local z = GetEntityCoords(ped).z - base.z
+                if z > peak then peak = z end
+                Wait(0)
+            end
+            SetEntityCoordsNoOffset(ped, base.x, base.y, base.z, false, false, false)
+            SetEntityCollision(ped, true, true)
+            SetPedGravity(ped, true)
+        end
+        local line = string.format('vbjump %s: en yuksek %.2f m (beklenen: a=0.50, b=~1.0)', mode, peak)
+        print(line)
+        TriggerEvent('chat:addMessage', { args = { 'vbjump', line } })
+    end)
+end, false)
+
+-- /vbref [clip]: OYUNUN KENDI ziplama dansini oynatir (nightclub jumper; varsayilan high_center, dongulu). Kiyas icin: bu senin
+-- sunucunda ziplar gibi gorunuyorsa kalca hareketi uygulaniyor demektir. /animstop ile durur.
+RegisterCommand('vbref', function(_, args)
+    local dict = 'anim@amb@nightclub@mini@dance@dance_solo@jumper@'
+    local clip = args[1] or 'high_center'
+    RequestAnimDict(dict)
+    local t = GetGameTimer()
+    while not HasAnimDictLoaded(dict) and GetGameTimer() - t < 5000 do Wait(0) end
+    if not HasAnimDictLoaded(dict) then
+        TriggerEvent('chat:addMessage', { args = { 'vbref', 'dict yuklenemedi: ' .. dict } })
+        return
+    end
+    TaskPlayAnim(PlayerPedId(), dict, clip, 8.0, -8.0, -1, 1, 0.0, false, false, false)
+    TriggerEvent('chat:addMessage', { args = { 'vbref', 'oynuyor: ' .. clip .. ' (durdurmak icin /animstop)' } })
 end, false)
 
 RegisterNUICallback('play', function(data, cb)
