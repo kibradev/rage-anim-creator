@@ -27,7 +27,7 @@ export function Sidebar({ peds, ped, onPed, skeleton, onSkeleton, clips, mine, t
 
       <Select
         items={peds.map((p) => ({ value: p.name, label: p.name }))}
-        value={ped ?? undefined}
+        value={ped ?? null}
         onValueChange={(v) => v && onPed(v)}
         disabled={peds.length === 0}
       >

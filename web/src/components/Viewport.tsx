@@ -26,6 +26,20 @@ function PedModel({ url, skeleton, player, clip }: { url: string; skeleton: bool
     helper.visible = skeleton
   }, [helper, skeleton])
 
+  // peds have their origin at the pelvis: lift the model so the feet stand on the grid
+  const lift = useMemo(() => {
+    scene.updateMatrixWorld(true)
+    const box = new THREE.Box3()
+    scene.traverse((o) => {
+      const m = o as THREE.Mesh
+      if (m.isMesh) {
+        m.geometry.computeBoundingBox()
+        box.union(m.geometry.boundingBox!.clone().applyMatrix4(m.matrixWorld))
+      }
+    })
+    return box.isEmpty() ? 0 : -box.min.y
+  }, [scene])
+
   useEffect(() => {
     scene.traverse((o) => {
       if ((o as THREE.SkinnedMesh).isSkinnedMesh) o.frustumCulled = false
@@ -39,7 +53,7 @@ function PedModel({ url, skeleton, player, clip }: { url: string; skeleton: bool
   return (
     <>
       {/* GTA clips face the opposite way of the rest pose in glTF space */}
-      <group rotation-y={Math.PI}>
+      <group rotation-y={Math.PI} position-y={lift}>
         <primitive object={scene} />
         <primitive object={helper} />
       </group>
@@ -56,7 +70,7 @@ type Props = { url: string | null; skeleton: boolean; player: Player; clip: Clip
 
 export function Viewport({ url, skeleton, player, clip }: Props) {
   return (
-    <Canvas camera={{ position: [0, 1.2, 3.2], fov: 40 }} gl={{ antialias: true }}>
+    <Canvas camera={{ position: [0, 1.15, 4.2], fov: 40 }} gl={{ antialias: true }}>
       <color attach="background" args={['#0b0b0d']} />
       <hemisphereLight args={['#ffffff', '#303040', 1.1]} />
       <directionalLight position={[3, 5, 4]} intensity={2} />
@@ -64,7 +78,7 @@ export function Viewport({ url, skeleton, player, clip }: Props) {
       <Suspense fallback={null}>
         {url && <PedModel key={url} url={url} skeleton={skeleton} player={player} clip={clip} />}
       </Suspense>
-      <OrbitControls target={[0, 0.9, 0]} makeDefault />
+      <OrbitControls target={[0, 0.95, 0]} makeDefault />
     </Canvas>
   )
 }

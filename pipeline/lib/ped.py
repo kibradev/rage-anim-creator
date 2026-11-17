@@ -77,7 +77,21 @@ def fix_orphan_groups(master):
         for g in list(o.vertex_groups):
             if g.name in bones:
                 continue
-            target = stems.get(re.sub(r"_\d+$", "", g.name), "SKEL_Head" if "SKEL_Head" in bones else None)
+            target = stems.get(re.sub(r"_\d+$", "", g.name))
+            if target is None and not g.name.startswith(("FB_", "FACIAL_")):
+                # e.g. CLOTH (game-simulated jacket flaps): bind each vertex rigidly to the nearest torso bone
+                torso = [master.data.bones[n] for n in ("SKEL_Pelvis", "SKEL_Spine0", "SKEL_Spine1", "SKEL_Spine2", "SKEL_Spine3") if n in bones]
+                for v in o.data.vertices:
+                    w = next((ge.weight for ge in v.groups if ge.group == g.index), 0.0)
+                    if w <= 0:
+                        continue
+                    co = o.matrix_world @ v.co
+                    near = min(torso, key=lambda b: (co - (b.head_local + b.tail_local) / 2).length)
+                    (o.vertex_groups.get(near.name) or o.vertex_groups.new(name=near.name)).add([v.index], w, "ADD")
+                o.vertex_groups.remove(g)
+                fixed += 1
+                continue
+            target = target or ("SKEL_Head" if "SKEL_Head" in bones else None)
             if target is None:
                 continue
             fixed += 1

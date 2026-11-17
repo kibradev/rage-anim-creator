@@ -72,3 +72,8 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
   uvicorn yeniden başlatıldı (gizli pencere, log `cache/api.log`). Video önizleme: `pipeline/render_video.py -- <ped> vb_` -> `cache/preview/video/*.mp4`.
   iPad önizleme sayfası: https://claude.ai/artifact/N1RyJNthuuGHfrNFJQWy8X (videolar gömülü; güncellemek için sayfayı yeniden üretip aynı dosyadan yayınla).
   FiveM paketi henüz bir sunucuya KOPYALANMADI (sunucu yolu bilinmiyor) ve oyunda denenmedi.
+- 17 Kas (arayüz hataları, kullanıcı ekran görüntüsünden): (1) ped seçici "Ped seç" gösteriyordu -> `value={ped ?? null}`;
+  (2) ped zemine gömülüydü/kadraj dışıydı -> `Viewport` modeli ayak tabanına göre kaldırıyor, kamera geri çekildi;
+  (3) Michael'ın ceketi parçalanıyordu: `CLOTH` vertex grubu (oyunda kumaş simülasyonu) iskelette yok -> `fix_orphan_groups`
+  bu köşeleri en yakın gövde kemiğine bağlıyor, `player_zero` GLB yeniden üretildi; (4) ped değiştirince animasyon durup
+  ped T-pozda arkadan görünüyordu -> `Player.attach` seçili clip'i yeniden başlatıyor.

@@ -16,6 +16,8 @@ export class Player {
     this.mixer = new THREE.AnimationMixer(root)
     this.action = null
     this.rootName = root.children[0]?.name ?? ''
+    // a clip chosen before the ped finished loading (or kept across a ped switch) starts on the new ped
+    if (this.source) this.play(this.source, 0)
   }
 
   detach() {
@@ -43,8 +45,8 @@ export class Player {
   }
 
   play(source: THREE.AnimationClip, fade = 0.2) {
-    if (!this.mixer) return
     this.source = source
+    if (!this.mixer) return
     const clip = this.prepare(source)
     const next = this.mixer.clipAction(clip)
     next.reset()
