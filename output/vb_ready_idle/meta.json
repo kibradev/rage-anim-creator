@@ -10,7 +10,7 @@
    "loop": true,
    "file": "v1.glb",
    "module": "volleyball:vb_ready_idle",
-   "status": "pending",
+   "status": "approved",
    "report": {
     "loop_gap_deg": 0.0,
     "max_step_deg": 1.26,

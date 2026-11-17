@@ -1,4 +1,17 @@
 local CLIPS = {
+    ['vb_block'] = { loop = false },
+    ['vb_bump'] = { loop = false },
+    ['vb_celebrate'] = { loop = false },
+    ['vb_dig_low'] = { loop = false },
+    ['vb_dig_side_L'] = { loop = false },
+    ['vb_dig_side_R'] = { loop = false },
+    ['vb_ready_idle'] = { loop = true },
+    ['vb_serve_over'] = { loop = false },
+    ['vb_serve_under'] = { loop = false },
+    ['vb_set'] = { loop = false },
+    ['vb_shuffle_L'] = { loop = true },
+    ['vb_shuffle_R'] = { loop = true },
+    ['vb_spike'] = { loop = false },
     ['wave_hand'] = { loop = false }
 }
 

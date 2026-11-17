@@ -68,3 +68,7 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
 2. Oyun testine göre: kök konumu oyunda çalışıyor mu (zıplama/çömelme), yön doğru mu, geçişler.
 3. Eksik hareketler: plonjon, yaklaşma adımlı smaç, sıçrayarak servis, parmak pozları (yumruk/açık el), kadın ped üzerinde kontrol.
 4. Arayüz: uyarıları İncele panelinde göster; toplu onay; freemode kamera çerçevesi.
+- 17 Kas (sonra): Kullanıcı isteğiyle 13 vb_ clip'i onaylandı + export edildi (`output/export/vb_*/v1/*.ycd`), `output/fivem/animcreator_anims/` kuruldu (14 clip).
+  uvicorn yeniden başlatıldı (gizli pencere, log `cache/api.log`). Video önizleme: `pipeline/render_video.py -- <ped> vb_` -> `cache/preview/video/*.mp4`.
+  iPad önizleme sayfası: https://claude.ai/artifact/N1RyJNthuuGHfrNFJQWy8X (videolar gömülü; güncellemek için sayfayı yeniden üretip aynı dosyadan yayınla).
+  FiveM paketi henüz bir sunucuya KOPYALANMADI (sunucu yolu bilinmiyor) ve oyunda denenmedi.
