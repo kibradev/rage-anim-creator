@@ -121,6 +121,13 @@ Tek ekran, üç bölge, koyu tema, shadcn/ui:
   (`.yft` + `.ydd` + `.ytd`); yürüyüş `move_m@generic` -> `clip_move_.rpf`; el sallama `anim@mp_player_intcelebrationmale@wave`.
 - Sollumz hem `import_ycd` hem `export_ycd` içeriyor: Aşama 2 ve 4 için ek bir format çözücü yazmak gerekmiyor.
 
+## Aşama 1 sonuçları (tamamlandı)
+- `pipeline/extract_ped.py -- player_zero` -> `cache/peds/player_zero/ped.glb` (7 parça, 120 kemik, dokulu).
+- Ped parçaları (`head/uppr/lowr/hand/feet/teef/hair`) ayrı armature'larla geliyor; `merge_armatures()` tek iskelete indiriyor.
+- Sollumz gölgelendiricileri glTF'e çıkmıyor; `simplify_materials()` diffuse dokuyu Principled BSDF'e bağlıyor.
+- Web: Vite + React + Tailwind + shadcn (base-ui) + react-three-fiber; FastAPI `/api/peds`, `/files/...`.
+- Tuzak: `.ycd` ikili dosyayı Sollumz doğrudan içe aktarmıyor (yalnızca `.ycd.xml`) -> Aşama 2'de CodeWalker.Core ile XML'e çevirme gerekiyor.
+
 ## Kurallar
 - `assets/` salt okunur; tüm çıktı `output/` ve `cache/` içine.
 - Blender işleri `pipeline/lib/` içindeki parametreli fonksiyonlarla; serbest script yok.
