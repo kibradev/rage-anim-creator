@@ -52,13 +52,20 @@ def bump():
 
 
 def set_pass():
-    """Overhead set (parmak pas): hands above the forehead, extend up through legs and arms."""
-    load = {"root": (0, 0, -0.20), "spine": (6, 0, 0), "chest": (-6, 0, 0), "head": (-28, 0, 0),
-            "hand_L": (-0.10, 0.20, 1.74), "hand_R": (0.10, 0.20, 1.74), "elbow_L": (-1, 0.3, -0.4), "elbow_R": (1, 0.3, -0.4),
+    """Jump set (parmak pas): hands above the forehead, small jump, the ball is pushed up at the apex, soft landing.
+    Hip +0.20 m (air ~0.4 s), knees come up in front (see _air)."""
+    load = {"root": (0, 0, -0.24), "spine": (6, 0, 0), "chest": (-6, 0, 0), "head": (-28, 0, 0),
+            "hand_L": (-0.10, 0.22, 1.65), "hand_R": (0.10, 0.22, 1.65), "elbow_L": (-1, 0.3, -0.4), "elbow_R": (1, 0.3, -0.4),
             "wrist_L": (-35, 0, 0), "wrist_R": (-35, 0, 0)}
-    push = {"root": (0, 0.03, 0.03), "pitch_L": 25, "pitch_R": 25, "foot_L": (-0.12, 0, 0.05), "foot_R": (0.12, 0, 0.05),
-            "hand_L": (-0.12, 0.28, 1.94), "hand_R": (0.12, 0.28, 1.94), "wrist_L": (10, 0, 0), "wrist_R": (10, 0, 0), "ease": "in"}
-    return 40, False, [(0, READY), (10, load), (16, push), (22, {**push, "ease": "smooth"}), (40, READY)]
+    takeoff = {"root": (0, 0.02, 0.05), "pitch_L": 40, "pitch_R": 40, "foot_L": (-0.12, 0, 0.09), "foot_R": (0.12, 0, 0.09),
+               "hand_L": (-0.10, 0.22, 1.86), "hand_R": (0.10, 0.22, 1.86), "ease": "in"}
+    apex = {"root": (0, 0.04, 0.20), **_air(0.40, 0.12, 35),
+            "hand_L": (-0.12, 0.28, 2.07), "hand_R": (0.12, 0.28, 2.07), "wrist_L": (10, 0, 0), "wrist_R": (10, 0, 0), "ease": "out"}
+    down = {"root": (0, 0.04, 0.10), **_air(0.20, 0.06, 30), "hand_L": (-0.14, 0.28, 2.00), "hand_R": (0.14, 0.28, 2.00), "ease": "in"}
+    touch = {"root": (0, 0.04, -0.02), **_GROUND, "hand_L": (-0.16, 0.26, 1.80), "hand_R": (0.16, 0.26, 1.80), "ease": "in"}
+    land = {"root": (0, 0.02, -0.18), "spine": (12, 0, 0), "chest": (0, 0, 0), "head": (-18, 0, 0), "wrist_L": (0, 0, 0), "wrist_R": (0, 0, 0),
+            "hand_L": (-0.22, 0.32, 1.30), "hand_R": (0.22, 0.32, 1.30), "ease": "out"}
+    return 46, False, [(0, READY), (9, load), (13, takeoff), (18, apex), (21, down), (24, touch), (28, land), (46, READY)]
 
 
 def serve_under():
@@ -75,18 +82,30 @@ def serve_under():
 
 
 def serve_over():
-    """Overhand float serve: toss with the left hand, right arm cocked, contact high in front."""
+    """Jump float serve: toss with the left hand, crouch with the right arm cocked, jump, contact high in front at the
+    apex, land on both feet. Hip +0.28 m (air ~0.48 s), knees come up in front (see _air)."""
     stance = {"root": (0, 0.06, -0.05), "foot_L": (-0.10, 0.26, 0), "foot_R": (0.12, -0.10, 0), "spine": (6, 0, 0), "head": (-8, 0, 0),
               "hand_L": (-0.06, 0.40, 1.15), "elbow_L": (-0.7, -0.5, -0.6), "hand_R": (0.20, 0.22, 1.20)}
-    toss = {"root": (0, 0.02, -0.03), "spine": (-4, 0, 0), "chest": (-8, 0, -28), "head": (-30, 0, 0),
+    toss = {"root": (0, 0.04, -0.06), "spine": (-4, 0, 0), "chest": (-8, 0, -28), "head": (-30, 0, 0),
             "hand_L": (-0.12, 0.30, 1.84), "elbow_L": (-1, 0, -0.5),
             "hand_R": (0.36, -0.14, 1.72), "elbow_R": (1, -0.6, 0.1), "wrist_R": (-20, 0, 0)}
-    hit = {"root": (0, 0.14, 0.0), "spine": (8, 0, 0), "chest": (6, 0, 18), "head": (-18, 0, 0), "ease": "in",
-           "hand_R": (0.14, 0.32, 1.96), "elbow_R": (1, -0.3, -0.2), "wrist_R": (0, 0, 0),
-           "hand_L": (-0.20, 0.32, 1.18), "elbow_L": (-0.3, -0.8, -0.7)}
-    follow = {"root": (0, 0.18, -0.06), "spine": (18, 0, 0), "chest": (8, 0, 26), "head": (-10, 0, 0), "ease": "out",
-              "hand_R": (-0.04, 0.58, 1.02), "hand_L": (-0.26, 0.22, 0.98)}
-    return 64, False, [(0, READY), (12, stance), (26, toss), (33, hit), (40, follow), (64, READY)]
+    crouch = {"root": (0, 0.04, -0.26), "spine": (14, 0, 0), "chest": (-4, 0, -24), "head": (-34, 0, 0),
+              "hand_L": (-0.16, 0.34, 1.40), "hand_R": (0.34, -0.16, 1.40), "ease": "out"}
+    takeoff = {"root": (0, 0.08, 0.05), "spine": (0, 0, 0), "chest": (-8, 0, -28), "pitch_L": 40, "pitch_R": 40,
+               "foot_L": (-0.10, 0.26, 0.09), "foot_R": (0.12, -0.10, 0.09),
+               "hand_L": (-0.14, 0.32, 1.78), "hand_R": (0.36, -0.14, 1.70), "ease": "in"}
+    cock = {"root": (0, 0.10, 0.24), **_air(0.48, 0.20, 35), "spine": (-6, 0, 0), "chest": (-8, 0, -30), "head": (-28, 0, 0),
+            "hand_L": (-0.14, 0.34, 2.04), "hand_R": (0.38, -0.16, 1.98), "elbow_R": (1, -0.6, 0.2), "wrist_R": (-20, 0, 0), "ease": "out"}
+    hit = {"root": (0, 0.14, 0.28), **_air(0.52, 0.24, 35), "spine": (8, 0, 0), "chest": (6, 0, 18), "head": (-18, 0, 0), "ease": "out",
+           "hand_R": (0.14, 0.34, 2.22), "elbow_R": (1, -0.3, -0.2), "wrist_R": (0, 0, 0),
+           "hand_L": (-0.20, 0.32, 1.46), "elbow_L": (-0.3, -0.8, -0.7)}
+    follow = {"root": (0, 0.16, 0.14), **_air(0.24, 0.18, 30), "spine": (16, 0, 0), "chest": (8, 0, 26), "head": (-10, 0, 0), "ease": "in",
+              "hand_R": (-0.02, 0.56, 1.30), "hand_L": (-0.26, 0.22, 1.10)}
+    touch = {"root": (0, 0.16, -0.02), **_GROUND, "spine": (18, 0, 0), "ease": "in"}
+    land = {"root": (0, 0.16, -0.24), **_GROUND, "spine": (22, 0, 0), "chest": (4, 0, 10), "head": (-16, 0, 0),
+            "hand_R": (-0.02, 0.54, 1.00), "hand_L": (-0.26, 0.24, 0.98), "ease": "out"}
+    return 72, False, [(0, READY), (12, stance), (22, toss), (27, crouch), (31, takeoff), (35, cock), (38, hit), (42, follow),
+                       (45, touch), (50, land), (72, READY)]
 
 
 def _air(h, fwd=0.0, pitch=40):
