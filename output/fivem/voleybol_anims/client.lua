@@ -239,8 +239,9 @@ end, false)
 -- Sonuc: baslangictan en yuksek / en alcak kalca farki (m). Ziplama clip'i icin "yuksek" ~ +0.3..0.5 olmali.
 RegisterCommand('vbhip', function(_, args)
     local name = args[1]
-    if not name or LOOP[name] == nil then
-        TriggerEvent('chat:addMessage', { args = { 'vbhip', 'kullanim: /vbhip vb_spike [ik]' } })
+    local REF_DICT, REF_CLIP = 'anim@arena@celeb@flat@solo@no_props@', 'jump_b_player_a'
+    if not name or (LOOP[name] == nil and name ~= 'ref') then
+        TriggerEvent('chat:addMessage', { args = { 'vbhip', 'kullanim: /vbhip vbm_spike [ik]   |   /vbhip ref (oyunun ziplamasi)' } })
         return
     end
     CreateThread(function()
@@ -249,7 +250,15 @@ RegisterCommand('vbhip', function(_, args)
         Wait(600)
         local base = GetPedBoneCoords(ped, 11816, 0.0, 0.0, 0.0)
         local ground = GetEntityCoords(ped)
-        if not play(name, { keepIk = args[2] == 'ik' }) then return end
+        local footR0 = GetPedBoneCoords(ped, 52301, 0.0, 0.0, 0.0).z   -- SKEL_R_Foot
+        local footL0 = GetPedBoneCoords(ped, 14201, 0.0, 0.0, 0.0).z   -- SKEL_L_Foot
+        local eHi, eLo, fHi, fLo = -9, 9, -9, 9
+        if name == 'ref' then
+            RequestAnimDict(REF_DICT)
+            local tw = GetGameTimer()
+            while not HasAnimDictLoaded(REF_DICT) and GetGameTimer() - tw < 5000 do Wait(0) end
+            TaskPlayAnim(ped, REF_DICT, REF_CLIP, 8.0, -8.0, -1, 0, 0.0, false, false, false)
+        elseif not play(name, { keepIk = args[2] == 'ik' }) then return end
         -- yon tanilamasi: entity heading ile iskeletin (sag-sol uyluk) bakis yonu; fark ~0 olmali, ~180 = iskelet ters
         local function skelYawDiff()
             local r = GetPedBoneCoords(ped, 51826, 0.0, 0.0, 0.0)   -- SKEL_R_Thigh
@@ -266,7 +275,14 @@ RegisterCommand('vbhip', function(_, args)
         local t0 = GetGameTimer()
         local dur = 3000
         for _, c in ipairs(CLIPS) do if c.name == name then dur = math.floor(c.sec * 1000) + 300 end end
+        if name == 'ref' then dur = 6300 end
         while GetGameTimer() - t0 < dur do
+            local ez = GetEntityCoords(ped).z - ground.z
+            if ez > eHi then eHi = ez end
+            if ez < eLo then eLo = ez end
+            local fz = math.min(GetPedBoneCoords(ped, 52301, 0.0, 0.0, 0.0).z - footR0, GetPedBoneCoords(ped, 14201, 0.0, 0.0, 0.0).z - footL0)
+            if fz > fHi then fHi = fz end   -- alttaki ayagin en yuksek yeri: >0.2 ise ped havada
+            if fz < fLo then fLo = fz end
             local b = GetPedBoneCoords(ped, 11816, 0.0, 0.0, 0.0)
             local dz = b.z - base.z
             if dz > hi then hi = dz end
@@ -284,6 +300,9 @@ RegisterCommand('vbhip', function(_, args)
         local line = string.format('%s legIK=%s: kalca yukari %+.2f m, asagi %+.2f m, yatay %.2f m', name, args[2] == 'ik' and 'ACIK' or 'kapali', hi, lo, side)
         print('vbhip: ' .. line)
         TriggerEvent('chat:addMessage', { args = { 'vbhip', line } })
+        local el2 = string.format('PED(entity) yukari %+.2f asagi %+.2f m | ALT AYAK yerden en fazla %+.2f, en az %+.2f m', eHi, eLo, fHi, fLo)
+        print('vbhip: ' .. el2)
+        TriggerEvent('chat:addMessage', { args = { 'vbhip', el2 } })
         local yl = string.format('YON: iskelet-entity farki baslangic %.0f, orta %.0f, son %.0f derece; entity heading en fazla %.0f derece degisti', yaw0, yawMid, yawEnd, hMax)
         print('vbhip: ' .. yl)
         TriggerEvent('chat:addMessage', { args = { 'vbhip', yl } })
