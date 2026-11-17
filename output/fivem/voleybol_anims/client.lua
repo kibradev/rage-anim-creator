@@ -13,9 +13,9 @@ local LOOP = {
     ['vb_shuffle_L'] = true,
     ['vb_shuffle_R'] = true,
     ['vb_spike'] = false,
-    ['vbx_block'] = false,
-    ['vbx_dig_side_R'] = false,
-    ['vbx_spike'] = false,
+    ['vbs_block'] = false,
+    ['vbs_dig_side_R'] = false,
+    ['vbs_spike'] = false,
     ['wave_hand'] = false
 }
 local CLIPS = {
@@ -33,12 +33,64 @@ local CLIPS = {
     { name = "vb_dig_side_L", title = "Sola defans", group = "Defans", loop = false, sec = 1.7 },
     { name = "wave_hand", title = "El sallama", group = "Diğer", loop = false, sec = 3.0 },
     { name = "vb_celebrate", title = "Sayı sevinci", group = "Diğer", loop = false, sec = 2.3 },
-    { name = "vbx_block", title = "TEST Blok (mover)", group = "Test (mover)", loop = false, sec = 1.9 },
-    { name = "vbx_dig_side_R", title = "TEST Sağa defans (mover)", group = "Test (mover)", loop = false, sec = 1.7 },
-    { name = "vbx_spike", title = "TEST Smaç (mover)", group = "Test (mover)", loop = false, sec = 2.4 }
+    { name = "vbs_block", title = "TEST Blok (script)", group = "Test (script)", loop = false, sec = 1.9 },
+    { name = "vbs_dig_side_R", title = "TEST Sağa defans (script)", group = "Test (script)", loop = false, sec = 1.7 },
+    { name = "vbs_spike", title = "TEST Smaç (script)", group = "Test (script)", loop = false, sec = 2.4 }
 }
 local open = false
 local current = nil
+
+-- Kalca (root) hareketi script ile: oyun kemik/mover uzerinden zıplama-comelmeyi uygulamiyor. Clip'ten cikarilan kalca egrisi
+-- (karakter uzayi: x sag, y ileri, z yukari, metre) animasyonun anlik fazina gore ped'in konumuna uygulanir.
+local HIP = {
+    ['vbs_block'] = { n = 57, x = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, y = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0047,0.0088,0.0122,0.015,0.0172,0.0188,0.0197,0.02,0.02,0.02,0.02,0.0198,0.019,0.0178,0.016,0.0138,0.0111,0.0079,0.0042,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, z = {-0.14,-0.146,-0.1619,-0.1843,-0.21,-0.2357,-0.2581,-0.274,-0.28,-0.2672,-0.2288,-0.1648,-0.0752,0.04,0.1244,0.1975,0.2594,0.31,0.3494,0.3775,0.3944,0.4,0.4,0.4,0.4,0.3923,0.3694,0.3311,0.2775,0.2086,0.1244,0.0249,-0.0899,-0.22,-0.2196,-0.2183,-0.2163,-0.2136,-0.2103,-0.2065,-0.2023,-0.1977,-0.1928,-0.1878,-0.1826,-0.1774,-0.1722,-0.1672,-0.1623,-0.1577,-0.1535,-0.1497,-0.1464,-0.1437,-0.1417,-0.1404,-0.14} },
+    ['vbs_dig_side_R'] = { n = 53, x = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, y = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0106,0.0196,0.0269,0.0327,0.0367,0.0392,0.04,0.04,0.04,0.04,0.04,0.04,0.04,0.04,0.04,0.04,0.04,0.04,0.0388,0.035,0.0288,0.02,0.0196,0.0185,0.0169,0.0148,0.0125,0.01,0.0075,0.0052,0.0031,0.0015,0.0004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, z = {-0.14,-0.1444,-0.1556,-0.17,-0.1844,-0.1956,-0.2,-0.2424,-0.2784,-0.3078,-0.3306,-0.3469,-0.3567,-0.36,-0.3589,-0.3556,-0.35,-0.3422,-0.3322,-0.32,-0.32,-0.32,-0.32,-0.32,-0.32,-0.3175,-0.31,-0.2975,-0.28,-0.278,-0.2726,-0.2644,-0.2541,-0.2424,-0.23,-0.2176,-0.2059,-0.1956,-0.1874,-0.182,-0.18,-0.1792,-0.177,-0.1737,-0.1696,-0.165,-0.16,-0.155,-0.1504,-0.1462,-0.143,-0.1408,-0.14} },
+    ['vbs_spike'] = { n = 73, x = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, y = {0.0,-0.0004,-0.0015,-0.0031,-0.0052,-0.0075,-0.01,-0.0125,-0.0148,-0.0169,-0.0185,-0.0196,-0.02,-0.0183,-0.0133,-0.005,0.0067,0.0217,0.04,0.0541,0.0662,0.0766,0.085,0.0916,0.0962,0.0991,0.1,0.1025,0.11,0.1225,0.14,0.1472,0.1528,0.1568,0.1592,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.1595,0.1581,0.1558,0.1527,0.1489,0.1443,0.1392,0.1335,0.1274,0.1208,0.1139,0.1066,0.0992,0.0916,0.0839,0.0761,0.0684,0.0608,0.0534,0.0461,0.0392,0.0326,0.0265,0.0208,0.0157,0.0111,0.0073,0.0042,0.0019,0.0005,0.0}, z = {-0.14,-0.1439,-0.1548,-0.1713,-0.1919,-0.2152,-0.24,-0.2648,-0.2881,-0.3088,-0.3252,-0.3361,-0.34,-0.3294,-0.2978,-0.245,-0.1711,-0.0761,0.04,0.1384,0.2237,0.2959,0.355,0.4009,0.4338,0.4534,0.46,0.4625,0.47,0.4825,0.5,0.428,0.372,0.332,0.308,0.3,0.2844,0.2378,0.16,0.0511,-0.0889,-0.26,-0.2596,-0.2586,-0.2568,-0.2545,-0.2516,-0.2483,-0.2444,-0.2401,-0.2355,-0.2306,-0.2254,-0.22,-0.2144,-0.2087,-0.2029,-0.1971,-0.1913,-0.1856,-0.18,-0.1746,-0.1694,-0.1645,-0.1599,-0.1556,-0.1517,-0.1484,-0.1455,-0.1432,-0.1414,-0.1404,-0.14} }
+}
+local hipRun = 0
+
+local function hipEnd(ped)
+    hipRun = hipRun + 1
+    SetEntityCollision(ped, true, true)
+    SetPedGravity(ped, true)
+end
+
+local function hipStart(name, ped)
+    local h = HIP[name]
+    if not h then return end
+    hipRun = hipRun + 1
+    local my = hipRun
+    CreateThread(function()
+        local base = GetEntityCoords(ped)
+        local head = math.rad(GetEntityHeading(ped))
+        local fx, fy, rx, ry = -math.sin(head), math.cos(head), math.cos(head), math.sin(head)
+        SetEntityCollision(ped, false, false)
+        SetPedGravity(ped, false)
+        local t0 = GetGameTimer()
+        local o = { 0.0, 0.0, 0.0 }
+        local function put(k)
+            SetEntityCoordsNoOffset(ped, base.x + rx * o[1] * k + fx * o[2] * k, base.y + ry * o[1] * k + fy * o[2] * k, base.z + o[3] * k, false, false, false)
+            SetEntityVelocity(ped, 0.0, 0.0, 0.0)
+        end
+        while hipRun == my do
+            if not IsEntityPlayingAnim(ped, name, name, 3) and GetGameTimer() - t0 > 600 then break end
+            local ph = GetEntityAnimCurrentTime(ped, name, name)
+            local f = ph * (h.n - 1) + 1
+            local i = math.max(1, math.min(h.n - 1, math.floor(f)))
+            local u = math.max(0.0, math.min(1.0, f - i))
+            o[1] = h.x[i] + (h.x[i + 1] - h.x[i]) * u
+            o[2] = h.y[i] + (h.y[i + 1] - h.y[i]) * u
+            o[3] = h.z[i] + (h.z[i + 1] - h.z[i]) * u
+            put(math.min(1.0, (GetGameTimer() - t0) / 150.0))
+            Wait(0)
+        end
+        if hipRun == my then  -- dogal bitis: kalcayi yumusakca eski yere indir
+            local t1 = GetGameTimer()
+            while hipRun == my and GetGameTimer() - t1 < 150 do put(1.0 - (GetGameTimer() - t1) / 150.0); Wait(0) end
+            hipEnd(ped)
+        end
+    end)
+end
 
 local function loadDict(name)
     if HasAnimDictLoaded(name) then return true end
@@ -64,6 +116,7 @@ local function play(name, opts)
     if opts.upper then flag = flag + 48 end
     local speed = opts.speed or 1.0
     -- ayak IK'si kalcayi zemine geri ceker (ziplama/comelme/yana kayma yutulur): oynarken kapat, stop()'ta geri ac
+    hipEnd(ped)
     if not opts.keepIk then SetPedLegIkMode(ped, 0) end
     TaskPlayAnim(ped, name, name, 8.0 * speed, -8.0 * speed, -1, flag, 0.0, false, false, false)
     Wait(250)
@@ -78,14 +131,17 @@ local function play(name, opts)
         end
         SetEntityAnimSpeed(ped, name, name .. '_clip', speed)
         current = name
+        hipStart(name, ped)
         return true
     end
     SetEntityAnimSpeed(ped, name, name, speed)
     current = name
+    hipStart(name, ped)
     return true
 end
 
 local function stop()
+    hipEnd(PlayerPedId())
     ClearPedTasks(PlayerPedId())
     SetPedLegIkMode(PlayerPedId(), 2)
     current = nil

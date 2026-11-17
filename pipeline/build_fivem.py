@@ -23,11 +23,12 @@ TITLES = {
     "vb_celebrate": ("Sayı sevinci", "Diğer"), "wave_hand": ("El sallama", "Diğer"),
 }
 TITLES.update({
-    "vbx_spike": ("TEST Smaç (mover)", "Test (mover)"), "vbx_block": ("TEST Blok (mover)", "Test (mover)"),
-    "vbx_dig_side_R": ("TEST Sağa defans (mover)", "Test (mover)"),
+    "vbs_spike": ("TEST Smaç (script)", "Test (script)"), "vbs_block": ("TEST Blok (script)", "Test (script)"),
+    "vbs_dig_side_R": ("TEST Sağa defans (script)", "Test (script)"),
 })
-ORDER = ["Duruş", "Top kontrolü", "Servis", "Hücum / blok", "Defans", "Diğer", "Test (mover)"]
+ORDER = ["Duruş", "Top kontrolü", "Servis", "Hücum / blok", "Defans", "Diğer", "Test (script)"]
 
+HIP = {}
 clips = {}
 for d in sorted(EXPORT.iterdir()) if EXPORT.exists() else []:
     vers = sorted((int(v.name[1:]), v) for v in d.iterdir() if v.is_dir() and (v / f"{d.name}.ycd").exists())
@@ -36,8 +37,9 @@ for d in sorted(EXPORT.iterdir()) if EXPORT.exists() else []:
         if mp.exists():
             meta = json.loads(mp.read_text("utf-8"))
             info = next((v for v in meta["versions"] if v["v"] == vers[-1][0]), {})
-        else:  # test variants (pipeline/export_mover.py) carry mover.json instead
-            info = json.loads((ROOT / "output" / d.name / "mover.json").read_text("utf-8"))
+        else:  # script-root variants (pipeline/export_script.py) carry hip.json instead
+            info = json.loads((ROOT / "output" / d.name / "hip.json").read_text("utf-8"))
+            HIP[d.name] = {k: info[k] for k in ("n", "duration", "x", "y", "z")}
         title, group = TITLES.get(d.name, (d.name, "Diğer"))
         clips[d.name] = {"file": vers[-1][1] / f"{d.name}.ycd", "v": vers[-1][0], "loop": bool(info.get("loop")),
                          "sec": round(info.get("duration", 0), 1), "title": title, "group": group}
@@ -67,6 +69,12 @@ def _q(v):
 lua_clips = ",\n".join(
     f"    {{ name = {_q(c['name'])}, title = {_q(c['title'])}, group = {_q(c['group'])}, loop = {'true' if c['loop'] else 'false'}, sec = {c['sec']} }}"
     for c in ui_clips)
+def _arr(v):
+    return "{" + ",".join(str(x) for x in v) + "}"
+
+
+lua_hip = ",\n".join(
+    f"    ['{n}'] = {{ n = {h['n']}, x = {_arr(h['x'])}, y = {_arr(h['y'])}, z = {_arr(h['z'])} }}" for n, h in HIP.items())
 lua_loop = ",\n".join(f"    ['{n}'] = {'true' if c['loop'] else 'false'}" for n, c in clips.items())
 
 (RES / "client.lua").write_text(f"""-- Voleybol animasyonlari: tek resource, F6 veya /vb ile menu.
@@ -78,6 +86,56 @@ local CLIPS = {{
 }}
 local open = false
 local current = nil
+
+-- Kalca (root) hareketi script ile: oyun kemik/mover uzerinden zıplama-comelmeyi uygulamiyor. Clip'ten cikarilan kalca egrisi
+-- (karakter uzayi: x sag, y ileri, z yukari, metre) animasyonun anlik fazina gore ped'in konumuna uygulanir.
+local HIP = {{
+{lua_hip}
+}}
+local hipRun = 0
+
+local function hipEnd(ped)
+    hipRun = hipRun + 1
+    SetEntityCollision(ped, true, true)
+    SetPedGravity(ped, true)
+end
+
+local function hipStart(name, ped)
+    local h = HIP[name]
+    if not h then return end
+    hipRun = hipRun + 1
+    local my = hipRun
+    CreateThread(function()
+        local base = GetEntityCoords(ped)
+        local head = math.rad(GetEntityHeading(ped))
+        local fx, fy, rx, ry = -math.sin(head), math.cos(head), math.cos(head), math.sin(head)
+        SetEntityCollision(ped, false, false)
+        SetPedGravity(ped, false)
+        local t0 = GetGameTimer()
+        local o = {{ 0.0, 0.0, 0.0 }}
+        local function put(k)
+            SetEntityCoordsNoOffset(ped, base.x + rx * o[1] * k + fx * o[2] * k, base.y + ry * o[1] * k + fy * o[2] * k, base.z + o[3] * k, false, false, false)
+            SetEntityVelocity(ped, 0.0, 0.0, 0.0)
+        end
+        while hipRun == my do
+            if not IsEntityPlayingAnim(ped, name, name, 3) and GetGameTimer() - t0 > 600 then break end
+            local ph = GetEntityAnimCurrentTime(ped, name, name)
+            local f = ph * (h.n - 1) + 1
+            local i = math.max(1, math.min(h.n - 1, math.floor(f)))
+            local u = math.max(0.0, math.min(1.0, f - i))
+            o[1] = h.x[i] + (h.x[i + 1] - h.x[i]) * u
+            o[2] = h.y[i] + (h.y[i + 1] - h.y[i]) * u
+            o[3] = h.z[i] + (h.z[i + 1] - h.z[i]) * u
+            put(math.min(1.0, (GetGameTimer() - t0) / 150.0))
+            Wait(0)
+        end
+        if hipRun == my then  -- dogal bitis: kalcayi yumusakca eski yere indir
+            local t1 = GetGameTimer()
+            while hipRun == my and GetGameTimer() - t1 < 150 do put(1.0 - (GetGameTimer() - t1) / 150.0); Wait(0) end
+            hipEnd(ped)
+        end
+    end)
+end
 
 local function loadDict(name)
     if HasAnimDictLoaded(name) then return true end
@@ -103,6 +161,7 @@ local function play(name, opts)
     if opts.upper then flag = flag + 48 end
     local speed = opts.speed or 1.0
     -- ayak IK'si kalcayi zemine geri ceker (ziplama/comelme/yana kayma yutulur): oynarken kapat, stop()'ta geri ac
+    hipEnd(ped)
     if not opts.keepIk then SetPedLegIkMode(ped, 0) end
     TaskPlayAnim(ped, name, name, 8.0 * speed, -8.0 * speed, -1, flag, 0.0, false, false, false)
     Wait(250)
@@ -117,14 +176,17 @@ local function play(name, opts)
         end
         SetEntityAnimSpeed(ped, name, name .. '_clip', speed)
         current = name
+        hipStart(name, ped)
         return true
     end
     SetEntityAnimSpeed(ped, name, name, speed)
     current = name
+    hipStart(name, ped)
     return true
 end
 
 local function stop()
+    hipEnd(PlayerPedId())
     ClearPedTasks(PlayerPedId())
     SetPedLegIkMode(PlayerPedId(), 2)
     current = nil
