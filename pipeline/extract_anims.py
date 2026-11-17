@@ -11,6 +11,8 @@ from lib import ped as pedlib, anims as animlib
 cfg = json.loads((ROOT / "config.json").read_text())
 args = sys.argv[sys.argv.index("--") + 1:]
 ped, dicts = args[0], args[1:]
+if len(dicts) == 1 and dicts[0].startswith('@'):  # @file: one dict name per line
+    dicts = [l.strip() for l in Path(dicts[0][1:]).read_text('utf-8').splitlines() if l.strip()]
 bpy.context.scene.render.fps = 30
 
 pedlib.import_ped_parts(cfg["game_dir"], ped)
