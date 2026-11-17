@@ -12,8 +12,8 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
 - [x] 2. Playwright: `web/` içine `npm i -D playwright` + `npx playwright install chromium` (arayüz ekran görüntüsü için).
 - [x] 3. `Clip` kütüphanesine konum desteği (`SKEL_ROOT` kalça konumu) + IK yardımcıları (el/ayak hedefe, ayak yerde sabit).
 - [x] 4. Otomatik kalite denetimi: ayak kayması, yere girme, eklem sınırı, döngü kapanışı (konum dahil).
-- [ ] 5. Referans poz kütüphanesi: GTA clip'inden poz/hareket alıp üzerine değişiklik yapma.
-- [ ] 6. Hepsini kullanan kısa bir dans döngüsü üret (`pipeline/clip_defs/`), kareleri render edip gözle kontrol et.
+- [x] 5. Referans poz kütüphanesi: GTA clip'inden poz/hareket alıp üzerine değişiklik yapma.
+- [x] 6. Hepsini kullanan kısa bir dans döngüsü üret (`pipeline/clip_defs/`), kareleri render edip gözle kontrol et.
 - [ ] 7. (Kullanıcıda) `output/export/wave_hand/v4/wave_hand.ycd` oyun içi testi; sonra FiveM test resource'u.
 
 ## Komutlar
@@ -34,3 +34,16 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
   - Denetim: `lib/checks.py::motion_report`; `make_clip` çıktısında `CLIP UYARI` satırları. meta.json `report.warnings`.
   - Michael'ın ceketi çömelmede bozuk görünür (ceket eteği bacak kemiklerine bağlı); önizlemede freemode ped tercih et.
   - Test clip'i: `pipeline/clip_defs/_test_squat.py` (çıktısı silindi, yeniden üretilebilir).
+- 17 Kas: Adım 5–6 bitti. `lib/ref.py::gta_action(arm, dict, clip)` GTA clip'ini action olarak verir (XML yoksa kendisi çevirir);
+  `Clip.copy_from` ile kopyalanır. İlk dans: `pipeline/clip_defs/club_groove.py` -> `output/club_groove/v1` (pending, uyarısız).
+  Arayüz ekran görüntüsü: `node web/scripts/shot.cjs cache/preview/ui.png mp_m_freemode_01 club_groove`.
+- Freemode yüz düzeltmesi: baş mesh'i `FB_*_000` gruplarını kullanıyor, iskelette `FB_*_045` var -> `ped.fix_orphan_groups` eşliyor
+  (yoksa göz/diş başın arkasında kalıyordu). Freemode GLB'leri yeniden üretildi.
+
+## Sıradaki işler (öneri sırası)
+1. Kullanıcı: arayüzde `club_groove v1`'e bak, beğenirse Onayla -> export; `.ycd`'yi oyunda dene (wave_hand v4 dahil henüz HİÇBİR .ycd oyunda denenmedi).
+2. Oyun testinden çıkan hataları `PLAN.md` > "Bilinen tuzaklar"a yaz. Olası: IK_*/PH_* konum track'leri ve mover yazılmıyor.
+3. Export `server/main.py` içinde ped'i `player_zero` sabit alıyor; clip'in üretildiği ped'i meta.json'a yazıp onu kullan.
+4. FiveM test resource'u (`/animtest <clip>`), kullanıcı isterse.
+5. Arayüz: rapor uyarılarını (`report.warnings`) İncele panelinde göster; freemode'da kamera çerçevesi alçak kalıyor, kontrol et.
+6. Dansı zenginleştir: adım atma (plant_feet `offsets` ile ayak kaldırma), omuz, parmaklar; GTA dansından parça alıp karıştırma.

@@ -1,0 +1,81 @@
+{
+ "name": "club_groove",
+ "versions": [
+  {
+   "v": 1,
+   "label": "ilk deneme",
+   "frames": 60,
+   "fps": 30,
+   "duration": 2.0,
+   "loop": true,
+   "file": "v1.glb",
+   "module": "club_groove",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 7.9,
+    "max_step_at": "SKEL_L_Forearm@29",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.0,
+      "R": 0.0
+     },
+     "foot_slide_worst_step": [
+      0.0,
+      "SKEL_L_Foot",
+      12
+     ],
+     "below_ground_m": [
+      0.0,
+      "SKEL_R_Foot",
+      23
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 56.2,
+      "SKEL_R_Calf": 56.2,
+      "SKEL_L_Forearm": 107.9,
+      "SKEL_R_Forearm": 107.9
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.355,
+      "SKEL_L_Hand",
+      53
+     ],
+     "seam_rot_deg": [
+      0.04,
+      "SKEL_L_Finger02"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": []
+   },
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
+  }
+ ]
+}

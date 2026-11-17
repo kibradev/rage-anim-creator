@@ -65,6 +65,34 @@ def clean_scene_extras():
             bpy.data.objects.remove(o, do_unlink=True)
 
 
+def fix_orphan_groups(master):
+    """Vertex groups whose bone is missing in the master skeleton would stay behind when the ped moves (freemode
+    heads use FB_*_000 while the skeleton has FB_*_045). Map them to the same-stem bone, else to SKEL_Head."""
+    bones = {b.name for b in master.data.bones}
+    stems = {}
+    for b in bones:
+        stems.setdefault(re.sub(r"_\d+$", "", b), b)
+    fixed = 0
+    for o in [o for o in bpy.data.objects if o.type == "MESH"]:
+        for g in list(o.vertex_groups):
+            if g.name in bones:
+                continue
+            target = stems.get(re.sub(r"_\d+$", "", g.name), "SKEL_Head" if "SKEL_Head" in bones else None)
+            if target is None:
+                continue
+            fixed += 1
+            if target not in o.vertex_groups:
+                g.name = target
+                continue
+            tg = o.vertex_groups[target]
+            for v in o.data.vertices:
+                for ge in v.groups:
+                    if ge.group == g.index and ge.weight > 0:
+                        tg.add([v.index], ge.weight, "ADD")
+            o.vertex_groups.remove(g)
+    return fixed
+
+
 def merge_armatures():
     """Parts are imported with one armature each (same skeleton). Keep one, repoint all skinned meshes to it."""
     arms = sorted([o for o in bpy.data.objects if o.type == "ARMATURE"], key=lambda o: -len(o.data.bones))
@@ -81,6 +109,7 @@ def merge_armatures():
             mw = o.matrix_world.copy()
             o.parent = master
             o.matrix_world = mw
+    fix_orphan_groups(master)
     for a in arms[1:]:
         bpy.data.objects.remove(a, do_unlink=True)
     # mesh objects are named after the root bone (SKEL_ROOT...), which collides with bone nodes in glTF/three.js
