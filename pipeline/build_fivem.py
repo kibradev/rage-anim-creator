@@ -94,6 +94,8 @@ local function play(name, opts)
     local flag = LOOP[name] and 1 or 0
     if opts.upper then flag = flag + 48 end
     local speed = opts.speed or 1.0
+    -- ayak IK'si kalcayi zemine geri ceker (ziplama/comelme/yana kayma yutulur): oynarken kapat, stop()'ta geri ac
+    if not opts.keepIk then SetPedLegIkMode(ped, 0) end
     TaskPlayAnim(ped, name, name, 8.0 * speed, -8.0 * speed, -1, flag, 0.0, false, false, false)
     Wait(250)
     if not IsEntityPlayingAnim(ped, name, name, 3) then
@@ -116,6 +118,7 @@ end
 
 local function stop()
     ClearPedTasks(PlayerPedId())
+    SetPedLegIkMode(PlayerPedId(), 2)
     current = nil
 end
 
@@ -163,6 +166,41 @@ RegisterCommand('vbtest', function()
         for _, l in ipairs(report) do
             TriggerEvent('chat:addMessage', {{ args = {{ 'vbtest', l }} }})
         end
+    end)
+end, false)
+
+-- /vbhip <clip> [ik]: clip'i oynatir, kalca (SKEL_Pelvis) ve bas yuksekligini olcer. "ik" yazarsan ayak IK'si acik kalir (kiyas icin).
+-- Sonuc: baslangictan en yuksek / en alcak kalca farki (m). Ziplama clip'i icin "yuksek" ~ +0.3..0.5 olmali.
+RegisterCommand('vbhip', function(_, args)
+    local name = args[1]
+    if not name or LOOP[name] == nil then
+        TriggerEvent('chat:addMessage', {{ args = {{ 'vbhip', 'kullanim: /vbhip vb_spike [ik]' }} }})
+        return
+    end
+    CreateThread(function()
+        local ped = PlayerPedId()
+        ClearPedTasks(ped)
+        Wait(600)
+        local base = GetPedBoneCoords(ped, 11816, 0.0, 0.0, 0.0)
+        local ground = GetEntityCoords(ped)
+        if not play(name, {{ keepIk = args[2] == 'ik' }}) then return end
+        local hi, lo, side = -9, 9, 0
+        local ox, oy = base.x, base.y
+        local t0 = GetGameTimer()
+        local dur = 3000
+        for _, c in ipairs(CLIPS) do if c.name == name then dur = math.floor(c.sec * 1000) + 300 end end
+        while GetGameTimer() - t0 < dur do
+            local b = GetPedBoneCoords(ped, 11816, 0.0, 0.0, 0.0)
+            local dz = b.z - base.z
+            if dz > hi then hi = dz end
+            if dz < lo then lo = dz end
+            local dx = math.sqrt((b.x - ox) ^ 2 + (b.y - oy) ^ 2)
+            if dx > side then side = dx end
+            Wait(33)
+        end
+        local line = string.format('%s legIK=%s: kalca yukari %+.2f m, asagi %+.2f m, yatay %.2f m', name, args[2] == 'ik' and 'ACIK' or 'kapali', hi, lo, side)
+        print('vbhip: ' .. line)
+        TriggerEvent('chat:addMessage', {{ args = {{ 'vbhip', line }} }})
     end)
 end, false)
 
