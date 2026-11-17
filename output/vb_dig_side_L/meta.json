@@ -79,6 +79,85 @@
     "SKEL_Spine1",
     "SKEL_Spine3"
    ]
+  },
+  {
+   "v": 2,
+   "label": "v2 kalca yana kaymaz",
+   "frames": 52,
+   "fps": 30,
+   "duration": 1.7333333333333334,
+   "loop": false,
+   "file": "v2.glb",
+   "module": "volleyball:vb_dig_side_L",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 41.76,
+    "max_step_at": "SKEL_R_Forearm@9",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.099,
+      "R": 0.0
+     },
+     "foot_slide_worst_step": [
+      0.053,
+      "SKEL_L_Foot",
+      2
+     ],
+     "below_ground_m": [
+      0.0,
+      "SKEL_R_Foot",
+      38
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 87.3,
+      "SKEL_R_Calf": 102.5,
+      "SKEL_L_Forearm": 104.2,
+      "SKEL_R_Forearm": 98.0
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.321,
+      "SKEL_R_Hand",
+      8
+     ],
+     "seam_rot_deg": [
+      0.06,
+      "SKEL_Head"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": [
+     "ayak kaymas\u0131 L: yerdeyken toplam 0.10 m kayd\u0131 (en b\u00fcy\u00fck ad\u0131m kare 2)"
+    ]
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
   }
  ]
 }

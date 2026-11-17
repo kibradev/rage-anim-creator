@@ -135,13 +135,14 @@ def dig_low():
 
 
 def dig_side_R():
-    """Side dig to the right: lunge step right, platform reaches out to the side."""
-    step = {"root": (0.16, 0, -0.20), "foot_R": (0.58, 0.06, 0.09), "pitch_R": -10}
-    low = {"root": (0.36, 0.04, -0.40), "foot_R": (0.62, 0.06, 0), "pitch_R": 0, "spine": (26, 0, 0), "chest": (6, -16, -10), "head": (-22, 0, 0),
-           "hand_L": (0.48 - J, 0.38, 0.58), "hand_R": (0.48 + J, 0.38, 0.58), "elbow_L": (-0.4, -0.3, -1), "elbow_R": (0.8, -0.3, -1), "ease": "out"}
-    lift = {"root": (0.36, 0.04, -0.34), "hand_L": (0.50 - J, 0.40, 0.80), "hand_R": (0.50 + J, 0.40, 0.80), "ease": "in"}
-    up = {"root": (0.30, 0.02, -0.30), "foot_R": (0.62, 0.06, 0.07), "ease": "in"}
-    back = {"root": (0.10, 0, -0.18), "foot_R": (0.14, 0, 0.08), "chest": (6, 0, 0), "spine": (18, 0, 0),
+    """Side dig to the right. The hip never moves sideways (root x = 0): sideways hip travel is the one thing no other
+    clip does; the lunge comes from a wide step + lean (pelvis/spine roll) instead."""
+    step = {"root": (0, 0, -0.20), "foot_R": (0.40, 0.06, 0.09), "pitch_R": -10, "pelvis": (8, -6, 0)}
+    low = {"root": (0, 0.04, -0.36), "foot_R": (0.46, 0.06, 0), "pitch_R": 0, "pelvis": (8, -12, 0), "spine": (26, -8, 0), "chest": (6, -16, -10), "head": (-22, 0, 0),
+           "hand_L": (0.30 - J, 0.36, 0.58), "hand_R": (0.30 + J, 0.36, 0.58), "elbow_L": (-0.4, -0.3, -1), "elbow_R": (0.8, -0.3, -1), "ease": "out"}
+    lift = {"root": (0, 0.04, -0.32), "hand_L": (0.32 - J, 0.38, 0.80), "hand_R": (0.32 + J, 0.38, 0.80), "ease": "in"}
+    up = {"root": (0, 0.02, -0.28), "foot_R": (0.46, 0.06, 0.07), "ease": "in"}
+    back = {"root": (0, 0, -0.18), "foot_R": (0.14, 0, 0.08), "pelvis": (8, 0, 0), "chest": (6, 0, 0), "spine": (18, 0, 0),
             "hand_L": (-0.10, 0.36, 0.92), "hand_R": (0.30, 0.36, 0.92)}
     return 52, False, [(0, READY), (6, step), (13, low), (19, lift), (24, {**lift, "ease": "smooth"}), (28, up), (40, back), (52, READY)]
 
