@@ -384,7 +384,16 @@ RegisterCommand('vbref', function(_, args)
 end, false)
 
 RegisterNUICallback('play', function(data, cb)
-    if play(data.name, { speed = tonumber(data.speed) or 1.0, upper = data.upper == true }) then
+    local spd, up = tonumber(data.speed) or 1.0, data.upper == true
+    -- komutla ayni baslangic: onceki animasyon/gorev temizlenir (/vbhip de boyle baslar), ped duruyor halinde oynar
+    local ped = PlayerPedId()
+    if current or IsEntityPlayingAnim(ped, data.name, data.name, 3) then
+        ClearPedTasks(ped)
+        Wait(200)
+    end
+    -- tanilama: UI'dan tam olarak ne gitti (ust vucut isaretliyse sadece ust vucut oynar, ziplama/bacak kaybolur)
+    TriggerEvent('chat:addMessage', { args = { 'vb-ui', string.format('%s | hiz %.2f | ust vucut: %s', tostring(data.name), spd, up and 'ACIK (bacaklar oynamaz!)' or 'kapali') } })
+    if play(data.name, { speed = spd, upper = up }) then
         SendNUIMessage({ type = 'playing', name = data.name })
     end
     cb('ok')
