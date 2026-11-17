@@ -110,7 +110,7 @@ def start_export(body: ExportBody):
     def run():
         with JOB_LOCK:
             cmd = [CFG["blender"], "-b", "--python", str(ROOT / "pipeline" / "export_ycd.py"), "--",
-                   "player_zero", body.name, str(body.version)]
+                   ver.get("ped") or "player_zero", body.name, str(body.version)]
             proc = subprocess.Popen(cmd, cwd=ROOT, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace")
             for line in proc.stdout:
                 if line.startswith("EXPORT"):

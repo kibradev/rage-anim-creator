@@ -47,3 +47,24 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
 4. FiveM test resource'u (`/animtest <clip>`), kullanıcı isterse.
 5. Arayüz: rapor uyarılarını (`report.warnings`) İncele panelinde göster; freemode'da kamera çerçevesi alçak kalıyor, kontrol et.
 6. Dansı zenginleştir: adım atma (plant_feet `offsets` ile ayak kaldırma), omuz, parmaklar; GTA dansından parça alıp karıştırma.
+
+## Voleybol seti (17 Kas)
+- Anahtar-poz sistemi: `pipeline/lib/posekeys.py` (karakter uzayında birkaç poz -> her kare IK ile çözülür; parametreler dosya başında).
+- Tanımlar: `pipeline/clip_defs/volleyball.py` (`CLIPS` sözlüğü, `READY` duruşu, `mirror()`).
+- Üretim (hepsi ~10 sn): `make_clip.py -- mp_m_freemode_01 volleyball:all "<etiket>"`; tek clip: `volleyball:vb_spike`.
+  Her clip için kontak sayfası `cache/preview/<clip>_vN.png` kendiliğinden çıkar.
+- Üretilen 13 clip (hepsi v1, pending): vb_ready_idle, vb_bump, vb_set, vb_serve_under, vb_serve_over, vb_spike, vb_block,
+  vb_dig_low, vb_dig_side_R/L, vb_shuffle_R/L, vb_celebrate. Hepsi yerinde (ped'i script taşır), READY duruşunda başlar/biter.
+- Bilinen kusurlar: shuffle'da ayak kayması uyarısı kasıtlı (koşu bandı döngüsü); servis/defansta adım başı-sonu 6–14 cm kayma;
+  parmaklar hareketsiz (el açık); top yok; plonjon (yere atlama) yok; koşu/yaklaşma adımları yok (smaç yerinden sıçrıyor).
+- Dosya düzeyi export testi: `export_ycd.py -- mp_m_freemode_01 vb_spike 1 test` -> `cache/rt/export_test/` (onay kapısına dokunmaz). Geçti (0,04°).
+- `server/main.py` export artık sürümün `ped` alanını kullanıyor (SUNUCU YENİDEN BAŞLATILMALI).
+- FiveM test resource: `python pipeline/build_fivem.py` -> `output/fivem/animcreator_anims/` (`/animtest <clip>`, `/animstop`).
+  Yalnızca onaylanıp export edilmiş clip'leri toplar.
+- İnternetten hazır animasyon kullanılmadı (lisans belirsiz + mocap'in GTA iskeletine aktarımı ayrı iş).
+
+## Sıradaki işler (güncel)
+1. Kullanıcı: clip'lere arayüzde bak -> Onayla -> export -> `build_fivem.py` -> oyunda `/animtest`. HİÇBİR .ycd henüz oyunda denenmedi.
+2. Oyun testine göre: kök konumu oyunda çalışıyor mu (zıplama/çömelme), yön doğru mu, geçişler.
+3. Eksik hareketler: plonjon, yaklaşma adımlı smaç, sıçrayarak servis, parmak pozları (yumruk/açık el), kadın ped üzerinde kontrol.
+4. Arayüz: uyarıları İncele panelinde göster; toplu onay; freemode kamera çerçevesi.

@@ -287,7 +287,7 @@ def quality_report(arm, clip) -> dict:
     return {"loop_gap_deg": round(gap, 2), "max_step_deg": round(fastest, 2), "max_step_at": fastest_at}
 
 
-def export_version(arm, clip: Clip, out_root: Path, label: str = "", module: str = "") -> dict:
+def export_version(arm, clip: Clip, out_root: Path, label: str = "", module: str = "", ped: str = "") -> dict:
     """Bake the clip into a single NLA track, export output/<name>/vN.glb and update meta.json."""
     from . import anims as animlib
 
@@ -316,7 +316,7 @@ def export_version(arm, clip: Clip, out_root: Path, label: str = "", module: str
     meta["versions"].append({
         "v": n, "label": label, "frames": clip.frames, "fps": clip.fps,
         "duration": clip.frames / clip.fps, "loop": clip.loop, "file": glb.name, "module": module,
-        "status": "pending", "report": report,
+        "status": "pending", "report": report, "ped": ped,
         "bones": sorted({fc.data_path.split('"')[1] for fc in clip.action.fcurves if fc.data_path.startswith("pose.bones")}),
     })
     meta_path.write_text(json.dumps(meta, indent=1), "utf-8")

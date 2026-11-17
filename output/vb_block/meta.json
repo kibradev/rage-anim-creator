@@ -1,0 +1,82 @@
+{
+ "name": "vb_block",
+ "versions": [
+  {
+   "v": 1,
+   "label": "v1",
+   "frames": 56,
+   "fps": 30,
+   "duration": 1.8666666666666667,
+   "loop": false,
+   "file": "v1.glb",
+   "module": "volleyball:vb_block",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 37.08,
+    "max_step_at": "SKEL_R_Forearm@4",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.0,
+      "R": 0.0
+     },
+     "foot_slide_worst_step": [
+      0.0,
+      "SKEL_R_Foot",
+      10
+     ],
+     "below_ground_m": [
+      0.001,
+      "SKEL_R_Toe0",
+      10
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 92.3,
+      "SKEL_R_Calf": 92.3,
+      "SKEL_L_Forearm": 130.9,
+      "SKEL_R_Forearm": 130.9
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.389,
+      "SKEL_L_Hand",
+      47
+     ],
+     "seam_rot_deg": [
+      0.06,
+      "SKEL_Head"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": []
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
+  }
+ ]
+}

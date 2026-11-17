@@ -46,7 +46,7 @@ def _aim(cam, direction: Vector, center: Vector, height: float):
     cam.data.ortho_scale = height
 
 
-def render_sheet(arm, action, frames, out_png, views=("front", "side"), cell=(300, 420), floor_z=None, follow=True):
+def render_sheet(arm, action, frames, out_png, views=("front", "side"), cell=(230, 330), floor_z=None, follow=True):
     """Rows = views, columns = frames. `follow` keeps the camera centred on the pelvis (in-place look)."""
     sc, cam = _setup(*cell)
     if arm.animation_data is None:
@@ -64,9 +64,9 @@ def render_sheet(arm, action, frames, out_png, views=("front", "side"), cell=(30
         for f in frames:
             sc.frame_set(int(f), subframe=f - int(f))
             pelvis = arm.matrix_world @ arm.pose.bones["SKEL_Pelvis"].head
-            center = Vector((pelvis.x, pelvis.y, fl.location.z + 1.0)) if follow else Vector((0, 0, fl.location.z + 1.0))
+            center = Vector((pelvis.x, pelvis.y, fl.location.z + 1.3)) if follow else Vector((0, 0, fl.location.z + 1.3))
             fl.location.x, fl.location.y = (center.x, center.y) if follow else (0, 0)
-            _aim(cam, VIEWS[v], center, 2.3 if v != "top" else 2.3)
+            _aim(cam, VIEWS[v], center, 2.9)
             sc.render.filepath = os.path.join(tmp, f"{v}_{f}.png")
             bpy.ops.render.render(write_still=True)
             img = bpy.data.images.load(sc.render.filepath)
