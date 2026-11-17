@@ -286,6 +286,17 @@ RegisterCommand('vbhip', function(_, args)
         local base = GetPedBoneCoords(ped, 11816, 0.0, 0.0, 0.0)
         local ground = GetEntityCoords(ped)
         if not play(name, {{ keepIk = args[2] == 'ik' }}) then return end
+        -- yon tanilamasi: entity heading ile iskeletin (sag-sol uyluk) bakis yonu; fark ~0 olmali, ~180 = iskelet ters
+        local function skelYawDiff()
+            local r = GetPedBoneCoords(ped, 51826, 0.0, 0.0, 0.0)   -- SKEL_R_Thigh
+            local l = GetPedBoneCoords(ped, 58271, 0.0, 0.0, 0.0)   -- SKEL_L_Thigh
+            local d = math.deg(math.atan2(r.y - l.y, r.x - l.x)) - GetEntityHeading(ped)
+            while d > 180 do d = d - 360 end
+            while d < -180 do d = d + 360 end
+            return d
+        end
+        local yaw0, h0 = skelYawDiff(), GetEntityHeading(ped)
+        local yawMid, yawEnd, hMax = yaw0, yaw0, 0.0
         local hi, lo, side = -9, 9, 0
         local ox, oy = base.x, base.y
         local t0 = GetGameTimer()
@@ -298,11 +309,20 @@ RegisterCommand('vbhip', function(_, args)
             if dz < lo then lo = dz end
             local dx = math.sqrt((b.x - ox) ^ 2 + (b.y - oy) ^ 2)
             if dx > side then side = dx end
+            local el = GetGameTimer() - t0
+            if el > dur * 0.4 and el < dur * 0.6 then yawMid = skelYawDiff() end
+            local dh = math.abs(GetEntityHeading(ped) - h0)
+            if dh > 180 then dh = 360 - dh end
+            if dh > hMax then hMax = dh end
+            yawEnd = skelYawDiff()
             Wait(33)
         end
         local line = string.format('%s legIK=%s: kalca yukari %+.2f m, asagi %+.2f m, yatay %.2f m', name, args[2] == 'ik' and 'ACIK' or 'kapali', hi, lo, side)
         print('vbhip: ' .. line)
         TriggerEvent('chat:addMessage', {{ args = {{ 'vbhip', line }} }})
+        local yl = string.format('YON: iskelet-entity farki baslangic %.0f, orta %.0f, son %.0f derece; entity heading en fazla %.0f derece degisti', yaw0, yawMid, yawEnd, hMax)
+        print('vbhip: ' .. yl)
+        TriggerEvent('chat:addMessage', {{ args = {{ 'vbhip', yl }} }})
     end)
 end, false)
 
