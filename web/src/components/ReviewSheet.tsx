@@ -108,6 +108,13 @@ export function ReviewSheet({ clip, open, onOpenChange, onChanged }: Props) {
           </Button>
 
           {job?.state === 'failed' && <p className="text-sm text-destructive">Export başarısız oldu.</p>}
+          {clip.gameDiff && (
+            <div className="flex flex-col gap-2">
+              <Row k="Export → tasarım farkı" v={`${clip.gameDiff.rotDeg}° (${clip.gameDiff.rotBone})`} />
+              <Row k="Kalça konum farkı" v={`${(clip.gameDiff.rootM * 1000).toFixed(1)} mm`} />
+              <Row k="Kayıp kemik eğrisi" v={String(clip.gameDiff.missing)} />
+            </div>
+          )}
           {clip.exportUrl && (
             <div className="flex flex-col gap-1 text-sm">
               <a className="underline underline-offset-4" href={clip.exportUrl} download>

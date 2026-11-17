@@ -80,3 +80,6 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
 - 17 Kas: FiveM paketi tek resource oldu: `python pipeline/build_fivem.py` -> `output/fivem/voleybol_anims/` (client.lua + ui.html + stream/*.ycd).
   Oyunda `ensure voleybol_anims`, F6 veya /vb menüsü (tıkla-oynat, hız, üst vücut modu, Durdur); /animtest <clip>, /animstop de çalışır.
   Lua sözdizimi `luac -p` ile doğrulandı; oyunda ve NUI HENÜZ DENENMEDİ. Yeni clip export edince build_fivem.py'yi yeniden çalıştır.
+- 17 Kas (oyun/önizleme farkı): `pipeline/decode_export.py -- vb_,wave_hand` export edilen İKİLİ .ycd'yi geri çözer -> `output/export/<clip>/vN/game.glb` + `game.json`.
+  Arayüzde kenar çubuğu "Oyun verisi" anahtarı bu GLB'yi oynatır; İncele panelinde tasarım↔export farkı görünür. Sonuç: 13 vb_ clip'te fark ≤0,66° ve ≤4 mm,
+  kayıp eğri yok -> kodlama kayıpsız; oyundaki fark çalışma zamanından (ped modeli, blend, flag, mover/kapsül) geliyor olmalı. wave_hand (player_zero) ayrı çalıştırılmalı.

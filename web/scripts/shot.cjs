@@ -1,9 +1,9 @@
-// node web/scripts/shot.cjs <out.png> [ped] [mine-clip-text]
+// node web/scripts/shot.cjs <out.png> [ped] [mine-clip-text] [game]
 // Opens the running UI (http://localhost:5173), optionally picks a ped and an authored clip, saves a screenshot.
 const { chromium } = require('playwright')
 
 ;(async () => {
-  const [out = 'shot.png', ped, mine] = process.argv.slice(2)
+  const [out = 'shot.png', ped, mine, game] = process.argv.slice(2)
   const b = await chromium.launch({ args: ['--use-gl=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] })
   const p = await b.newPage({ viewport: { width: 1400, height: 850 } })
   const errs = []
@@ -19,6 +19,10 @@ const { chromium } = require('playwright')
     await p.getByText('Benim', { exact: false }).first().click()
     await p.waitForTimeout(500)
     await p.getByText(mine, { exact: false }).first().click()
+    await p.waitForTimeout(2500)
+  }
+  if (game === 'game') {
+    await p.getByText('Oyun verisi', { exact: false }).first().click()
     await p.waitForTimeout(2500)
   }
   await p.screenshot({ path: out })

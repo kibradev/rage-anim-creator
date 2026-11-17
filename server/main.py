@@ -50,6 +50,16 @@ def clips():
     return json.loads(idx.read_text(encoding="utf-8")) if idx.exists() else []
 
 
+def _game_diff(name: str, version: int):
+    """Authored vs decoded-.ycd difference written by pipeline/decode_export.py (None if not decoded yet)."""
+    p = OUTPUT / "export" / name / f"v{version}" / "game.json"
+    if not p.exists():
+        return None
+    g = json.loads(p.read_text(encoding="utf-8"))
+    return {"rotDeg": g["max_rot_deg"][0], "rotBone": g["max_rot_deg"][1], "rootM": g["max_root_m"][0],
+            "missing": len(g["missing_in_game"]), "framesGame": g["frames_game"]}
+
+
 @app.get("/api/mine")
 def mine():
     """Clips authored with pipeline/make_clip.py, latest version first-class; all versions listed."""
@@ -66,6 +76,11 @@ def mine():
                     "frames": v["frames"], "duration": v["duration"], "fps": v["fps"], "loop": v.get("loop", False),
                     "bones": len(v.get("bones", [])), **v.get("report", {}),
                 },
+                "gameUrl": (
+                    f"/files/output/export/{meta['name']}/v{v['v']}/game.glb"
+                    if (OUTPUT / "export" / meta["name"] / f"v{v['v']}" / "game.glb").exists() else None
+                ),
+                "gameDiff": _game_diff(meta["name"], v["v"]),
                 "exportUrl": (
                     f"/files/output/export/{meta['name']}/v{v['v']}/{meta['name']}.ycd"
                     if (OUTPUT / "export" / meta["name"] / f"v{v['v']}" / f"{meta['name']}.ycd").exists() else None

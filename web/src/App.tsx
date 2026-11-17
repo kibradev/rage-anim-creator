@@ -19,6 +19,7 @@ export default function App() {
   const [review, setReview] = useState(false)
   const [skeleton, setSkeleton] = useState(false)
   const [inPlace, setInPlace] = useState(true)
+  const [game, setGame] = useState(false)
   const player = useRef(new Player()).current
 
   useEffect(() => {
@@ -56,6 +57,9 @@ export default function App() {
   // keep the selected authored clip in sync with status/export changes
   const liveClip = clip?.version ? (mine.find((m) => m.url === clip.url) ?? clip) : clip
 
+  // "game" view: the clip decoded back from the exported .ycd (what FiveM actually loads)
+  const shown = game && liveClip?.gameUrl ? { ...liveClip, url: liveClip.gameUrl } : clip
+
   const current = peds.find((p) => p.name === ped) ?? null
 
   return (
@@ -74,6 +78,8 @@ export default function App() {
           clip={clip}
           onClip={setClip}
           inPlace={inPlace}
+          game={game}
+          onGame={setGame}
           onInPlace={(v) => {
             setInPlace(v)
             player.setInPlace(v)
@@ -81,14 +87,14 @@ export default function App() {
         />
         <div className="flex min-w-0 flex-1 flex-col">
           <main className="relative min-h-0 flex-1">
-            <Viewport url={current?.url ?? null} skeleton={skeleton} player={player} clip={clip} />
+            <Viewport url={current?.url ?? null} skeleton={skeleton} player={player} clip={shown} />
             {liveClip?.version && (
               <Button className="absolute top-4 right-4" variant="secondary" size="sm" onClick={() => setReview(true)}>
                 İncele
               </Button>
             )}
           </main>
-          <Timeline player={player} label={clip ? clip.name.replace(/\.clip$/, '') : ''} />
+          <Timeline player={player} label={clip ? clip.name.replace(/\.clip$/, '') + (game && liveClip?.gameUrl ? '  [oyun verisi]' : game && clip.version ? '  [export yok]' : '') : ''} />
         </div>
       </div>
       {liveClip?.version && (

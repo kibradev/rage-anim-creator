@@ -18,9 +18,11 @@ type Props = {
   onClip: (c: Clip) => void
   inPlace: boolean
   onInPlace: (v: boolean) => void
+  game: boolean
+  onGame: (v: boolean) => void
 }
 
-export function Sidebar({ peds, ped, onPed, skeleton, onSkeleton, clips, mine, tab, onTab, clip, onClip, inPlace, onInPlace }: Props) {
+export function Sidebar({ peds, ped, onPed, skeleton, onSkeleton, clips, mine, tab, onTab, clip, onClip, inPlace, onInPlace, game, onGame }: Props) {
   return (
     <aside className="flex w-72 shrink-0 flex-col gap-4 border-r border-border p-4">
       <div className="text-sm font-medium tracking-tight">animCreator</div>
@@ -54,6 +56,10 @@ export function Sidebar({ peds, ped, onPed, skeleton, onSkeleton, clips, mine, t
       <label className="flex items-center justify-between text-sm">
         Yerinde (root motion kapalı)
         <Switch checked={inPlace} onCheckedChange={onInPlace} />
+      </label>
+      <label className="flex items-center justify-between text-sm" title="Export edilen .ycd dosyasını geri çözüp oynatır: oyunun gördüğü veri">
+        Oyun verisi (.ycd'den geri çözülmüş)
+        <Switch checked={game} onCheckedChange={onGame} />
       </label>
       <label className="flex items-center justify-between text-sm">
         İskelet
