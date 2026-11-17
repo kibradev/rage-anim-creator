@@ -24,4 +24,7 @@ mod = importlib.import_module(f"clip_defs.{module}")
 clip = mod.build(arm, cliplib)
 clip.finish()
 meta = cliplib.export_version(arm, clip, ROOT / "output", label, module)
+for w in meta["versions"][-1]["report"]["warnings"]:
+    print("CLIP UYARI", w)
+print("CLIP rapor", json.dumps(meta["versions"][-1]["report"], ensure_ascii=False))
 print("CLIP done", clip.name, "v", meta["versions"][-1]["v"], "frames", clip.frames, "bones", len(meta["versions"][-1]["bones"]))
