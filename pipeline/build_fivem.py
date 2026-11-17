@@ -52,13 +52,23 @@ client_script 'client.lua'
 
 ui_clips = [{"name": n, "title": c["title"], "group": c["group"], "loop": c["loop"], "sec": c["sec"]} for n, c in clips.items()]
 ui_clips.sort(key=lambda c: (ORDER.index(c["group"]) if c["group"] in ORDER else 99, c["title"]))
+def _q(v):
+    return json.dumps(v, ensure_ascii=False)  # JSON string literals are valid Lua strings for our content
+
+
+lua_clips = ",
+".join(
+    f"    {{ name = {_q(c['name'])}, title = {_q(c['title'])}, group = {_q(c['group'])}, loop = {'true' if c['loop'] else 'false'}, sec = {c['sec']} }}"
+    for c in ui_clips)
 lua_loop = ",\n".join(f"    ['{n}'] = {'true' if c['loop'] else 'false'}" for n, c in clips.items())
 
 (RES / "client.lua").write_text(f"""-- Voleybol animasyonlari: tek resource, F6 veya /vb ile menu.
 local LOOP = {{
 {lua_loop}
 }}
-local CLIPS = {json.dumps(ui_clips, ensure_ascii=False)}
+local CLIPS = {{
+{lua_clips}
+}}
 local open = false
 local current = nil
 
