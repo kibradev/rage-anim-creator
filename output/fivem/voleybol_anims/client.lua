@@ -100,6 +100,35 @@ RegisterCommand('animtest', function(_, args)
 end, false)
 RegisterCommand('animstop', stop, false)
 
+-- /vbtest: butun clip'leri sirayla dener, her biri icin dict yuklendi mi / oynadi mi yazar (F8 konsoluna ve sohbete)
+RegisterCommand('vbtest', function()
+    CreateThread(function()
+        local report = {}
+        for _, c in ipairs(CLIPS) do
+            local name = c.name
+            RequestAnimDict(name)
+            local t = GetGameTimer()
+            while not HasAnimDictLoaded(name) and GetGameTimer() - t < 4000 do Wait(0) end
+            local dict = HasAnimDictLoaded(name)
+            local plays = false
+            if dict then
+                local ped = PlayerPedId()
+                TaskPlayAnim(ped, name, name, 8.0, -8.0, -1, 0, 0.0, false, false, false)
+                Wait(300)
+                plays = IsEntityPlayingAnim(ped, name, name, 3)
+                ClearPedTasks(ped)
+            end
+            local line = ('%s  dict=%s  oynuyor=%s'):format(name, dict and 'EVET' or 'HAYIR', plays and 'EVET' or 'HAYIR')
+            print('vbtest: ' .. line)
+            report[#report + 1] = line
+            Wait(200)
+        end
+        for _, l in ipairs(report) do
+            TriggerEvent('chat:addMessage', { args = { 'vbtest', l } })
+        end
+    end)
+end, false)
+
 RegisterNUICallback('play', function(data, cb)
     if play(data.name, { speed = tonumber(data.speed) or 1.0, upper = data.upper == true }) then
         SendNUIMessage({ type = 'playing', name = data.name })
