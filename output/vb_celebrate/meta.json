@@ -77,6 +77,162 @@
     "SKEL_Spine1",
     "SKEL_Spine3"
    ]
+  },
+  {
+   "v": 2,
+   "label": "havada dizler bukuk (GTA olcumu)",
+   "frames": 70,
+   "fps": 30,
+   "duration": 2.3333333333333335,
+   "loop": false,
+   "file": "v2.glb",
+   "module": "volleyball:vb_celebrate",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 72.81,
+    "max_step_at": "SKEL_L_Forearm@21",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.0,
+      "R": 0.0
+     },
+     "foot_slide_worst_step": [
+      0.0,
+      "SKEL_R_Foot",
+      59
+     ],
+     "below_ground_m": [
+      0.035,
+      "SKEL_L_Toe0",
+      12
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 88.6,
+      "SKEL_R_Calf": 88.6,
+      "SKEL_L_Forearm": 151.7,
+      "SKEL_R_Forearm": 151.7
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.283,
+      "SKEL_R_Hand",
+      8
+     ],
+     "seam_rot_deg": [
+      0.06,
+      "SKEL_Head"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": [
+     "yere girme: SKEL_L_Toe0 zeminin 4 cm alt\u0131nda (kare 12)"
+    ]
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
+  },
+  {
+   "v": 3,
+   "label": "havada dizler bukuk (GTA olcumu)",
+   "frames": 70,
+   "fps": 30,
+   "duration": 2.3333333333333335,
+   "loop": false,
+   "file": "v3.glb",
+   "module": "volleyball:vb_celebrate",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 72.81,
+    "max_step_at": "SKEL_L_Forearm@21",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.0,
+      "R": 0.0
+     },
+     "foot_slide_worst_step": [
+      0.0,
+      "SKEL_R_Foot",
+      32
+     ],
+     "below_ground_m": [
+      0.004,
+      "SKEL_R_Toe0",
+      11
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 88.6,
+      "SKEL_R_Calf": 88.6,
+      "SKEL_L_Forearm": 151.7,
+      "SKEL_R_Forearm": 151.7
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.283,
+      "SKEL_R_Hand",
+      8
+     ],
+     "seam_rot_deg": [
+      0.06,
+      "SKEL_Head"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": []
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
   }
  ]
 }
