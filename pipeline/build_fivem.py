@@ -464,28 +464,30 @@ local function measureUi(name, sec)
 end
 
 RegisterNUICallback('play', function(data, cb)
-    cb('ok')  -- hemen cevapla: oynatma sirasinda NUI callback'i bloke etmeyelim
+    cb('ok')
     local spd, up = tonumber(data.speed) or 1.0, data.upper == true
-    local ped = PlayerPedId()
-    if current or IsEntityPlayingAnim(ped, data.name, data.name, 3) then
-        ClearPedTasks(ped)
-        Wait(200)
-    end
-    TriggerEvent('chat:addMessage', {{ args = {{ 'vb-ui', string.format('%s | hiz %.2f | ust vucut: %s', tostring(data.name), spd, up and 'ACIK (bacaklar oynamaz!)' or 'kapali') }} }})
-    setOpen(false)  -- odagi birak, menuyu gizle (komutla ayni kosul)
-    Wait(100)
-    if play(data.name, {{ speed = spd, upper = up }}) then
-        local sec = 3
-        for _, c in ipairs(CLIPS) do if c.name == data.name then sec = c.sec end end
-        if not LOOP[data.name] and not up then measureUi(data.name, sec) end
-        -- clip bitince menu geri gelsin (dongulu clip'lerde F6 ile ac)
+    setOpen(false)  -- odagi birak, menuyu gizle
+    if not up and math.abs(spd - 1.0) < 0.01 and LOOP[data.name] ~= nil then
+        -- TANI: calisan /vbhip komutunun BIREBIR aynisi (ClearPedTasks + 600 ms + play + olcum). UI yolu bununla ayni sonucu
+        -- veriyorsa fark benim eski UI kodumdaydi; vermiyorsa fark NUI/odak durumunda.
+        TriggerEvent('chat:addMessage', {{ args = {{ 'vb-ui', data.name .. ': menu -> /vbhip yolu' }} }})
+        ExecuteCommand('vbhip ' .. data.name)
+        SendNUIMessage({{ type = 'playing', name = data.name }})
         if not LOOP[data.name] then
             CreateThread(function()
-                local t0 = GetGameTimer()
-                while GetGameTimer() - t0 < math.floor(sec * 1000) + 600 do Wait(100) end
+                local sec = 3
+                for _, c in ipairs(CLIPS) do if c.name == data.name then sec = c.sec end end
+                Wait(math.floor(sec * 1000) + 1500)
                 if not open and current == data.name then setOpen(true) end
             end)
         end
+        return
+    end
+    local ped = PlayerPedId()
+    ClearPedTasks(ped)
+    Wait(600)
+    TriggerEvent('chat:addMessage', {{ args = {{ 'vb-ui', string.format('%s | hiz %.2f | ust vucut: %s', tostring(data.name), spd, up and 'ACIK (bacaklar oynamaz!)' or 'kapali') }} }})
+    if play(data.name, {{ speed = spd, upper = up }}) then
         SendNUIMessage({{ type = 'playing', name = data.name }})
     else
         setOpen(true)
