@@ -56,8 +56,7 @@ def _q(v):
     return json.dumps(v, ensure_ascii=False)  # JSON string literals are valid Lua strings for our content
 
 
-lua_clips = ",
-".join(
+lua_clips = ",\n".join(
     f"    {{ name = {_q(c['name'])}, title = {_q(c['title'])}, group = {_q(c['group'])}, loop = {'true' if c['loop'] else 'false'}, sec = {c['sec']} }}"
     for c in ui_clips)
 lua_loop = ",\n".join(f"    ['{n}'] = {'true' if c['loop'] else 'false'}" for n, c in clips.items())

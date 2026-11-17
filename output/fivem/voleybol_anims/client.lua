@@ -15,7 +15,22 @@ local LOOP = {
     ['vb_spike'] = false,
     ['wave_hand'] = false
 }
-local CLIPS = [{"name": "vb_ready_idle", "title": "Hazır bekleme", "group": "Duruş", "loop": true, "sec": 2.0}, {"name": "vb_shuffle_R", "title": "Sağa yan adım", "group": "Duruş", "loop": true, "sec": 0.7}, {"name": "vb_shuffle_L", "title": "Sola yan adım", "group": "Duruş", "loop": true, "sec": 0.7}, {"name": "vb_bump", "title": "Manşet pas", "group": "Top kontrolü", "loop": false, "sec": 1.3}, {"name": "vb_set", "title": "Parmak pas", "group": "Top kontrolü", "loop": false, "sec": 1.3}, {"name": "vb_serve_under", "title": "Alttan servis", "group": "Servis", "loop": false, "sec": 1.8}, {"name": "vb_serve_over", "title": "Üstten servis", "group": "Servis", "loop": false, "sec": 2.1}, {"name": "vb_block", "title": "Blok", "group": "Hücum / blok", "loop": false, "sec": 1.9}, {"name": "vb_spike", "title": "Smaç", "group": "Hücum / blok", "loop": false, "sec": 2.4}, {"name": "vb_dig_low", "title": "Alçak defans", "group": "Defans", "loop": false, "sec": 1.5}, {"name": "vb_dig_side_R", "title": "Sağa defans", "group": "Defans", "loop": false, "sec": 1.7}, {"name": "vb_dig_side_L", "title": "Sola defans", "group": "Defans", "loop": false, "sec": 1.7}, {"name": "wave_hand", "title": "El sallama", "group": "Diğer", "loop": false, "sec": 3.0}, {"name": "vb_celebrate", "title": "Sayı sevinci", "group": "Diğer", "loop": false, "sec": 2.3}]
+local CLIPS = {
+    { name = "vb_ready_idle", title = "Hazır bekleme", group = "Duruş", loop = true, sec = 2.0 },
+    { name = "vb_shuffle_R", title = "Sağa yan adım", group = "Duruş", loop = true, sec = 0.7 },
+    { name = "vb_shuffle_L", title = "Sola yan adım", group = "Duruş", loop = true, sec = 0.7 },
+    { name = "vb_bump", title = "Manşet pas", group = "Top kontrolü", loop = false, sec = 1.3 },
+    { name = "vb_set", title = "Parmak pas", group = "Top kontrolü", loop = false, sec = 1.3 },
+    { name = "vb_serve_under", title = "Alttan servis", group = "Servis", loop = false, sec = 1.8 },
+    { name = "vb_serve_over", title = "Üstten servis", group = "Servis", loop = false, sec = 2.1 },
+    { name = "vb_block", title = "Blok", group = "Hücum / blok", loop = false, sec = 1.9 },
+    { name = "vb_spike", title = "Smaç", group = "Hücum / blok", loop = false, sec = 2.4 },
+    { name = "vb_dig_low", title = "Alçak defans", group = "Defans", loop = false, sec = 1.5 },
+    { name = "vb_dig_side_R", title = "Sağa defans", group = "Defans", loop = false, sec = 1.7 },
+    { name = "vb_dig_side_L", title = "Sola defans", group = "Defans", loop = false, sec = 1.7 },
+    { name = "wave_hand", title = "El sallama", group = "Diğer", loop = false, sec = 3.0 },
+    { name = "vb_celebrate", title = "Sayı sevinci", group = "Diğer", loop = false, sec = 2.3 }
+}
 local open = false
 local current = nil
 
