@@ -48,9 +48,14 @@ local HIP = {
     ['vbs_spike'] = { n = 73, x = {0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, y = {0.0,-0.0004,-0.0015,-0.0031,-0.0052,-0.0075,-0.01,-0.0125,-0.0148,-0.0169,-0.0185,-0.0196,-0.02,-0.0183,-0.0133,-0.005,0.0067,0.0217,0.04,0.0541,0.0662,0.0766,0.085,0.0916,0.0962,0.0991,0.1,0.1025,0.11,0.1225,0.14,0.1472,0.1528,0.1568,0.1592,0.16,0.16,0.16,0.16,0.16,0.16,0.16,0.1595,0.1581,0.1558,0.1527,0.1489,0.1443,0.1392,0.1335,0.1274,0.1208,0.1139,0.1066,0.0992,0.0916,0.0839,0.0761,0.0684,0.0608,0.0534,0.0461,0.0392,0.0326,0.0265,0.0208,0.0157,0.0111,0.0073,0.0042,0.0019,0.0005,0.0}, z = {-0.14,-0.1439,-0.1548,-0.1713,-0.1919,-0.2152,-0.24,-0.2648,-0.2881,-0.3088,-0.3252,-0.3361,-0.34,-0.3294,-0.2978,-0.245,-0.1711,-0.0761,0.04,0.1384,0.2237,0.2959,0.355,0.4009,0.4338,0.4534,0.46,0.4625,0.47,0.4825,0.5,0.428,0.372,0.332,0.308,0.3,0.2844,0.2378,0.16,0.0511,-0.0889,-0.26,-0.2596,-0.2586,-0.2568,-0.2545,-0.2516,-0.2483,-0.2444,-0.2401,-0.2355,-0.2306,-0.2254,-0.22,-0.2144,-0.2087,-0.2029,-0.1971,-0.1913,-0.1856,-0.18,-0.1746,-0.1694,-0.1645,-0.1599,-0.1556,-0.1517,-0.1484,-0.1455,-0.1432,-0.1414,-0.1404,-0.14} }
 }
 local hipRun = 0
+local hipBase = nil
 
 local function hipEnd(ped)
     hipRun = hipRun + 1
+    if hipBase then  -- yarim kalan hareket (Durdur / yeniden oynat): ped'i baslangic konumuna geri koy, kayma birikmesin
+        SetEntityCoordsNoOffset(ped, hipBase.x, hipBase.y, hipBase.z, false, false, false)
+        hipBase = nil
+    end
     SetEntityCollision(ped, true, true)
     SetPedGravity(ped, true)
 end
@@ -62,11 +67,13 @@ local function hipStart(name, ped)
     local my = hipRun
     CreateThread(function()
         local base = GetEntityCoords(ped)
+        hipBase = base
         local head = math.rad(GetEntityHeading(ped))
         local fx, fy, rx, ry = -math.sin(head), math.cos(head), math.cos(head), math.sin(head)
         SetEntityCollision(ped, false, false)
         SetPedGravity(ped, false)
         local t0 = GetGameTimer()
+        local aborted = false
         local o = { 0.0, 0.0, 0.0 }
         local function put(k)
             SetEntityCoordsNoOffset(ped, base.x + rx * o[1] * k + fx * o[2] * k, base.y + ry * o[1] * k + fy * o[2] * k, base.z + o[3] * k, false, false, false)
@@ -74,6 +81,7 @@ local function hipStart(name, ped)
         end
         while hipRun == my do
             if not IsEntityPlayingAnim(ped, name, name, 3) and GetGameTimer() - t0 > 600 then break end
+            if IsPedRagdoll(ped) or IsEntityDead(ped) or IsPedInAnyVehicle(ped, false) then aborted = true break end
             local ph = GetEntityAnimCurrentTime(ped, name, name)
             local f = ph * (h.n - 1) + 1
             local i = math.max(1, math.min(h.n - 1, math.floor(f)))
@@ -84,10 +92,32 @@ local function hipStart(name, ped)
             put(math.min(1.0, (GetGameTimer() - t0) / 150.0))
             Wait(0)
         end
-        if hipRun == my then  -- dogal bitis: kalcayi yumusakca eski yere indir
+        if aborted and hipRun == my then
+            hipEnd(ped)
+        elseif hipRun == my then  -- dogal bitis: kalcayi yumusakca eski yere indir
             local t1 = GetGameTimer()
             while hipRun == my and GetGameTimer() - t1 < 150 do put(1.0 - (GetGameTimer() - t1) / 150.0); Wait(0) end
             hipEnd(ped)
+        end
+    end)
+end
+
+AddEventHandler('onResourceStop', function(res)
+    if res == GetCurrentResourceName() then
+        local ped = PlayerPedId()
+        hipEnd(ped)
+        SetPedLegIkMode(ped, 2)
+    end
+end)
+
+-- Clip oynarken oyuncu girdisi animasyonu kesmesin (bayrak 0 = kesilebilir). Dongu clip'leri ve ust vucut modu serbest.
+local LOCK = { 30, 31, 32, 33, 34, 35, 21, 22, 23, 24, 25, 36, 37, 44, 140, 141, 142, 257, 263, 264 }
+local function lockControls(name, ped)
+    CreateThread(function()
+        local t0 = GetGameTimer()
+        while current == name and (IsEntityPlayingAnim(ped, name, name, 3) or GetGameTimer() - t0 < 700) do
+            for _, c in ipairs(LOCK) do DisableControlAction(0, c, true) end
+            Wait(0)
         end
     end)
 end
@@ -113,14 +143,17 @@ local function play(name, opts)
     end
     local ped = PlayerPedId()
     local flag = LOOP[name] and 1 or 0
-    if opts.upper then flag = flag + 48 end
+    if opts.upper then flag = flag + 48 else flag = flag + 8 end  -- 8 = AF_NOT_INTERRUPTABLE
     local speed = opts.speed or 1.0
     -- ayak IK'si kalcayi zemine geri ceker (ziplama/comelme/yana kayma yutulur): oynarken kapat, stop()'ta geri ac
     hipEnd(ped)
     if not opts.keepIk then SetPedLegIkMode(ped, 0) end
     TaskPlayAnim(ped, name, name, 8.0 * speed, -8.0 * speed, -1, flag, 0.0, false, false, false)
+    current = name
+    if not opts.upper then hipStart(name, ped) end  -- hemen basla: ilk comelme atlanmasin
     Wait(250)
     if not IsEntityPlayingAnim(ped, name, name, 3) then
+        hipEnd(ped)
         -- tanilama: dict yuklendi ama clip oynamadi; "_clip" son ekli ad da dene (eski export hash'i)
         TaskPlayAnim(ped, name, name .. '_clip', 8.0 * speed, -8.0 * speed, -1, flag, 0.0, false, false, false)
         Wait(250)
@@ -131,12 +164,11 @@ local function play(name, opts)
         end
         SetEntityAnimSpeed(ped, name, name .. '_clip', speed)
         current = name
-        hipStart(name, ped)
         return true
     end
     SetEntityAnimSpeed(ped, name, name, speed)
     current = name
-    hipStart(name, ped)
+    if not LOOP[name] and not opts.upper then lockControls(name, ped) end
     return true
 end
 
