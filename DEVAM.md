@@ -8,7 +8,7 @@ Animasyon üretiminin tamamını AI yapacak. Bunun için AI'nin kendi ürettiği
 GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
 
 ## İş listesi (sırayla)
-- [ ] 1. Görme aracı: `pipeline/render_frames.py` — bir clip sürümünün seçili karelerini önden/yandan PNG kontak sayfası olarak çıkarır.
+- [x] 1. Görme aracı: `pipeline/render_frames.py` — bir clip sürümünün seçili karelerini önden/yandan PNG kontak sayfası olarak çıkarır.
 - [ ] 2. Playwright: `web/` içine `npm i -D playwright` + `npx playwright install chromium` (arayüz ekran görüntüsü için).
 - [ ] 3. `Clip` kütüphanesine konum desteği (`SKEL_ROOT` kalça konumu) + IK yardımcıları (el/ayak hedefe, ayak yerde sabit).
 - [ ] 4. Otomatik kalite denetimi: ayak kayması, yere girme, eklem sınırı, döngü kapanışı (konum dahil).
