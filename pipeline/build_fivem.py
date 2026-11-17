@@ -22,14 +22,22 @@ TITLES = {
     "vb_dig_low": ("Alçak defans", "Defans"), "vb_dig_side_R": ("Sağa defans", "Defans"), "vb_dig_side_L": ("Sola defans", "Defans"),
     "vb_celebrate": ("Sayı sevinci", "Diğer"), "wave_hand": ("El sallama", "Diğer"),
 }
-ORDER = ["Duruş", "Top kontrolü", "Servis", "Hücum / blok", "Defans", "Diğer"]
+TITLES.update({
+    "vbx_spike": ("TEST Smaç (mover)", "Test (mover)"), "vbx_block": ("TEST Blok (mover)", "Test (mover)"),
+    "vbx_dig_side_R": ("TEST Sağa defans (mover)", "Test (mover)"),
+})
+ORDER = ["Duruş", "Top kontrolü", "Servis", "Hücum / blok", "Defans", "Diğer", "Test (mover)"]
 
 clips = {}
 for d in sorted(EXPORT.iterdir()) if EXPORT.exists() else []:
     vers = sorted((int(v.name[1:]), v) for v in d.iterdir() if v.is_dir() and (v / f"{d.name}.ycd").exists())
     if vers:
-        meta = json.loads((ROOT / "output" / d.name / "meta.json").read_text("utf-8"))
-        info = next((v for v in meta["versions"] if v["v"] == vers[-1][0]), {})
+        mp = ROOT / "output" / d.name / "meta.json"
+        if mp.exists():
+            meta = json.loads(mp.read_text("utf-8"))
+            info = next((v for v in meta["versions"] if v["v"] == vers[-1][0]), {})
+        else:  # test variants (pipeline/export_mover.py) carry mover.json instead
+            info = json.loads((ROOT / "output" / d.name / "mover.json").read_text("utf-8"))
         title, group = TITLES.get(d.name, (d.name, "Diğer"))
         clips[d.name] = {"file": vers[-1][1] / f"{d.name}.ycd", "v": vers[-1][0], "loop": bool(info.get("loop")),
                          "sec": round(info.get("duration", 0), 1), "title": title, "group": group}
