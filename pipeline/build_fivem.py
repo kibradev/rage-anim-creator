@@ -441,20 +441,55 @@ RegisterCommand('vbref', function(_, args)
     TriggerEvent('chat:addMessage', {{ args = {{ 'vbref', 'oynuyor: ' .. clip .. ' (durdurmak icin /animstop)' }} }})
 end, false)
 
+-- UI'dan oynatma: menu acikken NUI ODAGI (fare imleci) aktif; komutta (sohbet kapaninca) yok. Zıplama komutla calisip UI'dan
+-- calismiyorsa odak suphelisi: bu yuzden tiklayinca menu gizlenir + odak birakilir, clip bitince menu geri gelir.
+-- Her UI oynatmasinin sonunda /vbhip ile ayni olcum sohbete yazilir (kalca yukari / alt ayak): iki yolu sayiyla karsilastir.
+local function measureUi(name, sec)
+    CreateThread(function()
+        local ped = PlayerPedId()
+        local hip0 = GetPedBoneCoords(ped, 11816, 0.0, 0.0, 0.0).z
+        local f0 = math.min(GetPedBoneCoords(ped, 52301, 0.0, 0.0, 0.0).z, GetPedBoneCoords(ped, 14201, 0.0, 0.0, 0.0).z)
+        local hHi, hLo, fHi = -9, 9, -9
+        local t0 = GetGameTimer()
+        while GetGameTimer() - t0 < math.floor(sec * 1000) + 300 do
+            local h = GetPedBoneCoords(ped, 11816, 0.0, 0.0, 0.0).z - hip0
+            local f = math.min(GetPedBoneCoords(ped, 52301, 0.0, 0.0, 0.0).z, GetPedBoneCoords(ped, 14201, 0.0, 0.0, 0.0).z) - f0
+            hHi, hLo, fHi = math.max(hHi, h), math.min(hLo, h), math.max(fHi, f)
+            Wait(33)
+        end
+        local line = string.format('UI OLCUM %s: kalca yukari %+.2f asagi %+.2f m | alt ayak yerden %+.2f m', name, hHi, hLo, fHi)
+        print('vb-ui: ' .. line)
+        TriggerEvent('chat:addMessage', {{ args = {{ 'vb-ui', line }} }})
+    end)
+end
+
 RegisterNUICallback('play', function(data, cb)
+    cb('ok')  -- hemen cevapla: oynatma sirasinda NUI callback'i bloke etmeyelim
     local spd, up = tonumber(data.speed) or 1.0, data.upper == true
-    -- komutla ayni baslangic: onceki animasyon/gorev temizlenir (/vbhip de boyle baslar), ped duruyor halinde oynar
     local ped = PlayerPedId()
     if current or IsEntityPlayingAnim(ped, data.name, data.name, 3) then
         ClearPedTasks(ped)
         Wait(200)
     end
-    -- tanilama: UI'dan tam olarak ne gitti (ust vucut isaretliyse sadece ust vucut oynar, ziplama/bacak kaybolur)
     TriggerEvent('chat:addMessage', {{ args = {{ 'vb-ui', string.format('%s | hiz %.2f | ust vucut: %s', tostring(data.name), spd, up and 'ACIK (bacaklar oynamaz!)' or 'kapali') }} }})
+    setOpen(false)  -- odagi birak, menuyu gizle (komutla ayni kosul)
+    Wait(100)
     if play(data.name, {{ speed = spd, upper = up }}) then
+        local sec = 3
+        for _, c in ipairs(CLIPS) do if c.name == data.name then sec = c.sec end end
+        if not LOOP[data.name] and not up then measureUi(data.name, sec) end
+        -- clip bitince menu geri gelsin (dongulu clip'lerde F6 ile ac)
+        if not LOOP[data.name] then
+            CreateThread(function()
+                local t0 = GetGameTimer()
+                while GetGameTimer() - t0 < math.floor(sec * 1000) + 600 do Wait(100) end
+                if not open and current == data.name then setOpen(true) end
+            end)
+        end
         SendNUIMessage({{ type = 'playing', name = data.name }})
+    else
+        setOpen(true)
     end
-    cb('ok')
 end)
 RegisterNUICallback('stop', function(_, cb) stop(); SendNUIMessage({{ type = 'playing', name = nil }}); cb('ok') end)
 RegisterNUICallback('close', function(_, cb) setOpen(false); cb('ok') end)
