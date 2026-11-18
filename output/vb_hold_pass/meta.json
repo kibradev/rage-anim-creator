@@ -241,7 +241,7 @@
    "loop": false,
    "file": "v4.glb",
    "module": "volleyball:vb_hold_pass",
-   "status": "pending",
+   "status": "approved",
    "report": {
     "loop_gap_deg": 46.29,
     "max_step_deg": 38.31,

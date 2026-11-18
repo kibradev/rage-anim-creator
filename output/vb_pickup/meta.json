@@ -241,7 +241,7 @@
    "loop": false,
    "file": "v5.glb",
    "module": "volleyball:vb_pickup",
-   "status": "pending",
+   "status": "approved",
    "report": {
     "loop_gap_deg": 35.0,
     "max_step_deg": 33.02,

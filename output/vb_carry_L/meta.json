@@ -164,7 +164,7 @@
    "loop": true,
    "file": "v3.glb",
    "module": "volleyball:vb_carry_L",
-   "status": "pending",
+   "status": "approved",
    "report": {
     "loop_gap_deg": 0.0,
     "max_step_deg": 3.57,

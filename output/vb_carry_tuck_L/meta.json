@@ -164,7 +164,7 @@
    "loop": false,
    "file": "v3.glb",
    "module": "volleyball:vb_carry_tuck_L",
-   "status": "pending",
+   "status": "approved",
    "report": {
     "loop_gap_deg": 123.73,
     "max_step_deg": 35.9,

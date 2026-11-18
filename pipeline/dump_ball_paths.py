@@ -14,7 +14,7 @@ cfg = json.loads((ROOT / "config.json").read_text())
 bpy.context.scene.render.fps = 30
 pedlib.import_ped_parts(cfg["game_dir"], "mp_m_freemode_01"); pedlib.clean_scene_extras(); arm = pedlib.merge_armatures()
 V = importlib.import_module("clip_defs.volleyball")
-out = {"offset": {"hold": [0.0, 0.0, 0.07], "carry": [0.0, 0.0, 0.0]}, "radius": V.BALL_R, "clips": {}}
+out = {"offset": {"hold": [0.0, 0.0, 0.0], "carry": [0.0, 0.0, 0.0]}, "radius": V.BALL_R, "clips": {}}
 for name in V.HOLD_PROP:
     frames, loop, keys = V.CLIPS[name]()
     c = V.build(arm, cliplib, name)
