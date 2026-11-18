@@ -35,6 +35,6 @@ for var in variants:
     if getattr(clip, "ik_unreachable", 0) > 0.01:
         print("CLIP UYARI", clip.name, f"IK hedefine ulaşılamadı: {clip.ik_unreachable:.2f} m", getattr(clip, "ik_worst_at", ""))
     frames = sorted(set(getattr(clip, "key_frames", None) or [round(clip.frames * i / 7) for i in range(8)]))
-    sheet = render.render_sheet(arm, clip.action, frames, ROOT / "cache" / "preview" / f"{clip.name}_v{ver['v']}.png", ("front", "side"))
+    sheet = render.render_sheet(arm, clip.action, frames, ROOT / "cache" / "preview" / f"{clip.name}_v{ver['v']}.png", tuple(__import__("os").environ.get("CLIP_VIEWS", "front,side").split(",")))
     print("CLIP rapor", clip.name, json.dumps(ver["report"], ensure_ascii=False))
     print("CLIP done", clip.name, "v", ver["v"], "frames", clip.frames, "bones", len(ver["bones"]), "sheet", sheet, "kareler", frames)

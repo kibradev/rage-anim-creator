@@ -261,8 +261,31 @@ def hold_pass():
     return 32, False, [(0, HOLD_POSE), (6, wind), (11, rel), (16, follow), (32, REST)]
 
 
+# Topu SOL KOLTUK ALTINDA taşıma: top gövdenin solunda kaburga hizasında, sol önkol ve el topun önünden sarar, sağ kol serbest.
+# Top merkezi karakter uzayında sabit (oyunda top gövdeye/ele bu ofsetle bağlanır).
+CARRY_BALL = (-0.20, 0.02, 1.10)
+CARRY_POSE = {**REST, "root": (0, 0, -0.02), "spine": (3, 0, 0), "chest": (1, 5, 0), "head": (-4, 0, 0),
+              "hand_L": (-0.27, 0.13, 1.12), "elbow_L": (-0.45, -1.0, -0.35), "clav_L": (0, 0, 0),
+              "hand_R": (0.26, 0.03, 0.88), "elbow_R": (0.5, -1.0, -0.6), "grip": 0.0}
+
+
+def carry_L():
+    """Top sol koltuk altında, ayakta duruş: nefes kadar hafif hareketli DÖNGÜ (yürürken üst vücut katmanı)."""
+    breathe = {**CARRY_POSE, "root": (0, 0, -0.035), "chest": (2, 5, 0), "hand_R": (0.26, 0.05, 0.89)}
+    return 60, True, [(0, CARRY_POSE), (30, breathe), (60, CARRY_POSE)]
+
+
+def carry_tuck_L():
+    """İki elle göğüs önünde tutuştan topu çabucak sol koltuk altına sıkıştır (kare 12 = sıkıştı), sağ kol serbest kalır."""
+    pull = {**HOLD_POSE, "root": (0, 0, -0.04), "chest": (2, 3, 0),
+            "hand_L": (-0.19, 0.24, 1.12), "hand_R": (0.06, 0.32, 1.05), "grip": 0.0, "ease": "in"}
+    tuck = {**CARRY_POSE, "root": (0, 0, -0.05), "ease": "out"}
+    return 18, False, [(0, {**HOLD_POSE, "grip": 0.0}), (5, pull), (12, tuck), (18, CARRY_POSE)]
+
+
 # klip -> (top klibi bırakılan/alınan kare, top eve ne zaman bağlı): önizleme topu için
-HOLD_PROP = {"vb_hold": ("all", None), "vb_pickup": ("from", 14), "vb_hold_pass": ("until", 11)}
+HOLD_PROP = {"vb_hold": ("all", None), "vb_pickup": ("from", 14), "vb_hold_pass": ("until", 11),
+             "vb_carry_L": ("fixed", None), "vb_carry_tuck_L": ("tuck", (4, 12))}
 
 
 def _prop_ball(arm, clip, variant, keys):
@@ -298,7 +321,15 @@ def _prop_ball(arm, clip, variant, keys):
         return tuple((hl[i] + hr[i]) / 2.0 + GRIP[i] for i in range(3))
 
     for f in range(0, clip.frames + 1):
-        if mode == "from" and f < at:
+        if mode == "fixed":
+            c = CARRY_BALL
+        elif mode == "tuck":
+            a, b = at
+            t = min(max((f - a) / float(b - a), 0.0), 1.0)
+            t = t * t * (3 - 2 * t)
+            c0 = center(a)
+            c = tuple(c0[i] + (CARRY_BALL[i] - c0[i]) * t for i in range(3))
+        elif mode == "from" and f < at:
             c = center(at)
             c = (c[0], c[1], BALL_R)                       # grab kareden önce top yerde
         elif mode == "until" and f > at:
@@ -317,6 +348,7 @@ CLIPS = {
     "vb_serve_over": serve_over, "vb_spike": spike, "vb_block": block, "vb_dig_low": dig_low,
     "vb_dig_side_R": dig_side_R, "vb_dig_side_L": dig_side_L, "vb_shuffle_R": shuffle_R, "vb_shuffle_L": shuffle_L,
     "vb_celebrate": celebrate, "vb_hold": hold, "vb_pickup": pickup, "vb_hold_pass": hold_pass,
+    "vb_carry_L": carry_L, "vb_carry_tuck_L": carry_tuck_L,
 }
 
 

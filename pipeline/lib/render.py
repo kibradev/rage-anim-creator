@@ -9,7 +9,7 @@ from mathutils import Vector
 
 # camera position direction (armature space) per view; clips face +Y after the game_facing root yaw
 VIEWS = {"front": Vector((0, 1, 0)), "side": Vector((1, 0, 0)), "back": Vector((0, -1, 0)), "top": Vector((0, 0.001, 1)),
-         "34": Vector((0.7, 0.7, 0.25))}
+         "34": Vector((0.7, 0.7, 0.25)), "sideL": Vector((-1, 0, 0)), "34L": Vector((-0.7, 0.7, 0.25))}
 
 
 def _setup(cell_w, cell_h):
