@@ -1,0 +1,236 @@
+{
+ "name": "vb_pickup",
+ "versions": [
+  {
+   "v": 1,
+   "label": "topu elde tutma (iki el, dogal durus)",
+   "frames": 48,
+   "fps": 30,
+   "duration": 1.6,
+   "loop": false,
+   "file": "v1.glb",
+   "module": "volleyball:vb_pickup",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 65.01,
+    "max_step_deg": 43.65,
+    "max_step_at": "SKEL_L_Calf@0",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.003,
+      "R": 0.003
+     },
+     "foot_slide_worst_step": [
+      0.0029,
+      "SKEL_R_Foot",
+      1
+     ],
+     "below_ground_m": [
+      0.0,
+      "SKEL_L_Foot",
+      4
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 117.8,
+      "SKEL_R_Calf": 117.8,
+      "SKEL_L_Forearm": 70.1,
+      "SKEL_R_Forearm": 70.1
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.259,
+      "SKEL_R_Hand",
+      1
+     ],
+     "seam_rot_deg": [
+      72.88,
+      "SKEL_L_Hand"
+     ],
+     "seam_root_m": 0.02
+    },
+    "warnings": []
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
+  },
+  {
+   "v": 2,
+   "label": "topu elde tutma (iki el, dogal durus) v2",
+   "frames": 48,
+   "fps": 30,
+   "duration": 1.6,
+   "loop": false,
+   "file": "v2.glb",
+   "module": "volleyball:vb_pickup",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 49.04,
+    "max_step_deg": 29.61,
+    "max_step_at": "SKEL_R_Calf@1",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.003,
+      "R": 0.003
+     },
+     "foot_slide_worst_step": [
+      0.0029,
+      "SKEL_R_Foot",
+      1
+     ],
+     "below_ground_m": [
+      0.0,
+      "SKEL_L_Foot",
+      17
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 128.4,
+      "SKEL_R_Calf": 128.4,
+      "SKEL_L_Forearm": 70.1,
+      "SKEL_R_Forearm": 70.1
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.246,
+      "SKEL_R_Hand",
+      2
+     ],
+     "seam_rot_deg": [
+      63.55,
+      "SKEL_R_Hand"
+     ],
+     "seam_root_m": 0.02
+    },
+    "warnings": []
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
+  },
+  {
+   "v": 3,
+   "label": "topu elde tutma v3 (el yonu sabit tutus)",
+   "frames": 48,
+   "fps": 30,
+   "duration": 1.6,
+   "loop": false,
+   "file": "v3.glb",
+   "module": "volleyball:vb_pickup",
+   "status": "approved",
+   "report": {
+    "loop_gap_deg": 49.04,
+    "max_step_deg": 29.61,
+    "max_step_at": "SKEL_R_Calf@1",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.003,
+      "R": 0.003
+     },
+     "foot_slide_worst_step": [
+      0.0029,
+      "SKEL_R_Foot",
+      1
+     ],
+     "below_ground_m": [
+      0.0,
+      "SKEL_L_Foot",
+      17
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 128.4,
+      "SKEL_R_Calf": 128.4,
+      "SKEL_L_Forearm": 70.1,
+      "SKEL_R_Forearm": 70.1
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.246,
+      "SKEL_R_Hand",
+      2
+     ],
+     "seam_rot_deg": [
+      63.55,
+      "SKEL_R_Forearm"
+     ],
+     "seam_root_m": 0.02
+    },
+    "warnings": []
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
+  }
+ ]
+}
