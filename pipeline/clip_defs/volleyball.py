@@ -288,6 +288,42 @@ HOLD_PROP = {"vb_hold": ("all", None), "vb_pickup": ("from", 14), "vb_hold_pass"
              "vb_carry_L": ("fixed", None), "vb_carry_tuck_L": ("tuck", (4, 12))}
 
 
+def ball_path(variant, keys, frames):
+    """Topun karakter uzayındaki merkezi (x sağ, y ileri, z zeminden), kare 0..frames. Blender gerektirmez (önizleme topu ve
+    oyun tablosu `tools/gen_animtable.py` aynı fonksiyonu kullanır)."""
+    spec = HOLD_PROP.get(variant)
+    if spec is None:
+        return []
+    mode, at = spec
+    filled = pk._filled(keys)
+
+    def center(f):
+        pz = pk.pose_at(filled, f)
+        hl, hr = pz["hand_L"], pz["hand_R"]
+        return tuple((hl[i] + hr[i]) / 2.0 + GRIP[i] for i in range(3))
+
+    out = []
+    for f in range(0, frames + 1):
+        if mode == "fixed":
+            c = CARRY_BALL
+        elif mode == "tuck":
+            a, b = at
+            t = min(max((f - a) / float(b - a), 0.0), 1.0)
+            t = t * t * (3 - 2 * t)
+            c0 = center(a)
+            c = tuple(c0[i] + (CARRY_BALL[i] - c0[i]) * t for i in range(3))
+        elif mode == "from" and f < at:
+            c = center(at)
+            c = (c[0], c[1], BALL_R)                       # grab kareden önce top yerde
+        elif mode == "until" and f > at:
+            c0, k = center(at), f - at                      # bıraktıktan sonra: ileri/yukarı süzülür (yalnızca görsel)
+            c = (c0[0], c0[1] + 0.045 * k, c0[2] + 0.05 * k - 0.0035 * k * k)
+        else:
+            c = center(f)
+        out.append(c)
+    return out
+
+
 def _prop_ball(arm, clip, variant, keys):
     """Önizleme için top küresi: ellerin tuttuğu yerde. Yalnızca bu klipler için görünür; yoksa gizlenir. (GLB ve .ycd'ye girmez.)"""
     import bpy
@@ -312,35 +348,11 @@ def _prop_ball(arm, clip, variant, keys):
     if spec is None:
         return
     mode, at = spec
-    filled = pk._filled(keys)
     floor = clip.floor
-
-    def center(f):
-        pz = pk.pose_at(filled, f)
-        hl, hr = pz["hand_L"], pz["hand_R"]
-        return tuple((hl[i] + hr[i]) / 2.0 + GRIP[i] for i in range(3))
-
-    for f in range(0, clip.frames + 1):
-        if mode == "fixed":
-            c = CARRY_BALL
-        elif mode == "tuck":
-            a, b = at
-            t = min(max((f - a) / float(b - a), 0.0), 1.0)
-            t = t * t * (3 - 2 * t)
-            c0 = center(a)
-            c = tuple(c0[i] + (CARRY_BALL[i] - c0[i]) * t for i in range(3))
-        elif mode == "from" and f < at:
-            c = center(at)
-            c = (c[0], c[1], BALL_R)                       # grab kareden önce top yerde
-        elif mode == "until" and f > at:
-            c0, k = center(at), f - at                      # bıraktıktan sonra: ileri/yukarı süzülür (yalnızca görsel)
-            c = (c0[0], c0[1] + 0.045 * k, c0[2] + 0.05 * k - 0.0035 * k * k)
-        else:
-            c = center(f)
+    path = ball_path(variant, keys, clip.frames)
+    for f, c in enumerate(path):
         ob.location = (c[0], c[1], floor + c[2])
         ob.keyframe_insert("location", frame=f)
-        if mode == "until" and f > at:
-            pass
 
 
 CLIPS = {
