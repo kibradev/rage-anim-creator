@@ -154,6 +154,113 @@
     "SKEL_Spine1",
     "SKEL_Spine3"
    ]
+  },
+  {
+   "v": 3,
+   "label": "sol el topun onunu sarar",
+   "frames": 18,
+   "fps": 30,
+   "duration": 0.6,
+   "loop": false,
+   "file": "v3.glb",
+   "module": "volleyball:vb_carry_tuck_L",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 123.73,
+    "max_step_deg": 35.9,
+    "max_step_at": "SKEL_L_Hand@5",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.0,
+      "R": 0.0
+     },
+     "foot_slide_worst_step": [
+      0.0,
+      "SKEL_R_Foot",
+      16
+     ],
+     "below_ground_m": [
+      0.0,
+      "SKEL_R_Foot",
+      5
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 33.8,
+      "SKEL_R_Calf": 33.8,
+      "SKEL_L_Forearm": 129.5,
+      "SKEL_R_Forearm": 71.3
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.194,
+      "SKEL_R_Hand",
+      8
+     ],
+     "seam_rot_deg": [
+      102.47,
+      "SKEL_L_Hand"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": []
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Finger00",
+    "SKEL_L_Finger01",
+    "SKEL_L_Finger02",
+    "SKEL_L_Finger10",
+    "SKEL_L_Finger11",
+    "SKEL_L_Finger12",
+    "SKEL_L_Finger20",
+    "SKEL_L_Finger21",
+    "SKEL_L_Finger22",
+    "SKEL_L_Finger30",
+    "SKEL_L_Finger31",
+    "SKEL_L_Finger32",
+    "SKEL_L_Finger40",
+    "SKEL_L_Finger41",
+    "SKEL_L_Finger42",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Finger00",
+    "SKEL_R_Finger01",
+    "SKEL_R_Finger02",
+    "SKEL_R_Finger10",
+    "SKEL_R_Finger11",
+    "SKEL_R_Finger12",
+    "SKEL_R_Finger20",
+    "SKEL_R_Finger21",
+    "SKEL_R_Finger22",
+    "SKEL_R_Finger30",
+    "SKEL_R_Finger31",
+    "SKEL_R_Finger32",
+    "SKEL_R_Finger40",
+    "SKEL_R_Finger41",
+    "SKEL_R_Finger42",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
   }
  ]
 }

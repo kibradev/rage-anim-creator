@@ -66,7 +66,14 @@ def render_sheet(arm, action, frames, out_png, views=("front", "side"), cell=(23
             pelvis = arm.matrix_world @ arm.pose.bones["SKEL_Pelvis"].head
             center = Vector((pelvis.x, pelvis.y, fl.location.z + 1.3)) if follow else Vector((0, 0, fl.location.z + 1.3))
             fl.location.x, fl.location.y = (center.x, center.y) if follow else (0, 0)
-            _aim(cam, VIEWS[v], center, 2.9)
+            if v.startswith("hands"):
+                # yakın plan (eller/top): handsF önden, handsT üstten, handsL soldan, hands3 sol-üç-çeyrek; merkez = önizleme topu (yoksa göğüs)
+                base = {"F": "front", "T": "top", "L": "sideL", "3": "34L"}[v[5:]]
+                ball = bpy.data.objects.get("vb_prop_ball")
+                cc = ball.matrix_world.translation.copy() if ball is not None and not ball.hide_render else Vector((pelvis.x, pelvis.y, pelvis.z + 0.25))
+                _aim(cam, VIEWS[base], cc, 0.9)
+            else:
+                _aim(cam, VIEWS[v], center, 2.9)
             sc.render.filepath = os.path.join(tmp, f"{v}_{f}.png")
             bpy.ops.render.render(write_still=True)
             img = bpy.data.images.load(sc.render.filepath)

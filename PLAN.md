@@ -188,3 +188,15 @@ Test: `blender -b --python pipeline/rt_dance.py -- player_zero "special_ped@moun
   dansta 4,8° hata). Aralık artık anahtarların sonundan kısa olamaz.
 - Orijinalde olup bizim ürettiğimiz clip'lerde OLMAYANLAR (dans için gerekli): `SKEL_ROOT` konum track'i (kalça yükselip alçalması),
   mover track'leri (`delta_location/rotation`), IK_*/PH_* konumları, clip özellikleri (Properties). `Clip` kütüphanesi şu an yalnızca dönüş anahtarlıyor.
+
+### El / parmak tuzakları (topu tutma, 18 Kas)
+- **El kemiklerinin yerel eksenleri sağ/solda AYNALI DEĞİL** (`SKEL_L_Hand` / `SKEL_R_Hand`): "x = parmaklar, palm = ±z" varsayımı sol elde yanlış çıktı
+  (sağ el topun içinden geçti, sol el boşta kaldı). El yönelimi kemik eksenine göre değil, ANATOMİK işaret noktalarından kurulur
+  (`posekeys.rest_hand_frames`: bilek, orta/işaret/serçe boğumu; avuç normali sağ elde `a × (işaret→serçe)`, sol elde tersi).
+- **Parmak kemiklerinin `tail`'i sağ elde geriye (bileğe) bakıyor.** Eklem konumu bir sonraki kemiğin `head`'inden alınır; `tail` kullanma.
+- **Parmak kıvrılma ekseni**: kemik yerel z'si iki elde farklı; kıvırma boğum hattı (işaret→serçe) ekseninde yapılır, sol elde +, sağ elde − işaret
+  (aynı sayılar iki elde simetrik). Başparmak eski kemik-yerel (z, x) kalır.
+- **Topu elle sarma**: eller `ball` (merkez) ve `cup` (0..1) pozlarından yerleştirilir (`posekeys.cup_frame`): avuç topun yüzeyinde (ekvatorun 12° altı),
+  parmaklar küre teğeti boyunca ileri-aşağı. `hand_*` anahtarları yalnızca `cup < 1`'de etkili. Parmak çözümü: `scratchpad/solve3.py` benzeri arama
+  (eklemler yüzeyde, uç 1 cm içeride); sonuç `clip_defs/volleyball.py::FINGERS_HOLD`.
+- Önizleme yakın planı: `CLIP_VIEWS=handsF,handsT,hands3 ... make_clip.py` (topa odaklı kamera).

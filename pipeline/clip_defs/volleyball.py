@@ -227,15 +227,23 @@ REST = {"root": (0, 0, 0), "pelvis": (0, 0, 0), "spine": (0, 0, 0), "chest": (0,
         "hand_L": (-0.25, 0.04, 0.90), "hand_R": (0.25, 0.04, 0.90), "elbow_L": (-0.5, -1.0, -0.6), "elbow_R": (0.5, -1.0, -0.6),
         "wrist_L": (0, 0, 0), "wrist_R": (0, 0, 0), "foot_L": (-0.10, 0, 0), "foot_R": (0.10, 0, 0), "pitch_L": 0, "pitch_R": 0,
         "grip": 0.0}
+# Parmak pozu (derece): `solve3`/`solve_thumb` ile iki elde de eklemler topun yüzeyine oturacak şekilde ÇÖZÜLDÜ. Parmaklar 1..4: üç eklemin avuca doğru
+# kıvrılma açısı (boğum hattı ekseninde; sağ/sol elde AYNI sayılar, posekeys._key_fingers işareti ayarlar). Başparmak (0): kemik yerel ((z0, x0), z1, z2).
+# Not: eklem konumu bir sonraki kemiğin BAŞINDAN alınır (sağ elde kemik 'tail'i geriye bakar). Ağırlık = max(grip, fing_<el>).
+FINGERS_HOLD = {
+    "L": {1: (35.0, 0.0, 0.0), 2: (28.0, 0.0, 0.0), 3: (28.0, 0.0, 0.0), 4: (35.0, 0.0, 0.0), 0: ((24.0, -8.0), -8.0, 0.0)},
+    "R": {1: (35.0, 0.0, 0.0), 2: (28.0, 0.0, 0.0), 3: (28.0, 0.0, 0.0), 4: (35.0, 0.0, 0.0), 0: ((24.0, 8.0), -8.0, 0.0)},
+}
 WRIST_L, WRIST_R = (0, 0, 0), (0, 0, 0)           # avuç içlerini topa çevirmek için (önizlemede ayarlanır)
 HOLD_POSE = {**REST, "root": (0, 0, -0.02), "spine": (6, 0, 0), "chest": (2, 0, 0), "head": (-6, 0, 0),
              "hand_L": (-0.12, 0.30, 1.08), "hand_R": (0.12, 0.30, 1.08),
-             "elbow_L": (-0.6, -0.5, -1), "elbow_R": (0.6, -0.5, -1), "wrist_L": WRIST_L, "wrist_R": WRIST_R, "grip": 1.0}
+             "elbow_L": (-0.6, -0.5, -1), "elbow_R": (0.6, -0.5, -1), "wrist_L": WRIST_L, "wrist_R": WRIST_R, "grip": 1.0,
+             "ball": (0.0, 0.36, 1.05), "cup": 1.0}      # eller topun merkezinden yerleştirilir (posekeys.cup_frame); hand_* yalnızca cup < 1'de etkili
 
 
 def hold():
     """Topu iki elle göğüs önünde tutma: nefes alma kadar hafif hareketli DÖNGÜ (yürürken üst vücut katmanı olarak oynatılır)."""
-    breathe = {**HOLD_POSE, "root": (0, 0, -0.035), "chest": (3, 0, 0), "hand_L": (-0.12, 0.30, 1.095), "hand_R": (0.12, 0.30, 1.095)}
+    breathe = {**HOLD_POSE, "root": (0, 0, -0.035), "chest": (3, 0, 0), "ball": (0.0, 0.36, 1.065)}
     return 60, True, [(0, HOLD_POSE), (30, breathe), (60, HOLD_POSE)]
 
 
@@ -244,20 +252,19 @@ def pickup():
     reach = {**REST, "root": (0, 0.12, -0.54), "pelvis": (12, 0, 0), "spine": (60, 0, 0), "chest": (6, 0, 0), "head": (-32, 0, 0),
              "hand_L": (-0.115, 0.40, 0.17), "hand_R": (0.115, 0.40, 0.17),
              "elbow_L": (-0.5, -0.3, -1), "elbow_R": (0.5, -0.3, -1), "wrist_L": WRIST_L, "wrist_R": WRIST_R,
-             "foot_L": (-0.10, 0, 0), "foot_R": (0.10, 0, 0), "grip": 1.0}
+             "foot_L": (-0.10, 0, 0), "foot_R": (0.10, 0, 0), "grip": 1.0, "ball": (0.0, 0.40, 0.105), "cup": 1.0}
     rise = {**reach, "root": (0, 0.06, -0.22), "spine": (22, 0, 0), "pelvis": (4, 0, 0), "head": (-14, 0, 0),
-            "hand_L": (-0.12, 0.38, 0.72), "hand_R": (0.12, 0.38, 0.72), "ease": "out"}
-    down = {**reach, "root": (0, 0.08, -0.28), "spine": (28, 0, 0), "pelvis": (5, 0, 0), "head": (-16, 0, 0),
-            "hand_L": (-0.12, 0.34, 0.55), "hand_R": (0.12, 0.34, 0.55), "grip": 0.35}
+            "ball": (0.0, 0.38, 0.70), "ease": "out"}
+    down = {**reach, "root": (0, 0.10, -0.38), "spine": (42, 0, 0), "pelvis": (8, 0, 0), "head": (-22, 0, 0),
+            "hand_L": (-0.17, 0.46, 0.42), "hand_R": (0.17, 0.46, 0.42), "grip": 0.35, "cup": 0.0}
     return 48, False, [(0, REST), (5, down), (10, {**reach, "ease": "out"}), (14, reach), (28, rise), (42, {**HOLD_POSE, "ease": "out"}), (48, HOLD_POSE)]
 
 
 def hold_pass():
     """Tutarken pas (alttan itiş): hafif çömel, kollar ileri-yukarı uzanırken BIRAKMA (kare 11), kollar gevşeyerek dinlenir."""
-    wind = {**HOLD_POSE, "root": (0, 0, -0.16), "spine": (14, 0, 0), "hand_L": (-0.12, 0.26, 0.80), "hand_R": (0.12, 0.26, 0.80)}
-    rel = {**HOLD_POSE, "root": (0, 0.10, -0.04), "spine": (9, 0, 0), "chest": (0, 0, 0),
-           "hand_L": (-0.12, 0.50, 1.06), "hand_R": (0.12, 0.50, 1.06), "ease": "in"}
-    follow = {**rel, "root": (0, 0.12, -0.04), "hand_L": (-0.14, 0.55, 1.10), "hand_R": (0.14, 0.55, 1.10), "head": (-2, 0, 0), "grip": 0.4, "ease": "out"}
+    wind = {**HOLD_POSE, "root": (0, 0, -0.16), "spine": (14, 0, 0), "ball": (0.0, 0.32, 0.77)}
+    rel = {**HOLD_POSE, "root": (0, 0.10, -0.04), "spine": (9, 0, 0), "chest": (0, 0, 0), "ball": (0.0, 0.56, 1.03), "ease": "in"}
+    follow = {**rel, "root": (0, 0.12, -0.04), "ball": (0.0, 0.61, 1.07), "head": (-2, 0, 0), "grip": 0.4, "cup": 0.4, "ease": "out"}
     return 32, False, [(0, HOLD_POSE), (6, wind), (11, rel), (16, follow), (32, REST)]
 
 
@@ -266,7 +273,9 @@ def hold_pass():
 CARRY_BALL = (-0.20, 0.02, 1.10)
 CARRY_POSE = {**REST, "root": (0, 0, -0.02), "spine": (3, 0, 0), "chest": (1, 5, 0), "head": (-4, 0, 0),
               "hand_L": (-0.27, 0.13, 1.12), "elbow_L": (-0.45, -1.0, -0.35), "clav_L": (0, 0, 0),
-              "hand_R": (0.26, 0.03, 0.88), "elbow_R": (0.5, -1.0, -0.6), "grip": 0.0}
+              "hand_R": (0.26, 0.03, 0.88), "elbow_R": (0.5, -1.0, -0.6), "grip": 0.0,
+              # sol el topun ÖNÜNÜ sarar (avuç topun ön-dış yüzeyinde, parmaklar aşağı-dışa), sağ el serbest
+              "ball": CARRY_BALL, "cup": 1.0, "cup_R": 0.0, "cu_L": (-0.35, 0.90, 0.15), "cd_L": (-0.5, 0.0, -1.0), "fing_L": 1.0, "fing_R": 0.0}
 
 
 def carry_L():
@@ -278,9 +287,9 @@ def carry_L():
 def carry_tuck_L():
     """İki elle göğüs önünde tutuştan topu çabucak sol koltuk altına sıkıştır (kare 12 = sıkıştı), sağ kol serbest kalır."""
     pull = {**HOLD_POSE, "root": (0, 0, -0.04), "chest": (2, 3, 0),
-            "hand_L": (-0.19, 0.24, 1.12), "hand_R": (0.06, 0.32, 1.05), "grip": 0.0, "ease": "in"}
+            "hand_L": (-0.19, 0.24, 1.12), "hand_R": (0.06, 0.32, 1.05), "grip": 0.0, "cup": 0.0, "fing_L": 1.0, "fing_R": 0.6, "ease": "in"}
     tuck = {**CARRY_POSE, "root": (0, 0, -0.05), "ease": "out"}
-    return 18, False, [(0, {**HOLD_POSE, "grip": 0.0}), (5, pull), (12, tuck), (18, CARRY_POSE)]
+    return 18, False, [(0, HOLD_POSE), (5, pull), (12, tuck), (18, CARRY_POSE)]
 
 
 # klip -> (top klibi bırakılan/alınan kare, top eve ne zaman bağlı): önizleme topu için
@@ -298,9 +307,7 @@ def ball_path(variant, keys, frames):
     filled = pk._filled(keys)
 
     def center(f):
-        pz = pk.pose_at(filled, f)
-        hl, hr = pz["hand_L"], pz["hand_R"]
-        return tuple((hl[i] + hr[i]) / 2.0 + GRIP[i] for i in range(3))
+        return tuple(pk.pose_at(filled, f)["ball"])
 
     out = []
     for f in range(0, frames + 1):
@@ -372,6 +379,8 @@ def build(arm, cl, variant):
         c.grip_rot = {k: Matrix(v) for k, v in GRIP_ROT.items()}
     except (ImportError, TypeError):
         pass
+    if variant in ("vb_hold", "vb_pickup", "vb_hold_pass", "vb_carry_L", "vb_carry_tuck_L"):
+        c.finger_sets = FINGERS_HOLD
     worst = pk.animate(c, keys)
     c.key_frames = [k[0] for k in keys]
     c.ik_unreachable = worst

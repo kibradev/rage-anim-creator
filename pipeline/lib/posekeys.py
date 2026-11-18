@@ -9,6 +9,11 @@ z = UP, metres. A key is (frame, {param: value}); a param missing in a key keeps
   hand_L/hand_R   (x, y, z)   wrist position in character space (z measured from the floor)
   elbow_L/elbow_R (x, y, z)   direction the elbow points to (optional; default back/down/out)
   wrist_L/wrist_R (x, y, z) degrees, extra hand rotation
+  ball (x, y, z)  ball centre in character space, cup 0..1: hands are PLACED from the ball (palm on the surface, fingers wrapping forward-down,
+                  see cup_frame) instead of from hand_L/hand_R; the two blend by `cup`
+  cup_L/cup_R     0..1 per-hand multiplier of `cup`; cu_*/cd_* (x, y, z) override the palm contact direction (ball centre -> palm) and the finger
+                  direction (default: sides of the ball, fingers forward-down), character space, zero vector = default
+  fing_L/fing_R   0..1 finger pose weight (rest -> clip.finger_sets[side]); `grip` also drives it (max of the two)
   clav_L/clav_R   (x, y, z) degrees, shoulder shrug etc.
   foot_L/foot_R   (dx, dy, dz) ankle offset from its standing spot
   pitch_L/pitch_R degrees, >0 = toes point down (tiptoe / airborne)
@@ -28,7 +33,8 @@ STAND = {
     "elbow_L": (-0.5, -1.0, -0.6), "elbow_R": (0.5, -1.0, -0.6),
     "wrist_L": (0, 0, 0), "wrist_R": (0, 0, 0),
     "foot_L": (0, 0, 0), "foot_R": (0, 0, 0), "pitch_L": 0.0, "pitch_R": 0.0, "glide": 0,
-    "grip": 0.0,
+    "grip": 0.0, "fing_L": 0.0, "fing_R": 0.0, "ball": (0.0, 0.36, 1.05), "cup": 0.0,
+    "cup_L": 1.0, "cup_R": 1.0, "cu_L": (0.0, 0.0, 0.0), "cu_R": (0.0, 0.0, 0.0), "cd_L": (0.0, 0.0, 0.0), "cd_R": (0.0, 0.0, 0.0),
 }
 EASE = {
     "smooth": lambda t: t * t * (3 - 2 * t), "lin": lambda t: t,
@@ -68,12 +74,103 @@ def pose_at(filled, f):
     return filled[-1][1]
 
 
+# CUP (topu avuçla sarma) geometrisi: avuç içi topun yüzeyine, ekvatorun biraz altında ve hafif önünde; parmaklar küre teğeti boyunca ileri-aşağı
+CUP_ELEV, CUP_AZ = math.radians(-12.0), math.radians(12.0)     # avuç temas yönü (yan eksenden aşağı / ileri sapma)
+CUP_FINGER_DIR = (0.0, 1.0, -0.6)                               # istenen parmak yönü (karakter uzayı; teğet düzleme izdüşürülür)
+PALM_TO_WRIST = 0.055                                           # el kemiği başı (bilek) -> avuç merkezi, parmak yönünde (m)
+CUP_MARGIN = 0.004                                              # avuç topun yüzeyinde (içeri/dışarı payı)
+
+
+def rest_hand_frames(arm, yaw):
+    """Her el için KEMİK EKSENİNDEN BAĞIMSIZ anatomik çerçeve (bileğin, orta/işaret/serçe parmak boğumlarının dinlenme konumlarından):
+    parmak ekseni a = bilek -> orta boğum; avuç içi normali n = sağ elde a × (işaret->serçe), sol elde bunun tersi (sağ/sol kuralı);
+    LF = (a, n × a, n). Dönüş: {side: (LF 3x3, el kemiğinin dinlenme yönelimi 3x3 [yaw çerçevesinde])}. Bilek/parmak kemiklerinin yerel
+    eksenleri iki elde aynalı olmadığından yönelim buradan kurulur (kemik eksenine göre sabit B = bone^T LF)."""
+    out = {}
+    for side in "LR":
+        hb = arm.data.bones[f"SKEL_{side}_Hand"]
+        w = (yaw @ hb.head_local)
+        m = (yaw @ arm.data.bones[f"SKEL_{side}_Finger20"].head_local)
+        i = (yaw @ arm.data.bones[f"SKEL_{side}_Finger10"].head_local)
+        k = (yaw @ arm.data.bones[f"SKEL_{side}_Finger40"].head_local)
+        a = (m - w).normalized()
+        lip = (k - i)
+        lip = (lip - a * lip.dot(a)).normalized()
+        n = a.cross(lip)
+        if side == "L":
+            n = -n
+        n = n.normalized()
+        y = n.cross(a)
+        lf = Matrix(((a.x, y.x, n.x), (a.y, y.y, n.y), (a.z, y.z, n.z)))
+        bone = (yaw.to_3x3() @ hb.matrix_local.to_3x3())
+        # parmak kıvrılma ekseni = boğum hattı (işaret -> serçe), armatür dinlenme uzayında (yaw'sız): hemen her kemiğin yerel ekseninden
+        # bağımsız; pozitif açı = avuca doğru kıvırma (sol elde +, sağ elde - dönüş), yani aynı sayılar iki elde simetriktir
+        w0 = hb.head_local
+        a0 = (arm.data.bones[f"SKEL_{side}_Finger20"].head_local - w0).normalized()
+        l0 = arm.data.bones[f"SKEL_{side}_Finger40"].head_local - arm.data.bones[f"SKEL_{side}_Finger10"].head_local
+        l0 = (l0 - a0 * l0.dot(a0)).normalized()
+        out[side] = (lf, bone, (m - w).length, l0)
+    return out
+
+
+def cup_frame(side, ball, floor, radius, frames, u_over=None, d_over=None):
+    """Topun merkezinden (karakter uzayı) el hedefi ve el kemiği yönelimi: dönüş (bilek konumu [armatür uzayı, zemin dahil], 3x3 yönelim).
+    Hedef çerçeve: parmaklar küre teğeti boyunca ileri-aşağı (f), avuç içi topun merkezine bakar (n = -u). Sol el sağın aynasıdır."""
+    sg = 1.0 if side == "R" else -1.0
+    u = Vector((sg * math.cos(CUP_ELEV) * math.cos(CUP_AZ), math.cos(CUP_ELEV) * math.sin(CUP_AZ), math.sin(CUP_ELEV)))
+    d0 = Vector((sg * CUP_FINGER_DIR[0], CUP_FINGER_DIR[1], CUP_FINGER_DIR[2]))
+    if u_over is not None and Vector(u_over).length > 1e-6:
+        u = Vector(u_over).normalized()
+    if d_over is not None and Vector(d_over).length > 1e-6:
+        d0 = Vector(d_over)
+    f = (d0 - u * d0.dot(u)).normalized()
+    n = -u
+    y = n.cross(f)
+    target = Matrix(((f.x, y.x, n.x), (f.y, y.y, n.y), (f.z, y.z, n.z)))
+    lf, bone, wm, _lat = frames[side]
+    rot = target @ lf.transposed() @ bone                       # hedef anatomik çerçeveyi veren kemik yönelimi
+    palm = Vector(ball) + u * (radius + CUP_MARGIN)
+    wrist = palm - f * (wm * 0.5)                               # bilek -> avuç merkezi = bilek -> orta boğumun yarısı
+    return Vector((wrist.x, wrist.y, floor + wrist.z)), rot
+
+
+def _key_fingers(clip, p, f):
+    """Key every finger bone of a hand whose `clip.finger_sets[side]` is defined. Fingers 1..4: (c0, c1, c2) = curl degrees TOWARD THE PALM of
+    the three joints, about the knuckle line (same numbers on both hands, see rest_hand_frames). Thumb (key 0): legacy bone-local
+    ((z0, x0), z1, z2). Weight = max(grip, fing_<side>) scales rest -> pose."""
+    sets = getattr(clip, "finger_sets", None)
+    if not sets:
+        return
+    P = clip.arm.pose.bones
+    frames = getattr(clip, "_hand_frames", None)
+    for side in "LR":
+        tbl = sets.get(side)
+        if not tbl:
+            continue
+        w = max(p.get("grip", 0.0), p.get(f"fing_{side}", 0.0))
+        sign = 1.0 if side == "L" else -1.0
+        lat = frames[side][3] if frames else None
+        for fi, vals in tbl.items():
+            for j in range(3):
+                name = f"SKEL_{side}_Finger{fi}{j}"
+                pb = P[name]
+                pb.rotation_mode = "QUATERNION"
+                if fi == 0:
+                    z, x = (vals[0][0], vals[0][1]) if j == 0 else (vals[j], 0.0)
+                    pb.rotation_quaternion = Quaternion((0, 0, 1), math.radians(z * w)) @ Quaternion((1, 0, 0), math.radians(x * w))
+                else:
+                    pb.rotation_quaternion = clip.delta(name, lat, sign * vals[j] * w)
+                pb.keyframe_insert("rotation_quaternion", frame=f)
+
+
 def animate(clip, keys):
     """Bake key poses into `clip` for every frame 0..clip.frames. Returns the worst unreachable IK distance (m)."""
     arm = clip.arm
     filled = _filled(keys)
     rm = arm.data.bones["SKEL_ROOT"].matrix_local
     yaw = rm @ Quaternion((0, 0, 0, 1) if clip.game_facing else (1, 0, 0, 0)).to_matrix().to_4x4() @ rm.inverted()
+    hand_frames = rest_hand_frames(arm, yaw)
+    clip._hand_frames = hand_frames
     floor = min((yaw @ b.head_local).z for b in arm.data.bones if b.name.startswith("SKEL_"))
     feet = {}
     for side, chain in zip("LR", clip.LEGS):
@@ -93,6 +190,7 @@ def animate(clip, keys):
             out = 0.25 - 0.17 * min(1.0, max(0.0, p[f"foot_{side}"][2]) / 0.3)
             knee = clip.forward() + Vector((out if side == "R" else -out, 0, 0.2))
             worst = max(worst, clip.ik(f, *chain, tpos + Vector(p[f"foot_{side}"]), knee, end_rot=rot))
+        _key_fingers(clip, p, f)
         for side in "LR":
             h = p[f"hand_{side}"]
             clip.eval(f)
@@ -100,7 +198,15 @@ def animate(clip, keys):
             hand = clip.ARMS[side][2]
             gw = p.get("grip", 0.0)
             gr = getattr(clip, "grip_rot", None)
-            gripping = bool(gr) and gw > 0.001
+            cw = min(1.0, p.get("cup", 0.0)) * p.get(f"cup_{side}", 1.0)
+            gripping = (bool(gr) and gw > 0.001) or cw > 0.001
+            if cw > 0.001:
+                tgt_c, rot_c = cup_frame(side, p["ball"], floor, 0.105, hand_frames, p.get(f"cu_{side}"), p.get(f"cd_{side}"))
+                tgt = tgt + (tgt_c - tgt) * cw
+                gw = cw
+                grot = rot_c.to_quaternion()
+            elif gripping:
+                grot = gr[side].to_quaternion()
             if gripping:
                 # TUTUŞ: el yönü, doğal yönden referans tutuş yönüne `grip` ağırlığıyla harmanlanır; böylece top-el ofseti klipler
                 # arasında sabit kalır (oyunda top tek kemiğe tek ofsetle bağlanır).
@@ -110,7 +216,7 @@ def animate(clip, keys):
                 P[hand].rotation_quaternion = (1, 0, 0, 0)
                 bpy.context.view_layer.update()
                 nat = P[hand].matrix.to_3x3().to_quaternion()
-                q = nat.slerp(gr[side].to_quaternion(), min(1.0, gw))
+                q = nat.slerp(grot, min(1.0, gw))
                 miss = clip.ik(f, *clip.ARMS[side], tgt, elb, end_rot=q.to_matrix())
             else:
                 miss = clip.ik(f, *clip.ARMS[side], tgt, elb)
@@ -120,6 +226,10 @@ def animate(clip, keys):
             if not gripping:
                 w = p[f"wrist_{side}"]
                 clip.set(f, {hand: [("x", w[0]), ("y", w[1]), ("z", w[2])]}, interp="LINEAR")
+    for fc in clip.action.fcurves:                       # finger tracks: linear between the per-frame bakes
+        if "_Finger" in fc.data_path:
+            for kp in fc.keyframe_points:
+                kp.interpolation = "LINEAR"
     clip.ik_worst_at = worst_at
     clip.floor = floor
     return worst
