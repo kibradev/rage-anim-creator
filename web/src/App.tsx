@@ -8,6 +8,7 @@ import { Timeline } from '@/components/Timeline'
 import { Viewport } from '@/components/Viewport'
 import { Player } from '@/lib/player'
 import type { Clip, Ped } from '@/lib/types'
+import type { BallOffsets, BallPaths } from '@/lib/ball'
 
 export default function App() {
   const [peds, setPeds] = useState<Ped[]>([])
@@ -21,6 +22,23 @@ export default function App() {
   const [inPlace, setInPlace] = useState(true)
   const [game, setGame] = useState(false)
   const player = useRef(new Player()).current
+  const [ballOn, setBallOn] = useState(true)
+  const [ballPaths, setBallPaths] = useState<BallPaths | null>(null)
+  const [useOffset, setUseOffset] = useState(true)
+  const [offsets, setOffsets] = useState<BallOffsets>({ hold: [0, 0, 7], carry: [0, 0, 0] })
+
+  useEffect(() => {
+    fetch('/files/output/ball_paths.json')
+      .then((r) => r.json())
+      .then((j: BallPaths) => {
+        setBallPaths(j)
+        setOffsets({
+          hold: j.offset.hold.map((v) => Math.round(v * 100)) as BallOffsets['hold'],
+          carry: j.offset.carry.map((v) => Math.round(v * 100)) as BallOffsets['carry'],
+        })
+      })
+      .catch(() => setBallPaths(null))
+  }, [])
 
   useEffect(() => {
     fetch('/api/peds')
@@ -80,6 +98,13 @@ export default function App() {
           inPlace={inPlace}
           game={game}
           onGame={setGame}
+          ballOn={ballOn}
+          onBallOn={setBallOn}
+          useOffset={useOffset}
+          onUseOffset={setUseOffset}
+          offsets={offsets}
+          onOffsets={setOffsets}
+          ballAvailable={!!ballPaths}
           onInPlace={(v) => {
             setInPlace(v)
             player.setInPlace(v)
@@ -87,7 +112,7 @@ export default function App() {
         />
         <div className="flex min-w-0 flex-1 flex-col">
           <main className="relative min-h-0 flex-1">
-            <Viewport url={current?.url ?? null} skeleton={skeleton} player={player} clip={shown} />
+            <Viewport url={current?.url ?? null} skeleton={skeleton} player={player} clip={shown} ball={{ on: ballOn, paths: ballPaths, offsets, useOffset }} />
             {liveClip?.version && (
               <Button className="absolute top-4 right-4" variant="secondary" size="sm" onClick={() => setReview(true)}>
                 İncele

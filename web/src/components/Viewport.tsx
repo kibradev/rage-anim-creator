@@ -1,9 +1,35 @@
-import { Suspense, useEffect, useMemo } from 'react'
+import { Suspense, useEffect, useMemo, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Grid, OrbitControls, useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
 import type { Player } from '@/lib/player'
 import type { Clip } from '@/lib/types'
+import { ballAt, type BallOffsets, type BallPaths } from '@/lib/ball'
+
+export const BALL_URL = '/files/cache/props/p_vb_volleyball.glb'
+
+export type BallView = { on: boolean; paths: BallPaths | null; offsets: BallOffsets; useOffset: boolean }
+
+/** Gerçek voleybol topu (.ydr -> GLB), klibin oynatma zamanına göre top yolunda. Ped ile aynı gruptadır (bone uzayı = glTF). */
+function BallProp({ clip, player, ball }: { clip: Clip | null; player: Player; ball: BallView }) {
+  const { scene } = useGLTF(BALL_URL)
+  const obj = useMemo(() => scene.clone(true), [scene])
+  const ref = useRef<THREE.Group>(null)
+  useFrame(() => {
+    const g = ref.current
+    if (!g) return
+    const key = clip?.name.replace(/\.clip$/, '') ?? ''
+    const p = ballAt(ball.paths, key, player, ball.offsets, ball.useOffset)
+    g.visible = !!p
+    // bone uzayı (x sağ, y ileri, z yukarı) -> glTF (x, z, -y)
+    if (p) g.position.set(p[0], p[2], -p[1])
+  })
+  return (
+    <group ref={ref} visible={false}>
+      <primitive object={obj} />
+    </group>
+  )
+}
 
 function ClipLoader({ clip, player }: { clip: Clip; player: Player }) {
   const { animations } = useGLTF(clip.url)
@@ -14,7 +40,7 @@ function ClipLoader({ clip, player }: { clip: Clip; player: Player }) {
   return null
 }
 
-function PedModel({ url, skeleton, player, clip }: { url: string; skeleton: boolean; player: Player; clip: Clip | null }) {
+function PedModel({ url, skeleton, player, clip, ball }: { url: string; skeleton: boolean; player: Player; clip: Clip | null; ball: BallView }) {
   const { scene } = useGLTF(url)
   const helper = useMemo(() => {
     const h = new THREE.SkeletonHelper(scene)
@@ -56,6 +82,11 @@ function PedModel({ url, skeleton, player, clip }: { url: string; skeleton: bool
       <group rotation-y={Math.PI} position-y={lift}>
         <primitive object={scene} />
         <primitive object={helper} />
+        {ball.on && (
+          <Suspense fallback={null}>
+            <BallProp clip={clip} player={player} ball={ball} />
+          </Suspense>
+        )}
       </group>
       {clip && (
         <Suspense fallback={null}>
@@ -66,9 +97,9 @@ function PedModel({ url, skeleton, player, clip }: { url: string; skeleton: bool
   )
 }
 
-type Props = { url: string | null; skeleton: boolean; player: Player; clip: Clip | null }
+type Props = { url: string | null; skeleton: boolean; player: Player; clip: Clip | null; ball: BallView }
 
-export function Viewport({ url, skeleton, player, clip }: Props) {
+export function Viewport({ url, skeleton, player, clip, ball }: Props) {
   return (
     <Canvas camera={{ position: [0, 1.15, 4.2], fov: 40 }} gl={{ antialias: true }}>
       <color attach="background" args={['#0b0b0d']} />
@@ -76,7 +107,7 @@ export function Viewport({ url, skeleton, player, clip }: Props) {
       <directionalLight position={[3, 5, 4]} intensity={2} />
       <Grid args={[20, 20]} cellColor="#2a2a30" sectionColor="#3a3a44" fadeDistance={14} infiniteGrid />
       <Suspense fallback={null}>
-        {url && <PedModel key={url} url={url} skeleton={skeleton} player={player} clip={clip} />}
+        {url && <PedModel key={url} url={url} skeleton={skeleton} player={player} clip={clip} ball={ball} />}
       </Suspense>
       <OrbitControls target={[0, 0.95, 0]} makeDefault />
     </Canvas>

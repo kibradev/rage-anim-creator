@@ -2,10 +2,15 @@
 local LOOP = {
     ['vb_block'] = false,
     ['vb_bump'] = false,
+    ['vb_carry_L'] = true,
+    ['vb_carry_tuck_L'] = false,
     ['vb_celebrate'] = false,
     ['vb_dig_low'] = false,
     ['vb_dig_side_L'] = false,
     ['vb_dig_side_R'] = false,
+    ['vb_hold'] = true,
+    ['vb_hold_pass'] = false,
+    ['vb_pickup'] = false,
     ['vb_ready_idle'] = true,
     ['vb_serve_over'] = false,
     ['vb_serve_under'] = false,
@@ -29,7 +34,12 @@ local CLIPS = {
     { name = "vb_dig_side_R", title = "Sağa defans", group = "Defans", loop = false, sec = 1.7 },
     { name = "vb_dig_side_L", title = "Sola defans", group = "Defans", loop = false, sec = 1.7 },
     { name = "wave_hand", title = "El sallama", group = "Diğer", loop = false, sec = 3.0 },
-    { name = "vb_celebrate", title = "Sayı sevinci", group = "Diğer", loop = false, sec = 2.3 }
+    { name = "vb_celebrate", title = "Sayı sevinci", group = "Diğer", loop = false, sec = 2.3 },
+    { name = "vb_carry_L", title = "vb_carry_L", group = "Diğer", loop = true, sec = 2.0 },
+    { name = "vb_carry_tuck_L", title = "vb_carry_tuck_L", group = "Diğer", loop = false, sec = 0.6 },
+    { name = "vb_hold", title = "vb_hold", group = "Diğer", loop = true, sec = 2.0 },
+    { name = "vb_hold_pass", title = "vb_hold_pass", group = "Diğer", loop = false, sec = 1.1 },
+    { name = "vb_pickup", title = "vb_pickup", group = "Diğer", loop = false, sec = 1.6 }
 }
 local open = false
 local current = nil
