@@ -318,7 +318,7 @@ def export_version(arm, clip: Clip, out_root: Path, label: str = "", module: str
     d.mkdir(parents=True, exist_ok=True)
     meta_path = d / "meta.json"
     meta = json.loads(meta_path.read_text("utf-8")) if meta_path.exists() else {"name": clip.name, "versions": []}
-    n = len(meta["versions"]) + 1
+    n = max((v["v"] for v in meta["versions"]), default=0) + 1
     glb = d / f"v{n}.glb"
     animlib.export_armature_glb(arm, str(glb))
     (d / f"v{n}.action.json").write_text(json.dumps({"frames": clip.frames, "fps": clip.fps, "curves": dump_action(clip.action)}), "utf-8")

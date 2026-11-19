@@ -66,10 +66,11 @@ def mine():
     out = []
     for meta_path in sorted(OUTPUT.glob("*/meta.json")):
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        latest = max((v["v"] for v in meta["versions"]), default=0)
         for v in meta["versions"]:
             out.append({
                 "dict": "output", "name": meta["name"], "duration": v["duration"], "fps": v["fps"],
-                "version": v["v"], "label": v.get("label", ""), "latest": v["v"] == len(meta["versions"]),
+                "version": v["v"], "label": v.get("label", ""), "latest": v["v"] == latest,
                 "url": f"/files/output/{meta['name']}/{v['file']}",
                 "status": v.get("status", "pending"),
                 "report": {
