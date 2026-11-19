@@ -1,0 +1,248 @@
+{
+ "name": "vb_dive",
+ "versions": [
+  {
+   "v": 1,
+   "label": "plonjon v1",
+   "frames": 84,
+   "fps": 30,
+   "duration": 2.8,
+   "loop": false,
+   "file": "v1.glb",
+   "module": "volleyball:vb_dive",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 50.27,
+    "max_step_at": "SKEL_L_Calf@13",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.096,
+      "R": 0.478
+     },
+     "foot_slide_worst_step": [
+      0.1599,
+      "SKEL_R_Foot",
+      13
+     ],
+     "below_ground_m": [
+      0.05,
+      "SKEL_R_Toe0",
+      13
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 98.3,
+      "SKEL_R_Calf": 99.8,
+      "SKEL_L_Forearm": 136.2,
+      "SKEL_R_Forearm": 136.2
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.265,
+      "SKEL_R_Hand",
+      66
+     ],
+     "seam_rot_deg": [
+      0.06,
+      "SKEL_L_Hand"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": [
+     "ayak kaymas\u0131 L: yerdeyken toplam 0.10 m kayd\u0131 (en b\u00fcy\u00fck ad\u0131m kare 13)",
+     "ayak kaymas\u0131 R: yerdeyken toplam 0.48 m kayd\u0131 (en b\u00fcy\u00fck ad\u0131m kare 13)",
+     "yere girme: SKEL_R_Toe0 zeminin 5 cm alt\u0131nda (kare 13)"
+    ]
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
+  },
+  {
+   "v": 2,
+   "label": "plonjon v2 g\u00f6vde yat\u0131k",
+   "frames": 84,
+   "fps": 30,
+   "duration": 2.8,
+   "loop": false,
+   "file": "v2.glb",
+   "module": "volleyball:vb_dive",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 50.27,
+    "max_step_at": "SKEL_L_Calf@13",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.096,
+      "R": 0.478
+     },
+     "foot_slide_worst_step": [
+      0.1599,
+      "SKEL_R_Foot",
+      13
+     ],
+     "below_ground_m": [
+      0.05,
+      "SKEL_R_Toe0",
+      13
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 98.3,
+      "SKEL_R_Calf": 99.8,
+      "SKEL_L_Forearm": 136.2,
+      "SKEL_R_Forearm": 136.2
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.265,
+      "SKEL_R_Hand",
+      66
+     ],
+     "seam_rot_deg": [
+      0.06,
+      "SKEL_L_Forearm"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": [
+     "ayak kaymas\u0131 L: yerdeyken toplam 0.10 m kayd\u0131 (en b\u00fcy\u00fck ad\u0131m kare 13)",
+     "ayak kaymas\u0131 R: yerdeyken toplam 0.48 m kayd\u0131 (en b\u00fcy\u00fck ad\u0131m kare 13)",
+     "yere girme: SKEL_R_Toe0 zeminin 5 cm alt\u0131nda (kare 13)"
+    ]
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
+  },
+  {
+   "v": 3,
+   "label": "plonjon v3",
+   "frames": 84,
+   "fps": 30,
+   "duration": 2.8,
+   "loop": false,
+   "file": "v3.glb",
+   "module": "volleyball:vb_dive",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 50.27,
+    "max_step_at": "SKEL_L_Calf@13",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.096,
+      "R": 0.478
+     },
+     "foot_slide_worst_step": [
+      0.1599,
+      "SKEL_R_Foot",
+      13
+     ],
+     "below_ground_m": [
+      0.05,
+      "SKEL_R_Toe0",
+      13
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 98.3,
+      "SKEL_R_Calf": 99.8,
+      "SKEL_L_Forearm": 136.2,
+      "SKEL_R_Forearm": 136.2
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.265,
+      "SKEL_L_Hand",
+      66
+     ],
+     "seam_rot_deg": [
+      0.06,
+      "SKEL_Head"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": [
+     "ayak kaymas\u0131 L: yerdeyken toplam 0.10 m kayd\u0131 (en b\u00fcy\u00fck ad\u0131m kare 13)",
+     "ayak kaymas\u0131 R: yerdeyken toplam 0.48 m kayd\u0131 (en b\u00fcy\u00fck ad\u0131m kare 13)",
+     "yere girme: SKEL_R_Toe0 zeminin 5 cm alt\u0131nda (kare 13)"
+    ]
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
+  }
+ ]
+}
