@@ -8,6 +8,7 @@ z = UP, metres. A key is (frame, {param: value}); a param missing in a key keeps
   pelvis/spine/chest/neck/head   (x, y, z) degrees: x>0 lean forward, y>0 bend to the left, z>0 turn to the left
   hand_L/hand_R   (x, y, z)   wrist position in character space (z measured from the floor)
   elbow_L/elbow_R (x, y, z)   direction the elbow points to (optional; default back/down/out)
+  palm_L/palm_R, fingers_L/fingers_R direction vectors: anatomical hand orientation, blended by orient_L/orient_R (0..1)
   wrist_L/wrist_R (x, y, z) degrees, extra hand rotation
   ball (x, y, z)  ball centre in character space, cup 0..1: hands are PLACED from the ball (palm on the surface, fingers wrapping forward-down,
                   see cup_frame) instead of from hand_L/hand_R; the two blend by `cup`
@@ -16,6 +17,7 @@ z = UP, metres. A key is (frame, {param: value}); a param missing in a key keeps
   fing_L/fing_R   0..1 finger pose weight (rest -> clip.finger_sets[side]); `grip` also drives it (max of the two)
   clav_L/clav_R   (x, y, z) degrees, shoulder shrug etc.
   foot_L/foot_R   (dx, dy, dz) ankle offset from its standing spot
+  knee_L/knee_R   (x, y, z) optional knee bend direction; zero uses the default
   pitch_L/pitch_R degrees, >0 = toes point down (tiptoe / airborne)
   glide           1 = feet may slide on the ground toward this key (treadmill loops); default: they step
   ease            'smooth' (default) | 'lin' | 'in' | 'out'  -- how this key is approached
@@ -31,6 +33,8 @@ STAND = {
     "clav_L": (0, 0, 0), "clav_R": (0, 0, 0),
     "hand_L": (-0.27, 0.04, 0.84), "hand_R": (0.27, 0.04, 0.84),
     "elbow_L": (-0.5, -1.0, -0.6), "elbow_R": (0.5, -1.0, -0.6),
+    "palm_L": (0, 0, -1), "palm_R": (0, 0, -1), "fingers_L": (0, 1, 0), "fingers_R": (0, 1, 0),
+    "orient_L": 0.0, "orient_R": 0.0, "knee_L": (0, 0, 0), "knee_R": (0, 0, 0),
     "wrist_L": (0, 0, 0), "wrist_R": (0, 0, 0),
     "foot_L": (0, 0, 0), "foot_R": (0, 0, 0), "pitch_L": 0.0, "pitch_R": 0.0, "glide": 0,
     "grip": 0.0, "fing_L": 0.0, "fing_R": 0.0, "ball": (0.0, 0.36, 1.05), "cup": 0.0,
@@ -189,7 +193,14 @@ def animate(clip, keys):
             # tucked leg with the knee splayed wider than the foot is not a GTA ped pose)
             out = 0.25 - 0.17 * min(1.0, max(0.0, p[f"foot_{side}"][2]) / 0.3)
             knee = clip.forward() + Vector((out if side == "R" else -out, 0, 0.2))
-            worst = max(worst, clip.ik(f, *chain, tpos + Vector(p[f"foot_{side}"]), knee, end_rot=rot))
+            if Vector(p[f"knee_{side}"]).length > 1e-6:
+                override = Vector(p[f"knee_{side}"])
+                knee = knee.normalized().lerp(override.normalized(), min(1.0, override.length)).normalized()
+            miss = clip.ik(f, *chain, tpos + Vector(p[f"foot_{side}"]), knee, end_rot=rot,
+                           min_mid_z=floor + clip.knee_clearance if hasattr(clip, "knee_clearance") else None)
+            if miss > worst_at[0]:
+                worst_at = (miss, f"foot_{side}", f)
+            worst = max(worst, miss)
         _key_fingers(clip, p, f)
         for side in "LR":
             h = p[f"hand_{side}"]
@@ -218,12 +229,29 @@ def animate(clip, keys):
                 nat = P[hand].matrix.to_3x3().to_quaternion()
                 q = nat.slerp(grot, min(1.0, gw))
                 miss = clip.ik(f, *clip.ARMS[side], tgt, elb, end_rot=q.to_matrix())
+            elif p.get(f"orient_{side}", 0.0) > 0.001:
+                # Explicit anatomical orientation for ground support; existing clips default to weight zero.
+                import bpy
+                clip.ik(f, *clip.ARMS[side], tgt, elb)
+                P = arm.pose.bones
+                P[hand].rotation_quaternion = (1, 0, 0, 0)
+                bpy.context.view_layer.update()
+                nat = P[hand].matrix.to_quaternion()
+                n = Vector(p[f"palm_{side}"]).normalized()
+                d = Vector(p[f"fingers_{side}"])
+                d = (d - n * d.dot(n)).normalized()
+                y = n.cross(d)
+                target = Matrix(((d.x, y.x, n.x), (d.y, y.y, n.y), (d.z, y.z, n.z)))
+                lf, bone, _, _ = hand_frames[side]
+                q = (target @ lf.transposed() @ bone).to_quaternion()
+                q = nat.slerp(q, min(1.0, p[f"orient_{side}"]))
+                miss = clip.ik(f, *clip.ARMS[side], tgt, elb, end_rot=q.to_matrix())
             else:
                 miss = clip.ik(f, *clip.ARMS[side], tgt, elb)
             if miss > worst_at[0]:
                 worst_at = (miss, f"hand_{side}", f)
             worst = max(worst, miss)
-            if not gripping:
+            if not gripping and p.get(f"orient_{side}", 0.0) <= 0.001:
                 w = p[f"wrist_{side}"]
                 clip.set(f, {hand: [("x", w[0]), ("y", w[1]), ("z", w[2])]}, interp="LINEAR")
     for fc in clip.action.fcurves:                       # finger tracks: linear between the per-frame bakes

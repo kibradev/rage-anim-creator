@@ -83,3 +83,12 @@ GTA clip'lerini referans alabilmesi ve otomatik kalite denetimi gerekiyor.
 - 17 Kas (oyun/önizleme farkı): `pipeline/decode_export.py -- vb_,wave_hand` export edilen İKİLİ .ycd'yi geri çözer -> `output/export/<clip>/vN/game.glb` + `game.json`.
   Arayüzde kenar çubuğu "Oyun verisi" anahtarı bu GLB'yi oynatır; İncele panelinde tasarım↔export farkı görünür. Sonuç: 13 vb_ clip'te fark ≤0,66° ve ≤4 mm,
   kayıp eğri yok -> kodlama kayıpsız; oyundaki fark çalışma zamanından (ped modeli, blend, flag, mover/kapsül) geliyor olmalı. wave_hand (player_zero) ayrı çalıştırılmalı.
+
+## 19 Kasım — doğal plonjon revizyonu
+- Kullanıcı talebiyle vb_dive yeniden işlendi; son aday **v16**, 78 kare / 2,6 sn, **pending**. v4 approved/export durumu korundu.
+- Görev promptu ve ölçümler: `pipeline/prompts/vb_dive.md`. Ara denemeler (v5–v15) temizlendi.
+- Uzanma, sabit aşağı bakan avuç desteği, zemin sınırına uyan dizler, kademeli kalkış.
+- Kayma L/R 2,7 cm / 1 mm; en büyük kare dönüşü 23,91°; hareket raporu uyarısız, IK kaçırma >1 cm yok.
+- Tüm deforme mesh kareleri gerçek ayakkabı tabanına göre kontrol edildi; ek zemin ihlali yok. Hazır duruş/smaç/tutuş eski çözücüyle karşılaştırıldı (<0,017 mm / <0,08°).
+- İnceleme: `cache/preview/video/vb_dive_v16_side.mp4`, `cache/preview/vb_dive_v16.png`.
+- Sonraki adım: kullanıcının görsel değerlendirmesi. Yeni aday onaylanmadı, YCD export veya sunucuya kopyalama yapılmadı.

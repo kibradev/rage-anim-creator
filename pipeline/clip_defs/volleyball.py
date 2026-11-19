@@ -184,33 +184,51 @@ def dig_side_L():
 
 
 def dive():
-    """Plonjon (ileri dalış): iki-üç adım yük, ayaklarla it, vücut yere paralel uçar (kollar önde birleşik, bacaklar arkada),
-    topa platformla vur (kare 19), göğüs/karın yere kayar, kollarla itip diz-çömelmeye, oradan ayağa kalk. Yerinde (ped'i script taşır)."""
-    load = {"root": (0, 0.02, -0.36), "spine": (30, 0, 0), "pelvis": (14, 0, 0), "head": (-26, 0, 0),
-            "hand_L": (-J, 0.60, 0.50), "hand_R": (J, 0.60, 0.50), "elbow_L": (-0.6, -0.2, -1), "elbow_R": (0.6, -0.2, -1),
-            "foot_L": (-0.20, 0.02, 0), "foot_R": (0.20, 0.10, 0)}
-    push = {"root": (0, 0.26, -0.30), "pelvis": (40, 0, 0), "spine": (22, 0, 0), "head": (-30, 0, 0),
-            "hand_L": (-J, 0.72, 0.50), "hand_R": (J, 0.72, 0.50), "foot_L": (-0.14, -0.16, 0.07), "foot_R": (0.14, -0.18, 0.07),
-            "pitch_L": 15, "pitch_R": 15, "ease": "in"}
-    fly = {"root": (0, 0.58, -0.38), "pelvis": (72, 0, 0), "spine": (46, 0, 0), "chest": (32, 0, 0), "head": (-42, 0, 0),
-           "hand_L": (-J, 1.12, 0.36), "hand_R": (J, 1.12, 0.36), "elbow_L": (-0.2, 0.1, -1), "elbow_R": (0.2, 0.1, -1),
-           "foot_L": (-0.12, -0.62, 0.34), "foot_R": (0.12, -0.66, 0.38), "pitch_L": 50, "pitch_R": 50, "ease": "out"}
-    hit = {"root": (0, 0.74, -0.46), "pelvis": (78, 0, 0), "spine": (46, 0, 0), "chest": (32, 0, 0), "head": (-44, 0, 0),
-           "hand_L": (-J, 1.30, 0.26), "hand_R": (J, 1.30, 0.26), "foot_L": (-0.12, -0.74, 0.30), "foot_R": (0.12, -0.78, 0.34), "ease": "in"}
-    slide = {"root": (0, 0.92, -0.70), "pelvis": (84, 0, 0), "spine": (42, 0, 0), "chest": (30, 0, 0), "head": (-46, 0, 0),
-             "hand_L": (-0.12, 1.44, 0.14), "hand_R": (0.12, 1.44, 0.14), "elbow_L": (-0.5, 0.4, -1), "elbow_R": (0.5, 0.4, -1),
-             "foot_L": (-0.12, -0.80, 0.08), "foot_R": (0.12, -0.84, 0.10), "pitch_L": 60, "pitch_R": 60, "ease": "in"}
-    rest = {**slide, "root": (0, 0.96, -0.74), "foot_L": (-0.12, -0.80, 0.02), "foot_R": (0.12, -0.84, 0.02), "pitch_L": 40, "pitch_R": 40, "ease": "out"}
-    push_up = {"root": (0, 0.82, -0.68), "pelvis": (72, 0, 0), "spine": (10, 0, 0), "chest": (6, 0, 0), "head": (-44, 0, 0),
-               "hand_L": (-0.22, 1.20, 0.12), "hand_R": (0.22, 1.20, 0.12), "foot_L": (-0.14, -0.50, 0), "foot_R": (0.14, -0.56, 0),
-               "pitch_L": 40, "pitch_R": 40}
-    kneel = {"root": (0, 0.66, -0.56), "pelvis": (40, 0, 0), "spine": (22, 0, 0), "chest": (6, 0, 0), "head": (-30, 0, 0),
-             "hand_L": (-0.24, 0.86, 0.30), "hand_R": (0.24, 0.86, 0.30), "foot_L": (-0.14, 0.04, 0), "foot_R": (0.14, -0.10, 0),
-             "pitch_L": 0, "pitch_R": 0}
-    rise = {"root": (0, 0.30, -0.30), "pelvis": (18, 0, 0), "spine": (22, 0, 0), "head": (-20, 0, 0),
-            "hand_L": (-0.25, 0.44, 0.90), "hand_R": (0.25, 0.44, 0.90), "foot_L": (-0.12, 0.0, 0), "foot_R": (0.12, 0.0, 0), "ease": "out"}
-    return 68, False, [(0, READY), (8, load), (13, push), (18, fly), (22, hit), (27, slide), (32, rest), (40, push_up), (48, kneel),
-                       (56, rise), (68, READY)]
+    """Forward platform dig, soft hand-supported landing and staggered recovery.
+    Local root travel is recovered during airborne/replant phases; grounded hands stay fixed.
+    Pelvis drives the hips; spine/chest drive the separate torso branch of the GTA rig.
+    """
+    load = {"root": (0, 0.02, -0.32), "pelvis": (18, 0, 0), "spine": (20, 0, 0), "chest": (4, 0, 0), "head": (-24, 0, 0),
+            "hand_L": (-0.12, 0.54, 0.80), "hand_R": (0.12, 0.54, 0.80),
+            "foot_L": READY["foot_L"], "foot_R": READY["foot_R"]}
+    drive = {"root": (0, 0.20, -0.22), "pelvis": (38, 0, 0), "spine": (16, 0, 0), "chest": (4, 0, 0), "head": (-24, 0, 0),
+             "hand_L": (-J, 0.72, 0.99), "hand_R": (J, 0.72, 0.99),
+             "foot_L": (-0.12, 0, 0.12), "foot_R": (0.12, 0, 0.12), "pitch_L": 15, "pitch_R": 15, "ease": "in"}
+    fly = {"root": (0, 0.44, -0.35), "pelvis": (70, 0, 0), "spine": (60, 0, 0), "chest": (18, 0, 0), "head": (-24, 0, 0),
+           "hand_L": (-J, 1.18, 0.70), "hand_R": (J, 1.18, 0.70),
+           "elbow_L": (-0.6, 0, -1), "elbow_R": (0.6, 0, -1),
+           "orient_L": 0.25, "orient_R": 0.25,
+           "knee_L": (-0.12, 0.2, -1), "knee_R": (0.12, 0.2, -1),
+           "foot_L": (-0.10, -0.27, 0.42), "foot_R": (0.10, -0.31, 0.48), "pitch_L": 30, "pitch_R": 32, "ease": "lin"}
+    hit = {"root": (0, 0.58, -0.47), "pelvis": (78, 0, 0), "spine": (65, 0, 0), "chest": (18, 0, 0), "head": (-24, 0, 0),
+           "hand_L": (-J, 1.32, 0.50), "hand_R": (J, 1.32, 0.50), "orient_L": 0.6, "orient_R": 0.6,
+           "foot_L": (-0.10, -0.10, 0.35), "foot_R": (0.10, -0.13, 0.40), "ease": "lin"}
+    contact = {"root": (0, 0.68, -0.68), "pelvis": (80, 0, 0), "spine": (65, 0, 0), "chest": (20, 0, 0), "head": (-28, 0, 0),
+               "hand_L": (-0.25, 1.15, 0.04), "hand_R": (0.25, 1.15, 0.04),
+               "elbow_L": (-1, -0.25, 0.25), "elbow_R": (1, -0.25, 0.25),
+               "foot_L": (-0.10, 0.04, 0.22), "foot_R": (0.10, 0.01, 0.26),
+               "palm_L": (0, 0, -1), "palm_R": (0, 0, -1), "fingers_L": (0, 1, 0), "fingers_R": (0, 1, 0),
+               "orient_L": 1.0, "orient_R": 1.0, "ease": "lin"}
+    absorb = {"root": (0, 0.74, -0.76), "pelvis": (82, 0, 0), "spine": (65, 0, 0), "chest": (20, 0, 0), "head": (-28, 0, 0),
+              "foot_L": (-0.10, 0.10, 0.18), "foot_R": (0.10, 0.07, 0.21), "pitch_L": 18, "pitch_R": 20, "ease": "out"}
+    support = {"root": (0, 0.68, -0.71), "pelvis": (45, 0, 0), "spine": (65, 0, 0), "chest": (18, 0, 0), "head": (-28, 0, 0),
+               "knee_L": (-0.12, 1, -0.15), "knee_R": (0.12, 1, -0.15),
+               "foot_L": (-0.10, 0.02, 0.17), "foot_R": (0.10, -0.03, 0.18), "pitch_L": 12, "pitch_R": 15}
+    tuck = {"root": (0, 0.53, -0.68), "pelvis": (16, 0, 0), "spine": (68, 0, 0), "chest": (16, 0, 0), "head": (-28, 0, 0),
+            "knee_L": (-0.12, 1, 0.4), "knee_R": (0.12, 1, 0.4),
+            "foot_L": (-0.04, 0.27, 0.02), "foot_R": (0.12, -0.02, 0.15), "pitch_L": 0, "pitch_R": 18,
+            "hand_L": (-0.25, 1.08, 0.26), "hand_R": (0.25, 1.15, 0.04), "orient_L": 0.8}
+    squat = {"root": (0, 0.28, -0.42), "pelvis": (24, 0, 0), "spine": (24, 0, 0), "chest": (6, 0, 0), "head": (-24, 0, 0),
+             "foot_L": (-0.04, 0.27, 0.02), "foot_R": (0.12, 0, 0.02), "pitch_L": 0, "pitch_R": 0,
+             "knee_L": (-0.05, 1, 0.2), "knee_R": (0.05, 1, 0.2),
+             "hand_L": (-0.26, 0.76, 0.62), "hand_R": (0.26, 0.70, 0.68), "orient_L": 0.0, "orient_R": 0.0,
+             "elbow_L": (-0.6, -0.6, -0.6), "elbow_R": (0.6, -0.6, -0.6)}
+    step = {"root": (0, 0.08, -0.24), "pelvis": (12, 0, 0), "spine": (18, 0, 0), "head": (-20, 0, 0),
+            "foot_L": (-0.12, 0.12, 0.14), "foot_R": (0.12, 0, 0.02),
+            "hand_L": (-0.25, 0.45, 0.94), "hand_R": (0.25, 0.45, 0.94), "orient_R": 0.0, "knee_L": (0, 0, 0), "knee_R": (0, 0, 0)}
+    reset = {**READY, "foot_R": (0.12, 0, 0.02), "orient_L": 0.0, "orient_R": 0.0, "knee_L": (0, 0, 0), "knee_R": (0, 0, 0)}
+    return 78, False, [(0, READY), (7, load), (12, drive), (18, fly), (22, hit), (27, contact), (32, absorb),
+                       (40, support), (48, tuck), (58, squat), (66, step), (72, reset), (78, READY)]
 
 
 def shuffle_R():
@@ -411,6 +429,8 @@ def build(arm, cl, variant):
         pass
     if variant in ("vb_hold", "vb_pickup", "vb_hold_pass", "vb_carry_L", "vb_carry_tuck_L"):
         c.finger_sets = FINGERS_HOLD
+    if variant == "vb_dive":
+        c.knee_clearance = 0.065  # knee centre: leave room for the mesh at ground contact
     worst = pk.animate(c, keys)
     c.key_frames = [k[0] for k in keys]
     c.ik_unreachable = worst

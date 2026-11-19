@@ -109,9 +109,10 @@ class Clip:
         pb.matrix = Matrix.Translation(head) @ q @ Matrix.Translation(-head) @ pb.matrix
         bpy.context.view_layer.update()
 
-    def ik(self, frame: int, upper: str, lower: str, end: str, target, pole, end_rot: Matrix = None):
+    def ik(self, frame: int, upper: str, lower: str, end: str, target, pole, end_rot: Matrix = None, min_mid_z: float = None):
         """Two-bone IK at `frame`: put the head of `end` (hand/foot) at `target` (armature space); the middle joint
         (elbow/knee) bends toward `pole` (a direction). end_rot: optional armature-space 3x3 orientation for `end`.
+        min_mid_z optionally constrains the elbow/knee centre above a floor while preserving segment lengths.
         Keys upper/lower (and end if end_rot). Returns the distance left to the target (0 if reachable)."""
         self.eval(frame)
         P = self.arm.pose.bones
@@ -130,7 +131,20 @@ class Clip:
         pv = Vector(pole)
         perp = pv - direction * pv.dot(direction)
         perp = perp.normalized() if perp.length > 1e-6 else direction.orthogonal().normalized()
-        mid = p0 + direction * a + perp * h
+        center = p0 + direction * a
+        mid = center + perp * h
+        if min_mid_z is not None and mid.z < min_mid_z and h > 1e-6:
+            # The joint lies on a circle perpendicular to the hip->ankle axis.
+            # Choose the closest bend direction on that circle above the floor.
+            up = Vector((0, 0, 1)) - direction * direction.z
+            span = up.length
+            if span > 1e-6:
+                up.normalize()
+                tangent = direction.cross(up).normalized()
+                height = max(-1.0, min(1.0, (min_mid_z - center.z) / (h * span)))
+                sign = 1.0 if perp.dot(tangent) >= 0 else -1.0
+                perp = up * height + tangent * (sign * math.sqrt(max(0.0, 1 - height * height)))
+                mid = center + perp * h
         self._aim(upper, lower, mid - p0)
         self._aim(lower, end, (p0 + direction * d) - mid)
         keyed = [upper, lower]
