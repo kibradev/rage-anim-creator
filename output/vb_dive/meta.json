@@ -172,7 +172,7 @@
    "loop": false,
    "file": "v3.glb",
    "module": "volleyball:vb_dive",
-   "status": "pending",
+   "status": "approved",
    "report": {
     "loop_gap_deg": 0.0,
     "max_step_deg": 50.27,
