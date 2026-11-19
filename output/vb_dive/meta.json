@@ -243,6 +243,86 @@
     "SKEL_Spine1",
     "SKEL_Spine3"
    ]
+  },
+  {
+   "v": 4,
+   "label": "plonjon v4 kisa toparlanma, ayak/el duzeltme",
+   "frames": 68,
+   "fps": 30,
+   "duration": 2.2666666666666666,
+   "loop": false,
+   "file": "v4.glb",
+   "module": "volleyball:vb_dive",
+   "status": "pending",
+   "report": {
+    "loop_gap_deg": 0.0,
+    "max_step_deg": 66.31,
+    "max_step_at": "SKEL_L_Forearm@58",
+    "motion": {
+     "foot_slide_m": {
+      "L": 0.124,
+      "R": 0.163
+     },
+     "foot_slide_worst_step": [
+      0.0573,
+      "SKEL_R_Foot",
+      11
+     ],
+     "below_ground_m": [
+      0.015,
+      "SKEL_L_Toe0",
+      40
+     ],
+     "max_bend_deg": {
+      "SKEL_L_Calf": 99.7,
+      "SKEL_R_Calf": 100.6,
+      "SKEL_L_Forearm": 136.2,
+      "SKEL_R_Forearm": 136.2
+     },
+     "knee_backward_m": [
+      0.0,
+      "",
+      0
+     ],
+     "hand_to_spine_min_m": [
+      0.265,
+      "SKEL_L_Hand",
+      56
+     ],
+     "seam_rot_deg": [
+      0.06,
+      "SKEL_R_Calf"
+     ],
+     "seam_root_m": 0.0
+    },
+    "warnings": [
+     "ayak kaymas\u0131 L: yerdeyken toplam 0.12 m kayd\u0131 (en b\u00fcy\u00fck ad\u0131m kare 11)",
+     "ayak kaymas\u0131 R: yerdeyken toplam 0.16 m kayd\u0131 (en b\u00fcy\u00fck ad\u0131m kare 11)"
+    ]
+   },
+   "ped": "mp_m_freemode_01",
+   "bones": [
+    "SKEL_Head",
+    "SKEL_L_Calf",
+    "SKEL_L_Clavicle",
+    "SKEL_L_Foot",
+    "SKEL_L_Forearm",
+    "SKEL_L_Hand",
+    "SKEL_L_Thigh",
+    "SKEL_L_UpperArm",
+    "SKEL_Neck_1",
+    "SKEL_Pelvis",
+    "SKEL_ROOT",
+    "SKEL_R_Calf",
+    "SKEL_R_Clavicle",
+    "SKEL_R_Foot",
+    "SKEL_R_Forearm",
+    "SKEL_R_Hand",
+    "SKEL_R_Thigh",
+    "SKEL_R_UpperArm",
+    "SKEL_Spine1",
+    "SKEL_Spine3"
+   ]
   }
  ]
 }

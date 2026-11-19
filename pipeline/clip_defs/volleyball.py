@@ -188,10 +188,10 @@ def dive():
     topa platformla vur (kare 19), göğüs/karın yere kayar, kollarla itip diz-çömelmeye, oradan ayağa kalk. Yerinde (ped'i script taşır)."""
     load = {"root": (0, 0.02, -0.36), "spine": (30, 0, 0), "pelvis": (14, 0, 0), "head": (-26, 0, 0),
             "hand_L": (-J, 0.60, 0.50), "hand_R": (J, 0.60, 0.50), "elbow_L": (-0.6, -0.2, -1), "elbow_R": (0.6, -0.2, -1),
-            "foot_L": (-0.20, -0.06, 0), "foot_R": (0.20, 0.14, 0)}
+            "foot_L": (-0.20, 0.02, 0), "foot_R": (0.20, 0.10, 0)}
     push = {"root": (0, 0.26, -0.30), "pelvis": (40, 0, 0), "spine": (22, 0, 0), "head": (-30, 0, 0),
-            "hand_L": (-J, 0.84, 0.46), "hand_R": (J, 0.84, 0.46), "foot_L": (-0.14, -0.16, 0.06), "foot_R": (0.14, -0.30, 0.02),
-            "pitch_L": 25, "pitch_R": 30, "ease": "in"}
+            "hand_L": (-J, 0.72, 0.50), "hand_R": (J, 0.72, 0.50), "foot_L": (-0.14, -0.16, 0.07), "foot_R": (0.14, -0.18, 0.07),
+            "pitch_L": 15, "pitch_R": 15, "ease": "in"}
     fly = {"root": (0, 0.58, -0.38), "pelvis": (72, 0, 0), "spine": (46, 0, 0), "chest": (32, 0, 0), "head": (-42, 0, 0),
            "hand_L": (-J, 1.12, 0.36), "hand_R": (J, 1.12, 0.36), "elbow_L": (-0.2, 0.1, -1), "elbow_R": (0.2, 0.1, -1),
            "foot_L": (-0.12, -0.62, 0.34), "foot_R": (0.12, -0.66, 0.38), "pitch_L": 50, "pitch_R": 50, "ease": "out"}
@@ -200,17 +200,17 @@ def dive():
     slide = {"root": (0, 0.92, -0.70), "pelvis": (84, 0, 0), "spine": (42, 0, 0), "chest": (30, 0, 0), "head": (-46, 0, 0),
              "hand_L": (-0.12, 1.44, 0.14), "hand_R": (0.12, 1.44, 0.14), "elbow_L": (-0.5, 0.4, -1), "elbow_R": (0.5, 0.4, -1),
              "foot_L": (-0.12, -0.80, 0.08), "foot_R": (0.12, -0.84, 0.10), "pitch_L": 60, "pitch_R": 60, "ease": "in"}
-    rest = {**slide, "root": (0, 0.96, -0.74), "foot_L": (-0.12, -0.80, 0.0), "foot_R": (0.12, -0.84, 0.0), "ease": "out"}
+    rest = {**slide, "root": (0, 0.96, -0.74), "foot_L": (-0.12, -0.80, 0.02), "foot_R": (0.12, -0.84, 0.02), "pitch_L": 40, "pitch_R": 40, "ease": "out"}
     push_up = {"root": (0, 0.82, -0.68), "pelvis": (72, 0, 0), "spine": (10, 0, 0), "chest": (6, 0, 0), "head": (-44, 0, 0),
-               "hand_L": (-0.22, 1.40, 0.10), "hand_R": (0.22, 1.40, 0.10), "foot_L": (-0.14, -0.50, 0), "foot_R": (0.14, -0.56, 0),
+               "hand_L": (-0.22, 1.20, 0.12), "hand_R": (0.22, 1.20, 0.12), "foot_L": (-0.14, -0.50, 0), "foot_R": (0.14, -0.56, 0),
                "pitch_L": 40, "pitch_R": 40}
     kneel = {"root": (0, 0.66, -0.56), "pelvis": (40, 0, 0), "spine": (22, 0, 0), "chest": (6, 0, 0), "head": (-30, 0, 0),
              "hand_L": (-0.24, 0.86, 0.30), "hand_R": (0.24, 0.86, 0.30), "foot_L": (-0.14, 0.04, 0), "foot_R": (0.14, -0.10, 0),
              "pitch_L": 0, "pitch_R": 0}
     rise = {"root": (0, 0.30, -0.30), "pelvis": (18, 0, 0), "spine": (22, 0, 0), "head": (-20, 0, 0),
             "hand_L": (-0.25, 0.44, 0.90), "hand_R": (0.25, 0.44, 0.90), "foot_L": (-0.12, 0.0, 0), "foot_R": (0.12, 0.0, 0), "ease": "out"}
-    return 84, False, [(0, READY), (8, load), (13, push), (18, fly), (22, hit), (28, slide), (36, rest), (46, push_up), (56, kneel),
-                       (66, rise), (84, READY)]
+    return 68, False, [(0, READY), (8, load), (13, push), (18, fly), (22, hit), (27, slide), (32, rest), (40, push_up), (48, kneel),
+                       (56, rise), (68, READY)]
 
 
 def shuffle_R():
