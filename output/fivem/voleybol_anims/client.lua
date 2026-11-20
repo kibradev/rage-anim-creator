@@ -8,6 +8,7 @@ local LOOP = {
     ['vb_dig_low'] = false,
     ['vb_dig_side_L'] = false,
     ['vb_dig_side_R'] = false,
+    ['vb_dive'] = false,
     ['vb_hold'] = true,
     ['vb_hold_pass'] = false,
     ['vb_pickup'] = false,
@@ -37,6 +38,7 @@ local CLIPS = {
     { name = "vb_celebrate", title = "Sayı sevinci", group = "Diğer", loop = false, sec = 2.3 },
     { name = "vb_carry_L", title = "vb_carry_L", group = "Diğer", loop = true, sec = 2.0 },
     { name = "vb_carry_tuck_L", title = "vb_carry_tuck_L", group = "Diğer", loop = false, sec = 0.6 },
+    { name = "vb_dive", title = "vb_dive", group = "Diğer", loop = false, sec = 2.3 },
     { name = "vb_hold", title = "vb_hold", group = "Diğer", loop = true, sec = 2.0 },
     { name = "vb_hold_pass", title = "vb_hold_pass", group = "Diğer", loop = false, sec = 1.1 },
     { name = "vb_pickup", title = "vb_pickup", group = "Diğer", loop = false, sec = 1.6 }

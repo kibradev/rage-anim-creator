@@ -10,3 +10,7 @@ __pycache__/
 *.yft
 converter/bin/
 converter/obj/
+
+# animasyon ciktilari (kucuk, projenin asil urunu) repoya dahil
+!output/export/**/*.ycd
+!output/fivem/**/*.ycd
