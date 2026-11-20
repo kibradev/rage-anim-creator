@@ -1,0 +1,2179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClipDictionary>
+ <Clips>
+  <Item>
+   <Hash>run</Hash>
+   <Name>pack:/run.clip</Name>
+   <Type value="AnimationList" />
+   <Unknown30 value="0" />
+   <Tags>
+    <Item>
+     <NameHash>hash_B82E430B</NameHash>
+     <UnkHash>hash_7E0050C6</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_2BC03824</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+      <Item>
+       <NameHash>right</NameHash>
+       <Type value="Bool" />
+       <Value value="0" />
+      </Item>
+     </Attributes>
+     <StartPhase value="0.112" />
+     <EndPhase value="0.112" />
+    </Item>
+    <Item>
+     <NameHash>hash_B82E430B</NameHash>
+     <UnkHash>hash_4F473F6A</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_2BC03824</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+      <Item>
+       <NameHash>right</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+     </Attributes>
+     <StartPhase value="0.238" />
+     <EndPhase value="0.238" />
+    </Item>
+    <Item>
+     <NameHash>hash_B82E430B</NameHash>
+     <UnkHash>hash_7E0050C6</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_2BC03824</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+      <Item>
+       <NameHash>right</NameHash>
+       <Type value="Bool" />
+       <Value value="0" />
+      </Item>
+     </Attributes>
+     <StartPhase value="0.357" />
+     <EndPhase value="0.357" />
+    </Item>
+    <Item>
+     <NameHash>hash_B82E430B</NameHash>
+     <UnkHash>hash_4F473F6A</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_2BC03824</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+      <Item>
+       <NameHash>right</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+     </Attributes>
+     <StartPhase value="0.499" />
+     <EndPhase value="0.499" />
+    </Item>
+    <Item>
+     <NameHash>hash_B82E430B</NameHash>
+     <UnkHash>hash_7E0050C6</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_2BC03824</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+      <Item>
+       <NameHash>right</NameHash>
+       <Type value="Bool" />
+       <Value value="0" />
+      </Item>
+     </Attributes>
+     <StartPhase value="0.613" />
+     <EndPhase value="0.613" />
+    </Item>
+    <Item>
+     <NameHash>hash_B82E430B</NameHash>
+     <UnkHash>hash_4F473F6A</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_2BC03824</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+      <Item>
+       <NameHash>right</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+     </Attributes>
+     <StartPhase value="0.739" />
+     <EndPhase value="0.739" />
+    </Item>
+    <Item>
+     <NameHash>hash_B82E430B</NameHash>
+     <UnkHash>hash_7E0050C6</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_2BC03824</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+      <Item>
+       <NameHash>right</NameHash>
+       <Type value="Bool" />
+       <Value value="0" />
+      </Item>
+     </Attributes>
+     <StartPhase value="0.854" />
+     <EndPhase value="0.854" />
+    </Item>
+    <Item>
+     <NameHash>hash_B82E430B</NameHash>
+     <UnkHash>hash_4F473F6A</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_2BC03824</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+      <Item>
+       <NameHash>right</NameHash>
+       <Type value="Bool" />
+       <Value value="1" />
+      </Item>
+     </Attributes>
+     <StartPhase value="0.993" />
+     <EndPhase value="0.993" />
+    </Item>
+   </Tags>
+   <Properties>
+    <Item>
+     <NameHash>hash_69497CB4</NameHash>
+     <UnkHash>hash_571B7C5F</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_69497CB4</NameHash>
+       <Type value="Int" />
+       <Value value="-958235956" />
+      </Item>
+     </Attributes>
+    </Item>
+   </Properties>
+   <Duration value="2.5" />
+   <Animations>
+    <Item>
+     <AnimationHash>hash_E2DFA587</AnimationHash>
+     <StartTime value="0" />
+     <EndTime value="2.5" />
+     <Rate value="1" />
+    </Item>
+    <Item>
+     <AnimationHash>hash_D0A1010A</AnimationHash>
+     <StartTime value="0" />
+     <EndTime value="2.5333335" />
+     <Rate value="1.0133334" />
+    </Item>
+    <Item>
+     <AnimationHash>hash_06986CF8</AnimationHash>
+     <StartTime value="0" />
+     <EndTime value="2.6" />
+     <Rate value="1.04" />
+    </Item>
+   </Animations>
+  </Item>
+ </Clips>
+ <Animations>
+  <Item>
+   <Hash>hash_06986CF8</Hash>
+   <Unknown10 value="0" />
+   <FrameCount value="15" />
+   <SequenceFrameLimit value="15" />
+   <Duration value="2.8" />
+   <Unknown1C>hash_2A5E1B9B</Unknown1C>
+   <BoneIds>
+    <Item>
+     <BoneId value="4089" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="4090" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="4137" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="4138" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="4153" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="4154" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="4169" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="4170" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="4185" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="4186" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="26610" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="26611" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="26612" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="26613" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="26614" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="58866" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="58867" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="58868" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="58869" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="58870" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64016" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64017" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64064" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64065" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64080" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64081" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64096" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64097" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64112" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64113" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+   </BoneIds>
+   <Sequences>
+    <Item>
+     <Hash>hash_E669FAA0</Hash>
+     <FrameCount value="15" />
+     <SequenceData>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.019682726" y="-0.014814639" z="-0.14170507" w="0.9896023" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="0.014672344" y="-0.01980227" z="-0.14555034" w="0.98904383" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="2.0534809E-07" y="-8.177368E-07" z="-0.30484536" w="0.9524019" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="1.4651486E-07" y="-6.0158095E-07" z="-0.31630912" w="0.9486562" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-1.1244522E-07" y="4.759197E-07" z="-0.01797346" w="0.9998385" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-1.1489779E-08" y="-5.644571E-07" z="-0.29386392" w="0.95584726" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="4.328089E-09" y="-8.2563565E-07" z="-0.3689674" w="0.92944235" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-1.60064E-08" y="-6.143542E-07" z="-0.3638352" w="0.9314633" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-3.9665818E-07" y="-2.5849372E-06" z="-0.35543767" w="0.9347" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-5.9228176E-07" y="-2.9880616E-06" z="-0.42558828" w="0.9049169" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="0.00017799782" y="-0.03601643" z="0.28385368" w="0.9581909" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.69855434" y="-0.23628058" z="-0.109651424" w="0.6664607" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.7036503" y="-0.23923744" z="-0.06984167" w="0.66540504" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.70350474" y="-0.27110577" z="-0.071305454" w="0.65306836" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.6989153" y="-0.43818375" z="-0.10730203" w="0.5549763" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.08694956" y="0.18855995" z="0.2416593" w="0.94788486" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.6759992" y="0.21008655" z="0.20742297" w="0.6751773" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.684056" y="0.20350254" z="0.1790715" w="0.6771909" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.6939345" y="0.13592346" z="0.13584802" w="0.6939201" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.6971275" y="0.13714994" z="0.11838064" w="0.69367796" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="0.019701708" y="0.0147990165" z="-0.14232056" w="0.9895139" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-0.014749233" y="0.01974138" z="-0.14151904" w="0.9896288" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="2.0359075E-06" y="-3.392978E-06" z="0.60258466" w="0.79805493" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="3.7245746E-07" y="-6.0941545E-07" z="0.19841333" w="0.98011845" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="3.0774897E-06" y="-3.979529E-06" z="0.68094605" w="0.7323336" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="5.244577E-07" y="-6.2901415E-07" z="0.19655645" w="0.98049253" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="1.2238012E-06" y="-1.4422113E-06" z="0.33157864" w="0.94342756" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="1.247711E-06" y="-1.4549313E-06" z="0.3449836" w="0.9386087" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="3.354953E-06" y="-7.661646E-06" z="0.56238467" w="0.8268757" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="1.3815642E-06" y="-2.9884961E-06" z="0.2933135" w="0.9560163" />
+        </Item>
+       </Channels>
+      </Item>
+     </SequenceData>
+    </Item>
+   </Sequences>
+  </Item>
+  <Item>
+   <Hash>hash_D0A1010A</Hash>
+   <Unknown10 value="0" />
+   <FrameCount value="40" />
+   <SequenceFrameLimit value="47" />
+   <Duration value="2.6000001" />
+   <Unknown1C>hash_EF91FC52</Unknown1C>
+   <BoneIds>
+    <Item>
+     <BoneId value="0" />
+     <Track value="0" />
+     <Unk0 value="0" />
+    </Item>
+    <Item>
+     <BoneId value="6286" />
+     <Track value="0" />
+     <Unk0 value="0" />
+    </Item>
+    <Item>
+     <BoneId value="28422" />
+     <Track value="0" />
+     <Unk0 value="0" />
+    </Item>
+    <Item>
+     <BoneId value="35502" />
+     <Track value="0" />
+     <Unk0 value="0" />
+    </Item>
+    <Item>
+     <BoneId value="36029" />
+     <Track value="0" />
+     <Unk0 value="0" />
+    </Item>
+    <Item>
+     <BoneId value="60309" />
+     <Track value="0" />
+     <Unk0 value="0" />
+    </Item>
+    <Item>
+     <BoneId value="65245" />
+     <Track value="0" />
+     <Unk0 value="0" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="2108" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="6286" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="10706" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="11816" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="12844" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="14201" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="18905" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="20781" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="23553" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="24816" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="24817" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="24818" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="28252" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="28422" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="31086" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="36029" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="36864" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="39317" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="40269" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="45509" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="51826" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="52301" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="56604" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="57005" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="57597" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="58271" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="60309" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="61163" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="63931" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="64729" />
+     <Track value="1" />
+     <Unk0 value="1" />
+    </Item>
+   </BoneIds>
+   <Sequences>
+    <Item>
+     <Hash>hash_AF1312A0</Hash>
+     <FrameCount value="40" />
+     <SequenceData>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0006736703" />
+         <Offset value="-0.039912425" />
+         <Values>
+          -0.02980737 -0.026439019 -0.024418008 -0.020375986 -0.023070667 -0.03048104 -0.037217744 -0.039912425 -0.035870403 -0.023744337
+          -0.014312953 -0.006902579 0.0005077943 0.0025288053 -0.000165876 -0.014312953 -0.026439019 -0.027112689 -0.019028645 -0.00892359
+          -0.0048815683 -0.0048815683 -0.004207898 -0.00824992 -0.014312953 -0.022396997 -0.03182838 -0.035196733 -0.03115471 -0.027112689
+          -0.023744337 -0.020375986 -0.021049656 -0.027112689 -0.035196733 -0.039238755 -0.038565084 -0.034523062 -0.02980737 -0.02980737
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.000630815" />
+         <Offset value="-0.03504023" />
+         <Values>
+          -0.01485415 -0.03251697 -0.030624524 -0.01863904 -0.0211623 -0.034409415 -0.033147786 -0.0154849645 -0.0028686635 -0.008546
+          -0.026839634 -0.02999371 -0.011069261 0.0015470386 -0.010438444 0.004701115 0.0166866 0.036241867 0.04507327 0.021102306
+          -0.012961704 -0.01485415 -0.002237849 -0.00602274 -0.0211623 -0.023054745 -0.013592521 -0.0053919256 -0.012961704 -0.030624524
+          -0.03504023 -0.02368556 -0.0098076295 -0.01233089 -0.01990067 -0.004761111 0.0072243735 0.00533193 -0.01485415 -0.01485415
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00078325334" />
+         <Offset value="-0.09869851" />
+         <Values>
+          -0.07990043 -0.07833393 -0.043087523 -0.04230427 -0.0838167 -0.09869851 -0.065801874 -0.0266392 -0.03212198 -0.07050139
+          -0.0736344 -0.040737763 -0.028988965 -0.05796934 -0.08929947 -0.075984165 -0.0266392 0.00077466667 -0.021939687 -0.061102353
+          -0.065801874 -0.036038242 -0.03290523 -0.0720679 -0.081466936 -0.04935355 -0.01645691 -0.025855951 -0.06736837 -0.080683686
+          -0.052486565 -0.03995451 -0.075200915 -0.09321574 -0.06345211 -0.023506194 -0.02037318 -0.056402832 -0.07990043 -0.07990043
+         </Values>
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticVector3" />
+         <Value x="0.054435" y="0" z="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticVector3" />
+         <Value x="0.050437" y="0" z="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticVector3" />
+         <Value x="0.101685405" y="-0.06407024" z="5.390683E-08" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticVector3" />
+         <Value x="0.054434" y="0" z="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticVector3" />
+         <Value x="0.050436" y="0" z="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticVector3" />
+         <Value x="0.10168567" y="-0.06407031" z="-1.2193299E-08" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="7.9142665E-05" />
+         <Offset value="-0.17033368" />
+         <Values>
+          -0.089370735 -0.110343546 -0.13598576 -0.124984935 -0.099896714 -0.11168897 -0.12965435 -0.12989178 -0.11073926 -0.09633529
+          -0.10781098 -0.13764776 -0.1399429 -0.11145154 -0.103853844 -0.11976152 -0.14769888 -0.14136747 -0.11691238 -0.110501826
+          -0.14207976 -0.17033368 -0.158304 -0.13123721 -0.1291795 -0.13970548 -0.13962632 -0.124193504 -0.10583241 -0.118890956
+          -0.15268487 -0.1614697 -0.14018033 -0.13361149 -0.14674917 -0.15094373 -0.1308415 -0.10314156 -0.089370735 -0.089370735
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="7.946107E-05" />
+         <Offset value="-0.048590414" />
+         <Values>
+          -0.048510954 -0.039293468 -0.00091377273 -0.01561407 0.00027814135 0.031665266 0.007429637 -0.011561558 0.016964965 -0.005443055
+          -0.023878023 -0.0013905391 -0.0077474266 -0.01561407 0.018554188 0.013230298 -0.015296228 0.0005165264 0.014660597 -0.013389163
+          -0.0137070045 0.0036949702 -0.020540657 -0.0048868284 0.01942826 -0.012356166 -0.030155446 -0.011879399 -0.03341335 -0.048590414
+          -0.015931915 -0.010528564 -0.005999282 0.03269826 0.0063171834 -0.019666586 0.0025030524 -0.0050457492 -0.048510954 -0.048510954
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="8.7962304E-05" />
+         <Offset value="-0.075641066" />
+         <Values>
+          -0.004655488 0.020501733 0.050408915 0.07134394 0.099843726 0.10441777 0.09535766 0.08814475 0.098700225 0.08814475
+          0.084186435 0.09166324 0.08788085 0.09201509 0.101251125 0.08664939 0.06879304 0.056742206 0.046450615 0.031321093
+          0.024723925 0.01496011 -8.144975E-05 0.0051083267 0.017247126 0.0007102117 -0.030428443 -0.049604222 -0.075641066 -0.07238646
+          -0.04907645 -0.026382174 0.016367503 0.034927547 0.022260979 0.014520295 0.01355271 0.009858295 -0.004655488 -0.004655488
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0027283786" />
+         <Offset value="0.1419786" />
+         <Values>
+          0.18563266 0.17471915 0.17199077 0.19927455 0.17199077 0.17744753 0.30022457 0.19927455 0.17744753 0.18290429
+          0.17744753 0.17744753 0.19108942 0.1556205 0.166534 0.22928673 0.2838543 0.17199077 0.1801759 0.18290429
+          0.18290429 0.1938178 0.21018808 0.166534 0.18563266 0.30568132 0.20200294 0.15834887 0.1801759 0.17199077
+          0.17199077 0.19108942 0.17199077 0.17471915 0.31386647 0.22110158 0.1419786 0.18836105 0.18563266 0.18563266
+         </Values>
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="-1.1176945E-07" />
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="-2.6767509E-08" />
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-6.021386E-07" y="3.665191E-07" z="-1.7453068E-08" w="1" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.001637736" />
+         <Offset value="-0.11078374" />
+         <Values>
+          -0.06656487 -0.0632894 -0.07147808 -0.08294223 -0.09113091 -0.10259506 -0.09931959 -0.09440638 -0.08949317 -0.07802902
+          -0.060013924 -0.0632894 -0.06984034 -0.079666756 -0.08949317 -0.10095733 -0.10750827 -0.10095733 -0.09768185 -0.07802902
+          -0.060013924 -0.0632894 -0.08130449 -0.09440638 -0.10587053 -0.11078374 -0.104232796 -0.09113091 -0.079666756 -0.07147808
+          -0.07639128 -0.09113091 -0.10095733 -0.10914601 -0.11078374 -0.10259506 -0.09113091 -0.0862177 -0.06656487 -0.06656487
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0014168493" />
+         <Offset value="-0.094819345" />
+         <Values>
+          -0.050897017 -0.05939811 -0.0820677 -0.090568796 -0.079234004 -0.063648656 -0.06223181 -0.06223181 -0.06506551 -0.063648656
+          -0.056564413 -0.06506551 -0.0764003 -0.07073291 -0.06223181 -0.05939811 -0.063648656 -0.06506551 -0.06081496 -0.057981264
+          -0.06648236 -0.07781716 -0.0764003 -0.063648656 -0.056564413 -0.057981264 -0.055147562 -0.057981264 -0.057981264 -0.05939811
+          -0.07781716 -0.094819345 -0.08915195 -0.07073291 -0.06506551 -0.06648236 -0.07073291 -0.067899205 -0.050897017 -0.050897017
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0015435122" />
+         <Offset value="0.5903364" />
+         <Values>
+          0.59805393 0.6134891 0.63201123 0.62738067 0.601141 0.601141 0.6196631 0.6134891 0.5965104 0.59496695
+          0.6134891 0.62275016 0.6335547 0.6242936 0.6134891 0.6196631 0.62120664 0.6134891 0.607315 0.6134891
+          0.6304677 0.63818526 0.6242936 0.59959745 0.59805393 0.6181196 0.6134891 0.59805393 0.5903364 0.59805393
+          0.6134891 0.61194557 0.59959745 0.59805393 0.61503255 0.6165761 0.601141 0.5934234 0.59805393 0.59805393
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="1" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-5.1072395E-09" y="0.70710677" z="5.107238E-09" w="0.70710677" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-1.3908082E-08" y="8.132956E-16" z="-5.8476473E-08" w="1" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.003595217" />
+         <Offset value="-0.07883847" />
+         <Values>
+          -0.024910215 -0.024910215 -0.05367195 -0.05007673 0.032613255 0.021827608 0.014637172 0.00025630742 -0.0033389106 -0.021314997
+          -0.024910215 -0.05007673 -0.060862385 0.021827608 0.029018037 0.014637172 0.011041954 -0.0069341287 -0.032100648 -0.024910215
+          -0.02850543 -0.05367195 -0.057267167 0.029018037 0.021827608 0.01823239 -0.0069341287 -0.02850543 -0.060862385 -0.0428863
+          -0.057267167 -0.07883847 0.007446736 0.011041954 0.01823239 -0.0033389106 -0.024910215 -0.035695866 -0.024910215 -0.024910215
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0040833796" />
+         <Offset value="-0.10564751" />
+         <Values>
+          0.008687116 0.020937257 -0.028063297 -0.10564751 -0.011729777 -0.011729777 -0.06481372 -0.08931399 -0.056646958 -0.007646404
+          -0.003563024 -0.036230057 -0.09339737 -0.019896537 0.008687116 -0.023979917 -0.07298048 -0.0688971 0.000520356 0.008687116
+          -0.003563024 -0.056646958 -0.07298048 0.004603736 0.000520356 -0.056646958 -0.08114724 -0.08114724 -0.011729777 0.016853876
+          -0.015813157 -0.08931399 -0.028063297 -0.015813157 -0.07706386 -0.09339737 -0.0688971 -0.036230057 0.008687116 0.008687116
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0046331454" />
+         <Offset value="0.46868774" />
+         <Values>
+          0.62158155 0.66791296 0.635481 0.5798832 0.64474726 0.75594276 0.6910787 0.51965237 0.5242855 0.59841585
+          0.6586467 0.64474726 0.5798832 0.61231524 0.732777 0.75130963 0.57061696 0.49185348 0.53818494 0.6401141
+          0.66791296 0.62158155 0.5752501 0.64938045 0.7605759 0.66791296 0.47795403 0.49185348 0.59841585 0.6818124
+          0.67254615 0.58914953 0.6401141 0.7605759 0.70034504 0.4825872 0.46868774 0.5150192 0.62158155 0.62158155
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0036733774" />
+         <Offset value="0.6488824" />
+         <Values>
+          0.7847974 0.7443902 0.7701038 0.8068376 0.76275706 0.65255576 0.71867657 0.8509182 0.8509182 0.79949087
+          0.75173694 0.76275706 0.8068376 0.78847075 0.6782694 0.6599025 0.81418437 0.86928505 0.839898 0.7664305
+          0.7407168 0.7774506 0.810511 0.7554103 0.6488824 0.73704344 0.8729584 0.8656117 0.7958175 0.7296967
+          0.73704344 0.79949087 0.7664305 0.6488824 0.70765644 0.8729584 0.8803052 0.8545915 0.7847974 0.7847974
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion2" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0019414093" />
+         <Offset value="-0.022609714" />
+         <Values>
+          0.10358189 0.06669511 0.031749748 0.00068719685 0.010394245 0.04533961 0.074460745 0.1249374 0.16182417 0.13464445
+          0.056988064 0.04922243 -0.0012542121 -0.022609714 0.02010129 0.04533961 0.1055233 0.18123826 0.22394927 0.1462929
+          0.07834357 0.023984108 -0.00707844 -0.010961259 0.014277063 0.027866926 0.07834357 0.11134753 0.1055233 0.070577934
+          0.056988064 0.010394245 0.010394245 0.056988064 0.074460745 0.11134753 0.1443515 0.18317968 0.10358189 0.10358189
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0012542153" />
+         <Offset value="-0.089723416" />
+         <Values>
+          -0.019487359 -0.0031825602 -0.025758438 -0.0019283444 0.018139094 0.03820654 0.033189677 -0.030775297 -0.0721644 -0.0031825602
+          0.04698605 0.008105375 0.0018342957 0.013122238 0.03820654 0.06078241 0.0030885115 -0.08345234 -0.03579216 0.04698605
+          0.06956192 0.03569811 0.023155957 0.020647526 0.026918605 0.02817282 -0.039554805 -0.089723416 -0.05962225 -0.005690992
+          0.0018342957 0.030681245 0.04698605 0.06078241 0.055765547 0.00058007985 -0.0796897 -0.08345234 -0.019487359 -0.019487359
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0010080166" />
+         <Offset value="0.016983459" />
+         <Values>
+          0.03411974 0.024039576 0.030087676 0.041175857 0.028071642 0.023031559 0.03411974 0.048231974 0.046215944 0.049239993
+          0.023031559 0.042183876 0.040167842 0.03411974 0.023031559 0.016983459 0.027063625 0.06536826 0.0804885 0.052264042
+          0.025047593 0.030087676 0.04319189 0.040167842 0.026055608 0.033111725 0.05528809 0.06637628 0.05629611 0.036135774
+          0.030087676 0.024039576 0.025047593 0.047223955 0.051256023 0.06637628 0.06536826 0.06536826 0.03411974 0.03411974
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0028401858" />
+         <Offset value="0.12815486" />
+         <Values>
+          0.14803615 0.22188099 0.30708656 0.14235578 0.15655671 0.15655671 0.15655671 0.16507727 0.1792782 0.13383523
+          0.17359783 0.3014062 0.15087634 0.13667542 0.13383523 0.14519598 0.1593969 0.16791746 0.16507727 0.15087634
+          0.20483989 0.29856598 0.1792782 0.14803615 0.15371653 0.14803615 0.15371653 0.17075765 0.12815486 0.18495858
+          0.30708656 0.12815486 0.15087634 0.1593969 0.1593969 0.15655671 0.16507727 0.13383523 0.14803615 0.14803615
+         </Values>
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="-5.016229E-08" />
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="3.2091458E-09" />
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="5.3411357E-05" />
+         <Offset value="-0.031923108" />
+         <Values>
+          -0.006980004 0.0046636723 0.016093701 0.019298382 0.011019625 -0.00019676238 -0.012801843 -0.02209542 -0.023537524 -0.009650571
+          0.004289791 0.014811829 0.022716708 0.019031327 0.0070137717 -0.0066595357 -0.01979873 -0.026421737 -0.022469297 -0.009810805
+          0.0018328689 0.012034439 0.015345942 0.007227417 -0.0063390676 -0.017769098 -0.02487281 -0.026154682 -0.016059935 -0.0041492023
+          0.007174004 0.012515143 0.00503755 -0.0052708406 -0.015686056 -0.02652856 -0.031923108 -0.02300341 -0.006980004 -0.006980004
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="5.3423602E-05" />
+         <Offset value="-0.03916395" />
+         <Values>
+          0.0086501725 0.010359727 -0.0057207756 -0.0053468123 -0.011650795 -0.02671625 -0.015604142 -0.0034769848 -0.011971338 0.006299533
+          0.015488394 0.002987273 -0.0020879693 -0.000752382 -0.019771183 -0.021854704 -0.0051331148 -0.008872768 -0.013574045 0.0023996122
+          0.004643403 -0.005293388 -0.003370136 -0.014749365 -0.029921668 -0.01704658 -0.0045454577 -0.0127726905 -0.0034235604 0.0036283545
+          -0.010422053 -0.016245225 -0.02062596 -0.03916395 -0.028265536 -0.014108282 -0.02121362 -0.012826115 0.0086501725 0.0086501725
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="5.7418853E-05" />
+         <Offset value="0.048863854" />
+         <Values>
+          0.078434564 0.075793296 0.063735336 0.055409603 0.06654886 0.07079785 0.067754656 0.060806975 0.06585983 0.08165002
+          0.085611925 0.07809005 0.061897933 0.06568758 0.07211849 0.07498943 0.069304965 0.07361138 0.09020543 0.10760334
+          0.10289499 0.08968866 0.0803868 0.08308549 0.083831936 0.07625265 0.063735336 0.058854736 0.0706256 0.07303719
+          0.061725676 0.048863854 0.05408897 0.06505597 0.06275922 0.054835416 0.05764894 0.064424366 0.078434564 0.078434564
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="5.343276E-05" />
+         <Offset value="-0.03236117" />
+         <Values>
+          -0.004469268 0.0070187747 0.015461151 0.018827416 0.009369817 -0.0036677774 -0.013659703 -0.020499095 -0.023384465 -0.0077821
+          0.0068584755 0.015140556 0.022300545 0.018880848 0.00440057 -0.008904187 -0.019002978 -0.025682073 -0.022689838 -0.008530159
+          0.0029578842 0.011026233 0.014659658 0.005041763 -0.009812543 -0.018468652 -0.023437899 -0.02600267 -0.01515582 -0.0027594194
+          0.0058966875 0.010171309 0.00210296 -0.010560602 -0.018522084 -0.0263767 -0.03236117 -0.022796705 -0.004469268 -0.004469268
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="8.051934E-05" />
+         <Offset value="-0.009191971" />
+         <Values>
+          0.031953413 0.028893676 0.01270929 0.012065135 0.00779761 -0.0008179601 0.012548251 0.024948228 0.019231357 0.02865212
+          0.03130926 0.018104086 0.012226174 0.013595002 0.002805411 0.005784626 0.022049533 0.020761224 0.01641318 0.02591446
+          0.024223555 0.012950847 0.013675522 0.0068313777 -1.276657E-05 0.0139975995 0.025109269 0.020358628 0.025109269 0.026397578
+          0.010454748 0.0027248915 0.00087294634 -0.009191971 0.003932681 0.018989798 0.01633266 0.020761224 0.031953413 0.031953413
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="9.551437E-05" />
+         <Offset value="0.0025035085" />
+         <Values>
+          0.026668644 0.024567328 0.014442805 0.008520913 0.01721272 0.020937782 0.017690293 0.012437003 0.017021693 0.029725105
+          0.034118764 0.026955187 0.013965233 0.015971035 0.021892926 0.023803214 0.018549923 0.02265704 0.036602136 0.05131135
+          0.047968347 0.036697652 0.028674446 0.02943856 0.030393705 0.023803214 0.013965233 0.010717745 0.020173667 0.022466011
+          0.012437003 0.0025035085 0.006419597 0.015015891 0.0127235465 0.0063240835 0.009285029 0.014538319 0.026668644 0.026668644
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="5.1330502E-05" />
+         <Offset value="-0.062032606" />
+         <Values>
+          -0.010958757 0.011113357 0.030105647 0.03662462 0.016503062 -0.007468283 -0.027281858 -0.04175706 -0.046325475 -0.018247686
+          0.008906145 0.027179804 0.043040935 0.035957325 0.009008806 -0.01645112 -0.038266584 -0.051201873 -0.04488822 -0.019479621
+          0.0023871772 0.019839544 0.027795773 0.008957479 -0.018401679 -0.036418684 -0.047608733 -0.051150538 -0.030926323 -0.00726296
+          0.012242634 0.02163611 0.00536434 -0.018709663 -0.035392076 -0.051458523 -0.062032606 -0.04381028 -0.010958757 -0.010958757
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="5.9923324E-05" />
+         <Offset value="-0.021029007" />
+         <Values>
+          0.040272553 0.02810812 0.005337257 0.0042586364 -0.0047897864 -0.0110218115 0.014445603 0.03457984 0.0296062 0.030744746
+          0.025351647 0.00485787 -0.0020333137 -0.00083484687 -0.007486335 0.0047380235 0.026849728 0.02613065 0.018820003 0.025651261
+          0.018640235 0.00066323765 0.0015620869 -0.005808482 -0.003291702 0.021696325 0.035298917 0.034160376 0.03517907 0.027748581
+          -0.0007749237 -0.0158756 -0.017553454 -0.021029007 0.005696796 0.03170352 0.03517907 0.037755776 0.040272553 0.040272553
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="5.3196756E-05" />
+         <Offset value="-0.03949305" />
+         <Values>
+          -0.012841476 -0.013639428 -0.025129925 -0.025821485 -0.02028902 -0.015926888 -0.02294886 -0.026353452 -0.019597463 -0.0077345856
+          0.0031707473 -0.009064507 -0.020076234 -0.02475755 -0.0157141 -0.017044019 -0.025981074 -0.018373938 -0.0025745034 0.014874034
+          0.014927231 0.0018408298 -0.008000571 -0.015448116 -0.013426639 -0.022044515 -0.029704846 -0.028640911 -0.01981025 -0.015288526
+          -0.029917635 -0.036035262 -0.034173377 -0.029066486 -0.03390739 -0.03949305 -0.03279026 -0.02901329 -0.012841476 -0.012841476
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="6.0086863E-05" />
+         <Offset value="-0.07035319" />
+         <Values>
+          -0.015373707 0.012386419 0.036000557 0.043030724 0.02903048 0.005236082 -0.023725782 -0.043013666 -0.04691931 -0.015493881
+          0.015510939 0.038043514 0.052644618 0.047657408 0.020678408 -0.011167627 -0.03640411 -0.04812105 -0.040309757 -0.015974578
+          0.0075794756 0.028790139 0.036661513 0.02049815 -0.0117684975 -0.037846196 -0.050284177 -0.056172688 -0.036103677 -0.00804311
+          0.020798586 0.035820298 0.020978846 -0.0058799833 -0.033039246 -0.056413036 -0.07035319 -0.052206956 -0.015373707 -0.015373707
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="9.285439E-05" />
+         <Offset value="-0.03847584" />
+         <Values>
+          -0.0013340861 -0.011362359 -0.012569467 -0.011548068 -0.028447568 -0.028540421 -0.01516939 -0.00922671 -0.0064410754 -0.016933624
+          -0.024826247 -0.028169004 -0.022597741 -0.026311915 -0.023247723 -0.012662321 -0.016840769 -0.02046209 -0.021669198 -0.019719254
+          -0.021854905 -0.025290519 -0.022690596 -0.028447568 -0.015912225 -0.0052339695 -0.008669583 0.0003372915 -0.0008698143 -0.010805234
+          -0.024083411 -0.033833124 -0.03847584 -0.029654674 -0.012755176 -0.0025411919 0.0072085187 0.008972753 -0.0013340861 -0.0013340861
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="6.0795068E-05" />
+         <Offset value="0.04093505" />
+         <Values>
+          0.055221893 0.05820085 0.056316204 0.06841442 0.060815036 0.061848555 0.05461394 0.060146295 0.064219564 0.059234366
+          0.07200133 0.06117981 0.06652977 0.05181737 0.057714492 0.051574185 0.04561627 0.05327645 0.054978713 0.058504827
+          0.06634739 0.06385479 0.060875833 0.043062877 0.04537309 0.04263731 0.04920318 0.058748007 0.0551003 0.05893039
+          0.049750336 0.05868721 0.053580426 0.045190707 0.04093505 0.044704344 0.053215653 0.048777614 0.055221893 0.055221893
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="-6.6895626E-07" />
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="-2.7690777E-07" />
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00050671975" />
+         <Offset value="0.6023114" />
+         <Values>
+          0.8212143 0.8394562 0.86124516 0.8394562 0.7502735 0.67071855 0.72189724 0.79689175 0.84351 0.8419898
+          0.8075329 0.80398583 0.80449253 0.7751028 0.7102427 0.7178435 0.76648855 0.79638505 0.78929096 0.7649684
+          0.77966326 0.8049993 0.7806767 0.6980814 0.6550102 0.7061889 0.76344824 0.80449253 0.818174 0.8237479
+          0.8455368 0.82729495 0.7310182 0.6023114 0.6469027 0.72493756 0.78017 0.81665385 0.8212143 0.8212143
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00056767487" />
+         <Offset value="0.5081782" />
+         <Values>
+          0.5706224 0.543374 0.5081782 0.5428063 0.66031504 0.7420602 0.69153714 0.60411525 0.5365619 0.5394003
+          0.5899234 0.5944648 0.5938971 0.6319313 0.7034583 0.69607854 0.64214945 0.6046829 0.6137657 0.6438525
+          0.62625456 0.5933294 0.62455153 0.7153795 0.75568444 0.70743203 0.6455555 0.5938971 0.57516384 0.56721634
+          0.53372353 0.5609719 0.681319 0.79826003 0.76249653 0.68869877 0.6256869 0.57686687 0.5706224 0.5706224
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion2" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-1.7453292E-08" y="-8.726646E-09" z="2.617994E-08" w="1" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0032273282" />
+         <Offset value="-0.042522717" />
+         <Values>
+          0.015569191 0.002659876 -0.016704092 -0.023158748 -0.010249436 0.002659876 0.025251176 0.0510698 0.057524454 0.041387815
+          0.03170583 0.015569191 -0.0037947781 -0.013476763 -0.013476763 -0.007022109 0.009114534 0.018796518 0.012341861 -0.007022109
+          -0.01993142 -0.03606806 -0.042522717 -0.029613405 -0.016704092 0.002659876 0.022023845 0.0284785 0.018796518 0.002659876
+          -0.023158748 -0.03606806 -0.029613405 -0.016704092 -0.0005674511 0.018796518 0.025251176 0.018796518 0.015569191 0.015569191
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0039884537" />
+         <Offset value="-0.044654667" />
+         <Values>
+          -0.032689307 -0.020723946 0.023149043 0.06303358 0.06702203 0.06702203 0.027137496 -0.024712399 -0.044654667 -0.040666215
+          -0.032689307 -0.00477013 0.023149043 0.047079764 0.055056676 0.03910286 0.0032067746 -0.024712399 -0.024712399 -0.020723946
+          -0.008758586 0.027137496 0.055056676 0.071010485 0.074998945 0.047079764 -0.00078167766 -0.028700853 -0.028700853 -0.016735492
+          0.027137496 0.06303358 0.0789874 0.0789874 0.047079764 0.0032067746 -0.020723946 -0.032689307 -0.032689307 -0.032689307
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.004733176" />
+         <Offset value="-0.18697612" />
+         <Values>
+          -0.14437753 -0.15384388 -0.13491118 -0.130178 -0.15384388 -0.16331024 -0.15857707 -0.14437753 -0.15384388 -0.17750977
+          -0.18697612 -0.1727766 -0.13964435 -0.14437753 -0.1727766 -0.16331024 -0.13964435 -0.130178 -0.120711654 -0.15384388
+          -0.15857707 -0.13491118 -0.11597848 -0.13491118 -0.15857707 -0.14437753 -0.12544483 -0.12544483 -0.15857707 -0.18224294
+          -0.16331024 -0.14437753 -0.16331024 -0.18224294 -0.17750977 -0.13964435 -0.13964435 -0.12544483 -0.14437753 -0.14437753
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-1.230457E-06" y="-3.1415925E-07" z="-8.727032E-09" w="1" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0.00023789165" />
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="-1.6984792E-06" />
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0007048343" />
+         <Offset value="-0.79996157" />
+         <Values>
+          -0.3664885 -0.33759028 -0.13882703 -0.2170636 -0.56807107 -0.78516006 -0.71608627 -0.36578363 -0.08173543 -0.29036635
+          -0.3911577 -0.26569718 -0.17900252 -0.4123027 -0.7372313 -0.79996157 -0.59767413 -0.17618322 -0.07891607 -0.28190833
+          -0.34463862 -0.22199744 -0.27979386 -0.59767413 -0.7774069 -0.70833313 -0.3911577 -0.1331883 -0.28684223 -0.35521114
+          -0.2248168 -0.19591856 -0.5081602 -0.7985519 -0.7922084 -0.546926 -0.15715271 -0.08455473 -0.3664885 -0.3664885
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00077687704" />
+         <Offset value="0.5997976" />
+         <Values>
+          0.9299704 0.9408466 0.98978984 0.9758061 0.8204307 0.61844265 0.6969072 0.92608595 0.99600494 0.9540535
+          0.92064786 0.96337605 0.98357487 0.9058871 0.6712703 0.5997976 0.7947937 0.9796905 0.99678177 0.95793796
+          0.938516 0.97425234 0.95793796 0.7963475 0.62931895 0.7023454 0.91520965 0.9913436 0.95716107 0.9346316
+          0.97347546 0.9796905 0.8569439 0.6013514 0.60834324 0.8344145 0.98745924 0.99600494 0.9299704 0.9299704
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion2" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.004154255" />
+         <Offset value="-0.08532985" />
+         <Values>
+          0.06422333 0.035143547 -0.010553263 -0.027170282 -0.014707513 0.014372267 0.08499461 0.15561694 0.1763882 0.14730844
+          0.11822865 0.08499461 0.039297804 0.0060637593 -0.01886177 -0.0063990057 0.02683504 0.04345206 0.03098929 -0.0022447482
+          -0.035478793 -0.07286709 -0.08532985 -0.06871283 -0.0437873 0.0019095019 0.05176056 0.07668609 0.060069077 0.018526524
+          -0.039633047 -0.07286709 -0.06871283 -0.05209581 -0.0063990057 0.039297804 0.055914827 0.06422333 0.06422333 0.06422333
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0028991825" />
+         <Offset value="-0.07510859" />
+         <Values>
+          -0.034520034 -0.034520034 -0.063511856 -0.07510859 -0.049015947 -0.046116762 -0.057713494 -0.037419215 -0.022923302 -0.03162085
+          -0.025822487 -0.022923302 -0.04321758 -0.049015947 -0.0403184 -0.049015947 -0.04321758 -0.014225755 0.00027015805 -0.0055282116
+          0.00027015805 -0.017124936 -0.0403184 -0.028721668 -0.022923302 -0.028721668 -0.011326574 -0.008427389 -0.022923302 -0.022923302
+          -0.037419215 -0.051915128 -0.037419215 -0.022923302 -0.017124936 0.0060685202 0.014766067 -0.017124936 -0.034520034 -0.034520034
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0048115947" />
+         <Offset value="-0.031144187" />
+         <Values>
+          0.036218137 0.021783356 0.031406544 0.060276113 0.08914568 0.05546452 0.05546452 0.08433409 0.11320366 0.10839206
+          0.08914568 0.098768875 0.10358046 0.118015245 0.07952249 0.069899306 0.0747109 0.069899306 0.060276113 0.036218137
+          0.012160167 0.0025369748 0.01697176 0.026594952 -0.021520998 -0.031144187 -0.011897808 0.007348571 0.031406544 0.01697176
+          0.0025369748 0.007348571 0.026594952 -0.0022746176 -0.021520998 -0.021520998 -0.0070862137 0.026594952 0.036218137 0.036218137
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00067763054" />
+         <Offset value="-0.28880334" />
+         <Values>
+          -0.04214582 -0.0041985214 -0.068573415 -0.16682984 -0.20884293 -0.22307318 -0.26508626 -0.24543498 -0.16208643 -0.03333664
+          0.05746585 -0.022494525 -0.15192197 -0.22849423 -0.22646132 -0.23052712 -0.22849423 -0.18512586 -0.101099685 0.007998824
+          0.05475533 -0.02317217 -0.15531012 -0.23662579 -0.2481455 -0.27525073 -0.27186257 -0.21561924 -0.10719836 -0.027237952
+          -0.07806024 -0.1614088 -0.20613241 -0.22984949 -0.28270465 -0.28880334 -0.21968502 -0.13565883 -0.04214582 -0.04214582
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00065355626" />
+         <Offset value="0.23128235" />
+         <Values>
+          0.32800868 0.3678756 0.37898606 0.37963963 0.39728564 0.39728564 0.33715847 0.26396018 0.2593853 0.3064413
+          0.33715847 0.34173337 0.36264718 0.38356096 0.38944298 0.34957603 0.2737635 0.25677106 0.29990578 0.3306229
+          0.3633007 0.3770254 0.3619936 0.37179697 0.3691827 0.33911914 0.28814176 0.27180284 0.308402 0.3515367
+          0.3665685 0.36852917 0.39009655 0.3979392 0.34042627 0.26330662 0.23128235 0.2770313 0.32800868 0.32800868
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00076550443" />
+         <Offset value="-0.15394023" />
+         <Values>
+          0.037435874 0.15608907 0.18977126 0.18288171 0.12929642 0.068821564 -0.040645577 -0.13480262 -0.15164372 -0.06896924
+          0.09637973 0.19053677 0.22881198 0.20355034 0.14077899 0.016767263 -0.10724446 -0.1478162 -0.08657584 0.0412634
+          0.1782887 0.23723254 0.22881198 0.143841 0.04432541 -0.07126575 -0.14551969 -0.13863014 -0.047535114 0.077242106
+          0.12623438 0.13159293 0.09944174 0.0581045 -0.042942084 -0.1332716 -0.15394023 -0.117196016 0.037435874 0.037435874
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.000606642" />
+         <Offset value="0.8709245" />
+         <Values>
+          0.9431149 0.9164226 0.9030765 0.8915503 0.8842706 0.8873038 0.9018632 0.92248905 0.939475 0.947968
+          0.9340152 0.9194558 0.8897304 0.8709245 0.8812374 0.907323 0.92794883 0.93704844 0.94372153 0.94129497
+          0.91217613 0.8945835 0.8897304 0.88548386 0.89397687 0.89640343 0.9061097 0.9273422 0.9431149 0.9321953
+          0.9182426 0.9061097 0.89215696 0.8860905 0.8951902 0.9109628 0.9352285 0.94372153 0.9431149 0.9431149
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion2" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0007150769" />
+         <Offset value="-0.10357814" />
+         <Values>
+          0.22464216 0.21820647 0.20462 0.13382739 0.03300155 -0.06281876 -0.031355374 0.096643396 0.17101139 0.16958123
+          0.16386062 0.176732 0.13525754 0.045872934 -0.072829835 -0.10214799 0.01655478 0.14669877 0.19746923 0.16672093
+          0.13454247 0.11881078 0.07519109 -0.01133322 -0.10357814 -0.051377527 0.085202165 0.19460893 0.22821754 0.22106677
+          0.19389385 0.11666555 0.022275396 -0.047802143 -0.045656912 0.078051396 0.20104462 0.26182616 0.22464216 0.22464216
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0007183986" />
+         <Offset value="-0.4262392" />
+         <Values>
+          -0.38672727 -0.3594281 -0.28758827 -0.24304755 -0.25454193 -0.34577855 -0.40540564 -0.38529047 -0.3845721 -0.40325043
+          -0.40684244 -0.36014652 -0.29261705 -0.2559787 -0.30411142 -0.3651753 -0.36086494 -0.36445692 -0.38529047 -0.4262392
+          -0.40468723 -0.34793374 -0.29549065 -0.2760939 -0.3227898 -0.3680489 -0.3730777 -0.3845721 -0.39606646 -0.39175606
+          -0.3342842 -0.2703467 -0.25238675 -0.31560582 -0.3723593 -0.33931297 -0.3163242 -0.34793374 -0.38672727 -0.38672727
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0008889376" />
+         <Offset value="-0.13067299" />
+         <Values>
+          0.085338846 -0.018666849 -0.11556105 -0.13067299 -0.028445162 0.14845341 0.22312418 0.2329025 0.20178968 0.1342304
+          0.046225592 -0.07466992 -0.12800618 -0.086226106 0.03022471 0.14578661 0.21601269 0.24890336 0.22845781 0.15645385
+          0.0604486 -0.042668164 -0.05955798 0.048003465 0.20979011 0.30135068 0.3129069 0.28001618 0.19823393 0.078227356
+          -0.058669046 -0.09689336 0.0026676506 0.18756667 0.29601705 0.32357413 0.2915724 0.20445648 0.085338846 0.085338846
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00085759914" />
+         <Offset value="0.85775673" />
+         <Values>
+          0.8903455 0.9066399 0.92807984 0.95209265 0.96581423 0.9237919 0.8860575 0.8869151 0.8843423 0.88863033
+          0.8972063 0.9126431 0.9375135 0.9615262 0.94780463 0.91350067 0.9057823 0.8851999 0.8714783 0.87490875
+          0.90149426 0.92893744 0.95037746 0.95895344 0.9160735 0.8774815 0.86890554 0.85775673 0.8671903 0.88863033
+          0.91950387 0.95037746 0.9666718 0.92807984 0.8783391 0.8791967 0.8800543 0.8766239 0.8903455 0.8903455
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion2" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0008448272" />
+         <Offset value="0.0061282925" />
+         <Values>
+          0.05174896 0.05850758 0.08892135 0.06442137 0.11342135 0.096524805 0.05766275 0.037386898 0.055973098 0.09990412
+          0.08469722 0.09314549 0.048369654 0.076248944 0.09061101 0.05174896 0.061886888 0.061042063 0.086386874 0.08131792
+          0.06780068 0.06273171 0.041611034 0.03992138 0.026404146 0.012042083 0.0061282925 0.02555932 0.03992138 0.0280938
+          0.04668 0.02555932 0.04668 0.07962826 0.060197234 0.05259379 0.042455863 0.09230067 0.05174896 0.05174896
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0006285857" />
+         <Offset value="-0.09101017" />
+         <Values>
+          0.05042161 0.034706965 -0.003008172 0.0334498 -0.009922616 -0.07780987 -0.057695128 -0.034437455 -0.04700917 0.0114493
+          0.040364236 0.0202495 0.032821216 0.015220813 -0.06712391 -0.09101017 -0.050780684 -0.0325517 -0.0061511025 0.037221313
+          0.032821216 0.0026490986 0.005792029 -0.044494826 -0.08786724 -0.036323212 0.0127064735 0.029678285 0.06927918 0.06299333
+          0.0013919324 -0.005522512 -0.011179782 -0.08598148 -0.045123413 0.0045348555 -0.0017509982 0.031564042 0.05042161 0.05042161
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0006293486" />
+         <Offset value="-0.17200103" />
+         <Values>
+          0.28868216 0.13952655 -0.06689981 -0.17200103 -0.08766832 0.18232223 0.41203448 0.4227334 0.34532353 0.34784093
+          0.25973213 0.08099711 -0.098996595 -0.12228249 0.08791995 0.34532353 0.4718226 0.39189532 0.32266697 0.30189848
+          0.22385925 0.057711214 -0.048648708 0.023726389 0.24651581 0.43469104 0.42902687 0.33965942 0.30126914 0.20309076
+          0.03442532 -0.10088464 -0.07067591 0.158407 0.40511164 0.46741715 0.3761616 0.29371694 0.28868216 0.28868216
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00094421126" />
+         <Offset value="0.8779688" />
+         <Values>
+          0.9544499 0.98749727 0.9931626 0.9827762 0.9893857 0.97427833 0.9062951 0.9044067 0.93556565 0.9317888
+          0.9610594 0.9912741 0.9922184 0.9893857 0.98749727 0.9308446 0.8779688 0.91668147 0.94217515 0.94878465
+          0.9714457 0.99505097 0.9978836 0.9969394 0.9629478 0.8996856 0.9025183 0.9393425 0.94972885 0.9761668
+          0.9978836 0.99410677 0.99599516 0.9789994 0.91101617 0.88268983 0.92517936 0.95067304 0.9544499 0.9544499
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion2" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0043753553" />
+         <Offset value="-0.024496032" />
+         <Values>
+          -0.0069946107 0.010506811 0.032383583 0.05863572 0.080512494 0.05863572 0.067386426 0.098013915 0.102389276 -0.011369966
+          -0.0026192553 -0.0026192553 0.049885005 0.0892632 0.07176179 0.067386426 0.0892632 0.11113998 0.07176179 -0.0069946107
+          0.010506811 0.032383583 0.032383583 0.05863572 0.041134298 0.067386426 0.08488785 0.07613714 -0.024496032 -0.020120677
+          -0.0026192553 0.041134298 0.06301107 0.041134298 0.04550965 0.080512494 0.098013915 0.019257521 -0.0069946107 -0.0069946107
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0034071167" />
+         <Offset value="-0.008140212" />
+         <Values>
+          0.008895371 0.025930954 0.06340924 0.08044482 0.06340924 0.012302488 0.002081138 0.042966537 0.08385194 0.005488255
+          -0.0013259784 0.06000212 0.09748041 0.06681635 0.015709605 -0.0013259784 0.029338071 0.090666175 0.073630586 -0.008140212
+          0.012302488 0.06681635 0.09748041 0.07703771 0.042966537 0.025930954 0.046373658 0.09407329 0.022523839 0.015709605
+          0.07022347 0.07703771 0.073630586 0.03274519 0.03274519 0.056595005 0.090666175 0.05318789 0.008895371 0.008895371
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.003929164" />
+         <Offset value="0.5081785" />
+         <Values>
+          0.71249497 0.7557158 0.5592576 0.5121076 0.5946201 0.665345 0.6771325 0.62998253 0.5710451 0.63784087
+          0.7399991 0.65355754 0.51996595 0.5474701 0.6260534 0.6692742 0.6614159 0.5867618 0.5710451 0.6692742
+          0.7439283 0.6142659 0.5081785 0.57497424 0.63784087 0.64177 0.59854925 0.5553284 0.665345 0.75178665
+          0.6339117 0.5081785 0.5474701 0.6260534 0.6574867 0.62998253 0.56318676 0.5356826 0.71249497 0.71249497
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0032137234" />
+         <Offset value="0.65434337" />
+         <Values>
+          0.7025492 0.65434337 0.8246707 0.8535942 0.7989609 0.7443276 0.73468643 0.7668237 0.8086021 0.7668237
+          0.6736257 0.7539688 0.8471668 0.83109814 0.7764649 0.7379002 0.7443276 0.79574716 0.8118158 0.7411139
+          0.66719824 0.7828923 0.8535942 0.8118158 0.7668237 0.76360995 0.79253346 0.82145697 0.7443276 0.66077083
+          0.7700374 0.85680795 0.83109814 0.7764649 0.7507551 0.7700374 0.8150295 0.8407393 0.7025492 0.7025492
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion2" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-8.2718056E-25" y="1.1115239E-24" z="0" w="1" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0011627261" />
+         <Offset value="-0.09683971" />
+         <Values>
+          -0.0014961734 -0.0142861605 -0.085212454 -0.08637518 -0.09683971 -0.03754068 -0.006147079 0.014781997 0.034548342 0.050826505
+          0.03803651 0.017107442 -0.056144297 -0.08056155 -0.056144297 -0.024750695 -0.016611613 -0.010797977 -0.015448883 -0.017774336
+          -0.036377955 -0.048005216 -0.07242246 -0.078236096 -0.027076147 0.0019920096 0.018270172 0.028734699 0.032222882 0.035711065
+          -0.034052506 -0.053818844 -0.05265612 -0.009635255 0.004317455 0.035711065 0.03803651 0.026409253 -0.0014961734 -0.0014961734
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0018395999" />
+         <Offset value="-0.107211694" />
+         <Values>
+          -0.09617409 -0.086976096 -0.033627696 -0.0207505 -0.0005149022 -0.013392098 -0.0060336962 -0.0207505 -0.0409861 -0.0649009
+          -0.07225929 -0.055702895 -0.011552498 0.0086831 -0.0225901 -0.029948495 -0.039146498 -0.057542495 -0.07225929 -0.085136496
+          -0.086976096 -0.0740989 -0.048344497 -0.015231699 -0.050184097 -0.057542495 -0.061221696 -0.07225929 -0.10353249 -0.107211694
+          -0.0630613 -0.031788096 -0.033627696 -0.029948495 -0.011552498 -0.0225901 -0.029948495 -0.0649009 -0.09617409 -0.09617409
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0015445214" />
+         <Offset value="0.045482427" />
+         <Values>
+          0.07791738 0.064016685 0.076372854 0.073283814 0.064016685 0.05166051 0.067105725 0.070194766 0.074828334 0.07791738
+          0.045482427 0.056294076 0.0871845 0.10726328 0.073283814 0.0794619 0.09490711 0.11189685 0.14278728 0.11498589
+          0.0871845 0.0871845 0.09336259 0.0871845 0.07791738 0.08409546 0.09645163 0.10417424 0.090273544 0.065561205
+          0.08409546 0.09645163 0.09954068 0.076372854 0.0871845 0.08563998 0.09645163 0.1088078 0.07791738 0.07791738
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="2.5186415E-08" y="-0.70710677" z="2.518641E-08" w="0.70710677" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.000906277" />
+         <Offset value="-0.123686194" />
+         <Values>
+          -0.0566217 -0.0113078505 -0.023995727 -0.06387191 -0.075653516 -0.05299659 -0.051184036 -0.040308714 -0.020370618 -0.015839234
+          -0.008589014 -0.029433385 -0.06930958 -0.072028406 -0.053902864 -0.06296563 -0.07293469 -0.08109118 -0.08471628 -0.06659074
+          -0.058434248 -0.06659074 -0.07384096 -0.08652884 -0.075653516 -0.099216715 -0.08381001 -0.10012299 -0.11462343 -0.06930958
+          -0.06296563 -0.10102927 -0.11190459 -0.07927862 -0.10827948 -0.123686194 -0.10465438 -0.07655979 -0.0566217 -0.0566217
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.000789751" />
+         <Offset value="-0.04161726" />
+         <Values>
+          0.12265095 0.11791244 0.025511578 -0.0076579675 -0.036878753 -0.039248005 0.021562822 0.07526589 0.100537926 0.15976925
+          0.14397423 0.03182958 -0.028981242 -0.032140248 -0.04161726 -0.014765725 0.034198835 0.063419625 0.10527642 0.13133821
+          0.0831634 0.0097165555 0.021562822 -0.0044989623 -0.022663236 0.021562822 0.023932077 0.008926805 0.06736838 0.12580995
+          0.0863224 0.03656809 -0.0044989623 -0.026611991 0.021562822 0.058681116 0.060260624 0.081583895 0.12265095 0.12265095
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00065735163" />
+         <Offset value="-0.19679657" />
+         <Values>
+          0.06680143 0.35274938 0.45332417 0.3882464 0.36260965 0.28504217 0.09769696 -0.10345264 -0.1336908 0.03130445
+          0.30542007 0.43623307 0.3948199 0.35077736 0.30344805 0.15225714 -0.0035351813 -0.07847327 -0.031143948 0.16474682
+          0.41191104 0.47567412 0.40402284 0.35537878 0.25809076 0.051025003 -0.13697757 -0.16458634 -0.02851455 0.25020254
+          0.42111394 0.3921905 0.37246993 0.28701425 0.09835431 -0.107396744 -0.19679657 -0.15669811 0.06680143 0.06680143
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0009394077" />
+         <Offset value="0.8768644" />
+         <Values>
+          0.9886539 0.9275924 0.8900161 0.9191377 0.92853177 0.9557746 0.9924115 0.9905327 0.9858357 0.98489624
+          0.9388653 0.89847076 0.91538006 0.93322885 0.95013815 0.98489624 0.99616915 0.9914721 0.98959327 0.97268397
+          0.9041072 0.8768644 0.91162246 0.9304106 0.96141106 0.9914721 0.98677504 0.98113865 0.9886539 0.9557746
+          0.90034956 0.91350126 0.9210165 0.9538958 0.9886539 0.98489624 0.97268397 0.98113865 0.9886539 0.9886539
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion2" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="-5.6723195E-07" y="1.745328E-08" z="1.7453301E-08" w="1" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="6.0865673E-06" />
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="3.9086526E-06" />
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0003504247" />
+         <Offset value="0.51970524" />
+         <Values>
+          0.69842184 0.65917426 0.58208084 0.53827775 0.5519443 0.5771749 0.58102953 0.58138 0.6052089 0.6654819
+          0.68019974 0.6055593 0.539329 0.51970524 0.55649984 0.5908415 0.5803287 0.57472193 0.6399009 0.69877225
+          0.68755865 0.6132686 0.5617562 0.5726194 0.58523464 0.5873372 0.57892704 0.6083627 0.66723406 0.6742425
+          0.60065335 0.55685025 0.5628075 0.6195763 0.62588394 0.6087131 0.618525 0.67284083 0.69842184 0.69842184
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="2" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00064482907" />
+         <Offset value="-0.0005063497" />
+         <Values>
+          0.00013847934 0.00013847934 0.00013847934 0.00013847934 -0.0005063497 -0.0005063497 0.00013847934 0.00013847934 0.00013847934 0.00013847934
+          0.00013847934 0.00013847934 0.00013847934 0.00013847934 -0.0005063497 0.00013847934 0.00013847934 0.00013847934 0.00013847934 0.00013847934
+          0.00013847934 0.00013847934 0.00013847934 0.00013847934 -0.0005063497 0.00013847934 0.00013847934 0.00013847934 0.00013847934 0.00013847934
+          0.00013847934 0.00013847934 0.00013847934 0.00013847934 0.00013847934 0.00013847934 0.00013847934 0.00013847934 0.00013847934 0.00013847934
+         </Values>
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="-7.410803E-06" />
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0006575403" />
+         <Offset value="-0.77194166" />
+         <Values>
+          -0.73906463 -0.77194166 -0.49774736 -0.18081295 -0.3156087 -0.43396595 -0.31758133 -0.16371691 -0.34782818 -0.6516118
+          -0.74103725 -0.5227339 -0.19199115 -0.21829277 -0.41292468 -0.34191033 -0.1867308 -0.25906026 -0.49511722 -0.6588447
+          -0.6535844 -0.3596639 -0.1262371 -0.26629317 -0.37675995 -0.23736143 -0.107168436 -0.28470433 -0.58585775 -0.7318317
+          -0.5457478 -0.17686772 -0.24459434 -0.39845878 -0.29062217 -0.09927797 -0.18212801 -0.47341838 -0.73906463 -0.73906463
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00070330437" />
+         <Offset value="0.63567114" />
+         <Values>
+          0.67364955 0.63567114 0.86565167 0.9831035 0.94793826 0.9008169 0.947235 0.98662 0.9359821 0.7545296
+          0.67153966 0.84666246 0.97958696 0.97466385 0.9106631 0.9387953 0.98169684 0.9641143 0.86635494 0.7517164
+          0.7552329 0.92754245 0.99224645 0.9598944 0.92613584 0.96974075 0.9943564 0.95567465 0.8065741 0.68138593
+          0.83259636 0.9838068 0.9676308 0.9169929 0.9563779 0.99505967 0.9824002 0.88042104 0.67364955 0.67364955
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion2" />
+         <QuatIndex value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0011359645" />
+         <Offset value="-0.12760124" />
+         <Values>
+          -0.11396966 -0.12646528 -0.12646528 -0.11624159 -0.08897844 -0.059443362 -0.056035474 -0.06057933 -0.07534687 -0.09693019
+          -0.11624159 -0.12760124 -0.12192141 -0.09693019 -0.07307494 -0.065123186 -0.06285126 -0.06853108 -0.09806616 -0.11851352
+          -0.12760124 -0.12192141 -0.11169773 -0.085570544 -0.057171434 -0.059443362 -0.06739512 -0.08329862 -0.10601791 -0.11737756
+          -0.11851352 -0.10715388 -0.08329862 -0.059443362 -0.0583074 -0.06057933 -0.06739512 -0.093522295 -0.11396966 -0.11396966
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0013669601" />
+         <Offset value="0.060218286" />
+         <Values>
+          0.07115397 0.06705309 0.068420045 0.07115397 0.06705309 0.062952206 0.077988766 0.09849317 0.09712621 0.07115397
+          0.060218286 0.06705309 0.07662181 0.077988766 0.06568613 0.07252093 0.09165837 0.09986013 0.08755749 0.07252093
+          0.06705309 0.06568613 0.06705309 0.06705309 0.06568613 0.08208965 0.09849317 0.10259405 0.077988766 0.06431916
+          0.062952206 0.06431916 0.06431916 0.061585248 0.07662181 0.09302533 0.094392285 0.08755749 0.07115397 0.07115397
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.0010698646" />
+         <Offset value="-0.65809417" />
+         <Values>
+          -0.6046009 -0.60674065 -0.6003215 -0.5971119 -0.60674065 -0.62813795 -0.651675 -0.64953524 -0.63241744 -0.60353106
+          -0.5939023 -0.59176254 -0.5906927 -0.6003215 -0.62492836 -0.6484654 -0.65809417 -0.65381473 -0.6270681 -0.6056708
+          -0.6056708 -0.6056708 -0.5971119 -0.60674065 -0.6345571 -0.65060514 -0.6484654 -0.6302777 -0.60781056 -0.60353106
+          -0.60353106 -0.5981817 -0.5992516 -0.6185092 -0.6441859 -0.64953524 -0.63990647 -0.6206489 -0.6046009 -0.6046009
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="1" />
+        </Item>
+       </Channels>
+      </Item>
+     </SequenceData>
+    </Item>
+   </Sequences>
+  </Item>
+  <Item>
+   <Hash>hash_E2DFA587</Hash>
+   <Unknown10 value="16" />
+   <FrameCount value="77" />
+   <SequenceFrameLimit value="47" />
+   <Duration value="2.5333335" />
+   <Unknown1C>hash_F57C1CE2</Unknown1C>
+   <BoneIds>
+    <Item>
+     <BoneId value="0" />
+     <Track value="5" />
+     <Unk0 value="0" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="6" />
+     <Unk0 value="1" />
+    </Item>
+    <Item>
+     <BoneId value="15570" />
+     <Track value="33" />
+     <Unk0 value="2" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="134" />
+     <Unk0 value="2" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="137" />
+     <Unk0 value="2" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="138" />
+     <Unk0 value="2" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="139" />
+     <Unk0 value="2" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="140" />
+     <Unk0 value="2" />
+    </Item>
+   </BoneIds>
+   <Sequences>
+    <Item>
+     <Hash>hash_39E9F7F6</Hash>
+     <FrameCount value="48" />
+     <SequenceData>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="9.566622E-05" />
+         <Offset value="-0.16594976" />
+         <Values>
+          0.029878989 0.02920933 0.025956675 0.020790696 0.015816048 0.012467742 0.009789079 0.0053884387 0.00041379035 -0.004560858
+          -0.009057164 -0.012979478 -0.015849471 -0.01891078 -0.022737429 -0.02742508 -0.03125173 -0.033739045 -0.035269707 -0.037757024
+          -0.042253338 -0.048471645 -0.055072613 -0.061003923 -0.06626556 -0.07190987 -0.07793684 -0.08405948 -0.08807746 -0.08912979
+          -0.08979945 -0.091043115 -0.09314777 -0.096591756 -0.10147073 -0.10548871 -0.10788037 -0.10912403 -0.11046335 -0.11448134
+          -0.12002998 -0.12615262 -0.13198826 -0.13734557 -0.14289421 -0.15026051 -0.1587748 -0.16594976
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="9.9173194E-05" />
+         <Offset value="0.015112458" />
+         <Values>
+          0.015112458 0.14850041 0.28773957 0.4323341 0.57603604 0.72628343 0.8718697 1.0181501 1.1560009 1.2932565
+          1.4261487 1.567768 1.7065113 1.8551718 1.9993696 2.1480303 2.292724 2.43474 2.5755658 2.723235
+          2.8554327 2.9925892 3.1354978 3.2785056 3.419629 3.5624385 3.699595 3.8415117 3.9553626 4.042536
+          4.130007 4.2456427 4.3665347 4.5021043 4.64779 4.798434 4.946896 5.1039867 5.2426305 5.384151
+          5.5252743 5.6623316 5.8026614 5.949835 6.091454 6.2383294 6.3786597 6.5144277
+         </Values>
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0.999995" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="5.7764635E-05" />
+         <Offset value="0.0017404999" />
+         <Values>
+          0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036
+          0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036
+          0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036 0.0035312036
+          0.0034734388 0.0033579096 0.003126851 0.002838028 0.0025492047 0.002202617 0.0019715584 0.0017982644 0.0017404999 0.0017404999
+          0.0017404999 0.0017404999 0.0017404999 0.0017404999 0.0017404999 0.0017404999 0.0017404999 0.0017404999
+         </Values>
+        </Item>
+        <Item>
+         <Type value="CachedQuaternion1" />
+         <QuatIndex value="3" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="1" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+     </SequenceData>
+    </Item>
+    <Item>
+     <Hash>hash_BD32B849</Hash>
+     <FrameCount value="30" />
+     <SequenceData>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="5.2550113E-05" />
+         <Offset value="-0.27351984" />
+         <Values>
+          -0.16594976 -0.17088947 -0.17420013 -0.17719549 -0.18092655 -0.18513055 -0.18917692 -0.19196206 -0.19317073 -0.19401152
+          -0.19595587 -0.19979203 -0.204469 -0.2091985 -0.21403311 -0.22007638 -0.2278538 -0.23536846 -0.24114898 -0.24398668
+          -0.24598359 -0.24882129 -0.25276256 -0.2572293 -0.26232666 -0.26658323 -0.26921073 -0.27120763 -0.27351984 -0.27351984
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="6.0857205E-05" />
+         <Offset value="6.5144277" />
+         <Values>
+          6.5144277 6.6543384 6.8009434 6.9462094 7.0942144 7.2394805 7.385903 7.5295258 7.675157 7.8184757
+          7.950171 8.089838 8.232427 8.376171 8.519977 8.660435 8.804423 8.938614 9.082054 9.219287
+          9.363031 9.501056 9.641514 9.786172 9.93375 10.078043 10.221544 10.359629 10.502705 10.502705
+         </Values>
+        </Item>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0.999989" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticQuaternion" />
+         <Value x="0" y="0" z="0.0017404999" w="0.99999845" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="1" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+     </SequenceData>
+    </Item>
+   </Sequences>
+  </Item>
+ </Animations>
+</ClipDictionary>

@@ -1,0 +1,3 @@
+﻿from pathlib import Path
+p=Path('pipeline/lib/posekeys.py');s=p.read_text(encoding='utf-8');s=s.replace('                knee = Vector(p[f"knee_{side}"])','                override = Vector(p[f"knee_{side}"])\n                knee = knee.normalized().lerp(override.normalized(), min(1.0, override.length)).normalized()');p.write_bytes(s.replace('\n','\r\n').encode('utf-8'))
+p=Path('pipeline/clip_defs/volleyball.py');s=p.read_text(encoding='utf-8');a=s.index('def dive():');b=s.index('\n\ndef shuffle_R()',a);d=s[a:b].replace('0.92, 0.91','0.72, 0.99').replace('1.22, 0.69','1.18, 0.70').replace('1.36, 0.48','1.32, 0.50');s=s[:a]+d+s[b:];p.write_bytes(s.replace('\n','\r\n').encode('utf-8'))

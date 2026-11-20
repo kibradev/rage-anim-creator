@@ -1,0 +1,3 @@
+﻿from pathlib import Path
+p=Path('pipeline/lib/clips.py');s=p.read_text(encoding='utf-8').replace('    n = len(meta["versions"]) + 1','    n = max((v["v"] for v in meta["versions"]), default=0) + 1');p.write_bytes(s.replace('\n','\r\n').encode('utf-8'))
+p=Path('server/main.py');s=p.read_text(encoding='utf-8').replace('        for v in meta["versions"]:\n            out.append({','        latest = max((v["v"] for v in meta["versions"]), default=0)\n        for v in meta["versions"]:\n            out.append({',1).replace('"latest": v["v"] == len(meta["versions"])','"latest": v["v"] == latest',1);p.write_bytes(s.replace('\n','\r\n').encode('utf-8'))

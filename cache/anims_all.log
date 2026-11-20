@@ -1,0 +1,803 @@
+TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/head_diff_000_a_whi.ytd'
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/uppr_diff_000_a_uni.ytd'
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/lowr_diff_000_a_uni.ytd'
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/hand_diff_000_a_whi.ytd'
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/feet_diff_000_a_uni.ytd'
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/teef_diff_000_a_uni.ytd'
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/hair_diff_000_a_uni.ytd'
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/jbib_diff_000_a_uni.ytd'
+INFO: Loaded 0 name table(s) in 0.000 seconds
+INFO: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/head_000_r.ydd'
+INFO: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/uppr_000_u.ydd'
+INFO: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/lowr_000_u.ydd'
+INFO: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/hand_000_r.ydd'
+INFO: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/feet_000_u.ydd'
+INFO: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/teef_000_u.ydd'
+INFO: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/hair_000_u.ydd'
+INFO: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+INFO: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/jbib_000_u.ydd'
+INFO: Imported in 2.077 seconds
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/head_diff_000_a_whi.ytd'
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/uppr_diff_000_a_uni.ytd'
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/lowr_diff_000_a_uni.ytd'
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/hand_diff_000_a_whi.ytd'
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/feet_diff_000_a_uni.ytd'
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/teef_diff_000_a_uni.ytd'
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/hair_diff_000_a_uni.ytd'
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/jbib_diff_000_a_uni.ytd'
+Info: Loaded 0 name table(s) in 0.000 seconds
+Info: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/head_000_r.ydd'
+Info: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/uppr_000_u.ydd'
+Info: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/lowr_000_u.ydd'
+Info: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/hand_000_r.ydd'
+Info: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/feet_000_u.ydd'
+Info: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/teef_000_u.ydd'
+Info: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/hair_000_u.ydd'
+Info: Using 'C:\Users\kibra\Desktop\animCreator\cache\skeletons\player_zero.yft' as external skeleton...
+Info: Successfully imported 'C:/Program Files (x86)/Steam/steamapps/common/Grand Theft Auto V/x64v.rpf/models/cdimages/streamedpeds_players.rpf/player_zero/jbib_000_u.ydd'
+Info: Imported in 2.077 seconds
+ANIM armature ped_armature 354
+ANIM amb@world_human_hang_out_street@male_a@base animations 2 clips 1 baked 1 skipped 0
+INFO Draco mesh compression is available, use library at C:\Program Files\Blender Foundation\Blender 4.2\4.2\python\lib\site-packages\extern_draco.dll
+04:57:38 | INFO: Starting glTF 2.0 export
+04:57:41 | INFO: Finished glTF 2.0 export in 2.5804648399353027 s
+
+ANIM amb@world_human_hang_out_street@male_a@enter animations 2 clips 1 baked 1 skipped 0
+04:57:41 | INFO: Starting glTF 2.0 export
+04:57:43 | INFO: Finished glTF 2.0 export in 2.1429712772369385 s
+
+ANIM amb@world_human_hang_out_street@male_a@exit animations 2 clips 1 baked 1 skipped 0
+04:57:43 | INFO: Starting glTF 2.0 export
+04:57:46 | INFO: Finished glTF 2.0 export in 2.3753163814544678 s
+
+ANIM amb@world_human_hang_out_street@male_a@idle_a animations 2 clips 5 baked 5 skipped 0
+04:57:49 | INFO: Starting glTF 2.0 export
+04:58:02 | INFO: Finished glTF 2.0 export in 13.672271728515625 s
+
+ANIM amb@world_human_jog_standing@male@base animations 2 clips 1 baked 1 skipped 0
+04:58:02 | INFO: Starting glTF 2.0 export
+04:58:05 | INFO: Finished glTF 2.0 export in 2.0741279125213623 s
+
+ANIM amb@world_human_jog_standing@male@fitbase animations 2 clips 1 baked 1 skipped 0
+04:58:05 | INFO: Starting glTF 2.0 export
+04:58:07 | INFO: Finished glTF 2.0 export in 1.8365654945373535 s
+
+ANIM amb@world_human_jog_standing@male@fitidle_a animations 2 clips 3 baked 3 skipped 0
+04:58:08 | INFO: Starting glTF 2.0 export
+04:58:18 | INFO: Finished glTF 2.0 export in 10.191074132919312 s
+
+ANIM amb@world_human_jog_standing@male@idle_a animations 2 clips 3 baked 3 skipped 0
+04:58:20 | INFO: Starting glTF 2.0 export
+04:58:30 | INFO: Finished glTF 2.0 export in 10.199958562850952 s
+
+ANIM amb@world_human_jog_standing@male@idle_b animations 3 clips 3 baked 3 skipped 0
+04:58:33 | INFO: Starting glTF 2.0 export
+04:58:50 | INFO: Finished glTF 2.0 export in 16.89257287979126 s
+
+ANIM anim@mp_player_intcelebrationmale@air_drums animations 3 clips 2 baked 2 skipped 0
+04:58:50 | INFO: Starting glTF 2.0 export
+04:58:59 | INFO: Finished glTF 2.0 export in 8.261157274246216 s
+
+ANIM anim@mp_player_intcelebrationmale@air_guitar animations 5 clips 2 baked 2 skipped 0
+04:59:00 | INFO: Starting glTF 2.0 export
+04:59:08 | INFO: Finished glTF 2.0 export in 8.448559999465942 s
+
+ANIM anim@mp_player_intcelebrationmale@air_shagging animations 4 clips 2 baked 2 skipped 0
+04:59:09 | INFO: Starting glTF 2.0 export
+04:59:18 | INFO: Finished glTF 2.0 export in 9.075498342514038 s
+
+ANIM anim@mp_player_intcelebrationmale@air_synth animations 4 clips 2 baked 2 skipped 0
+04:59:19 | INFO: Starting glTF 2.0 export
+04:59:31 | INFO: Finished glTF 2.0 export in 11.53050184249878 s
+
+ANIM anim@mp_player_intcelebrationmale@bang_bang animations 3 clips 2 baked 2 skipped 0
+04:59:31 | INFO: Starting glTF 2.0 export
+04:59:37 | INFO: Finished glTF 2.0 export in 5.643815517425537 s
+
+ANIM anim@mp_player_intcelebrationmale@banging_tunes animations 4 clips 2 baked 2 skipped 0
+04:59:38 | INFO: Starting glTF 2.0 export
+04:59:46 | INFO: Finished glTF 2.0 export in 8.511094093322754 s
+
+ANIM anim@mp_player_intcelebrationmale@banging_tunes_left animations 4 clips 2 baked 2 skipped 0
+04:59:47 | INFO: Starting glTF 2.0 export
+04:59:55 | INFO: Finished glTF 2.0 export in 8.283538579940796 s
+
+ANIM anim@mp_player_intcelebrationmale@banging_tunes_right animations 4 clips 2 baked 2 skipped 0
+04:59:56 | INFO: Starting glTF 2.0 export
+05:00:04 | INFO: Finished glTF 2.0 export in 8.039797067642212 s
+
+ANIM anim@mp_player_intcelebrationmale@baton_twirl animations 3 clips 2 baked 2 skipped 0
+05:00:04 | INFO: Starting glTF 2.0 export
+05:00:13 | INFO: Finished glTF 2.0 export in 8.92356824874878 s
+
+ANIM anim@mp_player_intcelebrationmale@baton_twirl_v2 animations 3 clips 2 baked 2 skipped 0
+05:00:14 | INFO: Starting glTF 2.0 export
+05:00:23 | INFO: Finished glTF 2.0 export in 8.71991229057312 s
+
+ANIM anim@mp_player_intcelebrationmale@blow_kiss animations 4 clips 2 baked 2 skipped 0
+05:00:24 | INFO: Starting glTF 2.0 export
+05:00:30 | INFO: Finished glTF 2.0 export in 6.608614444732666 s
+
+ANIM anim@mp_player_intcelebrationmale@bro_love animations 4 clips 2 baked 2 skipped 0
+05:00:31 | INFO: Starting glTF 2.0 export
+05:00:40 | INFO: Finished glTF 2.0 export in 9.372888088226318 s
+
+ANIM anim@mp_player_intcelebrationmale@call_me animations 3 clips 2 baked 2 skipped 0
+05:00:41 | INFO: Starting glTF 2.0 export
+05:00:45 | INFO: Finished glTF 2.0 export in 4.287973642349243 s
+
+ANIM anim@mp_player_intcelebrationmale@cats_cradle animations 4 clips 2 baked 2 skipped 0
+05:00:46 | INFO: Starting glTF 2.0 export
+05:00:54 | INFO: Finished glTF 2.0 export in 8.463990688323975 s
+
+ANIM anim@mp_player_intcelebrationmale@chicken_taunt animations 4 clips 2 baked 2 skipped 0
+05:00:55 | INFO: Starting glTF 2.0 export
+05:01:04 | INFO: Finished glTF 2.0 export in 9.27320671081543 s
+
+ANIM anim@mp_player_intcelebrationmale@chin_brush animations 4 clips 2 baked 2 skipped 0
+05:01:05 | INFO: Starting glTF 2.0 export
+05:01:13 | INFO: Finished glTF 2.0 export in 8.233424425125122 s
+
+ANIM anim@mp_player_intcelebrationmale@coin_roll_and_toss animations 3 clips 2 baked 2 skipped 0
+05:01:14 | INFO: Starting glTF 2.0 export
+05:01:21 | INFO: Finished glTF 2.0 export in 6.799845218658447 s
+
+ANIM anim@mp_player_intcelebrationmale@crowd_invitation animations 3 clips 2 baked 2 skipped 0
+05:01:21 | INFO: Starting glTF 2.0 export
+05:01:27 | INFO: Finished glTF 2.0 export in 5.835673093795776 s
+
+ANIM anim@mp_player_intcelebrationmale@cry_baby animations 3 clips 2 baked 2 skipped 0
+05:01:28 | INFO: Starting glTF 2.0 export
+05:01:35 | INFO: Finished glTF 2.0 export in 7.767459869384766 s
+
+ANIM anim@mp_player_intcelebrationmale@cut_throat animations 3 clips 2 baked 2 skipped 0
+05:01:36 | INFO: Starting glTF 2.0 export
+05:01:42 | INFO: Finished glTF 2.0 export in 6.215371370315552 s
+
+ANIM anim@mp_player_intcelebrationmale@dirty_harry_bang animations 3 clips 2 baked 2 skipped 0
+05:01:43 | INFO: Starting glTF 2.0 export
+05:01:49 | INFO: Finished glTF 2.0 export in 5.831799030303955 s
+
+ANIM anim@mp_player_intcelebrationmale@dj animations 5 clips 2 baked 2 skipped 0
+05:01:49 | INFO: Starting glTF 2.0 export
+05:02:02 | INFO: Finished glTF 2.0 export in 12.167292356491089 s
+
+ANIM anim@mp_player_intcelebrationmale@dock animations 4 clips 2 baked 2 skipped 0
+05:02:03 | INFO: Starting glTF 2.0 export
+05:02:11 | INFO: Finished glTF 2.0 export in 8.146235942840576 s
+
+ANIM anim@mp_player_intcelebrationmale@driver animations 3 clips 2 baked 2 skipped 0
+05:02:11 | INFO: Starting glTF 2.0 export
+05:02:18 | INFO: Finished glTF 2.0 export in 6.342692136764526 s
+
+ANIM anim@mp_player_intcelebrationmale@face_palm animations 4 clips 2 baked 2 skipped 0
+05:02:19 | INFO: Starting glTF 2.0 export
+05:02:28 | INFO: Finished glTF 2.0 export in 9.377557277679443 s
+
+ANIM anim@mp_player_intcelebrationmale@find_the_fish animations 4 clips 2 baked 2 skipped 0
+05:02:28 | INFO: Starting glTF 2.0 export
+05:02:37 | INFO: Finished glTF 2.0 export in 8.616360902786255 s
+
+ANIM anim@mp_player_intcelebrationmale@finger animations 4 clips 2 baked 2 skipped 0
+05:02:38 | INFO: Starting glTF 2.0 export
+05:02:44 | INFO: Finished glTF 2.0 export in 6.095643758773804 s
+
+ANIM anim@mp_player_intcelebrationmale@finger_kiss animations 4 clips 2 baked 2 skipped 0
+05:02:44 | INFO: Starting glTF 2.0 export
+05:02:51 | INFO: Finished glTF 2.0 export in 6.81025505065918 s
+
+ANIM anim@mp_player_intcelebrationmale@flash_cop_badge animations 3 clips 2 baked 2 skipped 0
+05:02:52 | INFO: Starting glTF 2.0 export
+05:02:58 | INFO: Finished glTF 2.0 export in 6.591252326965332 s
+
+ANIM anim@mp_player_intcelebrationmale@freakout animations 4 clips 2 baked 2 skipped 0
+05:02:59 | INFO: Starting glTF 2.0 export
+05:03:08 | INFO: Finished glTF 2.0 export in 9.153281211853027 s
+
+ANIM anim@mp_player_intcelebrationmale@heart_pumping animations 4 clips 2 baked 2 skipped 0
+05:03:09 | INFO: Starting glTF 2.0 export
+05:03:17 | INFO: Finished glTF 2.0 export in 8.380870342254639 s
+
+ANIM anim@mp_player_intcelebrationmale@jazz_hands animations 4 clips 2 baked 2 skipped 0
+05:03:18 | INFO: Starting glTF 2.0 export
+05:03:27 | INFO: Finished glTF 2.0 export in 8.868645668029785 s
+
+ANIM anim@mp_player_intcelebrationmale@karate_chops animations 3 clips 2 baked 2 skipped 0
+05:03:28 | INFO: Starting glTF 2.0 export
+05:03:33 | INFO: Finished glTF 2.0 export in 5.53822660446167 s
+
+ANIM anim@mp_player_intcelebrationmale@knuckle_crunch animations 4 clips 2 baked 2 skipped 0
+05:03:34 | INFO: Starting glTF 2.0 export
+05:03:43 | INFO: Finished glTF 2.0 export in 8.910456418991089 s
+
+ANIM anim@mp_player_intcelebrationmale@mind_blown animations 3 clips 2 baked 2 skipped 0
+05:03:44 | INFO: Starting glTF 2.0 export
+05:03:51 | INFO: Finished glTF 2.0 export in 6.807866334915161 s
+
+ANIM anim@mp_player_intcelebrationmale@no_way animations 4 clips 2 baked 2 skipped 0
+05:03:51 | INFO: Starting glTF 2.0 export
+05:04:00 | INFO: Finished glTF 2.0 export in 8.709953308105469 s
+
+ANIM anim@mp_player_intcelebrationmale@nose_pick animations 4 clips 2 baked 2 skipped 0
+05:04:01 | INFO: Starting glTF 2.0 export
+05:04:10 | INFO: Finished glTF 2.0 export in 9.201892852783203 s
+
+ANIM anim@mp_player_intcelebrationmale@oh_snap animations 4 clips 2 baked 2 skipped 0
+05:04:11 | INFO: Starting glTF 2.0 export
+05:04:19 | INFO: Finished glTF 2.0 export in 8.570173263549805 s
+
+ANIM anim@mp_player_intcelebrationmale@peace animations 4 clips 2 baked 2 skipped 0
+05:04:20 | INFO: Starting glTF 2.0 export
+05:04:29 | INFO: Finished glTF 2.0 export in 9.147032976150513 s
+
+ANIM anim@mp_player_intcelebrationmale@photography animations 4 clips 2 baked 2 skipped 0
+05:04:30 | INFO: Starting glTF 2.0 export
+05:04:40 | INFO: Finished glTF 2.0 export in 9.673185586929321 s
+
+ANIM anim@mp_player_intcelebrationmale@raining_cash animations 3 clips 2 baked 2 skipped 0
+05:04:40 | INFO: Starting glTF 2.0 export
+05:04:46 | INFO: Finished glTF 2.0 export in 5.615532159805298 s
+
+ANIM anim@mp_player_intcelebrationmale@raise_the_roof animations 4 clips 2 baked 2 skipped 0
+05:04:47 | INFO: Starting glTF 2.0 export
+05:04:55 | INFO: Finished glTF 2.0 export in 8.425325870513916 s
+
+ANIM anim@mp_player_intcelebrationmale@respect animations 3 clips 2 baked 2 skipped 0
+05:04:55 | INFO: Starting glTF 2.0 export
+05:05:00 | INFO: Finished glTF 2.0 export in 4.796207904815674 s
+
+ANIM anim@mp_player_intcelebrationmale@rock animations 4 clips 2 baked 2 skipped 0
+05:05:01 | INFO: Starting glTF 2.0 export
+05:05:05 | INFO: Finished glTF 2.0 export in 3.8897855281829834 s
+
+ANIM anim@mp_player_intcelebrationmale@runner animations 3 clips 2 baked 2 skipped 0
+05:05:05 | INFO: Starting glTF 2.0 export
+05:05:12 | INFO: Finished glTF 2.0 export in 6.422582387924194 s
+
+ANIM anim@mp_player_intcelebrationmale@salsa_roll animations 4 clips 2 baked 2 skipped 0
+05:05:12 | INFO: Starting glTF 2.0 export
+05:05:21 | INFO: Finished glTF 2.0 export in 8.795177221298218 s
+
+ANIM anim@mp_player_intcelebrationmale@salute animations 4 clips 2 baked 2 skipped 0
+05:05:21 | INFO: Starting glTF 2.0 export
+05:05:26 | INFO: Finished glTF 2.0 export in 4.308456182479858 s
+
+ANIM anim@mp_player_intcelebrationmale@shadow_boxing animations 3 clips 2 baked 2 skipped 0
+05:05:26 | INFO: Starting glTF 2.0 export
+05:05:32 | INFO: Finished glTF 2.0 export in 5.53459906578064 s
+
+ANIM anim@mp_player_intcelebrationmale@shooting animations 3 clips 2 baked 2 skipped 0
+05:05:32 | INFO: Starting glTF 2.0 export
+05:05:38 | INFO: Finished glTF 2.0 export in 6.04911208152771 s
+
+ANIM anim@mp_player_intcelebrationmale@shush animations 4 clips 2 baked 2 skipped 0
+05:05:39 | INFO: Starting glTF 2.0 export
+05:05:48 | INFO: Finished glTF 2.0 export in 8.783311128616333 s
+
+ANIM anim@mp_player_intcelebrationmale@slow_clap animations 4 clips 2 baked 2 skipped 0
+05:05:49 | INFO: Starting glTF 2.0 export
+05:05:58 | INFO: Finished glTF 2.0 export in 9.125277757644653 s
+
+ANIM anim@mp_player_intcelebrationmale@smoke_flick animations 4 clips 2 baked 2 skipped 0
+05:05:59 | INFO: Starting glTF 2.0 export
+05:06:08 | INFO: Finished glTF 2.0 export in 9.211955308914185 s
+
+ANIM anim@mp_player_intcelebrationmale@spray_champagne animations 3 clips 2 baked 2 skipped 0
+05:06:09 | INFO: Starting glTF 2.0 export
+05:06:17 | INFO: Finished glTF 2.0 export in 8.00189757347107 s
+
+ANIM anim@mp_player_intcelebrationmale@stinker animations 3 clips 2 baked 2 skipped 0
+05:06:17 | INFO: Starting glTF 2.0 export
+05:06:25 | INFO: Finished glTF 2.0 export in 7.468980550765991 s
+
+ANIM anim@mp_player_intcelebrationmale@suck_it animations 3 clips 2 baked 2 skipped 0
+05:06:25 | INFO: Starting glTF 2.0 export
+05:06:32 | INFO: Finished glTF 2.0 export in 6.6650307178497314 s
+
+ANIM anim@mp_player_intcelebrationmale@surrender animations 4 clips 2 baked 2 skipped 0
+05:06:33 | INFO: Starting glTF 2.0 export
+05:06:43 | INFO: Finished glTF 2.0 export in 9.673885583877563 s
+
+ANIM anim@mp_player_intcelebrationmale@take_selfie animations 3 clips 2 baked 2 skipped 0
+05:06:43 | INFO: Starting glTF 2.0 export
+05:06:49 | INFO: Finished glTF 2.0 export in 5.736045598983765 s
+
+ANIM anim@mp_player_intcelebrationmale@the_woogie animations 3 clips 2 baked 2 skipped 0
+05:06:49 | INFO: Starting glTF 2.0 export
+05:06:55 | INFO: Finished glTF 2.0 export in 5.607510805130005 s
+
+ANIM anim@mp_player_intcelebrationmale@thumb_on_ears animations 4 clips 2 baked 2 skipped 0
+05:06:56 | INFO: Starting glTF 2.0 export
+05:07:05 | INFO: Finished glTF 2.0 export in 8.954790592193604 s
+
+ANIM anim@mp_player_intcelebrationmale@thumbs_up animations 4 clips 2 baked 2 skipped 0
+05:07:06 | INFO: Starting glTF 2.0 export
+05:07:15 | INFO: Finished glTF 2.0 export in 9.111790418624878 s
+
+ANIM anim@mp_player_intcelebrationmale@uncle_disco animations 4 clips 2 baked 2 skipped 0
+05:07:15 | INFO: Starting glTF 2.0 export
+05:07:24 | INFO: Finished glTF 2.0 export in 8.874512910842896 s
+
+ANIM anim@mp_player_intcelebrationmale@v_sign animations 4 clips 2 baked 2 skipped 0
+05:07:25 | INFO: Starting glTF 2.0 export
+05:07:35 | INFO: Finished glTF 2.0 export in 9.561513423919678 s
+
+ANIM anim@mp_player_intcelebrationmale@wank animations 4 clips 2 baked 2 skipped 0
+05:07:35 | INFO: Starting glTF 2.0 export
+05:07:39 | INFO: Finished glTF 2.0 export in 4.123943090438843 s
+
+ANIM anim@mp_player_intcelebrationmale@wasnt_me animations 3 clips 2 baked 2 skipped 0
+05:07:40 | INFO: Starting glTF 2.0 export
+05:07:45 | INFO: Finished glTF 2.0 export in 5.820192575454712 s
+
+ANIM anim@mp_player_intcelebrationmale@wave animations 4 clips 2 baked 2 skipped 0
+05:07:46 | INFO: Starting glTF 2.0 export
+05:07:56 | INFO: Finished glTF 2.0 export in 9.491191387176514 s
+
+ANIM anim@mp_player_intcelebrationmale@you_loco animations 4 clips 2 baked 2 skipped 0
+05:07:56 | INFO: Starting glTF 2.0 export
+05:08:05 | INFO: Finished glTF 2.0 export in 8.39377760887146 s
+
+ANIM move_m@_idles@out_of_breath animations 5 clips 3 baked 3 skipped 0
+05:08:07 | INFO: Starting glTF 2.0 export
+05:08:21 | INFO: Finished glTF 2.0 export in 13.933722496032715 s
+
+ANIM move_m@_idles@shake_off animations 2 clips 7 baked 7 skipped 0
+05:08:25 | INFO: Starting glTF 2.0 export
+05:08:44 | INFO: Finished glTF 2.0 export in 18.587125301361084 s
+
+ANIM move_m@_idles@wet animations 2 clips 1 baked 1 skipped 0
+05:08:44 | INFO: Starting glTF 2.0 export
+05:08:48 | INFO: Finished glTF 2.0 export in 3.4649250507354736 s
+
+ANIM move_m@alien animations 2 clips 4 baked 4 skipped 0
+05:08:48 | INFO: Starting glTF 2.0 export
+05:08:54 | INFO: Finished glTF 2.0 export in 5.437470197677612 s
+
+ANIM move_m@bail_bond animations 2 clips 1 baked 1 skipped 0
+05:08:54 | INFO: Starting glTF 2.0 export
+05:08:58 | INFO: Finished glTF 2.0 export in 3.6978416442871094 s
+
+ANIM move_m@brave animations 3 clips 4 baked 4 skipped 0
+05:09:00 | INFO: Starting glTF 2.0 export
+05:09:14 | INFO: Finished glTF 2.0 export in 13.609497785568237 s
+
+ANIM move_m@brave@a animations 5 clips 4 baked 4 skipped 0
+05:09:16 | INFO: Starting glTF 2.0 export
+05:09:29 | INFO: Finished glTF 2.0 export in 13.57961916923523 s
+
+ANIM move_m@brave@b animations 2 clips 1 baked 1 skipped 0
+05:09:30 | INFO: Starting glTF 2.0 export
+05:09:35 | INFO: Finished glTF 2.0 export in 5.207390308380127 s
+
+ANIM move_m@brave@fallback animations 2 clips 6 baked 6 skipped 0
+05:09:37 | INFO: Starting glTF 2.0 export
+05:09:45 | INFO: Finished glTF 2.0 export in 8.485861778259277 s
+
+ANIM move_m@brave@idle_a animations 2 clips 3 baked 3 skipped 0
+05:09:47 | INFO: Starting glTF 2.0 export
+05:09:59 | INFO: Finished glTF 2.0 export in 12.190433740615845 s
+
+ANIM move_m@brave@idle_b animations 2 clips 3 baked 3 skipped 0
+05:10:02 | INFO: Starting glTF 2.0 export
+05:10:18 | INFO: Finished glTF 2.0 export in 16.29400134086609 s
+
+ANIM move_m@breathe animations 1 clips 1 baked 1 skipped 0
+05:10:18 | INFO: Starting glTF 2.0 export
+05:10:20 | INFO: Finished glTF 2.0 export in 2.257220983505249 s
+
+ANIM move_m@business@a animations 2 clips 1 baked 1 skipped 0
+05:10:21 | INFO: Starting glTF 2.0 export
+05:10:22 | INFO: Finished glTF 2.0 export in 1.8025219440460205 s
+
+ANIM move_m@business@b animations 2 clips 1 baked 1 skipped 0
+05:10:23 | INFO: Starting glTF 2.0 export
+05:10:24 | INFO: Finished glTF 2.0 export in 1.7069237232208252 s
+
+ANIM move_m@business@c animations 2 clips 1 baked 1 skipped 0
+05:10:25 | INFO: Starting glTF 2.0 export
+05:10:26 | INFO: Finished glTF 2.0 export in 1.6011624336242676 s
+
+ANIM move_m@buzzed animations 2 clips 1 baked 1 skipped 0
+05:10:26 | INFO: Starting glTF 2.0 export
+05:10:30 | INFO: Finished glTF 2.0 export in 3.1268608570098877 s
+
+ANIM move_m@casual@a animations 3 clips 3 baked 3 skipped 0
+05:10:30 | INFO: Starting glTF 2.0 export
+05:10:36 | INFO: Finished glTF 2.0 export in 6.069108963012695 s
+
+ANIM move_m@casual@b animations 3 clips 4 baked 4 skipped 0
+05:10:37 | INFO: Starting glTF 2.0 export
+05:10:44 | INFO: Finished glTF 2.0 export in 6.816385984420776 s
+
+ANIM move_m@casual@c animations 2 clips 2 baked 2 skipped 0
+05:10:44 | INFO: Starting glTF 2.0 export
+05:10:47 | INFO: Finished glTF 2.0 export in 2.5534584522247314 s
+
+ANIM move_m@casual@d animations 2 clips 2 baked 2 skipped 0
+05:10:47 | INFO: Starting glTF 2.0 export
+05:10:51 | INFO: Finished glTF 2.0 export in 3.375584125518799 s
+
+ANIM move_m@casual@e animations 2 clips 2 baked 2 skipped 0
+05:10:51 | INFO: Starting glTF 2.0 export
+05:10:54 | INFO: Finished glTF 2.0 export in 2.7995591163635254 s
+
+ANIM move_m@casual@f animations 2 clips 2 baked 2 skipped 0
+05:10:54 | INFO: Starting glTF 2.0 export
+05:10:57 | INFO: Finished glTF 2.0 export in 3.230649948120117 s
+
+ANIM move_m@caution animations 2 clips 1 baked 1 skipped 0
+05:10:58 | INFO: Starting glTF 2.0 export
+05:11:03 | INFO: Finished glTF 2.0 export in 5.068309783935547 s
+
+ANIM move_m@chubby@a animations 3 clips 4 baked 4 skipped 0
+05:11:04 | INFO: Starting glTF 2.0 export
+05:11:13 | INFO: Finished glTF 2.0 export in 8.41592526435852 s
+
+ANIM move_m@clipboard animations 2 clips 3 baked 3 skipped 0
+05:11:13 | INFO: Starting glTF 2.0 export
+05:11:19 | INFO: Finished glTF 2.0 export in 5.411949634552002 s
+
+ANIM move_m@confident animations 2 clips 1 baked 1 skipped 0
+05:11:19 | INFO: Starting glTF 2.0 export
+05:11:23 | INFO: Finished glTF 2.0 export in 3.6913843154907227 s
+
+ANIM move_m@copchase1 animations 2 clips 1 baked 1 skipped 0
+05:11:23 | INFO: Starting glTF 2.0 export
+05:11:25 | INFO: Finished glTF 2.0 export in 2.182814836502075 s
+
+ANIM move_m@copchase2 animations 2 clips 1 baked 1 skipped 0
+05:11:26 | INFO: Starting glTF 2.0 export
+05:11:27 | INFO: Finished glTF 2.0 export in 1.7414484024047852 s
+
+ANIM move_m@coward animations 3 clips 7 baked 7 skipped 0
+05:11:30 | INFO: Starting glTF 2.0 export
+05:11:48 | INFO: Finished glTF 2.0 export in 17.205885410308838 s
+
+ANIM move_m@crazy animations 2 clips 1 baked 1 skipped 0
+05:11:48 | INFO: Starting glTF 2.0 export
+05:11:50 | INFO: Finished glTF 2.0 export in 2.263672113418579 s
+
+ANIM move_m@depressed@a animations 4 clips 2 baked 2 skipped 0
+05:11:51 | INFO: Starting glTF 2.0 export
+05:11:59 | INFO: Finished glTF 2.0 export in 7.537339687347412 s
+
+ANIM move_m@depressed@b animations 2 clips 1 baked 1 skipped 0
+05:11:59 | INFO: Starting glTF 2.0 export
+05:12:05 | INFO: Finished glTF 2.0 export in 6.0101401805877686 s
+
+ANIM move_m@depressed@c animations 2 clips 1 baked 1 skipped 0
+05:12:06 | INFO: Starting glTF 2.0 export
+05:12:10 | INFO: Finished glTF 2.0 export in 3.985642194747925 s
+
+ANIM move_m@depressed@d animations 2 clips 1 baked 1 skipped 0
+05:12:11 | INFO: Starting glTF 2.0 export
+05:12:16 | INFO: Finished glTF 2.0 export in 5.920734405517578 s
+
+ANIM move_m@drunk@a animations 3 clips 4 baked 4 skipped 0
+05:12:18 | INFO: Starting glTF 2.0 export
+05:12:29 | INFO: Finished glTF 2.0 export in 11.533937931060791 s
+
+ANIM move_m@drunk@moderatedrunk animations 10 clips 51 baked 51 skipped 0
+05:13:37 | INFO: Starting glTF 2.0 export
+05:17:44 | INFO: Finished glTF 2.0 export in 246.36871004104614 s
+
+ANIM move_m@drunk@moderatedrunk_head_up animations 2 clips 8 baked 8 skipped 0
+05:17:50 | INFO: Starting glTF 2.0 export
+05:18:18 | INFO: Finished glTF 2.0 export in 27.424044132232666 s
+
+ANIM move_m@drunk@moderatedrunk_idles@ animations 6 clips 6 baked 6 skipped 0
+05:18:24 | INFO: Starting glTF 2.0 export
+05:19:17 | INFO: Finished glTF 2.0 export in 52.79976153373718 s
+
+ANIM move_m@drunk@slightlydrunk animations 2 clips 5 baked 5 skipped 0
+05:19:20 | INFO: Starting glTF 2.0 export
+05:19:34 | INFO: Finished glTF 2.0 export in 13.833109378814697 s
+
+ANIM move_m@drunk@slightlydrunk_idles@ animations 5 clips 4 baked 4 skipped 0
+05:19:38 | INFO: Starting glTF 2.0 export
+05:20:18 | INFO: Finished glTF 2.0 export in 39.187448501586914 s
+
+ANIM move_m@drunk@transitions animations 2 clips 3 baked 3 skipped 0
+05:20:20 | INFO: Starting glTF 2.0 export
+05:20:35 | INFO: Finished glTF 2.0 export in 15.173407316207886 s
+
+ANIM move_m@drunk@verydrunk animations 3 clips 7 baked 7 skipped 0
+05:20:39 | INFO: Starting glTF 2.0 export
+05:20:59 | INFO: Finished glTF 2.0 export in 20.54659676551819 s
+
+ANIM move_m@drunk@verydrunk_idles@ animations 5 clips 10 baked 10 skipped 0
+05:21:22 | INFO: Starting glTF 2.0 export
+05:22:25 | INFO: Finished glTF 2.0 export in 63.58981513977051 s
+
+ANIM move_m@fat@a animations 6 clips 5 baked 5 skipped 0
+05:22:26 | INFO: Starting glTF 2.0 export
+05:22:35 | INFO: Finished glTF 2.0 export in 8.657357454299927 s
+
+ANIM move_m@fat@bulky animations 2 clips 1 baked 1 skipped 0
+05:22:35 | INFO: Starting glTF 2.0 export
+05:22:35 | INFO: Finished glTF 2.0 export in 0.4248621463775635 s
+
+ANIM move_m@favor_right_foot animations 2 clips 1 baked 1 skipped 0
+05:22:36 | INFO: Starting glTF 2.0 export
+05:22:37 | INFO: Finished glTF 2.0 export in 1.4403150081634521 s
+
+ANIM move_m@femme@ animations 2 clips 7 baked 7 skipped 0
+05:22:40 | INFO: Starting glTF 2.0 export
+05:22:52 | INFO: Finished glTF 2.0 export in 12.132950782775879 s
+
+ANIM move_m@fire animations 2 clips 2 baked 2 skipped 0
+05:22:53 | INFO: Starting glTF 2.0 export
+05:22:55 | INFO: Finished glTF 2.0 export in 2.552938222885132 s
+
+ANIM move_m@flee@a animations 2 clips 1 baked 1 skipped 0
+05:22:56 | INFO: Starting glTF 2.0 export
+05:22:58 | INFO: Finished glTF 2.0 export in 2.3924522399902344 s
+
+ANIM move_m@flee@b animations 2 clips 1 baked 1 skipped 0
+05:22:58 | INFO: Starting glTF 2.0 export
+05:23:01 | INFO: Finished glTF 2.0 export in 2.674164056777954 s
+
+ANIM move_m@flee@c animations 2 clips 1 baked 1 skipped 0
+05:23:01 | INFO: Starting glTF 2.0 export
+05:23:03 | INFO: Finished glTF 2.0 export in 1.6073005199432373 s
+
+ANIM move_m@flee@generic animations 2 clips 4 baked 4 skipped 0
+05:23:03 | INFO: Starting glTF 2.0 export
+05:23:07 | INFO: Finished glTF 2.0 export in 3.817366600036621 s
+
+ANIM move_m@gangster@a animations 5 clips 5 baked 5 skipped 0
+05:23:09 | INFO: Starting glTF 2.0 export
+05:23:23 | INFO: Finished glTF 2.0 export in 14.008203744888306 s
+
+ANIM move_m@gangster@generic animations 3 clips 3 baked 3 skipped 0
+05:23:23 | INFO: Starting glTF 2.0 export
+05:23:27 | INFO: Finished glTF 2.0 export in 3.950284004211426 s
+
+ANIM move_m@gangster@ng animations 3 clips 7 baked 7 skipped 0
+05:23:30 | INFO: Starting glTF 2.0 export
+05:23:43 | INFO: Finished glTF 2.0 export in 13.398349046707153 s
+
+ANIM move_m@generic animations 20 clips 66 baked 66 skipped 0
+05:24:17 | INFO: Starting glTF 2.0 export
+05:27:55 | INFO: Finished glTF 2.0 export in 218.71925687789917 s
+
+ANIM move_m@generic_idles@std animations 3 clips 5 baked 5 skipped 0
+05:27:59 | INFO: Starting glTF 2.0 export
+05:28:15 | INFO: Finished glTF 2.0 export in 16.203505516052246 s
+
+ANIM move_m@generic_variations@idle@a animations 3 clips 4 baked 4 skipped 0
+05:28:19 | INFO: Starting glTF 2.0 export
+05:28:42 | INFO: Finished glTF 2.0 export in 22.61967372894287 s
+
+ANIM move_m@generic_variations@idle@b animations 3 clips 5 baked 5 skipped 0
+05:28:45 | INFO: Starting glTF 2.0 export
+05:29:04 | INFO: Finished glTF 2.0 export in 18.83954381942749 s
+
+ANIM move_m@generic_variations@run animations 2 clips 2 baked 2 skipped 0
+05:29:04 | INFO: Starting glTF 2.0 export
+05:29:06 | INFO: Finished glTF 2.0 export in 1.6444995403289795 s
+
+ANIM move_m@generic_variations@walk animations 2 clips 6 baked 6 skipped 0
+05:29:08 | INFO: Starting glTF 2.0 export
+05:29:15 | INFO: Finished glTF 2.0 export in 7.689590930938721 s
+
+ANIM move_m@golfer@ animations 3 clips 4 baked 4 skipped 0
+05:29:16 | INFO: Starting glTF 2.0 export
+05:29:22 | INFO: Finished glTF 2.0 export in 5.540473461151123 s
+
+ANIM move_m@hiking animations 2 clips 4 baked 4 skipped 0
+05:29:23 | INFO: Starting glTF 2.0 export
+05:29:31 | INFO: Finished glTF 2.0 export in 7.62546443939209 s
+
+ANIM move_m@hipster@a animations 2 clips 4 baked 4 skipped 0
+05:29:32 | INFO: Starting glTF 2.0 export
+05:29:38 | INFO: Finished glTF 2.0 export in 6.212785720825195 s
+
+ANIM move_m@hobo@a animations 3 clips 1 baked 1 skipped 0
+05:29:38 | INFO: Starting glTF 2.0 export
+05:29:40 | INFO: Finished glTF 2.0 export in 1.3975028991699219 s
+
+ANIM move_m@hobo@b animations 2 clips 1 baked 1 skipped 0
+05:29:40 | INFO: Starting glTF 2.0 export
+05:29:41 | INFO: Finished glTF 2.0 export in 1.3131394386291504 s
+
+ANIM move_m@hurry@a animations 4 clips 2 baked 2 skipped 0
+05:29:42 | INFO: Starting glTF 2.0 export
+05:29:45 | INFO: Finished glTF 2.0 export in 3.8960959911346436 s
+
+ANIM move_m@hurry@b animations 3 clips 2 baked 2 skipped 0
+05:29:46 | INFO: Starting glTF 2.0 export
+05:29:49 | INFO: Finished glTF 2.0 export in 3.2555673122406006 s
+
+ANIM move_m@hurry@c animations 3 clips 2 baked 2 skipped 0
+05:29:50 | INFO: Starting glTF 2.0 export
+05:29:53 | INFO: Finished glTF 2.0 export in 3.40698504447937 s
+
+ANIM move_m@hurry_butch@a animations 3 clips 2 baked 2 skipped 0
+05:29:53 | INFO: Starting glTF 2.0 export
+05:29:57 | INFO: Finished glTF 2.0 export in 3.28961443901062 s
+
+ANIM move_m@hurry_butch@b animations 3 clips 2 baked 2 skipped 0
+05:29:57 | INFO: Starting glTF 2.0 export
+05:30:00 | INFO: Finished glTF 2.0 export in 3.120983123779297 s
+
+ANIM move_m@hurry_butch@c animations 3 clips 2 baked 2 skipped 0
+05:30:01 | INFO: Starting glTF 2.0 export
+05:30:04 | INFO: Finished glTF 2.0 export in 3.577702522277832 s
+
+ANIM move_m@injured animations 7 clips 31 baked 31 skipped 0
+05:30:30 | INFO: Starting glTF 2.0 export
+05:31:37 | INFO: Finished glTF 2.0 export in 66.97407364845276 s
+
+ANIM move_m@intimidation@1h animations 2 clips 1 baked 1 skipped 0
+05:31:37 | INFO: Starting glTF 2.0 export
+05:31:39 | INFO: Finished glTF 2.0 export in 1.9190843105316162 s
+
+ANIM move_m@intimidation@cop@unarmed animations 2 clips 1 baked 1 skipped 0
+05:31:39 | INFO: Starting glTF 2.0 export
+05:31:43 | INFO: Finished glTF 2.0 export in 3.450334072113037 s
+
+ANIM move_m@intimidation@idle_a animations 2 clips 1 baked 1 skipped 0
+05:31:43 | INFO: Starting glTF 2.0 export
+05:31:46 | INFO: Finished glTF 2.0 export in 3.0798768997192383 s
+
+ANIM move_m@intimidation@unarmed animations 2 clips 1 baked 1 skipped 0
+05:31:46 | INFO: Starting glTF 2.0 export
+05:31:47 | INFO: Finished glTF 2.0 export in 1.0583291053771973 s
+
+ANIM move_m@janitor animations 2 clips 1 baked 1 skipped 0
+05:31:47 | INFO: Starting glTF 2.0 export
+05:31:48 | INFO: Finished glTF 2.0 export in 0.4564039707183838 s
+
+ANIM move_m@jog@ animations 2 clips 1 baked 1 skipped 0
+05:31:48 | INFO: Starting glTF 2.0 export
+05:31:49 | INFO: Finished glTF 2.0 export in 0.6648576259613037 s
+
+ANIM move_m@jogger animations 2 clips 28 baked 28 skipped 0
+05:32:06 | INFO: Starting glTF 2.0 export
+05:32:50 | INFO: Finished glTF 2.0 export in 44.247753620147705 s
+
+ANIM move_m@joy@a animations 2 clips 1 baked 1 skipped 0
+05:32:51 | INFO: Starting glTF 2.0 export
+05:32:51 | INFO: Finished glTF 2.0 export in 0.7190036773681641 s
+
+ANIM move_m@leaf_blower animations 2 clips 8 baked 8 skipped 0
+05:32:54 | INFO: Starting glTF 2.0 export
+05:33:04 | INFO: Finished glTF 2.0 export in 10.387912511825562 s
+
+ANIM move_m@melee animations 3 clips 3 baked 3 skipped 0
+05:33:05 | INFO: Starting glTF 2.0 export
+05:33:09 | INFO: Finished glTF 2.0 export in 4.278750896453857 s
+
+ANIM move_m@money animations 2 clips 1 baked 1 skipped 0
+05:33:09 | INFO: Starting glTF 2.0 export
+05:33:11 | INFO: Finished glTF 2.0 export in 1.5558147430419922 s
+
+ANIM move_m@multiplayer animations 2 clips 1 baked 1 skipped 0
+05:33:11 | INFO: Starting glTF 2.0 export
+05:33:12 | INFO: Finished glTF 2.0 export in 1.2331466674804688 s
+
+ANIM move_m@muscle@a animations 4 clips 4 baked 4 skipped 0
+05:33:13 | INFO: Starting glTF 2.0 export
+05:33:19 | INFO: Finished glTF 2.0 export in 6.408788204193115 s
+
+ANIM move_m@non_chalant animations 2 clips 1 baked 1 skipped 0
+05:33:20 | INFO: Starting glTF 2.0 export
+05:33:23 | INFO: Finished glTF 2.0 export in 3.0087950229644775 s
+
+ANIM move_m@plodding animations 2 clips 1 baked 1 skipped 0
+05:33:23 | INFO: Starting glTF 2.0 export
+05:33:25 | INFO: Finished glTF 2.0 export in 1.5452828407287598 s
+
+ANIM move_m@posh@ animations 3 clips 7 baked 7 skipped 0
+05:33:27 | INFO: Starting glTF 2.0 export
+05:33:35 | INFO: Finished glTF 2.0 export in 8.487315654754639 s
+
+ANIM move_m@power animations 2 clips 1 baked 1 skipped 0
+05:33:35 | INFO: Starting glTF 2.0 export
+05:33:36 | INFO: Finished glTF 2.0 export in 1.1022896766662598 s
+
+ANIM move_m@powerwalk animations 2 clips 1 baked 1 skipped 0
+05:33:36 | INFO: Starting glTF 2.0 export
+05:33:38 | INFO: Finished glTF 2.0 export in 1.1262881755828857 s
+
+ANIM move_m@quick animations 2 clips 1 baked 1 skipped 0
+05:33:38 | INFO: Starting glTF 2.0 export
+05:33:38 | INFO: Finished glTF 2.0 export in 0.7196488380432129 s
+
+ANIM move_m@sad@a animations 2 clips 1 baked 1 skipped 0
+05:33:39 | INFO: Starting glTF 2.0 export
+05:33:40 | INFO: Finished glTF 2.0 export in 1.581617832183838 s
+
+ANIM move_m@sad@b animations 2 clips 1 baked 1 skipped 0
+05:33:40 | INFO: Starting glTF 2.0 export
+05:33:42 | INFO: Finished glTF 2.0 export in 1.3909494876861572 s
+
+ANIM move_m@sad@c animations 2 clips 1 baked 1 skipped 0
+05:33:42 | INFO: Starting glTF 2.0 export
+05:33:43 | INFO: Finished glTF 2.0 export in 1.262155294418335 s
+
+ANIM move_m@sassy animations 2 clips 1 baked 1 skipped 0
+05:33:43 | INFO: Starting glTF 2.0 export
+05:33:45 | INFO: Finished glTF 2.0 export in 1.4298248291015625 s
+
+ANIM move_m@scared@a animations 3 clips 4 baked 4 skipped 0
+05:33:46 | INFO: Starting glTF 2.0 export
+05:33:53 | INFO: Finished glTF 2.0 export in 6.948985815048218 s
+
+ANIM move_m@shadyped@a animations 2 clips 1 baked 1 skipped 0
+05:33:53 | INFO: Starting glTF 2.0 export
+05:33:56 | INFO: Finished glTF 2.0 export in 2.880403757095337 s
+
+ANIM move_m@shocked@a animations 2 clips 6 baked 6 skipped 0
+05:33:57 | INFO: Starting glTF 2.0 export
+05:34:01 | INFO: Finished glTF 2.0 export in 4.7107462882995605 s
+
+ANIM move_m@shy@a animations 2 clips 1 baked 1 skipped 0
+05:34:02 | INFO: Starting glTF 2.0 export
+05:34:03 | INFO: Finished glTF 2.0 export in 1.5956885814666748 s
+
+ANIM move_m@shy@b animations 2 clips 1 baked 1 skipped 0
+05:34:03 | INFO: Starting glTF 2.0 export
+05:34:05 | INFO: Finished glTF 2.0 export in 1.9773108959197998 s
+
+ANIM move_m@shy@c animations 2 clips 1 baked 1 skipped 0
+05:34:06 | INFO: Starting glTF 2.0 export
+05:34:07 | INFO: Finished glTF 2.0 export in 1.6827995777130127 s
+
+ANIM move_m@shy@d animations 2 clips 1 baked 1 skipped 0
+05:34:07 | INFO: Starting glTF 2.0 export
+05:34:09 | INFO: Finished glTF 2.0 export in 1.3318910598754883 s
+
+ANIM move_m@shy@e animations 2 clips 1 baked 1 skipped 0
+05:34:09 | INFO: Starting glTF 2.0 export
+05:34:10 | INFO: Finished glTF 2.0 export in 0.9926657676696777 s
+
+ANIM move_m@strung_out@ animations 2 clips 1 baked 1 skipped 0
+05:34:10 | INFO: Starting glTF 2.0 export
+05:34:14 | INFO: Finished glTF 2.0 export in 3.8074588775634766 s
+
+ANIM move_m@swagger animations 2 clips 1 baked 1 skipped 0
+05:34:14 | INFO: Starting glTF 2.0 export
+05:34:16 | INFO: Finished glTF 2.0 export in 1.5657687187194824 s
+
+ANIM move_m@swagger@b animations 2 clips 1 baked 1 skipped 0
+05:34:16 | INFO: Starting glTF 2.0 export
+05:34:19 | INFO: Finished glTF 2.0 export in 2.5433547496795654 s
+
+ANIM move_m@tired animations 2 clips 1 baked 1 skipped 0
+05:34:19 | INFO: Starting glTF 2.0 export
+05:34:21 | INFO: Finished glTF 2.0 export in 1.6444106101989746 s
+
+ANIM move_m@tool_belt@a animations 2 clips 3 baked 3 skipped 0
+05:34:21 | INFO: Starting glTF 2.0 export
+05:34:25 | INFO: Finished glTF 2.0 export in 3.651076316833496 s
+
+ANIM move_m@tough_guy@ animations 5 clips 7 baked 7 skipped 0
+05:34:27 | INFO: Starting glTF 2.0 export
+05:34:37 | INFO: Finished glTF 2.0 export in 10.155006408691406 s
+
+ANIM move_m@wading animations 4 clips 3 baked 3 skipped 0
+05:34:38 | INFO: Starting glTF 2.0 export
+05:34:45 | INFO: Finished glTF 2.0 export in 6.963310718536377 s
+
+ANIM done 614
+Blender 4.2.22 LTS (hash 88937221abfc built 2026-06-23 01:34:44)
+
+Blender quit

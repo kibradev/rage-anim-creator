@@ -1,15 +1,7 @@
-assets/
-cache/
-tools/
-node_modules/
+﻿node_modules/
 __pycache__/
 .env
-*.ydd
 *.ycd
-*.ytd
-*.yft
-converter/bin/
-converter/obj/
 
 # animasyon ciktilari (kucuk, projenin asil urunu) repoya dahil
 !output/export/**/*.ycd

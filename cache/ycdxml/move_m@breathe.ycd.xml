@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClipDictionary>
+ <Clips>
+  <Item>
+   <Hash>breathe_additive</Hash>
+   <Name>pack:/breathe_additive.clip</Name>
+   <Type value="Animation" />
+   <Unknown30 value="0" />
+   <Tags />
+   <Properties>
+    <Item>
+     <NameHash>hash_69497CB4</NameHash>
+     <UnkHash>hash_571B7C5F</UnkHash>
+     <Attributes>
+      <Item>
+       <NameHash>hash_69497CB4</NameHash>
+       <Type value="Int" />
+       <Value value="-958235956" />
+      </Item>
+     </Attributes>
+    </Item>
+   </Properties>
+   <AnimationHash>hash_34B96F0C</AnimationHash>
+   <StartTime value="0" />
+   <EndTime value="2.5" />
+   <Rate value="1" />
+  </Item>
+ </Clips>
+ <Animations>
+  <Item>
+   <Hash>hash_34B96F0C</Hash>
+   <Unknown10 value="0" />
+   <FrameCount value="77" />
+   <SequenceFrameLimit value="79" />
+   <Duration value="2.5333335" />
+   <Unknown1C>hash_5BB615FF</Unknown1C>
+   <BoneIds>
+    <Item>
+     <BoneId value="24818" />
+     <Track value="2" />
+     <Unk0 value="0" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="134" />
+     <Unk0 value="2" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="137" />
+     <Unk0 value="2" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="138" />
+     <Unk0 value="2" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="139" />
+     <Unk0 value="2" />
+    </Item>
+    <Item>
+     <BoneId value="0" />
+     <Track value="140" />
+     <Unk0 value="2" />
+    </Item>
+   </BoneIds>
+   <Sequences>
+    <Item>
+     <Hash>hash_D0D82817</Hash>
+     <FrameCount value="77" />
+     <SequenceData>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00031745908" />
+         <Offset value="0" />
+         <Values>
+          0 0 0.00063491816 0.0012698363 0.0022222137 0.0031745909 0.0044444273 0.0057142633 0.0069840997 0.008571396
+          0.009841232 0.011428527 0.0130158225 0.0142856585 0.015555495 0.016825331 0.01777771 0.018730085 0.019365003 0.019999921
+          0.019999921 0.019999921 0.019999921 0.019682463 0.019682463 0.019365003 0.019047545 0.018730085 0.018412627 0.01777771
+          0.01746025 0.017142791 0.016507871 0.015872953 0.015555495 0.0149205765 0.0142856585 0.0136507405 0.0130158225 0.0123809045
+          0.011745986 0.011111068 0.01047615 0.009523773 0.008888855 0.008253936 0.0076190177 0.0069840997 0.0063491818 0.0057142633
+          0.0050793453 0.0044444273 0.004126968 0.0034920499 0.0028571317 0.0025396727 0.0022222137 0.0015872954 0.0012698363 0.0009523772
+          0.00063491816 0.00031745908 0.00031745908 0 0 0 0 0 0 0
+          0 0 0 0 0 0 0
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00031746" />
+         <Offset value="0" />
+         <Values>
+          0 0 0.00063492 0.00126984 0.0022222202 0.0031746002 0.0044444404 0.00571428 0.0069841202 0.008571421
+          0.0098412605 0.01142856 0.013015861 0.0142857 0.015555541 0.01682538 0.017777761 0.018730141 0.019365061 0.01999998
+          0.01999998 0.01999998 0.01999998 0.019682521 0.019682521 0.019365061 0.019047601 0.018730141 0.018412681 0.017777761
+          0.017460302 0.017142842 0.01650792 0.015873 0.015555541 0.01492062 0.0142857 0.013650781 0.013015861 0.012380941
+          0.01174602 0.0111111 0.01047618 0.009523801 0.008888881 0.00825396 0.00761904 0.0069841202 0.0063492004 0.00571428
+          0.00507936 0.0044444404 0.00412698 0.0034920601 0.00285714 0.00253968 0.0022222202 0.0015873001 0.00126984 0.00095238
+          0.00063492 0.00031746 0.00031746 0 0 0 0 0 0 0
+          0 0 0 0 0 0 0
+         </Values>
+        </Item>
+        <Item>
+         <Type value="QuantizeFloat" />
+         <Quantum value="0.00031746" />
+         <Offset value="0" />
+         <Values>
+          0 0 0.00063492 0.00126984 0.0022222202 0.0031746002 0.0044444404 0.00571428 0.0069841202 0.008571421
+          0.0098412605 0.01142856 0.013015861 0.0142857 0.015555541 0.01682538 0.017777761 0.018730141 0.019365061 0.01999998
+          0.01999998 0.01999998 0.01999998 0.019682521 0.019682521 0.019365061 0.019047601 0.018730141 0.018412681 0.017777761
+          0.017460302 0.017142842 0.01650792 0.015873 0.015555541 0.01492062 0.0142857 0.013650781 0.013015861 0.012380941
+          0.01174602 0.0111111 0.01047618 0.009523801 0.008888881 0.00825396 0.00761904 0.0069841202 0.0063492004 0.00571428
+          0.00507936 0.0044444404 0.00412698 0.0034920601 0.00285714 0.00253968 0.0022222202 0.0015873001 0.00126984 0.00095238
+          0.00063492 0.00031746 0.00031746 0 0 0 0 0 0 0
+          0 0 0 0 0 0 0
+         </Values>
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+      <Item>
+       <Channels>
+        <Item>
+         <Type value="StaticFloat" />
+         <Value value="0" />
+        </Item>
+       </Channels>
+      </Item>
+     </SequenceData>
+    </Item>
+   </Sequences>
+  </Item>
+ </Animations>
+</ClipDictionary>

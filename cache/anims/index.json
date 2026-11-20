@@ -1,0 +1,4300 @@
+[
+ {
+  "dict": "amb@world_human_hang_out_street@male_a@base",
+  "name": "base.clip",
+  "duration": 3.766666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_hang_out_street@male_a@base.glb"
+ },
+ {
+  "dict": "amb@world_human_hang_out_street@male_a@enter",
+  "name": "enter.clip",
+  "duration": 2.7333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_hang_out_street@male_a@enter.glb"
+ },
+ {
+  "dict": "amb@world_human_hang_out_street@male_a@exit",
+  "name": "exit.clip",
+  "duration": 2.8333332538604736,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_hang_out_street@male_a@exit.glb"
+ },
+ {
+  "dict": "amb@world_human_hang_out_street@male_a@idle_a",
+  "name": "idle_e.clip",
+  "duration": 3.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_hang_out_street@male_a@idle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_hang_out_street@male_a@idle_a",
+  "name": "idle_d.clip",
+  "duration": 3.6666665077209473,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_hang_out_street@male_a@idle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_hang_out_street@male_a@idle_a",
+  "name": "idle_c.clip",
+  "duration": 5.166667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_hang_out_street@male_a@idle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_hang_out_street@male_a@idle_a",
+  "name": "idle_b.clip",
+  "duration": 3.6666665077209473,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_hang_out_street@male_a@idle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_hang_out_street@male_a@idle_a",
+  "name": "idle_a.clip",
+  "duration": 5.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_hang_out_street@male_a@idle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@base",
+  "name": "base.clip",
+  "duration": 2.133333444595337,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@base.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@fitbase",
+  "name": "base.clip",
+  "duration": 2.133333444595337,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@fitbase.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@fitidle_a",
+  "name": "idle_c.clip",
+  "duration": 2.7333335876464844,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@fitidle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@fitidle_a",
+  "name": "idle_b.clip",
+  "duration": 6.300000190734863,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@fitidle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@fitidle_a",
+  "name": "idle_a.clip",
+  "duration": 6.200000286102295,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@fitidle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@idle_a",
+  "name": "idle_c.clip",
+  "duration": 2.7333335876464844,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@idle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@idle_a",
+  "name": "idle_b.clip",
+  "duration": 6.300000190734863,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@idle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@idle_a",
+  "name": "idle_a.clip",
+  "duration": 6.200000286102295,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@idle_a.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@idle_b",
+  "name": "idle_f.clip",
+  "duration": 10.600000381469727,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@idle_b.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@idle_b",
+  "name": "idle_e.clip",
+  "duration": 10.600000381469727,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@idle_b.glb"
+ },
+ {
+  "dict": "amb@world_human_jog_standing@male@idle_b",
+  "name": "idle_d.clip",
+  "duration": 7.4666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/amb@world_human_jog_standing@male@idle_b.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@air_drums",
+  "name": "air_drums_facial.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@air_drums.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@air_drums",
+  "name": "air_drums.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@air_drums.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@air_guitar",
+  "name": "air_guitar_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@air_guitar.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@air_guitar",
+  "name": "air_guitar.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@air_guitar.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@air_shagging",
+  "name": "air_shagging_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@air_shagging.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@air_shagging",
+  "name": "air_shagging.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@air_shagging.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@air_synth",
+  "name": "air_synth_facial.clip",
+  "duration": 10.833333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@air_synth.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@air_synth",
+  "name": "air_synth.clip",
+  "duration": 8.600000381469727,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@air_synth.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@bang_bang",
+  "name": "bang_bang_facial.clip",
+  "duration": 4.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@bang_bang.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@bang_bang",
+  "name": "bang_bang.clip",
+  "duration": 4.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@bang_bang.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@banging_tunes",
+  "name": "banging_tunes_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@banging_tunes.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@banging_tunes",
+  "name": "banging_tunes.clip",
+  "duration": 7.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@banging_tunes.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@banging_tunes_left",
+  "name": "banging_tunes_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@banging_tunes_left.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@banging_tunes_left",
+  "name": "banging_tunes.clip",
+  "duration": 7.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@banging_tunes_left.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@banging_tunes_right",
+  "name": "banging_tunes_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@banging_tunes_right.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@banging_tunes_right",
+  "name": "banging_tunes.clip",
+  "duration": 7.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@banging_tunes_right.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@baton_twirl",
+  "name": "baton_twirl_facial.clip",
+  "duration": 7.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@baton_twirl.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@baton_twirl",
+  "name": "baton_twirl.clip",
+  "duration": 7.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@baton_twirl.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@baton_twirl_v2",
+  "name": "baton_twirl_facial.clip",
+  "duration": 7.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@baton_twirl_v2.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@baton_twirl_v2",
+  "name": "baton_twirl.clip",
+  "duration": 7.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@baton_twirl_v2.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@blow_kiss",
+  "name": "blow_kiss_facial.clip",
+  "duration": 5.900000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@blow_kiss.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@blow_kiss",
+  "name": "blow_kiss.clip",
+  "duration": 5.900000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@blow_kiss.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@bro_love",
+  "name": "bro_love_facial.clip",
+  "duration": 7.766666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@bro_love.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@bro_love",
+  "name": "bro_love.clip",
+  "duration": 7.766666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@bro_love.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@call_me",
+  "name": "call_me_facial.clip",
+  "duration": 3.2666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@call_me.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@call_me",
+  "name": "call_me.clip",
+  "duration": 3.2666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@call_me.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@cats_cradle",
+  "name": "cats_cradle_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@cats_cradle.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@cats_cradle",
+  "name": "cats_cradle.clip",
+  "duration": 6.566667079925537,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@cats_cradle.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@chicken_taunt",
+  "name": "chicken_taunt_facial.clip",
+  "duration": 7.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@chicken_taunt.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@chicken_taunt",
+  "name": "chicken_taunt.clip",
+  "duration": 7.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@chicken_taunt.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@chin_brush",
+  "name": "chin_brush_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@chin_brush.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@chin_brush",
+  "name": "chin_brush.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@chin_brush.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@coin_roll_and_toss",
+  "name": "coin_roll_and_toss_facial.clip",
+  "duration": 6.0333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@coin_roll_and_toss.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@coin_roll_and_toss",
+  "name": "coin_roll_and_toss.clip",
+  "duration": 6.0333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@coin_roll_and_toss.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@crowd_invitation",
+  "name": "crowd_invitation_facial.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@crowd_invitation.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@crowd_invitation",
+  "name": "crowd_invitation.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@crowd_invitation.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@cry_baby",
+  "name": "cry_baby_facial.clip",
+  "duration": 6.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@cry_baby.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@cry_baby",
+  "name": "cry_baby.clip",
+  "duration": 6.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@cry_baby.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@cut_throat",
+  "name": "cut_throat_facial.clip",
+  "duration": 5.333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@cut_throat.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@cut_throat",
+  "name": "cut_throat.clip",
+  "duration": 5.333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@cut_throat.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@dirty_harry_bang",
+  "name": "dirty_harry_bang_facial.clip",
+  "duration": 4.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@dirty_harry_bang.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@dirty_harry_bang",
+  "name": "dirty_harry_bang.clip",
+  "duration": 4.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@dirty_harry_bang.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@dj",
+  "name": "dj_facial.clip",
+  "duration": 10.666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@dj.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@dj",
+  "name": "dj.clip",
+  "duration": 10.666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@dj.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@dock",
+  "name": "dock_facial.clip",
+  "duration": 7.199999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@dock.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@dock",
+  "name": "dock.clip",
+  "duration": 7.199999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@dock.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@driver",
+  "name": "driver_facial.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@driver.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@driver",
+  "name": "driver.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@driver.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@face_palm",
+  "name": "face_palm_facial.clip",
+  "duration": 7.1666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@face_palm.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@face_palm",
+  "name": "face_palm.clip",
+  "duration": 7.1666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@face_palm.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@find_the_fish",
+  "name": "find_the_fish_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@find_the_fish.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@find_the_fish",
+  "name": "find_the_fish.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@find_the_fish.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@finger",
+  "name": "finger_facial.clip",
+  "duration": 4.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@finger.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@finger",
+  "name": "finger.clip",
+  "duration": 4.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@finger.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@finger_kiss",
+  "name": "finger_kiss_facial.clip",
+  "duration": 7.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@finger_kiss.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@finger_kiss",
+  "name": "finger_kiss.clip",
+  "duration": 4.133333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@finger_kiss.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@flash_cop_badge",
+  "name": "flash_cop_badge_facial.clip",
+  "duration": 5.199999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@flash_cop_badge.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@flash_cop_badge",
+  "name": "flash_cop_badge.clip",
+  "duration": 5.199999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@flash_cop_badge.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@freakout",
+  "name": "freakout_facial.clip",
+  "duration": 7.599999904632568,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@freakout.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@freakout",
+  "name": "freakout.clip",
+  "duration": 7.566666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@freakout.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@heart_pumping",
+  "name": "heart_pumping_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@heart_pumping.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@heart_pumping",
+  "name": "heart_pumping.clip",
+  "duration": 7.1666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@heart_pumping.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@jazz_hands",
+  "name": "jazz_hands_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@jazz_hands.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@jazz_hands",
+  "name": "jazz_hands.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@jazz_hands.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@karate_chops",
+  "name": "karate_chops_facial.clip",
+  "duration": 4.166666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@karate_chops.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@karate_chops",
+  "name": "karate_chops.clip",
+  "duration": 4.166666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@karate_chops.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@knuckle_crunch",
+  "name": "knuckle_crunch_facial.clip",
+  "duration": 7.566666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@knuckle_crunch.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@knuckle_crunch",
+  "name": "knuckle_crunch.clip",
+  "duration": 7.566666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@knuckle_crunch.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@mind_blown",
+  "name": "mind_blown_facial.clip",
+  "duration": 5.599999904632568,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@mind_blown.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@mind_blown",
+  "name": "mind_blown.clip",
+  "duration": 5.599999904632568,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@mind_blown.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@no_way",
+  "name": "no_way_facial.clip",
+  "duration": 7.266666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@no_way.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@no_way",
+  "name": "no_way.clip",
+  "duration": 7.266666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@no_way.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@nose_pick",
+  "name": "nose_pick_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@nose_pick.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@nose_pick",
+  "name": "nose_pick.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@nose_pick.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@oh_snap",
+  "name": "oh_snap_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@oh_snap.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@oh_snap",
+  "name": "oh_snap.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@oh_snap.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@peace",
+  "name": "peace_facial.clip",
+  "duration": 7.766666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@peace.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@peace",
+  "name": "peace.clip",
+  "duration": 7.766666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@peace.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@photography",
+  "name": "photography_facial.clip",
+  "duration": 8.166666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@photography.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@photography",
+  "name": "photography.clip",
+  "duration": 8.166666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@photography.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@raining_cash",
+  "name": "raining_cash_facial.clip",
+  "duration": 4.433333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@raining_cash.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@raining_cash",
+  "name": "raining_cash.clip",
+  "duration": 4.433333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@raining_cash.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@raise_the_roof",
+  "name": "raise_the_roof_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@raise_the_roof.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@raise_the_roof",
+  "name": "raise_the_roof.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@raise_the_roof.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@respect",
+  "name": "respect_facial.clip",
+  "duration": 3.5999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@respect.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@respect",
+  "name": "respect.clip",
+  "duration": 3.5999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@respect.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@rock",
+  "name": "rock_facial.clip",
+  "duration": 3.1666667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@rock.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@rock",
+  "name": "rock.clip",
+  "duration": 3.1666667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@rock.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@runner",
+  "name": "runner_facial.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@runner.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@runner",
+  "name": "runner.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@runner.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@salsa_roll",
+  "name": "salsa_roll_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@salsa_roll.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@salsa_roll",
+  "name": "salsa_roll.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@salsa_roll.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@salute",
+  "name": "salute_facial.clip",
+  "duration": 3.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@salute.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@salute",
+  "name": "salute.clip",
+  "duration": 3.066666841506958,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@salute.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@shadow_boxing",
+  "name": "shadow_boxing_facial.clip",
+  "duration": 4.233333110809326,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@shadow_boxing.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@shadow_boxing",
+  "name": "shadow_boxing.clip",
+  "duration": 4.233333110809326,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@shadow_boxing.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@shooting",
+  "name": "shooting_facial.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@shooting.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@shooting",
+  "name": "shooting.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@shooting.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@shush",
+  "name": "shush_facial.clip",
+  "duration": 7.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@shush.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@shush",
+  "name": "shush.clip",
+  "duration": 7.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@shush.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@slow_clap",
+  "name": "slow_clap_facial.clip",
+  "duration": 7.90000057220459,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@slow_clap.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@slow_clap",
+  "name": "slow_clap.clip",
+  "duration": 7.90000057220459,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@slow_clap.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@smoke_flick",
+  "name": "smoke_flick_facial.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@smoke_flick.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@smoke_flick",
+  "name": "smoke_flick.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@smoke_flick.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@spray_champagne",
+  "name": "spray_champagne_facial.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@spray_champagne.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@spray_champagne",
+  "name": "spray_champagne.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@spray_champagne.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@stinker",
+  "name": "stinker_facial.clip",
+  "duration": 5.633333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@stinker.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@stinker",
+  "name": "stinker.clip",
+  "duration": 5.633333683013916,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@stinker.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@suck_it",
+  "name": "suck_it_facial.clip",
+  "duration": 5.366666793823242,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@suck_it.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@suck_it",
+  "name": "suck_it.clip",
+  "duration": 5.366666793823242,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@suck_it.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@surrender",
+  "name": "surrender_facial.clip",
+  "duration": 7.833333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@surrender.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@surrender",
+  "name": "surrender.clip",
+  "duration": 7.833333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@surrender.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@take_selfie",
+  "name": "take_selfie_facial.clip",
+  "duration": 4.866666793823242,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@take_selfie.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@take_selfie",
+  "name": "take_selfie.clip",
+  "duration": 4.866666793823242,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@take_selfie.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@the_woogie",
+  "name": "the_woogie_facial.clip",
+  "duration": 4.266666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@the_woogie.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@the_woogie",
+  "name": "the_woogie.clip",
+  "duration": 4.266666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@the_woogie.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@thumb_on_ears",
+  "name": "thumb_on_ears_facial.clip",
+  "duration": 7.566666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@thumb_on_ears.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@thumb_on_ears",
+  "name": "thumb_on_ears.clip",
+  "duration": 7.566666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@thumb_on_ears.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@thumbs_up",
+  "name": "thumbs_up_facial.clip",
+  "duration": 7.0333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@thumbs_up.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@thumbs_up",
+  "name": "thumbs_up.clip",
+  "duration": 7.0333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@thumbs_up.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@uncle_disco",
+  "name": "uncle_disco_facial.clip",
+  "duration": 7.400000095367432,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@uncle_disco.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@uncle_disco",
+  "name": "uncle_disco.clip",
+  "duration": 6.333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@uncle_disco.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@v_sign",
+  "name": "v_sign_facial.clip",
+  "duration": 7.9666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@v_sign.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@v_sign",
+  "name": "v_sign.clip",
+  "duration": 7.9666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@v_sign.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@wank",
+  "name": "wank_facial.clip",
+  "duration": 2.6666667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@wank.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@wank",
+  "name": "wank.clip",
+  "duration": 2.6666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@wank.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@wasnt_me",
+  "name": "wasnt_me_facial.clip",
+  "duration": 4.699999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@wasnt_me.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@wasnt_me",
+  "name": "wasnt_me.clip",
+  "duration": 4.700000286102295,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@wasnt_me.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@wave",
+  "name": "wave_facial.clip",
+  "duration": 8.266666412353516,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@wave.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@wave",
+  "name": "wave.clip",
+  "duration": 8.266666412353516,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@wave.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@you_loco",
+  "name": "you_loco_facial.clip",
+  "duration": 7.366666793823242,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@you_loco.glb"
+ },
+ {
+  "dict": "anim@mp_player_intcelebrationmale@you_loco",
+  "name": "you_loco.clip",
+  "duration": 7.366666793823242,
+  "fps": 30.0,
+  "url": "/files/cache/anims/anim@mp_player_intcelebrationmale@you_loco.glb"
+ },
+ {
+  "dict": "move_m@_idles@out_of_breath",
+  "name": "idle_c.clip",
+  "duration": 8.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@out_of_breath.glb"
+ },
+ {
+  "dict": "move_m@_idles@out_of_breath",
+  "name": "idle_b.clip",
+  "duration": 6.90000057220459,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@out_of_breath.glb"
+ },
+ {
+  "dict": "move_m@_idles@out_of_breath",
+  "name": "idle_a.clip",
+  "duration": 7.3666672706604,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@out_of_breath.glb"
+ },
+ {
+  "dict": "move_m@_idles@shake_off",
+  "name": "shakeoff_7.clip",
+  "duration": 3.1666665077209473,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@shake_off.glb"
+ },
+ {
+  "dict": "move_m@_idles@shake_off",
+  "name": "shakeoff_6.clip",
+  "duration": 3.766667127609253,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@shake_off.glb"
+ },
+ {
+  "dict": "move_m@_idles@shake_off",
+  "name": "shakeoff_5.clip",
+  "duration": 3.8999996185302734,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@shake_off.glb"
+ },
+ {
+  "dict": "move_m@_idles@shake_off",
+  "name": "shakeoff_4.clip",
+  "duration": 2.9666671752929688,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@shake_off.glb"
+ },
+ {
+  "dict": "move_m@_idles@shake_off",
+  "name": "shakeoff_3.clip",
+  "duration": 2.9333338737487793,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@shake_off.glb"
+ },
+ {
+  "dict": "move_m@_idles@shake_off",
+  "name": "shakeoff_2.clip",
+  "duration": 3.8999996185302734,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@shake_off.glb"
+ },
+ {
+  "dict": "move_m@_idles@shake_off",
+  "name": "shakeoff_1.clip",
+  "duration": 4.5333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@shake_off.glb"
+ },
+ {
+  "dict": "move_m@_idles@wet",
+  "name": "fidget_wet.clip",
+  "duration": 5.4666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@_idles@wet.glb"
+ },
+ {
+  "dict": "move_m@alien",
+  "name": "sprint.clip",
+  "duration": 1.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@alien.glb"
+ },
+ {
+  "dict": "move_m@alien",
+  "name": "run.clip",
+  "duration": 1.3333334922790527,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@alien.glb"
+ },
+ {
+  "dict": "move_m@alien",
+  "name": "alien_sprint.clip",
+  "duration": 1.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@alien.glb"
+ },
+ {
+  "dict": "move_m@alien",
+  "name": "alien_run.clip",
+  "duration": 1.3333333730697632,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@alien.glb"
+ },
+ {
+  "dict": "move_m@bail_bond",
+  "name": "walk.clip",
+  "duration": 5.433333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@bail_bond.glb"
+ },
+ {
+  "dict": "move_m@brave",
+  "name": "walk.clip",
+  "duration": 6.333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave.glb"
+ },
+ {
+  "dict": "move_m@brave",
+  "name": "run.clip",
+  "duration": 4.066667079925537,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave.glb"
+ },
+ {
+  "dict": "move_m@brave",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave.glb"
+ },
+ {
+  "dict": "move_m@brave",
+  "name": "idle.clip",
+  "duration": 7.3666672706604,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave.glb"
+ },
+ {
+  "dict": "move_m@brave@a",
+  "name": "walk.clip",
+  "duration": 6.333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@a.glb"
+ },
+ {
+  "dict": "move_m@brave@a",
+  "name": "run.clip",
+  "duration": 4.033333778381348,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@a.glb"
+ },
+ {
+  "dict": "move_m@brave@a",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@a.glb"
+ },
+ {
+  "dict": "move_m@brave@a",
+  "name": "idle.clip",
+  "duration": 7.3666672706604,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@a.glb"
+ },
+ {
+  "dict": "move_m@brave@b",
+  "name": "walk.clip",
+  "duration": 8.133333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@b.glb"
+ },
+ {
+  "dict": "move_m@brave@fallback",
+  "name": "idle_turn_r_90.clip",
+  "duration": 1.2666667699813843,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@fallback.glb"
+ },
+ {
+  "dict": "move_m@brave@fallback",
+  "name": "idle_turn_r_180.clip",
+  "duration": 1.2666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@fallback.glb"
+ },
+ {
+  "dict": "move_m@brave@fallback",
+  "name": "idle_turn_r_0.clip",
+  "duration": 1.2666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@fallback.glb"
+ },
+ {
+  "dict": "move_m@brave@fallback",
+  "name": "idle_turn_l_0.clip",
+  "duration": 1.166666865348816,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@fallback.glb"
+ },
+ {
+  "dict": "move_m@brave@fallback",
+  "name": "idle_turn_l_-90.clip",
+  "duration": 1.1666665077209473,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@fallback.glb"
+ },
+ {
+  "dict": "move_m@brave@fallback",
+  "name": "idle_turn_l_-180.clip",
+  "duration": 1.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@fallback.glb"
+ },
+ {
+  "dict": "move_m@brave@idle_a",
+  "name": "idle_c.clip",
+  "duration": 5.199999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@idle_a.glb"
+ },
+ {
+  "dict": "move_m@brave@idle_a",
+  "name": "idle_b.clip",
+  "duration": 4.233333587646484,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@idle_a.glb"
+ },
+ {
+  "dict": "move_m@brave@idle_a",
+  "name": "idle_a.clip",
+  "duration": 8.833333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@idle_a.glb"
+ },
+ {
+  "dict": "move_m@brave@idle_b",
+  "name": "idle_f.clip",
+  "duration": 9.466666221618652,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@idle_b.glb"
+ },
+ {
+  "dict": "move_m@brave@idle_b",
+  "name": "idle_e.clip",
+  "duration": 12.7333345413208,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@idle_b.glb"
+ },
+ {
+  "dict": "move_m@brave@idle_b",
+  "name": "idle_d.clip",
+  "duration": 4.100000381469727,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@brave@idle_b.glb"
+ },
+ {
+  "dict": "move_m@breathe",
+  "name": "breathe_additive.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@breathe.glb"
+ },
+ {
+  "dict": "move_m@business@a",
+  "name": "walk.clip",
+  "duration": 2.2666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@business@a.glb"
+ },
+ {
+  "dict": "move_m@business@b",
+  "name": "walk.clip",
+  "duration": 2.4000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@business@b.glb"
+ },
+ {
+  "dict": "move_m@business@c",
+  "name": "walk.clip",
+  "duration": 1.8666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@business@c.glb"
+ },
+ {
+  "dict": "move_m@buzzed",
+  "name": "walk.clip",
+  "duration": 3.799999952316284,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@buzzed.glb"
+ },
+ {
+  "dict": "move_m@casual@a",
+  "name": "walk.clip",
+  "duration": 3.6666667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@a.glb"
+ },
+ {
+  "dict": "move_m@casual@a",
+  "name": "run.clip",
+  "duration": 1.2000000476837158,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@a.glb"
+ },
+ {
+  "dict": "move_m@casual@a",
+  "name": "idle.clip",
+  "duration": 3.066666841506958,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@a.glb"
+ },
+ {
+  "dict": "move_m@casual@b",
+  "name": "walk.clip",
+  "duration": 3.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@b.glb"
+ },
+ {
+  "dict": "move_m@casual@b",
+  "name": "run.clip",
+  "duration": 1.3666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@b.glb"
+ },
+ {
+  "dict": "move_m@casual@b",
+  "name": "idle_intro.clip",
+  "duration": 1.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@b.glb"
+ },
+ {
+  "dict": "move_m@casual@b",
+  "name": "idle.clip",
+  "duration": 2.2333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@b.glb"
+ },
+ {
+  "dict": "move_m@casual@c",
+  "name": "walk.clip",
+  "duration": 1.7999999523162842,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@c.glb"
+ },
+ {
+  "dict": "move_m@casual@c",
+  "name": "run.clip",
+  "duration": 1.1999999284744263,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@c.glb"
+ },
+ {
+  "dict": "move_m@casual@d",
+  "name": "walk.clip",
+  "duration": 2.700000047683716,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@d.glb"
+ },
+ {
+  "dict": "move_m@casual@d",
+  "name": "run.clip",
+  "duration": 1.3666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@d.glb"
+ },
+ {
+  "dict": "move_m@casual@e",
+  "name": "walk.clip",
+  "duration": 2.4666669368743896,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@e.glb"
+ },
+ {
+  "dict": "move_m@casual@e",
+  "name": "run.clip",
+  "duration": 0.5999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@e.glb"
+ },
+ {
+  "dict": "move_m@casual@f",
+  "name": "walk.clip",
+  "duration": 1.899999976158142,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@f.glb"
+ },
+ {
+  "dict": "move_m@casual@f",
+  "name": "run.clip",
+  "duration": 1.3666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@casual@f.glb"
+ },
+ {
+  "dict": "move_m@caution",
+  "name": "walk.clip",
+  "duration": 8.233333587646484,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@caution.glb"
+ },
+ {
+  "dict": "move_m@chubby@a",
+  "name": "walk.clip",
+  "duration": 2.1999998092651367,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@chubby@a.glb"
+ },
+ {
+  "dict": "move_m@chubby@a",
+  "name": "run.clip",
+  "duration": 0.6333332061767578,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@chubby@a.glb"
+ },
+ {
+  "dict": "move_m@chubby@a",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@chubby@a.glb"
+ },
+ {
+  "dict": "move_m@chubby@a",
+  "name": "idle.clip",
+  "duration": 5.599999904632568,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@chubby@a.glb"
+ },
+ {
+  "dict": "move_m@clipboard",
+  "name": "walk.clip",
+  "duration": 2.133333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@clipboard.glb"
+ },
+ {
+  "dict": "move_m@clipboard",
+  "name": "run.clip",
+  "duration": 1.3333334922790527,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@clipboard.glb"
+ },
+ {
+  "dict": "move_m@clipboard",
+  "name": "idle.clip",
+  "duration": 4.133333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@clipboard.glb"
+ },
+ {
+  "dict": "move_m@confident",
+  "name": "walk.clip",
+  "duration": 5.133333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@confident.glb"
+ },
+ {
+  "dict": "move_m@copchase1",
+  "name": "run.clip",
+  "duration": 2.5999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@copchase1.glb"
+ },
+ {
+  "dict": "move_m@copchase2",
+  "name": "run.clip",
+  "duration": 2.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@copchase2.glb"
+ },
+ {
+  "dict": "move_m@coward",
+  "name": "idle_turn_r_90.clip",
+  "duration": 3.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@coward.glb"
+ },
+ {
+  "dict": "move_m@coward",
+  "name": "idle_turn_r_180.clip",
+  "duration": 3.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@coward.glb"
+ },
+ {
+  "dict": "move_m@coward",
+  "name": "idle_turn_r_0.clip",
+  "duration": 3.3333332538604736,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@coward.glb"
+ },
+ {
+  "dict": "move_m@coward",
+  "name": "idle_turn_l_0.clip",
+  "duration": 3.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@coward.glb"
+ },
+ {
+  "dict": "move_m@coward",
+  "name": "idle_turn_l_-90.clip",
+  "duration": 3.0000009536743164,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@coward.glb"
+ },
+ {
+  "dict": "move_m@coward",
+  "name": "idle_turn_l_-180.clip",
+  "duration": 3.3333330154418945,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@coward.glb"
+ },
+ {
+  "dict": "move_m@coward",
+  "name": "idle.clip",
+  "duration": 2.8333332538604736,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@coward.glb"
+ },
+ {
+  "dict": "move_m@crazy",
+  "name": "walk.clip",
+  "duration": 3.066666841506958,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@crazy.glb"
+ },
+ {
+  "dict": "move_m@depressed@a",
+  "name": "walk.clip",
+  "duration": 4.466667175292969,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@depressed@a.glb"
+ },
+ {
+  "dict": "move_m@depressed@a",
+  "name": "idle.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@depressed@a.glb"
+ },
+ {
+  "dict": "move_m@depressed@b",
+  "name": "walk.clip",
+  "duration": 9.966666221618652,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@depressed@b.glb"
+ },
+ {
+  "dict": "move_m@depressed@c",
+  "name": "walk.clip",
+  "duration": 5.800000190734863,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@depressed@c.glb"
+ },
+ {
+  "dict": "move_m@depressed@d",
+  "name": "walk.clip",
+  "duration": 9.366666793823242,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@depressed@d.glb"
+ },
+ {
+  "dict": "move_m@drunk@a",
+  "name": "walk.clip",
+  "duration": 10.766666412353516,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@a.glb"
+ },
+ {
+  "dict": "move_m@drunk@a",
+  "name": "run.clip",
+  "duration": 0.8333334922790527,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@a.glb"
+ },
+ {
+  "dict": "move_m@drunk@a",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@a.glb"
+ },
+ {
+  "dict": "move_m@drunk@a",
+  "name": "idle.clip",
+  "duration": 3.799999952316284,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@a.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_r_90.clip",
+  "duration": 4.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_r_180.clip",
+  "duration": 3.666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_r_0.clip",
+  "duration": 4.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_r_-90.clip",
+  "duration": 4.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_r_-180.clip",
+  "duration": 4.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_l_90.clip",
+  "duration": 3.7666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_l_180.clip",
+  "duration": 4.499999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_l_0.clip",
+  "duration": 4.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_l_-90.clip",
+  "duration": 4.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstop_l_-180.clip",
+  "duration": 4.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstart_r_90.clip",
+  "duration": 2.3333327770233154,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstart_r_180.clip",
+  "duration": 2.5333328247070312,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstart_r_0.clip",
+  "duration": 2.7333335876464844,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstart_l_0.clip",
+  "duration": 2.3666648864746094,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstart_l_-90.clip",
+  "duration": 2.133333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "wstart_l_-180.clip",
+  "duration": 2.666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "walktorun_right.clip",
+  "duration": 1.933333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "walktorun_left.clip",
+  "duration": 1.8000001907348633,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "walk_turn_r4.clip",
+  "duration": 1.6666679382324219,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "walk_turn_r3.clip",
+  "duration": 1.5333328247070312,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "walk_turn_l4.clip",
+  "duration": 1.6666679382324219,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "walk_turn_l3.clip",
+  "duration": 1.5333328247070312,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "walk_turn_180_r.clip",
+  "duration": 3.533334732055664,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "walk_turn_180_l.clip",
+  "duration": 3.4333336353302,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "walk.clip",
+  "duration": 8.800000190734863,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "sprint.clip",
+  "duration": 1.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "runtowalk_right.clip",
+  "duration": 2.7666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "runtowalk_left.clip",
+  "duration": 2.6666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "run_turn_r3.clip",
+  "duration": 1.6666672229766846,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "run_turn_r2.clip",
+  "duration": 1.833333969116211,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "run_turn_l3.clip",
+  "duration": 1.6666672229766846,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "run_turn_l2.clip",
+  "duration": 1.833333969116211,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "run_turn_180_r.clip",
+  "duration": 3.333332061767578,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "run_turn_180_l.clip",
+  "duration": 3.3333325386047363,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "run.clip",
+  "duration": 5.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "rstop_r.clip",
+  "duration": 4.300000190734863,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "rstop_l.clip",
+  "duration": 4.833332061767578,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "rstart_r_0.clip",
+  "duration": 2.0999984741210938,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "rstart_l_0.clip",
+  "duration": 2.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_r_90.clip",
+  "duration": 4.066667556762695,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_r_180.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_r_0.clip",
+  "duration": 3.4000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_r_-90.clip",
+  "duration": 4.30000114440918,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_r_-180.clip",
+  "duration": 4.8333330154418945,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_l_90.clip",
+  "duration": 5.133334159851074,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_l_180.clip",
+  "duration": 7.300000190734863,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_l_0.clip",
+  "duration": 3.4666664600372314,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_l_-90.clip",
+  "duration": 5.733333110809326,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_turn_l_-180.clip",
+  "duration": 6.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle_intro.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk",
+  "name": "idle.clip",
+  "duration": 8.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_head_up",
+  "name": "idle_turn_r_90.clip",
+  "duration": 4.0666656494140625,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_head_up.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_head_up",
+  "name": "idle_turn_r_180.clip",
+  "duration": 5.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_head_up.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_head_up",
+  "name": "idle_turn_r_0.clip",
+  "duration": 3.3999996185302734,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_head_up.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_head_up",
+  "name": "idle_turn_l_0.clip",
+  "duration": 3.4666671752929688,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_head_up.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_head_up",
+  "name": "idle_turn_l_-90.clip",
+  "duration": 5.733333587646484,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_head_up.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_head_up",
+  "name": "idle_turn_l_-180.clip",
+  "duration": 6.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_head_up.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_head_up",
+  "name": "idle_intro.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_head_up.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_head_up",
+  "name": "idle.clip",
+  "duration": 8.966666221618652,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_head_up.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_idles@",
+  "name": "flinch_f.clip",
+  "duration": 11.40000057220459,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_idles@",
+  "name": "flinch_e.clip",
+  "duration": 8.099998474121094,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_idles@",
+  "name": "flinch_d.clip",
+  "duration": 19.53333282470703,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_idles@",
+  "name": "flinch_c.clip",
+  "duration": 12.466666221618652,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_idles@",
+  "name": "flinch_b.clip",
+  "duration": 15.899999618530273,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@moderatedrunk_idles@",
+  "name": "flinch_a.clip",
+  "duration": 19.53333282470703,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@moderatedrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@slightlydrunk",
+  "name": "walk.clip",
+  "duration": 5.433332443237305,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@slightlydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@slightlydrunk",
+  "name": "sprint.clip",
+  "duration": 1.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@slightlydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@slightlydrunk",
+  "name": "run.clip",
+  "duration": 1.433333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@slightlydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@slightlydrunk",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@slightlydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@slightlydrunk",
+  "name": "idle.clip",
+  "duration": 8.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@slightlydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@slightlydrunk_idles@",
+  "name": "fidgit_04.clip",
+  "duration": 19.53333282470703,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@slightlydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@slightlydrunk_idles@",
+  "name": "fidgit_03.clip",
+  "duration": 15.666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@slightlydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@slightlydrunk_idles@",
+  "name": "fidgit_02.clip",
+  "duration": 20.733333587646484,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@slightlydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@slightlydrunk_idles@",
+  "name": "fidgit_01.clip",
+  "duration": 8.19999885559082,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@slightlydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@transitions",
+  "name": "very_to_moderate.clip",
+  "duration": 8.966666221618652,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@transitions.glb"
+ },
+ {
+  "dict": "move_m@drunk@transitions",
+  "name": "slightly_to_idle.clip",
+  "duration": 8.200000762939453,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@transitions.glb"
+ },
+ {
+  "dict": "move_m@drunk@transitions",
+  "name": "moderate_to_slightly.clip",
+  "duration": 7.200000762939453,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@transitions.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk",
+  "name": "wstop_r_0.clip",
+  "duration": 4.000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk",
+  "name": "wstop_l_0.clip",
+  "duration": 4.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk",
+  "name": "wstart_r_0.clip",
+  "duration": 2.7333335876464844,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk",
+  "name": "wstart_l_0.clip",
+  "duration": 2.366666793823242,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk",
+  "name": "walk.clip",
+  "duration": 7.599999904632568,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk",
+  "name": "idle.clip",
+  "duration": 3.3333325386047363,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_10.clip",
+  "duration": 14.033333778381348,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_09.clip",
+  "duration": 5.866668701171875,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_08.clip",
+  "duration": 21.733333587646484,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_07.clip",
+  "duration": 14.433334350585938,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_06.clip",
+  "duration": 8.066665649414062,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_05.clip",
+  "duration": 39.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_04.clip",
+  "duration": 16.53333282470703,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_03.clip",
+  "duration": 12.700002670288086,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_02.clip",
+  "duration": 12.933334350585938,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@drunk@verydrunk_idles@",
+  "name": "fidget_01.clip",
+  "duration": 8.099998474121094,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@drunk@verydrunk_idles@.glb"
+ },
+ {
+  "dict": "move_m@fat@a",
+  "name": "walk.clip",
+  "duration": 2.4666669368743896,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@fat@a.glb"
+ },
+ {
+  "dict": "move_m@fat@a",
+  "name": "run.clip",
+  "duration": 0.6333340406417847,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@fat@a.glb"
+ },
+ {
+  "dict": "move_m@fat@a",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@fat@a.glb"
+ },
+ {
+  "dict": "move_m@fat@a",
+  "name": "idle.clip",
+  "duration": 10.766666412353516,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@fat@a.glb"
+ },
+ {
+  "dict": "move_m@fat@a",
+  "name": "additive_fat.clip",
+  "duration": 0.3333333730697632,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@fat@a.glb"
+ },
+ {
+  "dict": "move_m@fat@bulky",
+  "name": "additive_fat.clip",
+  "duration": 0.3333333432674408,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@fat@bulky.glb"
+ },
+ {
+  "dict": "move_m@favor_right_foot",
+  "name": "walk.clip",
+  "duration": 2.4666669368743896,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@favor_right_foot.glb"
+ },
+ {
+  "dict": "move_m@femme@",
+  "name": "wstop_r_0.clip",
+  "duration": 5.566667556762695,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@femme@.glb"
+ },
+ {
+  "dict": "move_m@femme@",
+  "name": "wstop_l_0.clip",
+  "duration": 4.9333343505859375,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@femme@.glb"
+ },
+ {
+  "dict": "move_m@femme@",
+  "name": "wstart_r_0.clip",
+  "duration": 1.8666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@femme@.glb"
+ },
+ {
+  "dict": "move_m@femme@",
+  "name": "wstart_l_0.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@femme@.glb"
+ },
+ {
+  "dict": "move_m@femme@",
+  "name": "walk.clip",
+  "duration": 2.0999996662139893,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@femme@.glb"
+ },
+ {
+  "dict": "move_m@femme@",
+  "name": "idle_intro.clip",
+  "duration": 1.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@femme@.glb"
+ },
+ {
+  "dict": "move_m@femme@",
+  "name": "idle.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@femme@.glb"
+ },
+ {
+  "dict": "move_m@fire",
+  "name": "walk.clip",
+  "duration": 2.933333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@fire.glb"
+ },
+ {
+  "dict": "move_m@fire",
+  "name": "run.clip",
+  "duration": 1.366666555404663,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@fire.glb"
+ },
+ {
+  "dict": "move_m@flee@a",
+  "name": "run.clip",
+  "duration": 5.4666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@flee@a.glb"
+ },
+ {
+  "dict": "move_m@flee@b",
+  "name": "run.clip",
+  "duration": 5.566666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@flee@b.glb"
+ },
+ {
+  "dict": "move_m@flee@c",
+  "name": "run.clip",
+  "duration": 3.299999952316284,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@flee@c.glb"
+ },
+ {
+  "dict": "move_m@flee@generic",
+  "name": "run_turn_r3.clip",
+  "duration": 0.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@flee@generic.glb"
+ },
+ {
+  "dict": "move_m@flee@generic",
+  "name": "run_turn_r2.clip",
+  "duration": 2.1666667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@flee@generic.glb"
+ },
+ {
+  "dict": "move_m@flee@generic",
+  "name": "run_turn_l3.clip",
+  "duration": 0.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@flee@generic.glb"
+ },
+ {
+  "dict": "move_m@flee@generic",
+  "name": "run_turn_l2.clip",
+  "duration": 2.1666667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@flee@generic.glb"
+ },
+ {
+  "dict": "move_m@gangster@a",
+  "name": "walk.clip",
+  "duration": 4.199999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@a.glb"
+ },
+ {
+  "dict": "move_m@gangster@a",
+  "name": "sprint.clip",
+  "duration": 0.8333333730697632,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@a.glb"
+ },
+ {
+  "dict": "move_m@gangster@a",
+  "name": "run.clip",
+  "duration": 1.0999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@a.glb"
+ },
+ {
+  "dict": "move_m@gangster@a",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@a.glb"
+ },
+ {
+  "dict": "move_m@gangster@a",
+  "name": "idle.clip",
+  "duration": 23.133333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@a.glb"
+ },
+ {
+  "dict": "move_m@gangster@generic",
+  "name": "walk.clip",
+  "duration": 3.633333444595337,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@generic.glb"
+ },
+ {
+  "dict": "move_m@gangster@generic",
+  "name": "sprint.clip",
+  "duration": 1.566666841506958,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@generic.glb"
+ },
+ {
+  "dict": "move_m@gangster@generic",
+  "name": "run.clip",
+  "duration": 1.733333706855774,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@generic.glb"
+ },
+ {
+  "dict": "move_m@gangster@ng",
+  "name": "wstop_r_0.clip",
+  "duration": 3.4666671752929688,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@ng.glb"
+ },
+ {
+  "dict": "move_m@gangster@ng",
+  "name": "wstop_l_0.clip",
+  "duration": 3.766667604446411,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@ng.glb"
+ },
+ {
+  "dict": "move_m@gangster@ng",
+  "name": "wstart_r_0.clip",
+  "duration": 2.0999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@ng.glb"
+ },
+ {
+  "dict": "move_m@gangster@ng",
+  "name": "wstart_l_0.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@ng.glb"
+ },
+ {
+  "dict": "move_m@gangster@ng",
+  "name": "walk.clip",
+  "duration": 2.0999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@ng.glb"
+ },
+ {
+  "dict": "move_m@gangster@ng",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@ng.glb"
+ },
+ {
+  "dict": "move_m@gangster@ng",
+  "name": "idle.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@gangster@ng.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_r_90.clip",
+  "duration": 3.6666674613952637,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_r_180.clip",
+  "duration": 4.166666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_r_0.clip",
+  "duration": 3.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_r_-90.clip",
+  "duration": 3.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_r_-180.clip",
+  "duration": 3.8333327770233154,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_quick_r_0.clip",
+  "duration": 3.266666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_quick_l_0.clip",
+  "duration": 3.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_l_90.clip",
+  "duration": 3.4333336353302,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_l_180.clip",
+  "duration": 3.799999713897705,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_l_0.clip",
+  "duration": 3.799999237060547,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_l_-90.clip",
+  "duration": 3.933333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstop_l_-180.clip",
+  "duration": 3.766667127609253,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstart_r_90.clip",
+  "duration": 1.933333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstart_r_180.clip",
+  "duration": 2.200000762939453,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstart_r_0.clip",
+  "duration": 1.866666555404663,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstart_l_0.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstart_l_-90.clip",
+  "duration": 1.6666662693023682,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "wstart_l_-180.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walktorun_right.clip",
+  "duration": 1.6666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walktorun_left.clip",
+  "duration": 1.633333444595337,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_up_slope.clip",
+  "duration": 2.4666671752929688,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_up.clip",
+  "duration": 1.6666665077209473,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_turn_r4.clip",
+  "duration": 1.9000005722045898,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_turn_r3.clip",
+  "duration": 1.8999996185302734,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_turn_l4.clip",
+  "duration": 1.8999996185302734,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_turn_l3.clip",
+  "duration": 1.8999996185302734,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_turn_180_r.clip",
+  "duration": 3.2333335876464844,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_turn_180_l.clip",
+  "duration": 3.3000004291534424,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_down_slope.clip",
+  "duration": 0.6999998092651367,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk_down.clip",
+  "duration": 1.8333349227905273,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "walk.clip",
+  "duration": 2.0999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "sprint_turn_r.clip",
+  "duration": 1.1666673421859741,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "sprint_turn_l.clip",
+  "duration": 1.1666663885116577,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "sprint.clip",
+  "duration": 1.0666667222976685,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "runtowalk_right.clip",
+  "duration": 2.2666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "runtowalk_left.clip",
+  "duration": 2.2666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_up_slope.clip",
+  "duration": 0.6999998092651367,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_up.clip",
+  "duration": 1.433333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_turn_r3.clip",
+  "duration": 1.4666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_turn_r2.clip",
+  "duration": 4.0333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_turn_l3.clip",
+  "duration": 1.4666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_turn_l2.clip",
+  "duration": 4.0333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_turn_180_r.clip",
+  "duration": 2.4000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_turn_180_l.clip",
+  "duration": 2.4666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_down_slope.clip",
+  "duration": 4.233333110809326,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run_down.clip",
+  "duration": 1.8333333730697632,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "run.clip",
+  "duration": 1.3333348035812378,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstop_r.clip",
+  "duration": 3.7333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstop_quick_r.clip",
+  "duration": 3.4333336353302,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstop_quick_l.clip",
+  "duration": 3.3999998569488525,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstop_l.clip",
+  "duration": 3.733333110809326,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstart_r_90.clip",
+  "duration": 1.8000001907348633,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstart_r_180.clip",
+  "duration": 1.933333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstart_r_0.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstart_l_0.clip",
+  "duration": 1.7333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstart_l_-90.clip",
+  "duration": 1.633333444595337,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "rstart_l_-180.clip",
+  "duration": 1.9000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "idle_turn_r_90.clip",
+  "duration": 2.1666674613952637,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "idle_turn_r_180.clip",
+  "duration": 2.166666030883789,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "idle_turn_r_0.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "idle_turn_l_0.clip",
+  "duration": 2.1666674613952637,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "idle_turn_l_-90.clip",
+  "duration": 2.1666674613952637,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "idle_turn_l_-180.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "idle_transition.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "idle_intro.clip",
+  "duration": 2.000000476837158,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic",
+  "name": "idle.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic.glb"
+ },
+ {
+  "dict": "move_m@generic_idles@std",
+  "name": "idle_e.clip",
+  "duration": 7.566667079925537,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_idles@std.glb"
+ },
+ {
+  "dict": "move_m@generic_idles@std",
+  "name": "idle_d.clip",
+  "duration": 10.399999618530273,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_idles@std.glb"
+ },
+ {
+  "dict": "move_m@generic_idles@std",
+  "name": "idle_c.clip",
+  "duration": 10.199999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_idles@std.glb"
+ },
+ {
+  "dict": "move_m@generic_idles@std",
+  "name": "idle_b.clip",
+  "duration": 5.3333353996276855,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_idles@std.glb"
+ },
+ {
+  "dict": "move_m@generic_idles@std",
+  "name": "idle_a.clip",
+  "duration": 4.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_idles@std.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@idle@a",
+  "name": "idle_d.clip",
+  "duration": 16.33333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@idle@a.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@idle@a",
+  "name": "idle_c.clip",
+  "duration": 21.66666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@idle@a.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@idle@a",
+  "name": "idle_b.clip",
+  "duration": 14.833332061767578,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@idle@a.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@idle@a",
+  "name": "idle_a.clip",
+  "duration": 4.6666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@idle@a.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@idle@b",
+  "name": "idle_i.clip",
+  "duration": 8.333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@idle@b.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@idle@b",
+  "name": "idle_h.clip",
+  "duration": 12.333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@idle@b.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@idle@b",
+  "name": "idle_g.clip",
+  "duration": 11.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@idle@b.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@idle@b",
+  "name": "idle_f.clip",
+  "duration": 6.666667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@idle@b.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@idle@b",
+  "name": "idle_e.clip",
+  "duration": 5.333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@idle@b.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@run",
+  "name": "run_b.clip",
+  "duration": 1.3666666746139526,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@run.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@run",
+  "name": "run_a.clip",
+  "duration": 0.5999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@run.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@walk",
+  "name": "walk_f.clip",
+  "duration": 1.8999996185302734,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@walk.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@walk",
+  "name": "walk_e.clip",
+  "duration": 2.4666669368743896,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@walk.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@walk",
+  "name": "walk_d.clip",
+  "duration": 2.700000047683716,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@walk.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@walk",
+  "name": "walk_c.clip",
+  "duration": 1.8000001907348633,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@walk.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@walk",
+  "name": "walk_b.clip",
+  "duration": 2.000000476837158,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@walk.glb"
+ },
+ {
+  "dict": "move_m@generic_variations@walk",
+  "name": "walk_a.clip",
+  "duration": 2.433333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@generic_variations@walk.glb"
+ },
+ {
+  "dict": "move_m@golfer@",
+  "name": "walk.clip",
+  "duration": 1.1333332061767578,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@golfer@.glb"
+ },
+ {
+  "dict": "move_m@golfer@",
+  "name": "run.clip",
+  "duration": 1.3333333730697632,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@golfer@.glb"
+ },
+ {
+  "dict": "move_m@golfer@",
+  "name": "idle.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@golfer@.glb"
+ },
+ {
+  "dict": "move_m@golfer@",
+  "name": "golf_walk.clip",
+  "duration": 1.1333332061767578,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@golfer@.glb"
+ },
+ {
+  "dict": "move_m@hiking",
+  "name": "walk.clip",
+  "duration": 8.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hiking.glb"
+ },
+ {
+  "dict": "move_m@hiking",
+  "name": "idle_intro.clip",
+  "duration": 3.066667318344116,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hiking.glb"
+ },
+ {
+  "dict": "move_m@hiking",
+  "name": "idle_exit.clip",
+  "duration": 2.6000003814697266,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hiking.glb"
+ },
+ {
+  "dict": "move_m@hiking",
+  "name": "idle.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hiking.glb"
+ },
+ {
+  "dict": "move_m@hipster@a",
+  "name": "walk.clip",
+  "duration": 3.3000001907348633,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hipster@a.glb"
+ },
+ {
+  "dict": "move_m@hipster@a",
+  "name": "sprint.clip",
+  "duration": 0.5333337783813477,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hipster@a.glb"
+ },
+ {
+  "dict": "move_m@hipster@a",
+  "name": "run.clip",
+  "duration": 0.766666829586029,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hipster@a.glb"
+ },
+ {
+  "dict": "move_m@hipster@a",
+  "name": "idle.clip",
+  "duration": 7.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hipster@a.glb"
+ },
+ {
+  "dict": "move_m@hobo@a",
+  "name": "run.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hobo@a.glb"
+ },
+ {
+  "dict": "move_m@hobo@b",
+  "name": "run.clip",
+  "duration": 2.5999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hobo@b.glb"
+ },
+ {
+  "dict": "move_m@hurry@a",
+  "name": "walk.clip",
+  "duration": 4.766666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry@a.glb"
+ },
+ {
+  "dict": "move_m@hurry@a",
+  "name": "run.clip",
+  "duration": 3.9000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry@a.glb"
+ },
+ {
+  "dict": "move_m@hurry@b",
+  "name": "walk.clip",
+  "duration": 3.1666667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry@b.glb"
+ },
+ {
+  "dict": "move_m@hurry@b",
+  "name": "run.clip",
+  "duration": 3.9000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry@b.glb"
+ },
+ {
+  "dict": "move_m@hurry@c",
+  "name": "walk.clip",
+  "duration": 3.366666555404663,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry@c.glb"
+ },
+ {
+  "dict": "move_m@hurry@c",
+  "name": "run.clip",
+  "duration": 3.9000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry@c.glb"
+ },
+ {
+  "dict": "move_m@hurry_butch@a",
+  "name": "walk.clip",
+  "duration": 2.566666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry_butch@a.glb"
+ },
+ {
+  "dict": "move_m@hurry_butch@a",
+  "name": "run.clip",
+  "duration": 3.9000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry_butch@a.glb"
+ },
+ {
+  "dict": "move_m@hurry_butch@b",
+  "name": "walk.clip",
+  "duration": 2.5999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry_butch@b.glb"
+ },
+ {
+  "dict": "move_m@hurry_butch@b",
+  "name": "run.clip",
+  "duration": 3.9000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry_butch@b.glb"
+ },
+ {
+  "dict": "move_m@hurry_butch@c",
+  "name": "walk.clip",
+  "duration": 2.633333444595337,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry_butch@c.glb"
+ },
+ {
+  "dict": "move_m@hurry_butch@c",
+  "name": "run.clip",
+  "duration": 3.9000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@hurry_butch@c.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "wstop_r_0.clip",
+  "duration": 3.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "wstop_l_0.clip",
+  "duration": 3.8333346843719482,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "wstart_r_0.clip",
+  "duration": 1.8666683435440063,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "wstart_l_0.clip",
+  "duration": 2.033331871032715,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "walktorun_right.clip",
+  "duration": 1.933333158493042,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "walktorun_left.clip",
+  "duration": 1.7999992370605469,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "walk_turn_r4.clip",
+  "duration": 1.6666672229766846,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "walk_turn_r3.clip",
+  "duration": 1.5333328247070312,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "walk_turn_l4.clip",
+  "duration": 1.6666672229766846,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "walk_turn_l3.clip",
+  "duration": 1.5333328247070312,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "walk_turn_180_r.clip",
+  "duration": 3.5333328247070312,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "walk_turn_180_l.clip",
+  "duration": 3.4333343505859375,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "walk.clip",
+  "duration": 3.2666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "sprint.clip",
+  "duration": 7.800000190734863,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "runtowalk_right.clip",
+  "duration": 2.766666889190674,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "runtowalk_left.clip",
+  "duration": 2.6666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "run_turn_180_r.clip",
+  "duration": 3.333334445953369,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "run_turn_180_l.clip",
+  "duration": 3.333334445953369,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "run.clip",
+  "duration": 9.433333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "rstop_r.clip",
+  "duration": 3.6999988555908203,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "rstop_l.clip",
+  "duration": 3.700000762939453,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "rstart_r_0.clip",
+  "duration": 1.7333335876464844,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "rstart_l_0.clip",
+  "duration": 1.7333335876464844,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "idle_turn_r_90.clip",
+  "duration": 1.2666667699813843,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "idle_turn_r_180.clip",
+  "duration": 1.2666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "idle_turn_r_0.clip",
+  "duration": 1.2666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "idle_turn_l_0.clip",
+  "duration": 1.1666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "idle_turn_l_-90.clip",
+  "duration": 1.1666663885116577,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "idle_turn_l_-180.clip",
+  "duration": 1.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "idle_intro.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@injured",
+  "name": "idle.clip",
+  "duration": 7.3666672706604,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@injured.glb"
+ },
+ {
+  "dict": "move_m@intimidation@1h",
+  "name": "idle.clip",
+  "duration": 3.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@intimidation@1h.glb"
+ },
+ {
+  "dict": "move_m@intimidation@cop@unarmed",
+  "name": "idle.clip",
+  "duration": 9.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@intimidation@cop@unarmed.glb"
+ },
+ {
+  "dict": "move_m@intimidation@idle_a",
+  "name": "idle_a.clip",
+  "duration": 8.100000381469727,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@intimidation@idle_a.glb"
+ },
+ {
+  "dict": "move_m@intimidation@unarmed",
+  "name": "idle.clip",
+  "duration": 2.3333332538604736,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@intimidation@unarmed.glb"
+ },
+ {
+  "dict": "move_m@janitor",
+  "name": "additive_fat.clip",
+  "duration": 0.1666666865348816,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@janitor.glb"
+ },
+ {
+  "dict": "move_m@jog@",
+  "name": "run.clip",
+  "duration": 0.8333333134651184,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jog@.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "run_turn_r3.clip",
+  "duration": 2.933333396911621,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "run_turn_r2.clip",
+  "duration": 3.9000015258789062,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "run_turn_l3.clip",
+  "duration": 3.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "run_turn_l2.clip",
+  "duration": 4.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "run.clip",
+  "duration": 2.5666656494140625,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstop_r.clip",
+  "duration": 1.7666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstop_l.clip",
+  "duration": 1.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_r_90.clip",
+  "duration": 2.133334159851074,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_r_180.clip",
+  "duration": 2.2333335876464844,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_r_0.clip",
+  "duration": 2.0999984741210938,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_r_-90.clip",
+  "duration": 2.166667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_r_-180.clip",
+  "duration": 2.166667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_l_90.clip",
+  "duration": 2.1333322525024414,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_l_180.clip",
+  "duration": 2.5333328247070312,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_l_0.clip",
+  "duration": 2.0999984741210938,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_l_-90.clip",
+  "duration": 2.0999984741210938,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "rstart_l_-180.clip",
+  "duration": 2.2666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_r_90.clip",
+  "duration": 1.5333328247070312,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_r_180.clip",
+  "duration": 1.533333659172058,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_r_0.clip",
+  "duration": 1.3333330154418945,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_r_-90.clip",
+  "duration": 1.333333969116211,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_r_-180.clip",
+  "duration": 1.4333343505859375,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_l_90.clip",
+  "duration": 1.7666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_l_180.clip",
+  "duration": 1.4333343505859375,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_l_0.clip",
+  "duration": 1.3999996185302734,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_l_-90.clip",
+  "duration": 1.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle_turn_l_-180.clip",
+  "duration": 1.4666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@jogger",
+  "name": "idle.clip",
+  "duration": 2.133333683013916,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@jogger.glb"
+ },
+ {
+  "dict": "move_m@joy@a",
+  "name": "walk.clip",
+  "duration": 0.9666666388511658,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@joy@a.glb"
+ },
+ {
+  "dict": "move_m@leaf_blower",
+  "name": "wstop_r_0.clip",
+  "duration": 3.799999713897705,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@leaf_blower.glb"
+ },
+ {
+  "dict": "move_m@leaf_blower",
+  "name": "wstop_l_0.clip",
+  "duration": 3.799999952316284,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@leaf_blower.glb"
+ },
+ {
+  "dict": "move_m@leaf_blower",
+  "name": "wstart_r_0.clip",
+  "duration": 2.1000003814697266,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@leaf_blower.glb"
+ },
+ {
+  "dict": "move_m@leaf_blower",
+  "name": "wstart_l_0.clip",
+  "duration": 2.0333337783813477,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@leaf_blower.glb"
+ },
+ {
+  "dict": "move_m@leaf_blower",
+  "name": "walk.clip",
+  "duration": 3.333333969116211,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@leaf_blower.glb"
+ },
+ {
+  "dict": "move_m@leaf_blower",
+  "name": "run.clip",
+  "duration": 1.3333334922790527,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@leaf_blower.glb"
+ },
+ {
+  "dict": "move_m@leaf_blower",
+  "name": "idle_intro.clip",
+  "duration": 2.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@leaf_blower.glb"
+ },
+ {
+  "dict": "move_m@leaf_blower",
+  "name": "idle.clip",
+  "duration": 1.833333969116211,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@leaf_blower.glb"
+ },
+ {
+  "dict": "move_m@melee",
+  "name": "walk.clip",
+  "duration": 2.0999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@melee.glb"
+ },
+ {
+  "dict": "move_m@melee",
+  "name": "run.clip",
+  "duration": 1.3333332538604736,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@melee.glb"
+ },
+ {
+  "dict": "move_m@melee",
+  "name": "idle.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@melee.glb"
+ },
+ {
+  "dict": "move_m@money",
+  "name": "walk.clip",
+  "duration": 3.4333336353302,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@money.glb"
+ },
+ {
+  "dict": "move_m@multiplayer",
+  "name": "run.clip",
+  "duration": 2.633333444595337,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@multiplayer.glb"
+ },
+ {
+  "dict": "move_m@muscle@a",
+  "name": "walk.clip",
+  "duration": 6.133333683013916,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@muscle@a.glb"
+ },
+ {
+  "dict": "move_m@muscle@a",
+  "name": "run.clip",
+  "duration": 0.6333340406417847,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@muscle@a.glb"
+ },
+ {
+  "dict": "move_m@muscle@a",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@muscle@a.glb"
+ },
+ {
+  "dict": "move_m@muscle@a",
+  "name": "idle.clip",
+  "duration": 6.5333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@muscle@a.glb"
+ },
+ {
+  "dict": "move_m@non_chalant",
+  "name": "walk.clip",
+  "duration": 8.633333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@non_chalant.glb"
+ },
+ {
+  "dict": "move_m@plodding",
+  "name": "walk.clip",
+  "duration": 3.799999952316284,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@plodding.glb"
+ },
+ {
+  "dict": "move_m@posh@",
+  "name": "wstop_r_0.clip",
+  "duration": 3.633333444595337,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@posh@.glb"
+ },
+ {
+  "dict": "move_m@posh@",
+  "name": "wstop_l_0.clip",
+  "duration": 2.633333683013916,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@posh@.glb"
+ },
+ {
+  "dict": "move_m@posh@",
+  "name": "wstart_r_0.clip",
+  "duration": 1.8666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@posh@.glb"
+ },
+ {
+  "dict": "move_m@posh@",
+  "name": "wstart_l_0.clip",
+  "duration": 1.9000000953674316,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@posh@.glb"
+ },
+ {
+  "dict": "move_m@posh@",
+  "name": "walk.clip",
+  "duration": 2.0999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@posh@.glb"
+ },
+ {
+  "dict": "move_m@posh@",
+  "name": "idle_intro.clip",
+  "duration": 2.500000238418579,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@posh@.glb"
+ },
+ {
+  "dict": "move_m@posh@",
+  "name": "idle.clip",
+  "duration": 3.133334159851074,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@posh@.glb"
+ },
+ {
+  "dict": "move_m@power",
+  "name": "walk.clip",
+  "duration": 2.6666669845581055,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@power.glb"
+ },
+ {
+  "dict": "move_m@powerwalk",
+  "name": "walk.clip",
+  "duration": 1.6666666269302368,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@powerwalk.glb"
+ },
+ {
+  "dict": "move_m@quick",
+  "name": "walk.clip",
+  "duration": 1.1666666269302368,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@quick.glb"
+ },
+ {
+  "dict": "move_m@sad@a",
+  "name": "walk.clip",
+  "duration": 4.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@sad@a.glb"
+ },
+ {
+  "dict": "move_m@sad@b",
+  "name": "walk.clip",
+  "duration": 3.566666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@sad@b.glb"
+ },
+ {
+  "dict": "move_m@sad@c",
+  "name": "walk.clip",
+  "duration": 2.1666667461395264,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@sad@c.glb"
+ },
+ {
+  "dict": "move_m@sassy",
+  "name": "walk.clip",
+  "duration": 3.5999999046325684,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@sassy.glb"
+ },
+ {
+  "dict": "move_m@scared@a",
+  "name": "walk.clip",
+  "duration": 2.8333332538604736,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@scared@a.glb"
+ },
+ {
+  "dict": "move_m@scared@a",
+  "name": "run.clip",
+  "duration": 1.7666670083999634,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@scared@a.glb"
+ },
+ {
+  "dict": "move_m@scared@a",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@scared@a.glb"
+ },
+ {
+  "dict": "move_m@scared@a",
+  "name": "idle.clip",
+  "duration": 10.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@scared@a.glb"
+ },
+ {
+  "dict": "move_m@shadyped@a",
+  "name": "walk.clip",
+  "duration": 8.066666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shadyped@a.glb"
+ },
+ {
+  "dict": "move_m@shocked@a",
+  "name": "idle_turn_r_90.clip",
+  "duration": 1.2666667699813843,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shocked@a.glb"
+ },
+ {
+  "dict": "move_m@shocked@a",
+  "name": "idle_turn_r_180.clip",
+  "duration": 1.2666667699813843,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shocked@a.glb"
+ },
+ {
+  "dict": "move_m@shocked@a",
+  "name": "idle_turn_r_0.clip",
+  "duration": 1.2666664123535156,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shocked@a.glb"
+ },
+ {
+  "dict": "move_m@shocked@a",
+  "name": "idle_turn_l_0.clip",
+  "duration": 1.1666665077209473,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shocked@a.glb"
+ },
+ {
+  "dict": "move_m@shocked@a",
+  "name": "idle_turn_l_-90.clip",
+  "duration": 1.1666665077209473,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shocked@a.glb"
+ },
+ {
+  "dict": "move_m@shocked@a",
+  "name": "idle_turn_l_-180.clip",
+  "duration": 1.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shocked@a.glb"
+ },
+ {
+  "dict": "move_m@shy@a",
+  "name": "walk.clip",
+  "duration": 3.866666555404663,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shy@a.glb"
+ },
+ {
+  "dict": "move_m@shy@b",
+  "name": "walk.clip",
+  "duration": 5.199999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shy@b.glb"
+ },
+ {
+  "dict": "move_m@shy@c",
+  "name": "walk.clip",
+  "duration": 4.199999809265137,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shy@c.glb"
+ },
+ {
+  "dict": "move_m@shy@d",
+  "name": "walk.clip",
+  "duration": 3.2333333492279053,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shy@d.glb"
+ },
+ {
+  "dict": "move_m@shy@e",
+  "name": "walk.clip",
+  "duration": 1.8666667938232422,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@shy@e.glb"
+ },
+ {
+  "dict": "move_m@strung_out@",
+  "name": "walk.clip",
+  "duration": 10.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@strung_out@.glb"
+ },
+ {
+  "dict": "move_m@swagger",
+  "name": "walk.clip",
+  "duration": 4.0333333015441895,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@swagger.glb"
+ },
+ {
+  "dict": "move_m@swagger@b",
+  "name": "walk.clip",
+  "duration": 6.433333873748779,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@swagger@b.glb"
+ },
+ {
+  "dict": "move_m@tired",
+  "name": "walk.clip",
+  "duration": 4.633333206176758,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tired.glb"
+ },
+ {
+  "dict": "move_m@tool_belt@a",
+  "name": "walk.clip",
+  "duration": 2.366666793823242,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tool_belt@a.glb"
+ },
+ {
+  "dict": "move_m@tool_belt@a",
+  "name": "idle_intro.clip",
+  "duration": 2.500000476837158,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tool_belt@a.glb"
+ },
+ {
+  "dict": "move_m@tool_belt@a",
+  "name": "idle.clip",
+  "duration": 3.4666666984558105,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tool_belt@a.glb"
+ },
+ {
+  "dict": "move_m@tough_guy@",
+  "name": "wstop_r_0.clip",
+  "duration": 3.4666671752929688,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tough_guy@.glb"
+ },
+ {
+  "dict": "move_m@tough_guy@",
+  "name": "wstop_l_0.clip",
+  "duration": 4.566666603088379,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tough_guy@.glb"
+ },
+ {
+  "dict": "move_m@tough_guy@",
+  "name": "wstart_r_0.clip",
+  "duration": 1.799999713897705,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tough_guy@.glb"
+ },
+ {
+  "dict": "move_m@tough_guy@",
+  "name": "wstart_l_0.clip",
+  "duration": 2.000000238418579,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tough_guy@.glb"
+ },
+ {
+  "dict": "move_m@tough_guy@",
+  "name": "walk.clip",
+  "duration": 2.1000003814697266,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tough_guy@.glb"
+ },
+ {
+  "dict": "move_m@tough_guy@",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tough_guy@.glb"
+ },
+ {
+  "dict": "move_m@tough_guy@",
+  "name": "idle.clip",
+  "duration": 6.666666507720947,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@tough_guy@.glb"
+ },
+ {
+  "dict": "move_m@wading",
+  "name": "walk.clip",
+  "duration": 6.40000057220459,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@wading.glb"
+ },
+ {
+  "dict": "move_m@wading",
+  "name": "idle_intro.clip",
+  "duration": 2.5,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@wading.glb"
+ },
+ {
+  "dict": "move_m@wading",
+  "name": "idle.clip",
+  "duration": 10.0,
+  "fps": 30.0,
+  "url": "/files/cache/anims/move_m@wading.glb"
+ }
+]

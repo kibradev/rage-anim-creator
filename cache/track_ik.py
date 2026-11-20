@@ -1,0 +1,2 @@
+﻿from pathlib import Path
+p=Path('pipeline/lib/posekeys.py');s=p.read_text(encoding='utf-8');s=s.replace('            worst = max(worst, clip.ik(f, *chain, tpos + Vector(p[f"foot_{side}"]), knee, end_rot=rot))','            miss = clip.ik(f, *chain, tpos + Vector(p[f"foot_{side}"]), knee, end_rot=rot)\n            if miss > worst_at[0]:\n                worst_at = (miss, f"foot_{side}", f)\n            worst = max(worst, miss)');p.write_bytes(s.replace('\n','\r\n').encode('utf-8'))

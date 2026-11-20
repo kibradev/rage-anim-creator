@@ -1,0 +1,2 @@
+﻿from pathlib import Path
+p=Path('cache/render_dive_review.py');s=p.read_text(encoding='utf-8');s=s[:s.index('sc,cam=render._setup')];s=s.replace("worst=(10,'',0)","worst=(10,'',0);permesh={}");s=s.replace("if lo<worst[0]:worst=(lo,o.name,f)","if lo<worst[0]:worst=(lo,o.name,f)\n  if o.name not in permesh or lo<permesh[o.name][0]:permesh[o.name]=(lo,f)");s+="print('PER_MESH',permesh)\n";Path('cache/check_mesh_ground.py').write_text(s,encoding='utf-8')

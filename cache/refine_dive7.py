@@ -1,0 +1,2 @@
+﻿from pathlib import Path
+p=Path('pipeline/clip_defs/volleyball.py');s=p.read_text(encoding='utf-8');a=s.index('def dive():');b=s.index('\n\ndef shuffle_R()',a);d=s[a:b].replace('"pelvis": (48, 0, 0), "spine": (68','"pelvis": (24, 0, 0), "spine": (68').replace('(-0.05, 1, -0.15)','(-0.12, 1, 0.4)').replace('(0.05, 1, -0.15)','(0.12, 1, 0.4)');s=s[:a]+d+s[b:];p.write_bytes(s.replace('\n','\r\n').encode('utf-8'))

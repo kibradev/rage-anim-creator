@@ -1,0 +1,16 @@
+﻿from pathlib import Path
+p=Path('pipeline/clip_defs/volleyball.py');s=p.read_text(encoding='utf-8');a=s.index('def dive():');b=s.index('\n\ndef shuffle_R()',a);d=s[a:b]
+d=d.replace('Pelvis and spine pitch ADD: keep the flying torso near horizontal, not folded over.', 'Pelvis drives the hips; spine/chest drive the separate torso branch of the GTA rig.')
+d=d.replace('"spine": (10, 0, 0), "chest": (2, 0, 0)', '"spine": (60, 0, 0), "chest": (18, 0, 0)')
+d=d.replace('"spine": (8, 0, 0), "chest": (0, 0, 0)', '"spine": (65, 0, 0), "chest": (18, 0, 0)')
+d=d.replace('"spine": (6, 0, 0), "head": (-20, 0, 0)', '"spine": (65, 0, 0), "chest": (20, 0, 0), "head": (-28, 0, 0)',1)
+d=d.replace('"spine": (4, 0, 0), "head": (-16, 0, 0)', '"spine": (65, 0, 0), "chest": (20, 0, 0), "head": (-28, 0, 0)')
+d=d.replace('"spine": (6, 0, 0), "head": (-20, 0, 0)', '"spine": (48, 0, 0), "chest": (16, 0, 0), "head": (-28, 0, 0)',1)
+d=d.replace('"spine": (12, 0, 0), "head": (-24, 0, 0)', '"spine": (36, 0, 0), "chest": (12, 0, 0), "head": (-28, 0, 0)')
+d=d.replace('"spine": (18, 0, 0), "head": (-24, 0, 0)', '"spine": (24, 0, 0), "chest": (6, 0, 0), "head": (-24, 0, 0)')
+d=d.replace('"foot_L": (-0.10, -0.27, 0.42)', '"knee_L": (-0.12, 0.2, -1), "knee_R": (0.12, 0.2, -1),\n           "foot_L": (-0.10, -0.27, 0.42)')
+d=d.replace('"hand_L": (-0.25, 1.20, 0.14), "hand_R": (0.25, 1.37, 0.12)', '"hand_L": (-0.25, 1.00, 0.20), "hand_R": (0.25, 1.18, 0.12)')
+d=d.replace('"hand_L": (-0.26, 0.76, 0.62)', '"knee_L": (-0.25, 1, 0.2), "knee_R": (0.25, 1, 0.2),\n             "hand_L": (-0.26, 0.76, 0.62)')
+d=d.replace('"orient_R": 0.0}', '"orient_R": 0.0, "knee_L": (0, 0, 0), "knee_R": (0, 0, 0)}')
+s=s[:a]+d+s[b:];p.write_bytes(s.replace('\n','\r\n').encode('utf-8'))
+p=Path('pipeline/lib/posekeys.py');s=p.read_text(encoding='utf-8');s=s.replace('  pitch_L/pitch_R','  knee_L/knee_R   (x, y, z) optional knee bend direction; zero uses the default\n  pitch_L/pitch_R',1);s=s.replace('    "orient_L": 0.0, "orient_R": 0.0,','    "orient_L": 0.0, "orient_R": 0.0, "knee_L": (0, 0, 0), "knee_R": (0, 0, 0),',1);s=s.replace('            worst = max(worst, clip.ik(f, *chain,','            if Vector(p[f"knee_{side}"]).length > 1e-6:\n                knee = Vector(p[f"knee_{side}"])\n            worst = max(worst, clip.ik(f, *chain,',1);p.write_bytes(s.replace('\n','\r\n').encode('utf-8'))
