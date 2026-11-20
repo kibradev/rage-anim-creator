@@ -1,0 +1,34 @@
+name: Feature Request
+description: Suggest a new feature for the project
+labels: Feature Request
+body:
+- type: textarea
+  attributes:
+    label: 📝 Feature Description
+    description: What is this feature? What will it improve?
+    placeholder: Enter your feature description here
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: 🔧 Feature Workflow
+    description: How will this feature work/function/be used by users? How would the workflow look like within Blender?
+    placeholder: Enter the feature workflow here
+- type: dropdown
+  id: area
+  attributes:
+    label: 🧩 Area
+    description: What is this feature related to? Please choose any that apply.
+    multiple: true
+    options:
+      - 'Animations'
+      - 'Archetypes'
+      - 'Collisions'
+      - 'Drawables'
+      - 'Fragments'
+      - 'Interiors'
+      - 'Maps'
+      - 'Navmesh'
+      - 'Shaders'
+  validations:
+    required: false
